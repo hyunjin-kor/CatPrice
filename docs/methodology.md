@@ -19,7 +19,24 @@ The shipped product has four research-facing layers:
 
 Two tiers, kept apart on purpose.
 
-The live tier is what the desktop app shows. Yahoo Finance futures for gold, silver, platinum, palladium, copper and aluminium, Johnson Matthey daily base prices for the platinum-group metals, Westmetall's LME settlements for nickel, zinc and tin, and USGS annual averages where nothing trades. Every price carries its source, quote time and evidence tier.
+The live tier is what the desktop app shows. Direct Johnson Matthey base prices take priority for platinum and palladium, and Westmetall LME settlements for copper and aluminium. Yahoo futures remain their fallback and the first source for gold and silver. Every price carries its source, quote time and evidence tier.
+
+The selector tries the following fallbacks in order. An asterisk marks an optional configured API key. Yahoo-only polling preserves a stored primary JM/Westmetall quote; a full refresh can choose the fallback when the primary is unavailable. Both in-page polling intervals are five minutes (Yahoo increased from one minute); reference history is collected at most daily.
+
+| Metals | Live source order |
+|---|---|
+| Pt, Pd | Johnson Matthey → Yahoo → Metals.Dev* → Kitco → MetalpriceAPI* → CatCost anchor |
+| Cu, Al | Westmetall → Yahoo → Metals.Dev* → CatCost anchor |
+| Au, Ag | Yahoo → Metals.Dev* → Kitco → MetalpriceAPI* → CatCost anchor |
+| Rh | Kitco → Metals.Dev* → Johnson Matthey → CatCost anchor |
+| Ru, Ir | Johnson Matthey → Metals.Dev* → CatCost anchor |
+| Ni | Metals.Dev* → Markets Insider → Westmetall → CatCost anchor |
+| Zn, Sn | Westmetall → USGS anchor |
+| Co, Mo, W | Metals.Dev* → USGS anchor |
+| V, Re | USGS anchor |
+| Fe | CatCost anchor |
+
+The [source-priority audit](audit/t09-t10-notes.md) records actual public-feed responses and offline fallback tests. Missing sources retain the documented anchor; no additional rate is inferred.
 
 Supports have no daily quote anywhere, so on the live basis they price from the library (USGS annual averages, public trade unit values and vendor quotes, escalated with ChemPPI). On the academic basis, with a UN Comtrade key, eleven support materials (calcined and alpha alumina, titania, silica, activated carbon, carbon black, synthetic zeolites, magnesia, cerium compounds, manganese dioxide, chromium oxide) take the latest monthly U.S. import unit value for their HS code, listed in `backend/data/support_series.json`. A unit value is customs value over net weight with every grade and partner combined, so it is a bulk market level, not a catalyst-grade quote; the evidence tier says so.
 

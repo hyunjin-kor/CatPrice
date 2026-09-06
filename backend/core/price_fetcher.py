@@ -640,7 +640,7 @@ async def fetch_all_prices() -> dict[str, dict]:
     if isinstance(jm_data, dict):
         for sym, data in jm_data.items():
             existing_src = results.get(sym, {}).get("source", "")
-            if sym in {"Ru", "Ir"} or "CatCost" in existing_src:
+            if sym in {"Pt", "Pd", "Ru", "Ir"} or "CatCost" in existing_src:
                 results[sym] = data
     else:
         logger.warning("Johnson Matthey failed: %s", jm_data)
@@ -656,7 +656,7 @@ async def fetch_all_prices() -> dict[str, dict]:
     if isinstance(wm_data, dict):
         for sym, data in wm_data.items():
             existing_src = results.get(sym, {}).get("source", "")
-            if "CatCost" in existing_src or "USGS" in existing_src:
+            if sym in {"Cu", "Al"} or "CatCost" in existing_src or "USGS" in existing_src:
                 results[sym] = data
     else:
         logger.warning("Westmetall failed: %s", wm_data)
@@ -678,6 +678,8 @@ async def fetch_all_prices() -> dict[str, dict]:
 
 JM_HISTORY_SYMBOLS = ("Ru", "Ir", "Rh", "Pd", "Pt")
 WESTMETALL_FIELDS: dict[str, str] = {
+    "Cu": "LME_Cu_cash",
+    "Al": "LME_Al_cash",
     "Ni": "LME_Ni_cash",
     "Zn": "LME_Zn_cash",
     "Sn": "LME_Sn_cash",

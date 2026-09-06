@@ -1,0 +1,243 @@
+{
+  "started_at_utc": "2026-09-06T03:04:44.901959+00:00",
+  "finished_at_utc": "2026-09-06T03:04:51.569590+00:00",
+  "scope": "Read-only public feed retrieval; no DB persistence and no optional API-key providers requested",
+  "feeds": {
+    "yahoo": {
+      "Pt": {
+        "name": "Platinum",
+        "price": 1826.0,
+        "unit": "$/troy_oz",
+        "source": "Yahoo Finance (live)",
+        "ticker": "PL=F",
+        "fetched_at": "2026-09-04T20:59:58+00:00"
+      },
+      "Pd": {
+        "name": "Palladium",
+        "price": 1403.9,
+        "unit": "$/troy_oz",
+        "source": "Yahoo Finance (live)",
+        "ticker": "PA=F",
+        "fetched_at": "2026-09-04T20:59:55+00:00"
+      },
+      "Au": {
+        "name": "Gold",
+        "price": 4476.6,
+        "unit": "$/troy_oz",
+        "source": "Yahoo Finance (live)",
+        "ticker": "GC=F",
+        "fetched_at": "2026-09-04T20:59:58+00:00"
+      },
+      "Ag": {
+        "name": "Silver",
+        "price": 66.748,
+        "unit": "$/troy_oz",
+        "source": "Yahoo Finance (live)",
+        "ticker": "SI=F",
+        "fetched_at": "2026-09-04T20:59:55+00:00"
+      },
+      "Cu": {
+        "name": "Copper",
+        "price": 6.6825,
+        "unit": "$/lb",
+        "source": "Yahoo Finance (live)",
+        "ticker": "HG=F",
+        "fetched_at": "2026-09-04T20:59:57+00:00"
+      },
+      "Al": {
+        "name": "Aluminum",
+        "price": 1.5754,
+        "unit": "$/lb",
+        "source": "Yahoo Finance (live)",
+        "ticker": "ALI=F",
+        "fetched_at": "2026-09-04T20:50:00+00:00"
+      }
+    },
+    "johnson_matthey": {
+      "Ir": {
+        "name": "Iridium",
+        "price": 7850.0,
+        "unit": "$/troy_oz",
+        "source": "Johnson Matthey (live)",
+        "fetched_at": "2026-09-04T00:00:00+00:00"
+      },
+      "Pd": {
+        "name": "Palladium",
+        "price": 1418.0,
+        "unit": "$/troy_oz",
+        "source": "Johnson Matthey (live)",
+        "fetched_at": "2026-09-04T00:00:00+00:00"
+      },
+      "Pt": {
+        "name": "Platinum",
+        "price": 1820.0,
+        "unit": "$/troy_oz",
+        "source": "Johnson Matthey (live)",
+        "fetched_at": "2026-09-04T00:00:00+00:00"
+      },
+      "Rh": {
+        "name": "Rhodium",
+        "price": 9475.0,
+        "unit": "$/troy_oz",
+        "source": "Johnson Matthey (live)",
+        "fetched_at": "2026-09-04T00:00:00+00:00"
+      },
+      "Ru": {
+        "name": "Ruthenium",
+        "price": 1675.0,
+        "unit": "$/troy_oz",
+        "source": "Johnson Matthey (live)",
+        "fetched_at": "2026-09-04T00:00:00+00:00"
+      }
+    },
+    "westmetall": {
+      "Cu": {
+        "name": "Copper",
+        "price": 6.5131,
+        "unit": "$/lb",
+        "source": "Westmetall (LME settlement)",
+        "fetched_at": "2026-09-06T03:04:47.236928+00:00"
+      },
+      "Al": {
+        "name": "Aluminum",
+        "price": 1.4982,
+        "unit": "$/lb",
+        "source": "Westmetall (LME settlement)",
+        "fetched_at": "2026-09-06T03:04:48.301338+00:00"
+      },
+      "Ni": {
+        "name": "Nickel",
+        "price": 7.5364,
+        "unit": "$/lb",
+        "source": "Westmetall (LME settlement)",
+        "fetched_at": "2026-09-06T03:04:49.397684+00:00"
+      },
+      "Zn": {
+        "name": "Zinc",
+        "price": 1.8123,
+        "unit": "$/lb",
+        "source": "Westmetall (LME settlement)",
+        "fetched_at": "2026-09-06T03:04:50.467783+00:00"
+      },
+      "Sn": {
+        "name": "Tin",
+        "price": 24.6981,
+        "unit": "$/lb",
+        "source": "Westmetall (LME settlement)",
+        "fetched_at": "2026-09-06T03:04:51.569554+00:00"
+      }
+    },
+    "kitco": {
+      "Rh": {
+        "name": "Rhodium",
+        "price": 9425.0,
+        "unit": "$/troy_oz",
+        "source": "Kitco (live)",
+        "fetched_at": "2026-09-06T03:04:46.802256+00:00"
+      },
+      "Pt": {
+        "name": "Platinum",
+        "price": 1821.0,
+        "unit": "$/troy_oz",
+        "source": "Kitco (live)",
+        "fetched_at": "2026-09-06T03:04:46.802264+00:00"
+      },
+      "Pd": {
+        "name": "Palladium",
+        "price": 1388.0,
+        "unit": "$/troy_oz",
+        "source": "Kitco (live)",
+        "fetched_at": "2026-09-06T03:04:46.802267+00:00"
+      },
+      "Au": {
+        "name": "Gold",
+        "price": 4430.1,
+        "unit": "$/troy_oz",
+        "source": "Kitco (live)",
+        "fetched_at": "2026-09-06T03:04:46.802270+00:00"
+      },
+      "Ag": {
+        "name": "Silver",
+        "price": 66.216,
+        "unit": "$/troy_oz",
+        "source": "Kitco (live)",
+        "fetched_at": "2026-09-06T03:04:46.802271+00:00"
+      }
+    },
+    "markets_insider": {
+      "Ni": {
+        "symbol": "Ni",
+        "name": "Nickel",
+        "price": 7.5705,
+        "unit": "$/lb",
+        "source": "Markets Insider (live)",
+        "fetched_at": "2026-09-06T03:04:47.549420+00:00",
+        "market_hint": "03:59:19 PM EDT 9/4/2026"
+      }
+    }
+  },
+  "previous_selection_from_same_responses": {
+    "Pt": {
+      "name": "Platinum",
+      "price": 1826.0,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "ticker": "PL=F",
+      "fetched_at": "2026-09-04T20:59:58+00:00"
+    },
+    "Pd": {
+      "name": "Palladium",
+      "price": 1403.9,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "ticker": "PA=F",
+      "fetched_at": "2026-09-04T20:59:55+00:00"
+    },
+    "Cu": {
+      "name": "Copper",
+      "price": 6.6825,
+      "unit": "$/lb",
+      "source": "Yahoo Finance (live)",
+      "ticker": "HG=F",
+      "fetched_at": "2026-09-04T20:59:57+00:00"
+    },
+    "Al": {
+      "name": "Aluminum",
+      "price": 1.5754,
+      "unit": "$/lb",
+      "source": "Yahoo Finance (live)",
+      "ticker": "ALI=F",
+      "fetched_at": "2026-09-04T20:50:00+00:00"
+    }
+  },
+  "new_selection_from_same_responses": {
+    "Pt": {
+      "name": "Platinum",
+      "price": 1820.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Pd": {
+      "name": "Palladium",
+      "price": 1418.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Cu": {
+      "name": "Copper",
+      "price": 6.5131,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:47.236928+00:00"
+    },
+    "Al": {
+      "name": "Aluminum",
+      "price": 1.4982,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:48.301338+00:00"
+    }
+  }
+}

@@ -23,7 +23,7 @@ from backend.models.metal_price import MetalPrice
 # The reference basis starts where Johnson Matthey's public history does.
 REFERENCE_START = date(2019, 1, 1)
 # Monthly averages change once a month; the desktop client refreshes live
-# quotes every five minutes, so the reference feeds are polled once a day.
+# quotes more often, so the reference feeds are polled once a day.
 REFERENCE_REFRESH_INTERVAL = timedelta(hours=24)
 _last_reference_fetch: datetime | None = None
 
@@ -35,6 +35,12 @@ logger = logging.getLogger(__name__)
 # per pound (~2000x high) and a rhodium parse failure pinned at 1001.0 (~10x
 # low). The bound is deliberately loose so no genuine move is ever refused.
 MAX_TICK_RATIO = 5.0
+YAHOO_PRIMARY_SOURCES = {
+    "Pt": "Johnson Matthey",
+    "Pd": "Johnson Matthey",
+    "Cu": "Westmetall",
+    "Al": "Westmetall",
+}
 
 
 async def collect_prices(source: str | None = None) -> dict[str, dict]:
@@ -42,12 +48,23 @@ async def collect_prices(source: str | None = None) -> dict[str, dict]:
 
     Args:
         source: ``"yahoo"`` skips the slower scrapers and only refreshes the
-            Yahoo Finance-backed symbols — used by the desktop client's
-            in-page polling so frequent ticks don't hammer Kitco/JM.
+            Yahoo Finance-backed symbols without replacing a selected primary
+            JM/Westmetall quote. The full daily refresh chooses fallbacks when
+            a primary feed is unavailable.
             Default fetches every configured source.
     """
     if source == "yahoo":
         results = await fetch_yfinance()
+        with Session(engine) as session:
+            latest = _latest_by_symbol(session, list(results))
+        results = {
+            symbol: info for symbol, info in results.items()
+            if not (
+                symbol in YAHOO_PRIMARY_SOURCES
+                and symbol in latest
+                and latest[symbol].source.startswith(YAHOO_PRIMARY_SOURCES[symbol])
+            )
+        }
     else:
         results = await fetch_all_prices()
     if results:
