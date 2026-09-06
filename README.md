@@ -92,6 +92,8 @@ automatically before a rebuild, or manually with `npm run desktop:stop`.
 
 ## Tests
 
+The prepared source version is **1.4.0**; the latest verified public release is **v1.3.24** (2026-09-06). Tagging and publishing 1.4.0 remain human release steps. See the [release preparation checklist](docs/release-checklist.md) and [Korean getting-started guide](docs/getting-started.ko.md).
+
 ```bash
 python -m pytest backend/tests -q    # engine + API, includes CatCost validation cases
 cd frontend && npm run build         # type-check + build
@@ -103,6 +105,16 @@ The engine reproduces the three published CatCost reference cases (2 wt% Pt/C,
 published inputs. Pt/C matches to the cent. The other two land within 7%, and
 both residuals trace to footnotes in the table itself.
 `scripts/reproduce_catcost_table62.py` prints the full comparison.
+
+## Reproduce the paper
+
+Reproduce the paper's monthly reference basis, analyses and figures with:
+
+```bash
+python scripts/reproduce_paper.py --price-basis reference --month 2026-07 --seed 20260906
+```
+
+Omit `--month` for the latest common completed publication month. Matplotlib is needed for figures. To replay exactly from committed inputs, add `--history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json`. Input hashes, source failures and Python/package versions are recorded in the reproduction manifest. See [methodology](docs/methodology.md#reproducing-the-paper) and the [run audit](docs/audit/autonomous-run-2026-09-06.md).
 
 ## Optional API keys
 

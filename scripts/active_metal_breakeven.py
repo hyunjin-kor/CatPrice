@@ -60,16 +60,16 @@ def cost_of(c: dict[str, Any]) -> float:
     return float(v if v is not None else c["summary"]["landed_cost_per_lb"])
 
 
-def run_family(session: Session, family: str, baseline: dict, history: dict, scan: int) -> dict[str, Any]:
+def run_family(session: Session, family: str, baseline: dict, history: dict, scan: int, basis: str = "live") -> dict[str, Any]:
     catalog = _load_catalogs()[family]
-    base = evaluate_benchmark_family(session=session, family=family, profile="balanced", prices=baseline)
+    base = evaluate_benchmark_family(session=session, family=family, profile="balanced", prices=baseline, basis=basis)
     w0 = performance_zero(base["decision_profile"]["weights"])
-    perf0 = evaluate_benchmark_family(session=session, family=family, profile="balanced", weights=w0, prices=baseline)
+    perf0 = evaluate_benchmark_family(session=session, family=family, profile="balanced", weights=w0, prices=baseline, basis=basis)
 
     cands = base["candidates"]
     unit = {c["summary"].get("economics_basis_unit") or "$/lb" for c in cands}
     feeds = {c["slug"]: feed_symbols(family, c["slug"]) for c in cands}
-    cost_winner = min(cands, key=cost_of)["slug"]
+    cost_winner = min(cands, key=lambda c: (cost_of(c), c["slug"]))["slug"]
     composite_winner = perf0["winner"]["slug"] if perf0["winner"] else None
 
     contests: list[dict[str, Any]] = []
@@ -89,8 +89,8 @@ def run_family(session: Session, family: str, baseline: dict, history: dict, sca
                 "a": cost_winner, "b": b, "kind": kind, "symbol": symbol,
                 "symbol_in": holder, "wt_pct": feeds[holder][symbol],
                 "precious": symbol in PRECIOUS,
-                "cost": breakeven_for_pair(session, family, cost_winner, b, symbol, baseline, metric="cost", scan=max(12, scan // 2)),
-                "composite_perf0": breakeven_for_pair(session, family, cost_winner, b, symbol, baseline, metric="composite", weights=w0, scan=scan),
+                "cost": breakeven_for_pair(session, family, cost_winner, b, symbol, baseline, metric="cost", scan=max(12, scan // 2), basis=basis),
+                "composite_perf0": breakeven_for_pair(session, family, cost_winner, b, symbol, baseline, metric="composite", weights=w0, scan=scan, basis=basis),
             }
             series = history.get(symbol)
             for key in ("cost", "composite_perf0"):
@@ -137,6 +137,7 @@ def main() -> None:
     ap.add_argument("--scan", type=int, default=32, help="log-grid points per sweep")
     ap.add_argument("--family", action="append", help="restrict to these families")
     ap.add_argument("--price-basis", type=Path, help="frozen price basis JSON (a previous run's output, or its price_basis map) instead of the local database")
+    ap.add_argument("--basis-type", choices=("live", "reference"), default="live")
     args = ap.parse_args()
 
     history = json.loads(args.history.read_text(encoding="utf-8"))["series"]
@@ -150,13 +151,13 @@ def main() -> None:
             payload = json.loads(args.price_basis.read_text(encoding="utf-8"))
             baseline = payload.get("price_basis", payload)
         else:
-            baseline = _latest_price_map(session)
+            baseline = _latest_price_map(session, args.basis_type)
         for fam in list_benchmark_families():
             key = fam["family"]
             if args.family and key not in args.family:
                 continue
             try:
-                families_out.append(run_family(session, key, baseline, history, args.scan))
+                families_out.append(run_family(session, key, baseline, history, args.scan, args.basis_type))
             except Exception as exc:  # isolate one family's failure
                 errors.append({"family": key, "error": f"{type(exc).__name__}: {exc}"})
 
@@ -166,6 +167,7 @@ def main() -> None:
         "history_symbols": {s: {"unit": v["unit"], "first": v["first"], "last": v["last"], "n": v["n"]} for s, v in history.items()},
         "price_basis_source": str(args.price_basis) if args.price_basis else "application database",
         "price_basis": baseline,
+        "basis_type": args.basis_type,
         "scan": args.scan,
         "families": families_out,
         "errors": errors,
