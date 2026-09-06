@@ -152,3 +152,7 @@ python scripts/reproduce_paper.py --price-basis reference --month 2026-07 --seed
 - 최종 출시·자동 업데이트·새 Zenodo 보관·투고 승인 상태는 이번 실행에서 만들거나 확인할 대상이 아닙니다. 사람이 실행할 체크리스트로 남겼습니다.
 
 핵심 검토 파일: `docs/audit/autonomous-run-2026-09-06.md`, `docs/paper/manuscript_2026-09-06.md`, `docs/paper/si_2026-09-06.md`, `docs/paper/reproduction_manifest_2026-09-06.json`, `docs/release-checklist.md`. GitHub CI의 최종 상태와 링크는 이 PR의 Checks에서 확인할 수 있습니다.
+
+## Subsequent user decision — free data only
+
+After the run, the user prohibited paid data acquisition and requested that supplementation rely as far as possible on free papers and other free sources. The data budget is zero: no dataset or paper purchases, paid subscriptions, or billable API calls. The policy is recorded in `docs/roadmap.md`; verified free literature, supplementary data, repositories, public statistics and supplier information are prioritized. Missing free evidence remains an explicit gap. This documentation-only decision does not alter the completed run's calculations, data snapshots, source licenses or validation results.
