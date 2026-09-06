@@ -43,35 +43,35 @@
       "label": "Nature Communications 2015",
       "url": "https://doi.org/10.1038/ncomms9619",
       "kind": "literature",
-      "note": "Patched bimetallic Ni-Fe surfaces identified as effective, scalable non-noble architectures for ammonia decomposition."
+      "note": "Guo and Vlachos model Ni patches on Pt(111) using multiscale simulations; this is Ni-Pt, not Ni-Fe, and does not establish a Ni/alumina recipe. The legacy citation id is retained for compatibility."
     },
     {
       "id": "hea-ammonia-ncomms-2019",
       "label": "Nature Communications 2019",
       "url": "https://doi.org/10.1038/s41467-019-11848-9",
       "kind": "literature",
-      "note": "High-entropy alloy catalyst family for ammonia decomposition highlighting non-noble route-design latitude and composition effects."
+      "note": "CoMoFeNiCu high-entropy nanoparticles on carbon nanofibers, with 10 wt% total metals and flash heating to 2000-2300 K; context for composition effects, not evidence for a Ni/MgO-CeO2 or Ni/alumina formulation."
     },
     {
       "id": "ru-mgo-nature-2023",
       "label": "Nature Communications 2023",
       "url": "https://doi.org/10.1038/s41467-023-36339-w",
       "kind": "literature",
-      "note": "Ru ensembles on MgO(111) reported as a high-activity ammonia-decomposition architecture."
+      "note": "Ru ensembles on preferentially exposed MgO(111) nanosheets; the reported 3.1 wt% Ru catalyst uses Ru3(CO)12 deposition on a specially prepared support. Generic MgO impregnation is a manufacturing proxy."
     },
     {
       "id": "gan-ru-ncomms-2024",
       "label": "Nature Communications 2024",
       "url": "https://doi.org/10.1038/s41467-024-51810-y",
       "kind": "literature",
-      "note": "Ruthenium-on-gallium-nitride architecture showing strong low-temperature ammonia-decomposition activity and durability."
+      "note": "Light-driven Ru nanoparticles on GaN nanowires on silicon, including photodeposition and concentrated illumination. This is not a thermal Ru/MgO catalyst recipe or thermal-only activity benchmark."
     },
     {
       "id": "ni-ceo2x-ncomms-2025",
       "label": "Nature Communications 2025",
       "url": "https://doi.org/10.1038/s41467-025-66325-3",
       "kind": "literature",
-      "note": "Photothermal Ni-CeO2-x/CNT catalyst showing how Ni-ceria interfacial design can recover low-temperature ammonia-decomposition activity without noble-metal loading."
+      "note": "Photothermal catalyst with 10 wt% Ni on CeO2-x/CNTs (CeO2:CNT mass ratio 0.5), deposited by NaBH4-assisted reduction. It establishes an interface concept, not the screened Ni/CeO2/MgO formulation or its thermal-only performance."
     },
     {
       "id": "sigma-ni-nitrate",
@@ -113,21 +113,21 @@
       "label": "Ind. Eng. Chem. Res. 2021",
       "url": "https://doi.org/10.1021/acs.iecr.1c00843",
       "kind": "literature",
-      "note": "Comprehensive ammonia decomposition review; tabulates 5 wt% Co/MgO-La2O3 at 92% conversion, 550 C, WHSV 6000 mL/(g h), 1 atm."
+      "note": "Ammonia-decomposition review, used as secondary family context. The previously transcribed 92% conversion at 550 C for 5 wt% Co/MgO-La2O3 was not independently reverified in the accessible primary text during the 2026-09-07 audit."
     },
     {
       "id": "podila-ijhe-2015",
       "label": "Int. J. Hydrogen Energy 2015",
       "url": "https://doi.org/10.1016/j.ijhydene.2015.09.057",
       "kind": "literature",
-      "note": "Co on Mg mixed-oxide supports for ammonia decomposition, the basis of the MgO-La2O3 candidate."
+      "note": "Primary study of 5 wt% Co impregnated on Mg-La mixed oxides, tested at 300-550 C and atmospheric pressure; Mg/La = 5 is a molar ratio. It does not establish the screened 85/10 wt% MgO/La2O3 split."
     },
     {
       "id": "bell-ijhe-2020",
       "label": "Int. J. Hydrogen Energy 2020",
       "url": "https://doi.org/10.1016/j.ijhydene.2020.07.090",
       "kind": "literature",
-      "note": "Synthetic-method study for Co/Al2O3 ammonia decomposition: particle size and cobalt-aluminate formation trade-offs across preparation routes."
+      "note": "Co/gamma-Al2O3 preparation study; the cobalt-aluminate and particle-size discussion is context for that support, not direct evidence for Co/MgO-La2O3."
     }
   ],
   "catalog_quotes": [
@@ -309,8 +309,7 @@
         700
       ],
       "literature_basis_ids": [
-        "patched-ni-fe-ncomms-2015",
-        "hea-ammonia-ncomms-2019",
+        "lucentini-iecr-2021",
         "sigma-ni-nitrate",
         "sigma-alumina"
       ],
@@ -319,8 +318,9 @@
         "sigma-alumina"
       ],
       "decision_notes": [
-        "Tracks Ni live price directly, so economics move with a broadly traded industrial metal.",
-        "Lowest route complexity and easiest basis to defend in desktop screening."
+        "The 12/88 wt% Ni/alumina composition and 550-700 C window are engineering screening assumptions; no exact primary recipe was verified.",
+        "Ni/Pt(111) simulations and carbon-supported CoMoFeNiCu alloys do not validate this monometallic gamma-alumina baseline. Support grade and precursor markup remain price proxies.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -356,7 +356,7 @@
       "title": "Ni-MgO/CeO2 interface",
       "archetype": "Non-noble performance route",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "Ni route that aims to recover activity through support/interface engineering instead of noble metal loading.",
+      "summary": "Engineering Ni/CeO2/MgO formulation inspired by interface design; the cited photothermal Ni-CeO2-x/CNT study uses a different support and activation mode.",
       "route_template_id": "interface-engineered-ni-route",
       "order_size_tons": 20,
       "performance_index": 84,
@@ -367,7 +367,6 @@
         650
       ],
       "literature_basis_ids": [
-        "hea-ammonia-ncomms-2019",
         "ni-ceo2x-ncomms-2025",
         "sigma-ni-nitrate",
         "sigma-ceo2",
@@ -379,8 +378,9 @@
         "sigma-mgo"
       ],
       "decision_notes": [
-        "Still avoids Ru, but the route adds ceria handling and tighter support engineering.",
-        "Useful when you want better low-temperature activity without moving to a noble-metal basis."
+        "The 15/15/70 wt% Ni/CeO2/MgO composition, 475-650 C window and generic oxide route are assumptions, not a reproduced literature recipe.",
+        "The primary paper uses 10 wt% Ni, CeO2:CNT = 0.5 by mass, NaBH4-assisted reduction and light; its activity cannot be transferred directly to this thermal MgO formulation.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -430,7 +430,7 @@
       "title": "Ru/MgO premium",
       "archetype": "Low-temperature premium",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "High-activity Ru route for low-temperature ammonia cracking when activity is worth a noble-metal premium.",
+      "summary": "Ru/MgO screening formulation motivated by active Ru ensembles on MgO(111); catalyst grade and synthesis differ from the generic cost route.",
       "route_template_id": "ru-basic-oxide-route",
       "order_size_tons": 20,
       "performance_index": 96,
@@ -442,7 +442,6 @@
       ],
       "literature_basis_ids": [
         "ru-mgo-nature-2023",
-        "gan-ru-ncomms-2024",
         "sigma-ru-chloride",
         "sigma-mgo"
       ],
@@ -451,8 +450,10 @@
         "sigma-mgo"
       ],
       "decision_notes": [
-        "Performance leader at low temperature, but economics are dominated by Ru exposure.",
-        "Best fit when reactor temperature or start-up intensity matters more than catalyst replacement cost."
+        "The retained 3 wt% Ru cost input approximates a paper reporting 3.1 wt% Ru on preferential MgO(111) nanosheets, not commodity MgO of unspecified facet distribution.",
+        "The primary route includes special MgO preparation and Ru3(CO)12 deposition. The chloride-price anchor and generic impregnation route do not reproduce those procurement and manufacturing requirements.",
+        "GaN-supported Ru uses concentrated light and is not direct evidence for thermal Ru/MgO activity. The 400-575 C screening window is not a cross-study performance normalization.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -488,7 +489,7 @@
       "title": "Co/MgO-La2O3 mid-cost route",
       "archetype": "Cost middle ground",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "5 wt% cobalt on a lanthana-promoted magnesia support reaches 92% ammonia conversion at 550 C, sitting between the nickel workhorse and the ruthenium premium on both cost and activity.",
+      "summary": "Co/Mg-La mixed-oxide screening route supported by a primary study of 5 wt% Co; the support mass split and comparisons with other catalyst families remain assumptions.",
       "route_template_id": "oxide-wet-impregnation",
       "order_size_tons": 20,
       "performance_index": 76,
@@ -500,13 +501,13 @@
       ],
       "literature_basis_ids": [
         "lucentini-iecr-2021",
-        "podila-ijhe-2015",
-        "bell-ijhe-2020"
+        "podila-ijhe-2015"
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "Pick it when Ru economics fail but the Ni baseline's higher light-off temperature is unacceptable.",
-        "Preparation-route sensitivity is the documented risk: precipitation shrinks Co particles but risks inactive spinel formation."
+        "The primary study supports 5 wt% Co and identifies Mg/La = 5 on a molar basis as its most active support; the retained 85 wt% MgO and 10 wt% La2O3 are not that formulation.",
+        "The review-derived 92% conversion was not reverified against the primary results and is not assigned to this proxy. Co/alumina spinel observations are not direct evidence for this Mg-La support.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {

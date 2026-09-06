@@ -1,0 +1,206 @@
+{
+  "audit_date": "2026-09-07",
+  "scope": "External source comparability and catalog-unit normalization only",
+  "summary": {
+    "candidate_case_count": 10,
+    "catalog_pack_price_count": 3,
+    "contract_price_count": 1,
+    "observed_manufacturing_cost_count": 0,
+    "matched_full_cost_case_count": 0,
+    "empirical_mape_pct": null,
+    "paid_data_acquisitions": 0
+  },
+  "cases": [
+    {
+      "id": "E01",
+      "evidence_kind": "signed_contract_price_schedule",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield"
+      ],
+      "exclusion_reasons": [
+        "Proprietary composition/grade and catalyst manufacturing route are not disclosed.",
+        "Catalyst charge/order mass and invoice delivery month are not disclosed; plant biodiesel output is not catalyst order mass.",
+        "Base-index contract amount is not an observed settled invoice or manufacturer cost."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E02",
+      "evidence_kind": "public_catalog_offer",
+      "catalog_price_usd_per_kg": 129000.0,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E03",
+      "evidence_kind": "public_catalog_offer",
+      "catalog_price_usd_per_kg": 140000.0,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E04",
+      "evidence_kind": "public_catalog_offer",
+      "catalog_price_usd_per_kg": 145000.0,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E05",
+      "evidence_kind": "reported_supplier_quote",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "price_date_and_currency",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Quoted preparation charge is not separately quantified with its order quantity/date in the inspected section.",
+        "SubsequentPt/C precipitation and ink costs are DFMA estimates, not measured production expenditure."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E06",
+      "evidence_kind": "reported_supplier_quote",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Bulk order quantity and original supplier quotation document are not reproduced.",
+        "This is a support material quote, not finished catalyst manufacturing cost.",
+        "Current generic carbon-library price is not the identical grade/date/quantity and cannot yield a matched empirical input-price error."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E07",
+      "evidence_kind": "quoted_and_modeled_data_mixture",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Quoted observations are combined with literature projections and normalized to a chosen raw-material basis.",
+        "Table5 gives fitted regression coefficients, not independent observed catalyst manufacturing costs.",
+        "Underlying data are available upon request; SI retrieval returned403; exact individual quote conditions were not recovered."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E08",
+      "evidence_kind": "unpriced_tender",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "price_date_and_currency",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Public price schedule leaves bid amounts blank.",
+        "Proprietary catalyst composition and winning invoice price are not supplied."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E09",
+      "evidence_kind": "field_cost_informed_model",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "price_date_and_currency",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "Reported example prices cover solvent paste/catalyst/sealant and site treatment rather than isolated dry catalyst mass.",
+        "The tabulated site scenarios are models informed by demonstration costs; no separate matched catalyst manufacturing ledger is provided."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    },
+    {
+      "id": "E10",
+      "evidence_kind": "assumed_scenario_price",
+      "catalog_price_usd_per_kg": null,
+      "full_cost_comparison_eligible": false,
+      "unmatched_requirements": [
+        "composition_and_grade",
+        "quantity_and_production_scale",
+        "price_date_and_currency",
+        "manufacturing_route_and_yield",
+        "cost_boundary"
+      ],
+      "exclusion_reasons": [
+        "The100and1500USD/kg catalyst levels are assigned sensitivity values based on metal-price classes.",
+        "Finished-catalyst grade, exact recipe, campaign size and purchased invoice are not given for those scenario prices."
+      ],
+      "comet_prediction": null,
+      "relative_error_pct": null
+    }
+  ],
+  "interpretation": "No matched full-cost observation: external manufacturing accuracy remains unquantified.",
+  "registry_sha256": "df0695b1963e0fb89b4eec40efdf174ac7b05be586a3fd276a5cd90e43280c15"
+}

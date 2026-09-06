@@ -1,0 +1,228 @@
+{
+  "requests": 22,
+  "accepted": 19,
+  "rejections": [
+    {
+      "symbol": "HS281122",
+      "period": "202604",
+      "status": "unverified",
+      "http_status": 200,
+      "reason": "net weight is estimated or its quality flag is missing"
+    },
+    {
+      "symbol": "HS280300",
+      "period": "202604",
+      "status": "unverified",
+      "http_status": 200,
+      "reason": "net weight is estimated or its quality flag is missing"
+    },
+    {
+      "symbol": "HS280300",
+      "period": "202605",
+      "status": "unverified",
+      "http_status": 200,
+      "reason": "missing numeric value or net weight"
+    }
+  ],
+  "series": 10,
+  "observations": 28,
+  "common_month": "2026-05",
+  "shipped_sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29",
+  "inputs": [
+    {
+      "file": "docs/paper/free-data-2026-09-07/support_history_2026-09-07.json",
+      "sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3"
+    },
+    {
+      "file": "docs/sources/comtrade-preview-april-may-2026-09-07.json",
+      "sha256": "a677ac16014ec9f69bf2de3c6d962b07150f74d9c654c7822c9fca047333d19b"
+    }
+  ],
+  "series_months": {
+    "HS281820": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS282300": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS281122": [
+      "2026-05",
+      "2026-06"
+    ],
+    "HS380210": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS284210": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS251990": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS284610": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS282010": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS281990": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "HS281810": [
+      "2026-04",
+      "2026-05"
+    ]
+  },
+  "previous_points_preserved": true,
+  "new_observations": 17,
+  "values": {
+    "HS281820": [
+      {
+        "date": "2026-04-30",
+        "price": 0.5782
+      },
+      {
+        "date": "2026-05-31",
+        "price": 0.6728
+      },
+      {
+        "date": "2026-06-30",
+        "price": 0.5558
+      }
+    ],
+    "HS282300": [
+      {
+        "date": "2026-04-30",
+        "price": 3.6587
+      },
+      {
+        "date": "2026-05-31",
+        "price": 3.3076
+      },
+      {
+        "date": "2026-06-30",
+        "price": 3.3905
+      }
+    ],
+    "HS281122": [
+      {
+        "date": "2026-05-31",
+        "price": 2.3614
+      },
+      {
+        "date": "2026-06-30",
+        "price": 2.1895
+      }
+    ],
+    "HS380210": [
+      {
+        "date": "2026-04-30",
+        "price": 3.3753
+      },
+      {
+        "date": "2026-05-31",
+        "price": 3.4256
+      },
+      {
+        "date": "2026-06-30",
+        "price": 3.7154
+      }
+    ],
+    "HS284210": [
+      {
+        "date": "2026-04-30",
+        "price": 4.2381
+      },
+      {
+        "date": "2026-05-31",
+        "price": 3.8812
+      },
+      {
+        "date": "2026-06-30",
+        "price": 4.5579
+      }
+    ],
+    "HS251990": [
+      {
+        "date": "2026-04-30",
+        "price": 0.8103
+      },
+      {
+        "date": "2026-05-31",
+        "price": 0.8226
+      },
+      {
+        "date": "2026-06-30",
+        "price": 0.6434
+      }
+    ],
+    "HS284610": [
+      {
+        "date": "2026-04-30",
+        "price": 26.6479
+      },
+      {
+        "date": "2026-05-31",
+        "price": 12.4547
+      },
+      {
+        "date": "2026-06-30",
+        "price": 17.633
+      }
+    ],
+    "HS282010": [
+      {
+        "date": "2026-04-30",
+        "price": 2.5192
+      },
+      {
+        "date": "2026-05-31",
+        "price": 2.8975
+      },
+      {
+        "date": "2026-06-30",
+        "price": 2.7147
+      }
+    ],
+    "HS281990": [
+      {
+        "date": "2026-04-30",
+        "price": 5.8868
+      },
+      {
+        "date": "2026-05-31",
+        "price": 4.8345
+      },
+      {
+        "date": "2026-06-30",
+        "price": 4.5274
+      }
+    ],
+    "HS281810": [
+      {
+        "date": "2026-04-30",
+        "price": 1.4228
+      },
+      {
+        "date": "2026-05-31",
+        "price": 1.0214
+      }
+    ]
+  },
+  "note": "LatestcommonmonthMay follows existing intersection rule, including alphaalumina series with noacceptedJuneweight. Juneobservationsforothernine remainpreserved butareexcludedfromtheMaypaperbasis. No interpolation orchangeofpreviousacceptedpoints."
+}

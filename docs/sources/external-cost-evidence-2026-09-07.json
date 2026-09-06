@@ -1,0 +1,837 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-09-07",
+  "date_timezone": "Asia/Seoul",
+  "source_checks_completed_at_utc": "2026-09-06T16:10:25Z",
+  "acquisition_policy": "Free public sources only; no purchase, subscription, paid endpoint, key, login or outbound supplier/author message.",
+  "search_scope": {
+    "description": "Bounded primary-source search covering government cost reports, public supplier product pages, filed commercial contracts, public procurement and open papers. This is not an exhaustive global inventory.",
+    "representative_queries": [
+      "site.energy.gov catalyst manufacturing cost actual catalyst supplier quote platinum carbon cost report",
+      "catalyst cost purchase quoted price nickel alumina catalyst kg NREL report",
+      "\"catalyst\" \"supplier quote\" \"$/kg\" -catcost",
+      "\"catalyst\" \"cost\" \"invoice\" \"kg\" filetype:pdf -bill -exhibits -agreement",
+      "site.sec.gov \"catalyst\" \"price per\" \"kg\"",
+      "\"catalyst\" \"actual costs\" manufacture -CL-20 -hexabenzyl -Nielsen"
+    ],
+    "stopping_rule": "Retain10substantively screened primary-source cases with documented access/conditions; do not invent missing recipes, purchase quantities, currency conversions or paid invoices."
+  },
+  "matching_policy": {
+    "requirements": [
+      "composition_and_grade",
+      "quantity_and_production_scale",
+      "price_date_and_currency",
+      "manufacturing_route_and_yield",
+      "cost_boundary"
+    ],
+    "rule": "All five dimensions must match before an independent full-cost residual can be reported. Unknown is not matched. Retail unit normalization does not satisfy this condition.",
+    "market_price_is_not_manufacturing_cost": true,
+    "catcost_table62_not_counted_as_external_validation": true
+  },
+  "sources": [
+    {
+      "id": "S01",
+      "title": "AXENS–Mission Biofuels Technology Transfer Agreement07/3071, Exhibit10.13",
+      "url": "https://www.sec.gov/Archives/edgar/data/1463471/000114420410068095/v206169_ex10-13.htm",
+      "http_verification": {
+        "id": "axens_sec",
+        "url": "https://www.sec.gov/Archives/edgar/data/1463471/000114420410068095/v206169_ex10-13.htm",
+        "final_url": "https://www.sec.gov/Archives/edgar/data/1463471/000114420410068095/v206169_ex10-13.htm",
+        "status_code": 403,
+        "content_type": "text/html",
+        "bytes": 4819,
+        "sha256": "99fb747824d9d1462276709828070c2888efc7ca54c4c1a01be875f3c539f438"
+      },
+      "content_verification": "Signed public SEC filing; full text read via web retrieval, direct HTTP403; AnnexD p41 and signatures p45.",
+      "doi": null,
+      "reuse_note": "Publicly filed commercial document; only factual price/date metadata retained. No open redistribution license claimed."
+    },
+    {
+      "id": "S02",
+      "title": "FuelCellStore5% Platinum on Carbon XC-72",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon?ovs=105&path=25_32",
+      "http_verification": {
+        "id": "fuel_pt5_selected",
+        "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon?ovs=105&path=25_32",
+        "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon?ovs=105&path=25_32",
+        "status_code": 200,
+        "bytes": 100674,
+        "sha256": "d88f29ce1ecf66caa1e964023681719527193a9dc2781e6f97f18af7c8d2e076",
+        "currency_cookie": "USD"
+      },
+      "content_verification": "DirectHTTP200; realChrome1g selection gives SKU57080184 and$129; currency response metadata USD.",
+      "doi": null,
+      "reuse_note": "Retail facts only; supplier copyright and product terms retained. No full page redistribution."
+    },
+    {
+      "id": "S03",
+      "title": "FuelCellStore10% Platinum on Carbon XC-72",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon?ovs=105&path=25_32",
+      "http_verification": {
+        "id": "fuel_pt10_selected",
+        "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon?ovs=105&path=25_32",
+        "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon?ovs=105&path=25_32",
+        "status_code": 200,
+        "bytes": 106170,
+        "sha256": "089a0eea3e7f31b696e7aeea4396cc92638a28f3a01df0d8db591a1672a1ace4",
+        "currency_cookie": "USD"
+      },
+      "content_verification": "DirectHTTP200; realChrome1g selection gives SKU57080019 and$140; currency response metadata USD.",
+      "doi": null,
+      "reuse_note": "Retail facts only; supplier copyright and product terms retained. No full page redistribution."
+    },
+    {
+      "id": "S04",
+      "title": "FuelCellStoreXT20% Nickel on Vulcan XC-72R GradeS",
+      "url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r?ovs=105",
+      "http_verification": {
+        "id": "fuel_ni_selected",
+        "url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r?ovs=105",
+        "final_url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r?ovs=105",
+        "status_code": 200,
+        "bytes": 95267,
+        "sha256": "8243e4be35f5a72d7c7f892de391671cc5270f345a0ff6d16877b48cbaf54d4e",
+        "currency_cookie": "USD"
+      },
+      "content_verification": "DirectHTTP200; realChrome1g selection gives SKU11080023 and$145; currency response metadata USD.",
+      "doi": null,
+      "reuse_note": "Retail facts only; supplier copyright and product terms retained. No full page redistribution."
+    },
+    {
+      "id": "S05",
+      "title": "James and Kalinoski, Mass Production Cost Estimation for Direct H2 PEM Fuel Cell Systems:2008 Update,2009",
+      "url": "https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/mass_production_cost_estimation_report.pdf",
+      "http_verification": {
+        "id": "dti_doe",
+        "url": "https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/mass_production_cost_estimation_report.pdf",
+        "final_url": "https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/mass_production_cost_estimation_report.pdf",
+        "status_code": 200,
+        "content_type": "application/pdf",
+        "bytes": 4484945,
+        "sha256": "bac83b6d19d0ee32ec50eff49174396db6d3e472c15e7f99bd9574d859f70226"
+      },
+      "content_verification": "DirectHTTP200 PDF; Section4.4.3, printed pp44–47; supplier quote and DFMA forecast distinguished.",
+      "doi": null,
+      "reuse_note": "Public DOE-hosted contractor report; only source facts retained, no report redistribution."
+    },
+    {
+      "id": "S06",
+      "title": "Battelle, Manufacturing Cost Analysis of100-and250-kW Fuel Cell Systems, January2017",
+      "url": "https://www.energy.gov/sites/prod/files/2018/02/f49/fcto_battelle_mfg_cost_analysis_100_250kw_pp_chp_fc_systems_jan2017.pdf",
+      "http_verification": {
+        "id": "battelle_pdf",
+        "url": "https://www.energy.gov/sites/prod/files/2018/02/f49/fcto_battelle_mfg_cost_analysis_100_250kw_pp_chp_fc_systems_jan2017.pdf",
+        "final_url": "https://www.energy.gov/sites/prod/files/2018/02/f49/fcto_battelle_mfg_cost_analysis_100_250kw_pp_chp_fc_systems_jan2017.pdf",
+        "status_code": 200,
+        "bytes": 4503259,
+        "sha256": "053c89d700fc4bc2cfe982de6b5275eeaf4cbe788eb3628ab7fb160a924cfabd"
+      },
+      "content_verification": "DirectHTTP200 PDF; AppendixA-6.4.2, printedA-6-4/PDF159; February2014 material quotes distinguished from estimated/learned prices.",
+      "doi": null,
+      "reuse_note": "Public DOE-hosted contractor report; only source facts retained, no report redistribution."
+    },
+    {
+      "id": "S07",
+      "title": "Hog etal., Techno-Economic Assessment of Manufacturing Membrane Electrode Assemblies for PEM Fuel Cells:Focus on Coating Technologies",
+      "url": "https://publica.fraunhofer.de/bitstreams/85c01630-8c81-466a-8a15-65efc69af91d/download",
+      "http_verification": {
+        "id": "fraunhofer_pdf",
+        "url": "https://publica.fraunhofer.de/bitstreams/85c01630-8c81-466a-8a15-65efc69af91d/download",
+        "final_url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/85c01630-8c81-466a-8a15-65efc69af91d/content",
+        "status_code": 200,
+        "content_type": "application/pdf;charset=UTF-8",
+        "bytes": 5008659,
+        "sha256": "99ad656ab544621fabe62bfedbc87c4f08c9c279f1f9d4a2e99fd0ecfb0fc7ef"
+      },
+      "content_verification": "DirectHTTP200 full PDF; Section2.5,3.1/Table5 and DataAvailability; Crossref title/DOI match. SI HTTP403.",
+      "doi": "10.1002/fuce.70058",
+      "reuse_note": "CC BY4.0 verified in Crossref and author repository; only bibliographic/classification facts retained.",
+      "crossref": {
+        "http": {
+          "id": "fraunhofer_crossref",
+          "url": "https://api.crossref.org/works/10.1002%2Ffuce.70058",
+          "final_url": "https://api.crossref.org/works/10.1002%2Ffuce.70058",
+          "status_code": 200,
+          "content_type": "application/json",
+          "bytes": 16491,
+          "sha256": "f73df0084b23d339e986ff674dfad8c9918adb850963dfdb41ed3394a9017e03"
+        },
+        "doi": "10.1002/fuce.70058",
+        "title": "Techno‐Economic Assessment of Manufacturing Membrane Electrode Assemblies for PEM Fuel Cells: Focus on Coating Technologies",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              2
+            ]
+          ]
+        },
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  2,
+                  22
+                ]
+              ],
+              "date-time": "2026-02-22T00:00:00Z",
+              "timestamp": 1771718400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 21,
+            "URL": "http://creativecommons.org/licenses/by/4.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  2,
+                  1
+                ]
+              ],
+              "date-time": "2026-02-01T00:00:00Z",
+              "timestamp": 1769904000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://doi.wiley.com/10.1002/tdm_license_1.1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S08",
+      "title": "Bharat Petroleum VGOHDS catalyst tender, CRFQ1000199350,25November2013, AnnexureE",
+      "url": "https://www.bharatpetroleum.in/pdf/t000004780_filename1_vgo%20hds%20catalyst%20price%20schedule%20annexure%20e.pdf",
+      "http_verification": {
+        "id": "bpcl_tender",
+        "url": "https://www.bharatpetroleum.in/pdf/t000004780_filename1_vgo%20hds%20catalyst%20price%20schedule%20annexure%20e.pdf",
+        "final_url": "https://www.bharatpetroleum.in/pdf/t000004780_filename1_vgo%20hds%20catalyst%20price%20schedule%20annexure%20e.pdf",
+        "status_code": 200,
+        "content_type": "application/pdf",
+        "bytes": 188627,
+        "sha256": "b63d68bb048f41080b0875f4756b78dd6baa42041bf6cfe60dc4e743fe1b46d8"
+      },
+      "content_verification": "DirectHTTP200 PDF; blank price schedule, pp6–7 supply boundary; no awarded price.",
+      "doi": null,
+      "reuse_note": "Public procurement document; only factual procurement metadata retained. No open redistribution license claimed."
+    },
+    {
+      "id": "S09",
+      "title": "ESTCP RC-200610, Application of a Solvent Emulsion Technology for PCB Removal, Cost and Performance Report, November2011",
+      "url": "https://www.cluin.org/download/contaminantfocus/pcb/PCBs-RC-200610-CP.pdf",
+      "http_verification": {
+        "id": "pcb_report",
+        "url": "https://www.cluin.org/download/contaminantfocus/pcb/PCBs-RC-200610-CP.pdf",
+        "final_url": "https://www.cluin.org/download/contaminantfocus/pcb/PCBs-RC-200610-CP.pdf",
+        "status_code": 200,
+        "content_type": "application/pdf",
+        "bytes": 3192925,
+        "sha256": "89b5d25248a5009ee6aedd0e6c20bf0cffc3b8e7fbdc4acd7ebea29a958d68d5"
+      },
+      "content_verification": "DirectHTTP200 PDF; printed pp45–48/PDF54–57 distinguish observed demonstration cost inputs from hypothetical site cost models.",
+      "doi": null,
+      "reuse_note": "Public government-hosted project report; only classification facts retained. No report redistribution."
+    },
+    {
+      "id": "S10",
+      "title": "Mendoza Suarez and Tatarchuk, Comparative economic analysis of batch vs.continuous manufacturing in catalytic heterogeneous processes",
+      "url": "https://link.springer.com/article/10.1007/s41981-024-00342-z",
+      "http_verification": {
+        "id": "flow_paper",
+        "url": "https://link.springer.com/article/10.1007/s41981-024-00342-z",
+        "final_url": "https://link.springer.com/article/10.1007/s41981-024-00342-z",
+        "status_code": 200,
+        "content_type": "text/html; charset=utf-8",
+        "bytes": 3038,
+        "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+      },
+      "content_verification": "Crossref title/DOI match; publisher web content inspected. DirectHTTP200 returned challenge HTML, not article text.",
+      "doi": "10.1007/s41981-024-00342-z",
+      "reuse_note": "CC BY4.0 via Crossref; only classification and two explicitly assumed price facts retained.",
+      "crossref": {
+        "http": {
+          "id": "flow_crossref",
+          "url": "https://api.crossref.org/works/10.1007%2Fs41981-024-00342-z",
+          "final_url": "https://api.crossref.org/works/10.1007%2Fs41981-024-00342-z",
+          "status_code": 200,
+          "content_type": "application/json",
+          "bytes": 26335,
+          "sha256": "a8cf5991d3a3bdaf4076002846edf0b03cc1850b6bbbd8f74b702aa738ff3ac8"
+        },
+        "doi": "10.1007/s41981-024-00342-z",
+        "title": "Comparative economic analysis of batch vs. continuous manufacturing in catalytic heterogeneous processes: impact of catalyst activity maintenance and materials costs on total costs of manufacturing in the production of fine chemicals and pharmaceuticals",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              13
+            ]
+          ]
+        },
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  1,
+                  13
+                ]
+              ],
+              "date-time": "2025-01-13T00:00:00Z",
+              "timestamp": 1736726400000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  1,
+                  13
+                ]
+              ],
+              "date-time": "2025-01-13T00:00:00Z",
+              "timestamp": 1736726400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S11",
+      "title": "FuelCellStore terms and conditions",
+      "url": "https://www.fuelcellstore.com/terms-and-conditions",
+      "http_verification": {
+        "id": "fuel_terms",
+        "url": "https://www.fuelcellstore.com/terms-and-conditions",
+        "final_url": "https://www.fuelcellstore.com/terms-and-conditions",
+        "status_code": 200,
+        "bytes": 38519,
+        "sha256": "227b21a108413b0c2987db07ed0280ff83e7d2679b0f6fa856cf1a087e173133"
+      },
+      "content_verification": "DirectHTTP200; product list prices are retail/comparative values, with supplier accuracy qualifications.",
+      "doi": null,
+      "reuse_note": "Terms cited, not accepted or reproduced."
+    }
+  ],
+  "cases": [
+    {
+      "id": "E01",
+      "title": "AXENS STR111 commercial catalyst base-price schedule",
+      "evidence_kind": "signed_contract_price_schedule",
+      "source_ids": [
+        "S01"
+      ],
+      "observation": {
+        "price": 16.5,
+        "currency": "EUR",
+        "unit": "EUR/kg",
+        "basis_month": "2007-06",
+        "signed_date": "2007-07-25",
+        "delivery_basis": "EXW Salindres,France",
+        "catalyst_quantity_kg": null,
+        "invoice_or_settlement_verified": false
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "matched"
+      },
+      "exclusion_reasons": [
+        "Proprietary composition/grade and catalyst manufacturing route are not disclosed.",
+        "Catalyst charge/order mass and invoice delivery month are not disclosed; plant biodiesel output is not catalyst order mass.",
+        "Base-index contract amount is not an observed settled invoice or manufacturer cost."
+      ],
+      "notes": "Price-index metal coefficients must not be interpreted as a catalyst recipe. HistoricalEUR price is not converted into2026USD."
+    },
+    {
+      "id": "E02",
+      "title": "5wt% Pt/Vulcan XC-72,1g public catalog offer",
+      "evidence_kind": "public_catalog_offer",
+      "source_ids": [
+        "S02",
+        "S11"
+      ],
+      "observation": {
+        "price": 129,
+        "currency": "USD",
+        "unit": "USD/pack",
+        "pack_mass_kg": 0.001,
+        "selected_pack_verified": true,
+        "observed_date": "2026-09-07",
+        "date_timezone": "Asia/Seoul",
+        "sku": "57080184",
+        "composition": "5wt%Pt onVulcanXC-72",
+        "quantity_packs": 1,
+        "paid_purchase": false,
+        "tax_freight_inclusion": "Not verified; displayed catalog amount only.",
+        "currency_evidence": "Selected-page HTTP response set only the non-sensitive currency valueUSD; no session cookie retained."
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "mismatched",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "notes": "One1g option was selected in realChrome; basket remainedempty. The USD/kg normalization is arithmetic only, not a1kg or bulk quote."
+    },
+    {
+      "id": "E03",
+      "title": "10wt% Pt/Vulcan XC-72,1g public catalog offer",
+      "evidence_kind": "public_catalog_offer",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "observation": {
+        "price": 140,
+        "currency": "USD",
+        "unit": "USD/pack",
+        "pack_mass_kg": 0.001,
+        "selected_pack_verified": true,
+        "observed_date": "2026-09-07",
+        "date_timezone": "Asia/Seoul",
+        "sku": "57080019",
+        "composition": "10wt%Pt onVulcanXC-72",
+        "quantity_packs": 1,
+        "paid_purchase": false,
+        "tax_freight_inclusion": "Not verified; displayed catalog amount only.",
+        "currency_evidence": "Selected-page HTTP response set only the non-sensitive currency valueUSD; no session cookie retained."
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "mismatched",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "notes": "One1g option was selected in realChrome; basket remainedempty. The USD/kg normalization is arithmetic only, not a1kg or bulk quote."
+    },
+    {
+      "id": "E04",
+      "title": "20wt% Ni/Vulcan XC-72R GradeS,1g public catalog offer",
+      "evidence_kind": "public_catalog_offer",
+      "source_ids": [
+        "S04",
+        "S11"
+      ],
+      "observation": {
+        "price": 145,
+        "currency": "USD",
+        "unit": "USD/pack",
+        "pack_mass_kg": 0.001,
+        "selected_pack_verified": true,
+        "observed_date": "2026-09-07",
+        "date_timezone": "Asia/Seoul",
+        "sku": "11080023",
+        "composition": "20wt%Ni onVulcanXC-72R GradeS",
+        "quantity_packs": 1,
+        "paid_purchase": false,
+        "tax_freight_inclusion": "Not verified; displayed catalog amount only.",
+        "currency_evidence": "Selected-page HTTP response set only the non-sensitive currency valueUSD; no session cookie retained."
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "mismatched",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Gram-scale retail offer does not disclose its manufacturing campaign size.",
+        "COMET generic support/route does not establish the same supplier nanoparticle grade or manufacturing yield.",
+        "Catalog price is a retail offer, not an invoice or industrial manufacturing-cost observation."
+      ],
+      "notes": "One1g option was selected in realChrome; basket remainedempty. The USD/kg normalization is arithmetic only, not a1kg or bulk quote."
+    },
+    {
+      "id": "E05",
+      "title": "J&J chloroplatinic-acid preparation quote within DOE catalyst-ink model",
+      "evidence_kind": "reported_supplier_quote",
+      "source_ids": [
+        "S05"
+      ],
+      "observation": null,
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "unknown",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Quoted preparation charge is not separately quantified with its order quantity/date in the inspected section.",
+        "SubsequentPt/C precipitation and ink costs are DFMA estimates, not measured production expenditure."
+      ],
+      "notes": "A40wt%Pt/C costing choice and a fixedDOE platinum price are model assumptions. No full ink/catalyst forecast is relabeled as an actual quote."
+    },
+    {
+      "id": "E06",
+      "title": "Battelle reported bulkXC-72 material quote",
+      "evidence_kind": "reported_supplier_quote",
+      "source_ids": [
+        "S06"
+      ],
+      "observation": {
+        "price": 0.9,
+        "currency": "USD",
+        "unit": "USD/kg",
+        "basis_month": "2014-02",
+        "material": "XC-72 catalyst-grade carbon black",
+        "quantity_kg": null
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "mismatched",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Bulk order quantity and original supplier quotation document are not reproduced.",
+        "This is a support material quote, not finished catalyst manufacturing cost.",
+        "Current generic carbon-library price is not the identical grade/date/quantity and cannot yield a matched empirical input-price error."
+      ],
+      "notes": "The report identifies supplier inputs separately from learned/estimated material prices and forecast ink totals; only the reported0.90USD/kg input is retained."
+    },
+    {
+      "id": "E07",
+      "title": "Hog2026 mixed supplier/literature consumable-price regression",
+      "evidence_kind": "quoted_and_modeled_data_mixture",
+      "source_ids": [
+        "S07"
+      ],
+      "observation": null,
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "matched",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Quoted observations are combined with literature projections and normalized to a chosen raw-material basis.",
+        "Table5 gives fitted regression coefficients, not independent observed catalyst manufacturing costs.",
+        "Underlying data are available upon request; SI retrieval returned403; exact individual quote conditions were not recovered."
+      ],
+      "notes": "Full text is freeCCBY4.0 and Crossref-verified. No supplier contact was sent and no fitted curve was digitized as an observation."
+    },
+    {
+      "id": "E08",
+      "title": "BPCL2013 VGOHDS public procurement price form",
+      "evidence_kind": "unpriced_tender",
+      "source_ids": [
+        "S08"
+      ],
+      "observation": null,
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "unknown",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "unknown"
+      },
+      "exclusion_reasons": [
+        "Public price schedule leaves bid amounts blank.",
+        "Proprietary catalyst composition and winning invoice price are not supplied."
+      ],
+      "notes": "The tender separates base-catalyst conversion charges from precious-metal value and specifies supply boundaries; it provides no usable observed price."
+    },
+    {
+      "id": "E09",
+      "title": "ESTCP PCB demonstration-informed treatment-cost model",
+      "evidence_kind": "field_cost_informed_model",
+      "source_ids": [
+        "S09"
+      ],
+      "observation": null,
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "unknown",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "Reported example prices cover solvent paste/catalyst/sealant and site treatment rather than isolated dry catalyst mass.",
+        "The tabulated site scenarios are models informed by demonstration costs; no separate matched catalyst manufacturing ledger is provided."
+      ],
+      "notes": "Do not divide a site treatment cost by assumed catalyst mass or use treated surface area as electrode assembly area."
+    },
+    {
+      "id": "E10",
+      "title": "Mendoza Suarez2025 catalyst-price sensitivity assumptions",
+      "evidence_kind": "assumed_scenario_price",
+      "source_ids": [
+        "S10"
+      ],
+      "observation": {
+        "scenario_prices": [
+          100,
+          1500
+        ],
+        "currency": "USD",
+        "unit": "USD/kg",
+        "published_date": "2025-01-13"
+      },
+      "match_requirements": {
+        "composition_and_grade": "unknown",
+        "quantity_and_production_scale": "unknown",
+        "price_date_and_currency": "unknown",
+        "manufacturing_route_and_yield": "unknown",
+        "cost_boundary": "mismatched"
+      },
+      "exclusion_reasons": [
+        "The100and1500USD/kg catalyst levels are assigned sensitivity values based on metal-price classes.",
+        "Finished-catalyst grade, exact recipe, campaign size and purchased invoice are not given for those scenario prices."
+      ],
+      "notes": "The paper combines supplier/market inputs elsewhere, but that does not make these two scenario prices independent actual manufacturing observations."
+    }
+  ],
+  "http_attempts": [
+    {
+      "id": "fuel_catalog",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst?page=1",
+      "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst?page=1",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 85629,
+      "sha256": "38dc864a6e0acd494e127412733c0fbac5281d0bcf013fed145f0785b18fb754"
+    },
+    {
+      "id": "sigma_ni",
+      "url": "https://www.sigmaaldrich.com/US/en/product/aldrich/208779",
+      "error": "The read operation timed out"
+    },
+    {
+      "id": "battelle_doe",
+      "url": "https://www.energy.gov/eere/fuelcells/downloads/manufacturing-cost-analysis-100-and-250-kw-fuel-cell-systems-primary-power",
+      "final_url": "https://www.energy.gov/eere/fuelcells/downloads/manufacturing-cost-analysis-100-and-250-kw-fuel-cell-systems-primary-power",
+      "status_code": 404,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 105831,
+      "sha256": "c6fa5c971e13b481049a93b2939fb5f8531bf3f0c6de0ad275b5b5a199bfab48"
+    },
+    {
+      "id": "dti_doe",
+      "url": "https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/mass_production_cost_estimation_report.pdf",
+      "final_url": "https://www1.eere.energy.gov/hydrogenandfuelcells/pdfs/mass_production_cost_estimation_report.pdf",
+      "status_code": 200,
+      "content_type": "application/pdf",
+      "bytes": 4484945,
+      "sha256": "bac83b6d19d0ee32ec50eff49174396db6d3e472c15e7f99bd9574d859f70226"
+    },
+    {
+      "id": "fraunhofer",
+      "url": "https://publica.fraunhofer.de/entities/publication/ca68b5f0-d656-43fd-bb94-955411fc99f2",
+      "final_url": "https://publica.fraunhofer.de/entities/publication/ca68b5f0-d656-43fd-bb94-955411fc99f2",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 985702,
+      "sha256": "b94f2b3d0a0add6efd9df5f153656fa65430f96e91ecf6b39f64a69d46fbc041"
+    },
+    {
+      "id": "epa",
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100DHE7.TXT",
+      "final_url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100DHE7.TXT",
+      "status_code": 200,
+      "content_type": "text/html; charset=ISO-8859-1",
+      "bytes": 980,
+      "sha256": "ab0bca183e8c2cffdd45aa25d40c1c3de0737619da2b0b69793b9d5562b2b6c4"
+    },
+    {
+      "id": "axens_sec",
+      "url": "https://www.sec.gov/Archives/edgar/data/1463471/000114420410068095/v206169_ex10-13.htm",
+      "final_url": "https://www.sec.gov/Archives/edgar/data/1463471/000114420410068095/v206169_ex10-13.htm",
+      "status_code": 403,
+      "content_type": "text/html",
+      "bytes": 4819,
+      "sha256": "99fb747824d9d1462276709828070c2888efc7ca54c4c1a01be875f3c539f438"
+    },
+    {
+      "id": "fuel_ni",
+      "url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r",
+      "final_url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 95246,
+      "sha256": "c4c8107666e4e6f0bf6b44c6496956dca453ce9c5e442c4fd3f86f783f959c33"
+    },
+    {
+      "id": "fuel_pt5",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon",
+      "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 100354,
+      "sha256": "794078af46d0b495d55db25de895c86cdb4b2673f07d3008b8ad281b3461abe3"
+    },
+    {
+      "id": "fuel_pt10",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon",
+      "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 105850,
+      "sha256": "032d3ecb3df02b3b64952810395f8bc7d2f6f4128b9e8a6254f8f36ffc24c28e"
+    },
+    {
+      "id": "fraunhofer_pdf",
+      "url": "https://publica.fraunhofer.de/bitstreams/85c01630-8c81-466a-8a15-65efc69af91d/download",
+      "final_url": "https://publica-rest.fraunhofer.de/server/api/core/bitstreams/85c01630-8c81-466a-8a15-65efc69af91d/content",
+      "status_code": 200,
+      "content_type": "application/pdf;charset=UTF-8",
+      "bytes": 5008659,
+      "sha256": "99ad656ab544621fabe62bfedbc87c4f08c9c279f1f9d4a2e99fd0ecfb0fc7ef"
+    },
+    {
+      "id": "pcb_report",
+      "url": "https://www.cluin.org/download/contaminantfocus/pcb/PCBs-RC-200610-CP.pdf",
+      "final_url": "https://www.cluin.org/download/contaminantfocus/pcb/PCBs-RC-200610-CP.pdf",
+      "status_code": 200,
+      "content_type": "application/pdf",
+      "bytes": 3192925,
+      "sha256": "89b5d25248a5009ee6aedd0e6c20bf0cffc3b8e7fbdc4acd7ebea29a958d68d5"
+    },
+    {
+      "id": "bpcl_tender",
+      "url": "https://www.bharatpetroleum.in/pdf/t000004780_filename1_vgo%20hds%20catalyst%20price%20schedule%20annexure%20e.pdf",
+      "final_url": "https://www.bharatpetroleum.in/pdf/t000004780_filename1_vgo%20hds%20catalyst%20price%20schedule%20annexure%20e.pdf",
+      "status_code": 200,
+      "content_type": "application/pdf",
+      "bytes": 188627,
+      "sha256": "b63d68bb048f41080b0875f4756b78dd6baa42041bf6cfe60dc4e743fe1b46d8"
+    },
+    {
+      "id": "flow_paper",
+      "url": "https://link.springer.com/article/10.1007/s41981-024-00342-z",
+      "final_url": "https://link.springer.com/article/10.1007/s41981-024-00342-z",
+      "status_code": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 3038,
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea"
+    },
+    {
+      "id": "fraunhofer_crossref",
+      "url": "https://api.crossref.org/works/10.1002%2Ffuce.70058",
+      "final_url": "https://api.crossref.org/works/10.1002%2Ffuce.70058",
+      "status_code": 200,
+      "content_type": "application/json",
+      "bytes": 16491,
+      "sha256": "f73df0084b23d339e986ff674dfad8c9918adb850963dfdb41ed3394a9017e03"
+    },
+    {
+      "id": "flow_crossref",
+      "url": "https://api.crossref.org/works/10.1007%2Fs41981-024-00342-z",
+      "final_url": "https://api.crossref.org/works/10.1007%2Fs41981-024-00342-z",
+      "status_code": 200,
+      "content_type": "application/json",
+      "bytes": 26335,
+      "sha256": "a8cf5991d3a3bdaf4076002846edf0b03cc1850b6bbbd8f74b702aa738ff3ac8"
+    },
+    {
+      "id": "battelle_pdf",
+      "url": "https://www.energy.gov/sites/prod/files/2018/02/f49/fcto_battelle_mfg_cost_analysis_100_250kw_pp_chp_fc_systems_jan2017.pdf",
+      "final_url": "https://www.energy.gov/sites/prod/files/2018/02/f49/fcto_battelle_mfg_cost_analysis_100_250kw_pp_chp_fc_systems_jan2017.pdf",
+      "status_code": 200,
+      "bytes": 4503259,
+      "sha256": "053c89d700fc4bc2cfe982de6b5275eeaf4cbe788eb3628ab7fb160a924cfabd"
+    },
+    {
+      "id": "fuel_terms",
+      "url": "https://www.fuelcellstore.com/terms-and-conditions",
+      "final_url": "https://www.fuelcellstore.com/terms-and-conditions",
+      "status_code": 200,
+      "bytes": 38519,
+      "sha256": "227b21a108413b0c2987db07ed0280ff83e7d2679b0f6fa856cf1a087e173133"
+    },
+    {
+      "id": "fraunhofer_si",
+      "url": "https://onlinelibrary.wiley.com/doi/suppl/10.1002/fuce.70058/supinfo/fuce70058-sup-0001-SuppMat.docx",
+      "final_url": "https://onlinelibrary.wiley.com/doi/suppl/10.1002/fuce.70058/supinfo/fuce70058-sup-0001-SuppMat.docx",
+      "status_code": 403,
+      "bytes": 5746,
+      "sha256": "05eb186290e0bb443354114d1715625cfbe5ef34600006013ccb374f89ec7bfa"
+    },
+    {
+      "id": "fuel_purchase_terms",
+      "url": "https://www.fuelcellstore.com/purchase-orders",
+      "final_url": "https://www.fuelcellstore.com/purchase-orders",
+      "status_code": 200,
+      "bytes": 27755,
+      "sha256": "5487b5e13ddc4b25a3439e8039aa6a48e4e7b3712450c8597ca75c9d81528aef"
+    },
+    {
+      "id": "fuel_ni_selected",
+      "url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r?ovs=105",
+      "final_url": "https://www.fuelcellstore.com/fce-20ni-vulcanxc72r?ovs=105",
+      "status_code": 200,
+      "bytes": 95267,
+      "sha256": "8243e4be35f5a72d7c7f892de391671cc5270f345a0ff6d16877b48cbaf54d4e",
+      "currency_cookie": "USD"
+    },
+    {
+      "id": "fuel_pt5_selected",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon?ovs=105&path=25_32",
+      "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/5-platinum-carbon?ovs=105&path=25_32",
+      "status_code": 200,
+      "bytes": 100674,
+      "sha256": "d88f29ce1ecf66caa1e964023681719527193a9dc2781e6f97f18af7c8d2e076",
+      "currency_cookie": "USD"
+    },
+    {
+      "id": "fuel_pt10_selected",
+      "url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon?ovs=105&path=25_32",
+      "final_url": "https://www.fuelcellstore.com/fuel-cell-components/catalyst/10-platinum-carbon?ovs=105&path=25_32",
+      "status_code": 200,
+      "bytes": 106170,
+      "sha256": "089a0eea3e7f31b696e7aeea4396cc92638a28f3a01df0d8db591a1672a1ace4",
+      "currency_cookie": "USD"
+    }
+  ],
+  "unretained_leads": [
+    {
+      "url": "https://www.sigmaaldrich.com/US/en/product/aldrich/208779",
+      "reason": "US product-page request timed out. A Canadian search snippet was not treated as a verifiedUSD quote."
+    },
+    {
+      "url": "https://nepis.epa.gov/Exe/ZyPURL.cgi?Dockey=P100DHE7.TXT",
+      "reason": "Direct200body was a frame/redirect shell rather than the substantiveSCR report; no numeric fact retained."
+    },
+    {
+      "url": "https://www.energy.gov/eere/fuelcells/downloads/manufacturing-cost-analysis-100-and-250-kw-fuel-cell-systems-primary-power",
+      "reason": "OldDOE landing URL returned404; replaced for this audit by the actual accessibleJanuary2017PDF. No source data overwritten."
+    }
+  ],
+  "overall_status": "partial: independent market evidence collected; no fully matched observed catalyst manufacturing-cost case found",
+  "limitations": [
+    "No paid invoice or catalyst manufacturing expenditure ledger was obtained.",
+    "The10screened cases cannot quantify COMET external manufacturing accuracy.",
+    "No calculation coefficients, material library prices, LCA factors or model formulas changed."
+  ]
+}
