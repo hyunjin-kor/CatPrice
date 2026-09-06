@@ -1,0 +1,327 @@
+{
+  "checked_at": "2026-09-06T16:12:33.519618+00:00",
+  "guidelines": {
+    "url": "https://researcher-resources.acs.org/publish/author_guidelines?coden=ascecg",
+    "http_status": 200,
+    "checked_at": "2026-09-06T16:05:36.821024+00:00",
+    "page_updated": "2026-08-27"
+  },
+  "checks": [
+    {
+      "id": "baddour",
+      "url": "https://api.crossref.org/works/10.1021/acs.oprd.8b00245",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1021/acs.oprd.8b00245",
+      "doi": "10.1021/acs.oprd.8b00245",
+      "title": [
+        "Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method"
+      ],
+      "volume": "22",
+      "issue": "12",
+      "page": "1599-1605",
+      "author": [
+        {
+          "given": "Frederick G.",
+          "family": "Baddour",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lesley",
+          "family": "Snowden-Swan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, 902 Battelle Boulevard, Richland, Washington 99354, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5655-6281",
+          "authenticated-orcid": true,
+          "given": "John D.",
+          "family": "Super",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Cobroko Solutions, P.O. Box 130609, Houston, Texas 77219, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kurt M.",
+          "family": "Van Allsburg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "catcost",
+      "url": "https://api.crossref.org/works/10.1038/s41929-022-00759-6",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1038/s41929-022-00759-6",
+      "doi": "10.1038/s41929-022-00759-6",
+      "title": [
+        "Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost"
+      ],
+      "volume": "5",
+      "issue": "4",
+      "page": "342-353",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4553-6709",
+          "authenticated-orcid": false,
+          "given": "Kurt M.",
+          "family": "Van Allsburg",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9110-2410",
+          "authenticated-orcid": false,
+          "given": "Eric C. D.",
+          "family": "Tan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "John D.",
+          "family": "Super",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joshua A.",
+          "family": "Schaidle",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5837-5804",
+          "authenticated-orcid": false,
+          "given": "Frederick G.",
+          "family": "Baddour",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "biosteam",
+      "url": "https://api.crossref.org/works/10.1021/acssuschemeng.9b07040",
+      "status": 200,
+      "final_url": "https://api.crossref.org/works/10.1021/acssuschemeng.9b07040",
+      "doi": "10.1021/acssuschemeng.9b07040",
+      "title": [
+        "BioSTEAM: A Fast and Flexible Platform for the Design,\nSimulation, and Techno-Economic Analysis of Biorefineries under Uncertainty"
+      ],
+      "volume": "8",
+      "issue": "8",
+      "page": "3302-3310",
+      "author": [
+        {
+          "given": "Yoel",
+          "family": "Cortes-Peña",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Deepak",
+          "family": "Kumar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "State University of New York College of Environmental Science and Forestry , , 402 Walters Hall, 1 Forestry Drive , , ,",
+              "place": [
+                "Syracuse, New York, United States, 13210"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vijay",
+          "family": "Singh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 360 G Agricultural Sciences Building, 1304 W. Pennsylvania Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-2489-2579",
+          "authenticated-orcid": true,
+          "given": "Jeremy S.",
+          "family": "Guest",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lca",
+      "url": "https://api.crossref.org/works/10.1371/journal.pone.0101298",
+      "status": 429,
+      "final_url": "https://api.crossref.org/works/10.1371/journal.pone.0101298"
+    },
+    {
+      "id": "zenodo",
+      "url": "https://api.datacite.org/dois/10.5281/zenodo.21451931",
+      "status": 200,
+      "final_url": "https://api.datacite.org/dois/10.5281/zenodo.21451931",
+      "doi": "10.5281/zenodo.21451931",
+      "titles": [
+        {
+          "title": "COMET: Catalyst Overall Manufacturing Estimation Tool"
+        }
+      ],
+      "state": "findable",
+      "target": "https://zenodo.org/doi/10.5281/zenodo.21451931"
+    },
+    {
+      "id": "repository",
+      "url": "https://github.com/hyunjin-kor/COMET",
+      "status": 200,
+      "final_url": "https://github.com/hyunjin-kor/COMET"
+    }
+  ],
+  "toc_guidelines": {
+    "url": "https://pubsapp.acs.org/paragonplus/submission/toc_abstract_graphics_guidelines.pdf",
+    "http_status": 200,
+    "bytes": 1081234,
+    "page_updated": "2024-02-28",
+    "extraction": "Direct HTTP response; pypdf text extraction; no source PDF retained in repository",
+    "width_in": 3.25,
+    "height_in": 1.75,
+    "minimum_font_pt": 6,
+    "color_tiff_dpi": 300
+  }
+}

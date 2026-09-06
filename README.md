@@ -92,7 +92,7 @@ automatically before a rebuild, or manually with `npm run desktop:stop`.
 
 ## Tests
 
-The prepared source version is **1.4.0**; the latest verified public release is **v1.3.24** (2026-09-06). Tagging and publishing 1.4.0 remain human release steps. See the [release preparation checklist](docs/release-checklist.md) and [Korean getting-started guide](docs/getting-started.ko.md).
+The prepared source version is **1.4.0**; the latest verified public release is **v1.3.24** (verified 2026-09-07). Tagging and publishing 1.4.0 remain human release steps. See the [release preparation checklist](docs/release-checklist.md) and [Korean getting-started guide](docs/getting-started.ko.md).
 
 ```bash
 python -m pytest backend/tests -q    # engine + API, includes CatCost validation cases
@@ -108,21 +108,17 @@ both residuals trace to footnotes in the table itself.
 
 ## Reproduce the paper
 
-Reproduce the paper's monthly reference basis, analyses and figures with:
+The [unified manuscript](docs/paper/manuscript_2026-09-07.md), [supporting information](docs/paper/si_2026-09-07.md) and six figures use **May 2026**, the latest common month in the frozen metal history and ten validated support series. Reproduce their numerical results without network access:
 
 ```bash
-python scripts/reproduce_paper.py --price-basis reference --month 2026-07 --seed 20260906
+python scripts/reproduce_paper.py --price-basis reference --month 2026-05 --seed 20260906 --date 2026-09-07 --history docs/paper/submission-2026-09-07/price_history_2026-09-07.json --live-basis docs/paper/submission-2026-09-07/live_basis_2026-09-07.json --support-history docs/paper/submission-2026-09-07/support_history_2026-09-07.json --out-dir _local/submission-replay-2026-09-07
 ```
 
-Omit `--month` for the latest common completed publication month. Matplotlib is needed for figures. To replay exactly from committed inputs, add `--history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json`. Input hashes, source failures and Python/package versions are recorded in the reproduction manifest. See [methodology](docs/methodology.md#reproducing-the-paper) and the [run audit](docs/audit/autonomous-run-2026-09-06.md).
+Matplotlib is needed for figures. Input hashes, exact commands and Python/package versions are recorded in the reproduction manifest. `python scripts/build_submission_manuscript.py --directory docs/paper/submission-2026-09-07 --check` checks the committed manuscript/SI and their numerical source keys. The original July metal-only results and earlier June support runs remain available as historical snapshots.
 
-Free support observations can be included explicitly:
+The shipped support history contains ten series and 28 observations over April–June. Alpha alumina lacks a valid June observation, so the combined paper basis is May; the app can still show each series' latest accepted quote. These all-grade import values are bulk proxies, not catalyst-grade supplier quotations. To collect a small new snapshot without credentials, run `python scripts/fetch_support_history.py --start 2026-04 --end 2026-07 --out support_history.json`; it records missing data and stops at provider rate limits. Omitting `--month` in the paper pipeline selects the common month of its supplied inputs.
 
-```bash
-python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --date 2026-09-07 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history docs/paper/free-data-2026-09-07/support_history_2026-09-07.json --out-dir _local/free-data-replay-2026-09-07
-```
-
-This selects June2026, the latest common month in the frozen metal and nine support series, and writes to a separate replay directory. The original July results and September6 alumina-only run are preserved. The app also loads the shipped support observations offline. To collect a small new snapshot without credentials, run `python scripts/fetch_support_history.py --start 2026-04 --end 2026-07 --out support_history.json`; it records missing data and stops at provider rate limits. See the [resumed free-data audit](docs/audit/free-data-resume-2026-09-07.md). Project data acquisition must remain free: no purchases, paid subscriptions or billable API calls.
+See the [validation and submission audit](docs/audit/validation-submission-2026-09-07.md) and [methodology](docs/methodology.md#reproducing-the-paper). The external cost evidence screen found no fully matched manufacturing-cost observation; method reproduction is not an empirical procurement-accuracy claim. Project data acquisition must remain free: no purchases, paid subscriptions or billable API calls.
 
 ## Optional API keys
 

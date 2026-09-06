@@ -1,0 +1,15 @@
+{
+  "basis_month": "2026-05",
+  "abstract_words": 185,
+  "text_words_excluding_tables_figures_references": 1887,
+  "figure_count": 6,
+  "table_count": 2,
+  "word_equivalents_small_graphics": 4287,
+  "word_equivalents_large_graphics": 6687,
+  "article_limit": 7000,
+  "word_count_note": "Approximate lexical count; all eight analytical figures/tables conservatively counted at 600 each. TOC excluded. Final typeset graphic size determines ACS count.",
+  "manuscript_json_key_references": 76,
+  "si_json_key_references": 1059,
+  "frozen_outputs_verified": 27,
+  "reproduction_command": "python scripts/reproduce_paper.py --price-basis reference --month 2026-05 --seed 20260906 --date 2026-09-07 --out-dir docs/paper/submission-2026-09-07 --history docs/paper/submission-2026-09-07/price_history_2026-09-07.json --support-history docs/paper/submission-2026-09-07/support_history_2026-09-07.json --live-basis docs/paper/submission-2026-09-07/live_basis_2026-09-07.json"
+}

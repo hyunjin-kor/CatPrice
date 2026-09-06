@@ -1,0 +1,784 @@
+{
+  "comparison": "Previous frozen June reference versus unified May reference. Both metal month and accepted support values differ. Metadata attribution corrections do not change numerical inputs; do not interpret the total difference as support-only effect.",
+  "before_month": "2026-06",
+  "after_month": "2026-05",
+  "inputs": [
+    {
+      "file": "docs/paper/free-data-2026-09-07/all_families_2026-09-07.json",
+      "sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c"
+    },
+    {
+      "file": "docs/paper/submission-2026-09-07/all_families_2026-09-07.json",
+      "sha256": "d25a24e6a1cbb5ad384e1bf47d98bf04ce9586b86edfda5e81beea1167a4236e"
+    }
+  ],
+  "summary": {
+    "changed_cost_count": 93,
+    "changed_ranking_count": 5,
+    "changed_winner_count": 4,
+    "min_cost_change_pct": -1.5079,
+    "max_cost_change_pct": 20.8767
+  },
+  "lca_processing_and_steps_unchanged": true,
+  "cost_changes": [
+    {
+      "family": "aem-electrolyzer-oer",
+      "candidate": "nico2o4-spinel",
+      "before_usd_per_lb": 34.1475,
+      "after_usd_per_lb": 34.4326,
+      "change_pct": 0.8349
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "co-mgo-la2o3",
+      "before_usd_per_lb": 4.6465,
+      "after_usd_per_lb": 4.7411,
+      "change_pct": 2.0359
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ni-mgo-ceo2-interface",
+      "before_usd_per_lb": 5.6028,
+      "after_usd_per_lb": 5.8131,
+      "change_pct": 3.7535
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ni-alumina-baseline",
+      "before_usd_per_lb": 4.1874,
+      "after_usd_per_lb": 4.3573,
+      "change_pct": 4.0574
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ru-mgo-premium",
+      "before_usd_per_lb": 1213.9222,
+      "after_usd_per_lb": 1265.9574,
+      "change_pct": 4.2865
+    },
+    {
+      "family": "ammonia-synthesis",
+      "candidate": "cs-co3mo3n",
+      "before_usd_per_lb": 54.3067,
+      "after_usd_per_lb": 53.8719,
+      "change_pct": -0.8006
+    },
+    {
+      "family": "ammonia-synthesis",
+      "candidate": "fused-iron-baseline",
+      "before_usd_per_lb": 5.0709,
+      "after_usd_per_lb": 5.0733,
+      "change_pct": 0.0473
+    },
+    {
+      "family": "ammonia-synthesis",
+      "candidate": "ru-graphite-kaap",
+      "before_usd_per_lb": 2841.5281,
+      "after_usd_per_lb": 2962.1672,
+      "change_pct": 4.2456
+    },
+    {
+      "family": "ammonia-synthesis",
+      "candidate": "ru-cafh-lowtemp",
+      "before_usd_per_lb": 4595.3845,
+      "after_usd_per_lb": 4792.0787,
+      "change_pct": 4.2803
+    },
+    {
+      "family": "co2-electroreduction",
+      "candidate": "ag-co-mea",
+      "before_usd_per_lb": 1601.9983,
+      "after_usd_per_lb": 1860.3721,
+      "change_pct": 16.1282
+    },
+    {
+      "family": "co2-electroreduction",
+      "candidate": "cu-multicarbon-co2rr",
+      "before_usd_per_lb": 28.0882,
+      "after_usd_per_lb": 28.0552,
+      "change_pct": -0.1175
+    },
+    {
+      "family": "co2-electroreduction",
+      "candidate": "sn-formate-co2rr",
+      "before_usd_per_lb": 43.0147,
+      "after_usd_per_lb": 43.1528,
+      "change_pct": 0.3211
+    },
+    {
+      "family": "co2-electroreduction",
+      "candidate": "au-co-co2rr",
+      "before_usd_per_lb": 117654.9301,
+      "after_usd_per_lb": 127467.1996,
+      "change_pct": 8.3399
+    },
+    {
+      "family": "co2-methanation",
+      "candidate": "ni-ceo2-lowtemp",
+      "before_usd_per_lb": 4.7342,
+      "after_usd_per_lb": 4.8165,
+      "change_pct": 1.7384
+    },
+    {
+      "family": "co2-methanation",
+      "candidate": "ni-alumina-baseline",
+      "before_usd_per_lb": 5.2124,
+      "after_usd_per_lb": 5.4321,
+      "change_pct": 4.2149
+    },
+    {
+      "family": "co2-methanation",
+      "candidate": "ru-layered-titanate",
+      "before_usd_per_lb": 1686.5516,
+      "after_usd_per_lb": 1758.6728,
+      "change_pct": 4.2763
+    },
+    {
+      "family": "co2-methanation",
+      "candidate": "ru-mnox-photothermal",
+      "before_usd_per_lb": 1687.1511,
+      "after_usd_per_lb": 1759.2723,
+      "change_pct": 4.2747
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cza-baseline",
+      "before_usd_per_lb": 8.2013,
+      "after_usd_per_lb": 8.2111,
+      "change_pct": 0.1195
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cu-zrox-interface",
+      "before_usd_per_lb": 5.7735,
+      "after_usd_per_lb": 5.842,
+      "change_pct": 1.1865
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "pd-in2o3",
+      "before_usd_per_lb": 433.9956,
+      "after_usd_per_lb": 463.0032,
+      "change_pct": 6.6838
+    },
+    {
+      "family": "co2-to-formate",
+      "candidate": "pdag-ndcarbon-co2fa",
+      "before_usd_per_lb": 1779.2651,
+      "after_usd_per_lb": 2003.1683,
+      "change_pct": 12.584
+    },
+    {
+      "family": "co2-to-formate",
+      "candidate": "ru-sa-ldh",
+      "before_usd_per_lb": 252.668,
+      "after_usd_per_lb": 262.9643,
+      "change_pct": 4.075
+    },
+    {
+      "family": "co2-to-formate",
+      "candidate": "ru-pincer-co2fa",
+      "before_usd_per_lb": 16244.0899,
+      "after_usd_per_lb": 16890.4109,
+      "change_pct": 3.9788
+    },
+    {
+      "family": "co2-to-formate",
+      "candidate": "ir-pincer-co2fa",
+      "before_usd_per_lb": 73574.543,
+      "after_usd_per_lb": 74701.6918,
+      "change_pct": 1.532
+    },
+    {
+      "family": "co-prox",
+      "candidate": "cuo-ceo2",
+      "before_usd_per_lb": 12.1424,
+      "after_usd_per_lb": 12.1405,
+      "change_pct": -0.0156
+    },
+    {
+      "family": "co-prox",
+      "candidate": "pt-fe-alumina",
+      "before_usd_per_lb": 254.4272,
+      "after_usd_per_lb": 289.8486,
+      "change_pct": 13.922
+    },
+    {
+      "family": "co-prox",
+      "candidate": "au-tio2-nanogold",
+      "before_usd_per_lb": 2468.9481,
+      "after_usd_per_lb": 2673.4574,
+      "change_pct": 8.2833
+    },
+    {
+      "family": "dry-reforming",
+      "candidate": "ni-co-almgo",
+      "before_usd_per_lb": 5.9413,
+      "after_usd_per_lb": 5.9742,
+      "change_pct": 0.5538
+    },
+    {
+      "family": "dry-reforming",
+      "candidate": "ni-single-atom-ceria",
+      "before_usd_per_lb": 5.4611,
+      "after_usd_per_lb": 5.5305,
+      "change_pct": 1.2708
+    },
+    {
+      "family": "dry-reforming",
+      "candidate": "ni-zeolite-stable",
+      "before_usd_per_lb": 5.3683,
+      "after_usd_per_lb": 5.4724,
+      "change_pct": 1.9392
+    },
+    {
+      "family": "dry-reforming",
+      "candidate": "ir-ceria-premium",
+      "before_usd_per_lb": 973.5513,
+      "after_usd_per_lb": 988.6444,
+      "change_pct": 1.5503
+    },
+    {
+      "family": "ethylene-epoxidation",
+      "candidate": "agcs-industrial",
+      "before_usd_per_lb": 204.8155,
+      "after_usd_per_lb": 237.2179,
+      "change_pct": 15.8203
+    },
+    {
+      "family": "ethylene-epoxidation",
+      "candidate": "ag-alumina-baseline",
+      "before_usd_per_lb": 204.5493,
+      "after_usd_per_lb": 236.9517,
+      "change_pct": 15.8409
+    },
+    {
+      "family": "ethylene-epoxidation",
+      "candidate": "cu-ag-bimetallic",
+      "before_usd_per_lb": 211.4943,
+      "after_usd_per_lb": 244.652,
+      "change_pct": 15.6778
+    },
+    {
+      "family": "ethylene-epoxidation",
+      "candidate": "agcsre-modern",
+      "before_usd_per_lb": 219.2302,
+      "after_usd_per_lb": 253.1418,
+      "change_pct": 15.4685
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "fe-cu-k-precipitated",
+      "before_usd_per_lb": 6.6185,
+      "after_usd_per_lb": 6.6231,
+      "change_pct": 0.0695
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "co-alumina-fts",
+      "before_usd_per_lb": 14.6743,
+      "after_usd_per_lb": 14.7294,
+      "change_pct": 0.3755
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "co-cnt-structured",
+      "before_usd_per_lb": 40.4203,
+      "after_usd_per_lb": 40.4202,
+      "change_pct": -0.0002
+    },
+    {
+      "family": "formic-acid-dehydrogenation",
+      "candidate": "ptmo-gasphase-premium",
+      "before_usd_per_lb": 1221.0765,
+      "after_usd_per_lb": 1397.6221,
+      "change_pct": 14.4582
+    },
+    {
+      "family": "formic-acid-dehydrogenation",
+      "candidate": "pd-carbon-baseline",
+      "before_usd_per_lb": 1535.1947,
+      "after_usd_per_lb": 1726.9668,
+      "change_pct": 12.4917
+    },
+    {
+      "family": "formic-acid-dehydrogenation",
+      "candidate": "aupd-mil101",
+      "before_usd_per_lb": 3264.1335,
+      "after_usd_per_lb": 3562.1473,
+      "change_pct": 9.13
+    },
+    {
+      "family": "fuel-cell-orr",
+      "candidate": "ptco-intermetallic-cathode",
+      "before_usd_per_lb": 7478.0564,
+      "after_usd_per_lb": 8566.6756,
+      "change_pct": 14.5575
+    },
+    {
+      "family": "fuel-cell-orr",
+      "candidate": "ptc-baseline-cathode",
+      "before_usd_per_lb": 7333.2566,
+      "after_usd_per_lb": 8401.5278,
+      "change_pct": 14.5675
+    },
+    {
+      "family": "fuel-cell-orr",
+      "candidate": "ptni-octahedra",
+      "before_usd_per_lb": 32985.3531,
+      "after_usd_per_lb": 37792.6636,
+      "change_pct": 14.5741
+    },
+    {
+      "family": "glycerol-electrooxidation",
+      "candidate": "niooh-glycerol-anode",
+      "before_usd_per_lb": 20.5057,
+      "after_usd_per_lb": 21.4536,
+      "change_pct": 4.6226
+    },
+    {
+      "family": "glycerol-electrooxidation",
+      "candidate": "pt-c-glycerol-anode",
+      "before_usd_per_lb": 8873.0479,
+      "after_usd_per_lb": 10163.5273,
+      "change_pct": 14.5438
+    },
+    {
+      "family": "glycerol-electrooxidation",
+      "candidate": "pt-bi-dha",
+      "before_usd_per_lb": 19897.4411,
+      "after_usd_per_lb": 22797.0346,
+      "change_pct": 14.5727
+    },
+    {
+      "family": "glycerol-electrooxidation",
+      "candidate": "au-c-glycerol-selectivity",
+      "before_usd_per_lb": 23552.1663,
+      "after_usd_per_lb": 25514.6202,
+      "change_pct": 8.3324
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "comos-hdo",
+      "before_usd_per_lb": 10.8827,
+      "after_usd_per_lb": 10.8577,
+      "change_pct": -0.2297
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "nimo-carbon-hdo",
+      "before_usd_per_lb": 13.4091,
+      "after_usd_per_lb": 13.2069,
+      "change_pct": -1.5079
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "pt-silica-hdo",
+      "before_usd_per_lb": 412.4117,
+      "after_usd_per_lb": 471.3819,
+      "change_pct": 14.2989
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "ru-carbon-hdo",
+      "before_usd_per_lb": 1839.9619,
+      "after_usd_per_lb": 1918.4686,
+      "change_pct": 4.2668
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "nimo-alkaline-her-cathode",
+      "before_usd_per_lb": 31.0106,
+      "after_usd_per_lb": 31.4082,
+      "change_pct": 1.2821
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "pt-carbon-her-cathode",
+      "before_usd_per_lb": 8083.2836,
+      "after_usd_per_lb": 9260.3594,
+      "change_pct": 14.5619
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "ru-c2n-her",
+      "before_usd_per_lb": 11934.9317,
+      "after_usd_per_lb": 12446.3365,
+      "change_pct": 4.2849
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "fe-alumina-pyrolysis",
+      "before_usd_per_lb": 4.5394,
+      "after_usd_per_lb": 4.567,
+      "change_pct": 0.608
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "ni-sio2-highload",
+      "before_usd_per_lb": 11.7675,
+      "after_usd_per_lb": 12.4113,
+      "change_pct": 5.471
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "molten-ni-bi",
+      "before_usd_per_lb": 23.6104,
+      "after_usd_per_lb": 23.8124,
+      "change_pct": 0.8556
+    },
+    {
+      "family": "methanol-to-olefins",
+      "candidate": "zn-zsm5-aromatics",
+      "before_usd_per_lb": 5.9679,
+      "after_usd_per_lb": 5.9666,
+      "change_pct": -0.0218
+    },
+    {
+      "family": "nh3-scr",
+      "candidate": "v2o5-wo3-tio2",
+      "before_usd_per_lb": 6.1546,
+      "after_usd_per_lb": 6.108,
+      "change_pct": -0.7572
+    },
+    {
+      "family": "nh3-scr",
+      "candidate": "cu-ssz-13",
+      "before_usd_per_lb": 19.7212,
+      "after_usd_per_lb": 19.7206,
+      "change_pct": -0.003
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "candidate": "li-mediated-nrr",
+      "before_usd_per_lb": 34.3878,
+      "after_usd_per_lb": 34.3517,
+      "change_pct": -0.105
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "candidate": "plasma-nrr",
+      "before_usd_per_lb": 32.4484,
+      "after_usd_per_lb": 33.4423,
+      "change_pct": 3.063
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "candidate": "aqueous-nrr-cu",
+      "before_usd_per_lb": 34.1478,
+      "after_usd_per_lb": 34.1117,
+      "change_pct": -0.1057
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "wo3-silica-oct",
+      "before_usd_per_lb": 6.2749,
+      "after_usd_per_lb": 6.3697,
+      "change_pct": 1.5108
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "mo-silica-alumina",
+      "before_usd_per_lb": 11.0503,
+      "after_usd_per_lb": 10.9871,
+      "change_pct": -0.5719
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "w-h-alumina",
+      "before_usd_per_lb": 9.3871,
+      "after_usd_per_lb": 9.4714,
+      "change_pct": 0.898
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "re2o7-alumina-mild",
+      "before_usd_per_lb": 113.3146,
+      "after_usd_per_lb": 113.4031,
+      "change_pct": 0.0781
+    },
+    {
+      "family": "pem-electrolyzer-oer",
+      "candidate": "iro2-tio2-supported",
+      "before_usd_per_lb": 73452.9268,
+      "after_usd_per_lb": 74596.3091,
+      "change_pct": 1.5566
+    },
+    {
+      "family": "photocatalytic-co2-reduction",
+      "candidate": "cu2o-mof-co2",
+      "before_usd_per_lb": 64.6957,
+      "after_usd_per_lb": 64.6812,
+      "change_pct": -0.0224
+    },
+    {
+      "family": "photocatalytic-water-splitting",
+      "candidate": "pt-tio2-cocatalyst",
+      "before_usd_per_lb": 462.1719,
+      "after_usd_per_lb": 526.6958,
+      "change_pct": 13.961
+    },
+    {
+      "family": "photocatalytic-water-splitting",
+      "candidate": "srtio3-al-qe-benchmark",
+      "before_usd_per_lb": 2531.4929,
+      "after_usd_per_lb": 3059.3143,
+      "change_pct": 20.8502
+    },
+    {
+      "family": "propane-dehydrogenation",
+      "candidate": "crox-alumina-catofin",
+      "before_usd_per_lb": 3.5718,
+      "after_usd_per_lb": 3.627,
+      "change_pct": 1.5454
+    },
+    {
+      "family": "propane-dehydrogenation",
+      "candidate": "ptsn-alumina-pdh",
+      "before_usd_per_lb": 178.6006,
+      "after_usd_per_lb": 204.1883,
+      "change_pct": 14.3268
+    },
+    {
+      "family": "propane-dehydrogenation",
+      "candidate": "ptzn-intermetallic-pdh",
+      "before_usd_per_lb": 206.0003,
+      "after_usd_per_lb": 233.8916,
+      "change_pct": 13.5394
+    },
+    {
+      "family": "rwgs",
+      "candidate": "cu-ceria-baseline",
+      "before_usd_per_lb": 5.6165,
+      "after_usd_per_lb": 5.6125,
+      "change_pct": -0.0712
+    },
+    {
+      "family": "rwgs",
+      "candidate": "mo2n-hightemp",
+      "before_usd_per_lb": 34.0032,
+      "after_usd_per_lb": 33.5541,
+      "change_pct": -1.3208
+    },
+    {
+      "family": "rwgs",
+      "candidate": "cs-fe-cu-alumina",
+      "before_usd_per_lb": 8.1751,
+      "after_usd_per_lb": 8.2331,
+      "change_pct": 0.7095
+    },
+    {
+      "family": "rwgs",
+      "candidate": "pt-tio2-premium",
+      "before_usd_per_lb": 758.73,
+      "after_usd_per_lb": 868.5589,
+      "change_pct": 14.4754
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "nizn-intermetallic",
+      "before_usd_per_lb": 5.7594,
+      "after_usd_per_lb": 5.9389,
+      "change_pct": 3.1166
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pdcu-saa",
+      "before_usd_per_lb": 9.7702,
+      "after_usd_per_lb": 10.2354,
+      "change_pct": 4.7614
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pd-alumina-baseline",
+      "before_usd_per_lb": 13.8077,
+      "after_usd_per_lb": 15.2075,
+      "change_pct": 10.1378
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pdag-bimetallic",
+      "before_usd_per_lb": 16.5602,
+      "after_usd_per_lb": 18.3919,
+      "change_pct": 11.0609
+    },
+    {
+      "family": "steam-methane-reforming",
+      "candidate": "ni-calcium-aluminate",
+      "before_usd_per_lb": 5.5188,
+      "after_usd_per_lb": 5.6381,
+      "change_pct": 2.1617
+    },
+    {
+      "family": "steam-methane-reforming",
+      "candidate": "sn-ni-coking-resistant",
+      "before_usd_per_lb": 4.6721,
+      "after_usd_per_lb": 4.8576,
+      "change_pct": 3.9704
+    },
+    {
+      "family": "steam-methane-reforming",
+      "candidate": "rh-alumina-compact",
+      "before_usd_per_lb": 2236.9745,
+      "after_usd_per_lb": 2703.9804,
+      "change_pct": 20.8767
+    },
+    {
+      "family": "syngas-methanol",
+      "candidate": "cza-industrial",
+      "before_usd_per_lb": 9.0873,
+      "after_usd_per_lb": 9.081,
+      "change_pct": -0.0693
+    },
+    {
+      "family": "syngas-methanol",
+      "candidate": "ga-promoted-cza",
+      "before_usd_per_lb": 16.387,
+      "after_usd_per_lb": 16.3926,
+      "change_pct": 0.0342
+    },
+    {
+      "family": "syngas-methanol",
+      "candidate": "pd-zno-intermetallic",
+      "before_usd_per_lb": 773.8965,
+      "after_usd_per_lb": 870.5884,
+      "change_pct": 12.4942
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "cu-zno-baseline",
+      "before_usd_per_lb": 7.7442,
+      "after_usd_per_lb": 7.7589,
+      "change_pct": 0.1898
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "co-ceria-interface",
+      "before_usd_per_lb": 11.1687,
+      "after_usd_per_lb": 11.1686,
+      "change_pct": -0.0009
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "fe-cr-hts",
+      "before_usd_per_lb": 6.7814,
+      "after_usd_per_lb": 6.8043,
+      "change_pct": 0.3377
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "pt-ceria-premium",
+      "before_usd_per_lb": 946.2344,
+      "after_usd_per_lb": 1083.5836,
+      "change_pct": 14.5153
+    }
+  ],
+  "ranking_changes": [
+    {
+      "family": "co2-methanation",
+      "profile": "balanced",
+      "before": [
+        "ni-alumina-baseline",
+        "ni-ceo2-lowtemp",
+        "ru-layered-titanate",
+        "ru-mnox-photothermal"
+      ],
+      "after": [
+        "ni-ceo2-lowtemp",
+        "ni-alumina-baseline",
+        "ru-layered-titanate",
+        "ru-mnox-photothermal"
+      ]
+    },
+    {
+      "family": "co2-methanation",
+      "profile": "cost-first",
+      "before": [
+        "ni-alumina-baseline",
+        "ni-ceo2-lowtemp",
+        "ru-layered-titanate",
+        "ru-mnox-photothermal"
+      ],
+      "after": [
+        "ni-ceo2-lowtemp",
+        "ni-alumina-baseline",
+        "ru-layered-titanate",
+        "ru-mnox-photothermal"
+      ]
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "profile": "balanced",
+      "before": [
+        "plasma-nrr",
+        "li-mediated-nrr",
+        "aqueous-nrr-cu",
+        "li-flow-shuttle"
+      ],
+      "after": [
+        "li-mediated-nrr",
+        "plasma-nrr",
+        "aqueous-nrr-cu",
+        "li-flow-shuttle"
+      ]
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "profile": "evidence-first",
+      "before": [
+        "plasma-nrr",
+        "li-mediated-nrr",
+        "aqueous-nrr-cu",
+        "li-flow-shuttle"
+      ],
+      "after": [
+        "li-mediated-nrr",
+        "plasma-nrr",
+        "aqueous-nrr-cu",
+        "li-flow-shuttle"
+      ]
+    },
+    {
+      "family": "photocatalytic-water-splitting",
+      "profile": "performance_zero",
+      "before": [
+        "tio2-anatase-baseline",
+        "gcn-metal-free",
+        "pt-tio2-cocatalyst",
+        "srtio3-al-qe-benchmark"
+      ],
+      "after": [
+        "tio2-anatase-baseline",
+        "pt-tio2-cocatalyst",
+        "gcn-metal-free",
+        "srtio3-al-qe-benchmark"
+      ]
+    }
+  ],
+  "winner_changes": [
+    {
+      "family": "co2-methanation",
+      "profile": "balanced",
+      "before": "ni-alumina-baseline",
+      "after": "ni-ceo2-lowtemp"
+    },
+    {
+      "family": "co2-methanation",
+      "profile": "cost-first",
+      "before": "ni-alumina-baseline",
+      "after": "ni-ceo2-lowtemp"
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "profile": "balanced",
+      "before": "plasma-nrr",
+      "after": "li-mediated-nrr"
+    },
+    {
+      "family": "nitrogen-reduction-reaction",
+      "profile": "evidence-first",
+      "before": "plasma-nrr",
+      "after": "li-mediated-nrr"
+    }
+  ]
+}

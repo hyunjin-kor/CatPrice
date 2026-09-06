@@ -1,0 +1,125 @@
+{
+  "renderer": "Matplotlib",
+  "run_date": "2026-09-07",
+  "figures": [
+    {
+      "figure": "figure1_architecture",
+      "question": "How do source observations become traceable research outputs?",
+      "chart": "directed process diagram",
+      "source_keys": [
+        "scripts/reproduce_paper.py",
+        "backend/core",
+        "frontend/src"
+      ],
+      "note": "Reference histories and local live quotes remain separate; legacy fallback sources retain their original labels.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "figure": "figure2_table62",
+      "question": "Does the independent Step Method reproduce the three published cases?",
+      "chart": "grouped bars",
+      "source_keys": [
+        "paper_summary_2026-09-07.json:table62"
+      ],
+      "note": "Published materials and step inputs; no calibration. Residuals: -0.00%, -6.65%, +1.16%.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "figure": "figure3_gwp_cost",
+      "question": "How does modeled GWP compare with cost for the same mass-based candidates?",
+      "chart": "log-log scatter",
+      "source_keys": [
+        "all_families_2026-09-07.json:families[].candidates[].landed_cost_per_lb",
+        "families[].candidates[].lca"
+      ],
+      "note": "n=88 thermocatalysts with positive modeled GWP. Unmatched materials contribute no assumed factor; low-coverage GWP is incomplete.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "figure": "figure4_weight_sensitivity",
+      "question": "How frequently does the balanced winner remain first as weights change?",
+      "chart": "ranked horizontal bars",
+      "source_keys": [
+        "all_families_2026-09-07.json:families[].simplex"
+      ],
+      "note": "30 families; 286 simplex points, step 0.1. Dashed guide = 50%.\nPerformance and route inputs include authored judgments; economics and price evidence derive from priced inputs.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "figure": "figure5_live_reference",
+      "question": "Does the selected price tier change the winning candidate?",
+      "chart": "horizontal count bars or unavailable annotation",
+      "source_keys": [
+        "paper_summary_2026-09-07.json:live_reference_comparison",
+        "live_basis_2026-09-07.json:price_basis"
+      ],
+      "note": "Denominator: 30 families per profile. Live = frozen observed quote snapshot; original source dates are retained.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    },
+    {
+      "figure": "figure6_breakeven_sweeps",
+      "question": "At which distinguishing-metal price does a rival become cheaper?",
+      "chart": "faceted log-log sweep curves",
+      "source_keys": [
+        "breakeven_sweep_points_2026-09-07.json:rows",
+        "active_metal_breakeven_2026-09-07.json:families[].contests"
+      ],
+      "note": "All other prices held fixed. Horizontal dashed guide = equal cost; vertical dotted guide = baseline metal price. Full candidate IDs are in the data file.",
+      "palette": {
+        "blue": "#376D9C",
+        "gold": "#B78B35",
+        "neutral": "#26313B"
+      },
+      "non_color_distinction": "direct labels, separate markers or open fill",
+      "formats": [
+        "svg",
+        "png"
+      ]
+    }
+  ]
+}

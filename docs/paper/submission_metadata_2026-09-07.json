@@ -1,0 +1,26 @@
+{
+  "run_directory": "submission-2026-09-07",
+  "basis_month": "2026-05",
+  "support_series": 10,
+  "support_observations": 28,
+  "support_first_month": "2026-04",
+  "support_last_month": "2026-06",
+  "support_month_count": 3,
+  "support_counts": {
+    "HS251990": 3,
+    "HS281122": 2,
+    "HS281810": 2,
+    "HS281820": 3,
+    "HS281990": 3,
+    "HS282010": 3,
+    "HS282300": 3,
+    "HS284210": 3,
+    "HS284610": 3,
+    "HS380210": 3
+  },
+  "unit_note": "Model conversion constants, not newly measured data",
+  "kg_per_lb": 0.453592,
+  "kg_per_short_ton": 907.184,
+  "source_manifest_sha256": "0bbebb785a0fc1d74cc50a153a1a5b4d8005e84958171b6633aead92068cd127",
+  "external_audit_sha256": "a5d00b61494b5b93ab08a1c4b2b9838fd0bba8a4cf9d4cddbfa734f43a9ccb0f"
+}

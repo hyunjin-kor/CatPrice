@@ -102,7 +102,7 @@ def main() -> None:
     ax.xaxis.grid(True, color=GREY)
     ax.tick_params(axis="y", labelsize=8.5)
     fig.suptitle(f"MCDA weight sensitivity — {month}", fontsize=15, x=0.02, ha="left")
-    save(fig, "figure4_weight_sensitivity", "How frequently does the balanced winner remain first as weights change?", [f"all_families_{run_date}.json:families[].simplex"], f"{len(ordered)} families; {summary['weight_sensitivity']['grid_points']} simplex points, step 0.1. Dashed guide = 50%. Scores are author-assigned screening judgments.", "ranked horizontal bars")
+    save(fig, "figure4_weight_sensitivity", "How frequently does the balanced winner remain first as weights change?", [f"all_families_{run_date}.json:families[].simplex"], f"{len(ordered)} families; {summary['weight_sensitivity']['grid_points']} simplex points, step 0.1. Dashed guide = 50%.\nPerformance and route inputs include authored judgments; economics and price evidence derive from priced inputs.", "ranked horizontal bars")
 
     fig, ax = plt.subplots(figsize=(9, 5.4))
     comparison = summary["live_reference_comparison"]
