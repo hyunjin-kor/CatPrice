@@ -1,0 +1,74 @@
+
+> frontend@1.4.0 check:i18n
+> node ../scripts/check_i18n.mjs
+
+{
+  "static_translation_calls": 781,
+  "korean_keys": 822,
+  "missing_key_occurrences": 0,
+  "raw_jsx_label_occurrences": 27,
+  "untranslated_ui_label_occurrences": 0,
+  "missing": [],
+  "untranslatedLabels": [],
+  "scope": "Literal and conditional t(string) keys, literal JSX text, UI attributes and direct JSX template-literal fragments. Technical symbols/units, the product name and already-Korean text are explicitly excluded from untranslated UI counts. Conditional language branches, source data and variable translation keys require manual/browser review."
+}
+
+> frontend@1.4.0 lint
+> eslint .
+
+
+> frontend@1.4.0 build
+> tsc -b && vite build
+
+vite v8.1.5 building client environment for production...
+[2K
+transforming...✓ 618 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                      0.75 kB │ gzip:   0.41 kB
+dist/assets/PretendardVariable-CJuje-Rk.woff2    2,057.68 kB
+dist/assets/index-BXUpkB8K.css                      61.73 kB │ gzip:  11.15 kB
+dist/assets/format-price-xyQn9blZ.js                 0.35 kB │ gzip:   0.18 kB │ map:     1.67 kB
+dist/assets/calculator-session-OVC9PJVi.js           0.59 kB │ gzip:   0.28 kB │ map:     4.62 kB
+dist/assets/rolldown-runtime-QTnfLwEv.js             0.69 kB │ gzip:   0.42 kB
+dist/assets/ResultBreakdownPieChart-DMlP0iYL.js      0.79 kB │ gzip:   0.52 kB │ map:     2.15 kB
+dist/assets/FitPriceText-DcTail5I.js                 0.91 kB │ gzip:   0.43 kB │ map:     3.01 kB
+dist/assets/EstimateRangeBarChart-C1UTHjPM.js        1.01 kB │ gzip:   0.59 kB │ map:     2.66 kB
+dist/assets/Skeleton-a7cBJvy9.js                     1.42 kB │ gzip:   0.59 kB │ map:     4.45 kB
+dist/assets/MetalCompareChart-DgwQ5g5F.js            1.71 kB │ gzip:   0.90 kB │ map:     5.27 kB
+dist/assets/MetalTrendChart-DYYoqhqa.js              1.78 kB │ gzip:   0.89 kB │ map:     5.06 kB
+dist/assets/api-CbdZfW3m.js                          3.19 kB │ gzip:   1.41 kB │ map:    41.19 kB
+dist/assets/WorkspaceSections-V3qBC110.js            3.33 kB │ gzip:   1.49 kB │ map:     9.67 kB
+dist/assets/export-csv-BrhDHTdX.js                   4.76 kB │ gzip:   1.99 kB │ map:    13.81 kB
+dist/assets/Compare-DIu7LrVV.js                     18.04 kB │ gzip:   4.87 kB │ map:    40.02 kB
+dist/assets/CapEx-Cx2MT-5D.js                       18.28 kB │ gzip:   4.32 kB │ map:    43.72 kB
+dist/assets/Uncertainty-DUR9GE1b.js                 18.35 kB │ gzip:   5.23 kB │ map:    42.64 kB
+dist/assets/Library-mdS59Vup.js                     24.21 kB │ gzip:   5.94 kB │ map:    62.03 kB
+dist/assets/Prices-iPuLAWB5.js                      32.18 kB │ gzip:   8.55 kB │ map:    77.96 kB
+dist/assets/CalculatorResult-B8AzhebW.js            44.06 kB │ gzip:  10.58 kB │ map:    93.98 kB
+dist/assets/Calculator-DZDF6Lc7.js                  68.26 kB │ gzip:  17.34 kB │ map:   181.03 kB
+dist/assets/index-DrZ8vS4D.js                      123.19 kB │ gzip:  41.65 kB │ map:   563.75 kB
+dist/assets/react-CC1klYW5.js                      189.64 kB │ gzip:  59.65 kB │ map:   841.37 kB
+dist/assets/recharts-KlhfxoSq.js                   390.73 kB │ gzip: 111.46 kB │ map: 1,913.19 kB
+
+[plugin @tailwindcss/vite:generate:build] [SOURCEMAP_BROKEN] Sourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect
+
+✓ built in 443ms
+✔ repeated operations remain distinct while order-only changes match (0.564ms)
+✔ selected card identity survives identical routes and scale fitting (0.1727ms)
+✔ fuel_cell × pem_fuel_cell_ccm defaults (5.3818ms)
+✔ direct_methanol_fuel_cell × dmfc_gde_route defaults (0.092ms)
+✔ electrolyzer × pem_electrolyzer_ccm defaults (0.089ms)
+✔ electrolyzer × alkaline_electrolyzer_gde defaults (0.0692ms)
+✔ AEM fuel-cell route retains existing application-family preference (0.1179ms)
+✔ equal chemistry ranks prefer source scope, then quoted price, then name (0.0839ms)
+✔ electrode displayed ledger uses area costs without thermal cost fields (0.1572ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11.5666
+WALL_SECONDS=8.2529931

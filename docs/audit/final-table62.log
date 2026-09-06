@@ -1,0 +1,46 @@
+
+## 2 wt% Pt/C  (order 2 ton)
+materials: published total 10.7  |  sum of rows 10.7013
+                                 COMET   Table 6.2    dev %
+step_cost_per_hr              390.0000    390.0000    +0.00
+campaign_days                   2.5000      2.5000    +0.00
+campaign_cost               23400.0000  23400.0000    +0.00
+processing_cost_per_lb          5.8500      5.8500    +0.00
+subtotal_per_lb                16.5500     16.5500    +0.00
+ga_per_lb                       0.8275      0.8300    -0.30
+sard_per_lb                     0.8689      0.8700    -0.13
+margin_per_lb                   9.1231      9.1200    +0.03
+estimated_price_per_lb         27.3695     27.3700    -0.00
+margin basis: COMET 33.33% of selling price = 50.0% of pre-margin  |  table footnote 50.0% of pre-margin
+vs market $34.09: COMET -19.7%  |  CatCost published -19.7%
+
+## 21 wt% Ni/Al2O3  (order 20 ton)
+materials: published total 11.88  |  sum of rows 11.8918
+                                 COMET   Table 6.2    dev %
+step_cost_per_hr             1200.0000   1200.0000    +0.00
+campaign_days                   3.0000      3.0000    +0.00
+campaign_cost               86400.0000  86400.0000    +0.00
+processing_cost_per_lb          2.1600      2.1600    +0.00
+subtotal_per_lb                14.0400     14.0400    +0.00
+ga_per_lb                       0.7020      0.7000    +0.29
+sard_per_lb                     0.7371      0.7400    -0.39
+margin_per_lb                   3.7415      5.1100   -26.78
+estimated_price_per_lb         19.2206     20.5900    -6.65
+margin basis: COMET 19.47% of selling price = 24.17% of pre-margin  |  table footnote 33.0% of pre-margin
+vs market $21.33: COMET -9.9%  |  CatCost published -3.5%
+
+## USY-based FCC (with RE)  (order 200 ton)
+materials: published total 0.352  |  sum of rows 0.3524
+                                 COMET   Table 6.2    dev %
+step_cost_per_hr             6725.0000   6725.0000    +0.00
+campaign_days                   2.3300      4.0000   -41.75
+campaign_cost              376600.0000 645600.0000   -41.67
+processing_cost_per_lb          0.9415      1.6100   -41.52
+subtotal_per_lb                 1.2935      1.9700   -34.34
+ga_per_lb                       0.0647      0.1000   -35.30
+sard_per_lb                     0.0679      0.1000   -32.10
+margin_per_lb                   0.1829      0.2400   -23.79
+estimated_price_per_lb          1.6090      2.4100   -33.24
+margin basis: COMET 11.37% of selling price = 12.83% of pre-margin  |  table footnote 11.0% of pre-margin
+vs market $2.73: COMET -41.1%  |  CatCost published -11.7%
+with footnote-b rate 67 t/d: campaign 3.985 d, processing 1.6080, price 2.4380 (+1.16% vs published)

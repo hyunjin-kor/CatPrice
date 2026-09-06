@@ -32,8 +32,8 @@
 | T15 | 완료 | 300fbf7 | All4 versions1.4.0; final desktop build156.36s and smoke200/one window; total172.41s; latest public release remains1.3.24 | Prepared metadata, notes and checklist only; isolated junction packaging issue recovered with unchanged-lockfile npm ci |
 | T16 | 완료 | ea787f0 | Full pipeline2026-07/seed20260906;14series91months; six PNG/SVGfigures; 26outputs+80data+34code hash checks pass; staged raw SHA preserved | Fresh history fetched; actual live12quote snapshot; latest-common July; live-classification edge tests11 included in final636 |
 | T17 | 완료 | e7effeb | Manuscript69+SI980 keys resolve;466 numeric checks;4Crossref citations;165-word abstract; estimated6624 word equivalents; six figures inspected | New3.4/3.5/3.6 and4SI tables; ACS guidelines verified; no invented authorship or version DOI |
-| T18 | 완료 | this commit | Reviewer checklist plus10 evidence-linked questions/answers; no fabricated performance/coverage/reuse claims | Expected objections cover method reproduction, proxies, sources, LCA, licensing and price reproducibility |
-| T19 | 대기 | — | — | 필수 |
+| T18 | 완료 | 5365889 | Reviewer checklist plus10 evidence-linked questions/answers; no fabricated performance/coverage/reuse claims | Expected objections cover method reproduction, proxies, sources, LCA, licensing and price reproducibility |
+| T19 | 진행 | final verification commit | Final636 passed in383.97s; ruff, frontend lint/build/i18n/Node9, Table6.2, desktop1.4.0 and paper hashes pass | Local gates complete; final PR report and Draft transition next |
 
 ## Assumptions and unverified items
 
@@ -41,3 +41,13 @@
 - The user-defined audit log takes precedence over duplicate .autonomy state files; no scheduled automation was created.
 - Initial log-only commit used unchanged, user-verified baseline code; local full checks completed before any implementation commit.
 - At 11:48:39 KST an external process switched the shared checkout to master and pulled 10b5388. No task agent issued that operation. Preserved every working file and resumed in C:/Users/user/Desktop/COMET-autonomous-2026-09-06 on the original run branch. The original checkout was left intact; all subsequent writes use explicit isolated paths.
+
+## Final verification checkpoint
+
+- `python -m pytest backend/tests -q`: 636 passed in 383.97 s, measured wall 387.33 s (`final-pytest.log`). Baseline: 573 passed.
+- `python -m ruff check .`: all checks passed (`final-ruff.log`). Frontend check:i18n, lint, build and nine calculator rule tests passed in 8.25 s (`final-frontend.log`).
+- `python scripts/reproduce_catcost_table62.py`: unchanged acceptance results (`final-table62.log`).
+- Final version 1.4.0 desktop build and smoke passed after the isolated dependency-link recovery (`t15-release-validation.md`, `final-desktop-retry.log`).
+- Paper pipeline: 2026-07, seed 20260906, fresh fetched history; all 26 output, 80 data and 34 code hashes verified. All 26 staged output byte hashes also match (`final-manifest-integrity.json`).
+- Independent diff review against dd04fa9 found no changed LICENSE/COPYING files, no proprietary CatCost workbook/raw-extract or DB additions, no backend data deletion, and no high-confidence secret/private-key patterns in added text. This check reports its scope and does not relicense existing data.
+- Temporary browser server stopped after captures. Intermediate scratch outputs, including the superseded five-year replay, were preserved under ignored `_local/autonomous-scratch`; no dataset was deleted. Only the final 91-month replay is committed.
