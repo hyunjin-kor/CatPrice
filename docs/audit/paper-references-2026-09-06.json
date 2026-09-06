@@ -1,0 +1,1492 @@
+{
+  "audit_date": "2026-09-06",
+  "method": "Crossref bibliographic query (top three results), then exact works/DOI metadata retrieval and DOI-resolver/publisher HTTP GET. Metadata registration does not imply all scientific claims or novelty are verified.",
+  "references": {
+    "baddour2018": {
+      "checked_at_utc": "2026-09-06T03:10:26.630471+00:00",
+      "expected_doi": "10.1021/acs.oprd.8b00245",
+      "query": "Estimating Precommercial Heterogeneous Catalyst Price A Simple Step Based Method Baddour 2018",
+      "query_http_status": 200,
+      "query_url": "https://api.crossref.org/works?query.bibliographic=Estimating+Precommercial+Heterogeneous+Catalyst+Price+A+Simple+Step+Based+Method+Baddour+2018&rows=3",
+      "query_candidates": [
+        {
+          "DOI": "10.1021/acs.oprd.8b00245",
+          "title": [
+            "Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method"
+          ],
+          "author": [
+            {
+              "given": "Frederick G.",
+              "family": "Baddour",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Lesley",
+              "family": "Snowden-Swan",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Pacific Northwest National Laboratory, 902 Battelle Boulevard, Richland, Washington 99354, United States"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-5655-6281",
+              "authenticated-orcid": true,
+              "given": "John D.",
+              "family": "Super",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Cobroko Solutions, P.O. Box 130609, Houston, Texas 77219, United States"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Kurt M.",
+              "family": "Van Allsburg",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Organic Process Research &amp; Development"
+          ],
+          "short-container-title": [
+            "Org. Process Res. Dev."
+          ],
+          "publisher": "American Chemical Society (ACS)",
+          "volume": "22",
+          "issue": "12",
+          "page": "1599-1605",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                21
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2018,
+                12,
+                21
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2018,
+                9,
+                21
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1021/acs.oprd.8b00245",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1021/acsami.2c18907.s001",
+          "title": [
+            "Synthesis of UiO-66-Sal-Cu(OH)2 by a Simple and Novel Method: MOF-Based Metal Thin Film as a Heterogeneous Catalyst for Olefin Oxidation"
+          ],
+          "author": null,
+          "container-title": null,
+          "short-container-title": null,
+          "publisher": "American Chemical Society (ACS)",
+          "volume": null,
+          "issue": null,
+          "page": null,
+          "article-number": null,
+          "published": null,
+          "published-print": null,
+          "published-online": null,
+          "URL": "https://doi.org/10.1021/acsami.2c18907.s001",
+          "type": "component"
+        },
+        {
+          "DOI": "10.21275/v5i4.nov161546",
+          "title": [
+            "Simple and Eco-friendly Method for Synthesis of 3,4-dihydropyrimidin-2(1H) ones / thiones by Sodium Hydrogen Sulfate as Novel and Replicable Heterogeneous Catalyst"
+          ],
+          "author": null,
+          "container-title": [
+            "International Journal of Science and Research (IJSR)"
+          ],
+          "short-container-title": [
+            "IJSR"
+          ],
+          "publisher": "International Journal of Science and Research",
+          "volume": "5",
+          "issue": "4",
+          "page": "400-404",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                5
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                5
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2016,
+                4,
+                5
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.21275/v5i4.nov161546",
+          "type": "journal-article"
+        }
+      ],
+      "exact_crossref_http_status": 200,
+      "exact_crossref_url": "https://api.crossref.org/works/10.1021%2Facs.oprd.8b00245",
+      "metadata": {
+        "DOI": "10.1021/acs.oprd.8b00245",
+        "title": [
+          "Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method"
+        ],
+        "author": [
+          {
+            "given": "Frederick G.",
+            "family": "Baddour",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lesley",
+            "family": "Snowden-Swan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Pacific Northwest National Laboratory, 902 Battelle Boulevard, Richland, Washington 99354, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5655-6281",
+            "authenticated-orcid": true,
+            "given": "John D.",
+            "family": "Super",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Cobroko Solutions, P.O. Box 130609, Houston, Texas 77219, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kurt M.",
+            "family": "Van Allsburg",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Organic Process Research &amp; Development"
+        ],
+        "short-container-title": [
+          "Org. Process Res. Dev."
+        ],
+        "publisher": "American Chemical Society (ACS)",
+        "volume": "22",
+        "issue": "12",
+        "page": "1599-1605",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              21
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2018,
+              12,
+              21
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1021/acs.oprd.8b00245",
+        "type": "journal-article"
+      },
+      "exact_doi_match": true,
+      "doi_resolver": {
+        "requested_url": "https://doi.org/10.1021/acs.oprd.8b00245",
+        "http_status": 403,
+        "final_url": "https://pubs.acs.org/doi/10.1021/acs.oprd.8b00245",
+        "redirect_statuses": [
+          302
+        ]
+      },
+      "publisher": {
+        "requested_url": "https://doi.org/10.1021/acs.oprd.8b00245",
+        "http_status": 403,
+        "final_url": "https://pubs.acs.org/doi/10.1021/acs.oprd.8b00245",
+        "redirect_statuses": [
+          302
+        ]
+      }
+    },
+    "van_allsburg2022": {
+      "checked_at_utc": "2026-09-06T03:10:28.023085+00:00",
+      "expected_doi": "10.1038/s41929-022-00759-6",
+      "query": "Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost Van Allsburg 2022",
+      "query_http_status": 200,
+      "query_url": "https://api.crossref.org/works?query.title=Early-stage+evaluation+of+catalyst+manufacturing+cost+and+environmental+impact+using+CatCost&query.author=Van+Allsburg&rows=3",
+      "exact_crossref_http_status": 200,
+      "exact_crossref_url": "https://api.crossref.org/works/10.1038%2Fs41929-022-00759-6",
+      "metadata": {
+        "DOI": "10.1038/s41929-022-00759-6",
+        "title": [
+          "Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-4553-6709",
+            "authenticated-orcid": false,
+            "given": "Kurt M.",
+            "family": "Van Allsburg",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9110-2410",
+            "authenticated-orcid": false,
+            "given": "Eric C. D.",
+            "family": "Tan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "John D.",
+            "family": "Super",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joshua A.",
+            "family": "Schaidle",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5837-5804",
+            "authenticated-orcid": false,
+            "given": "Frederick G.",
+            "family": "Baddour",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Nature Catalysis"
+        ],
+        "short-container-title": [
+          "Nat Catal"
+        ],
+        "publisher": "Springer Science and Business Media LLC",
+        "volume": "5",
+        "issue": "4",
+        "page": "342-353",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              31
+            ]
+          ]
+        },
+        "published-print": null,
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              31
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/s41929-022-00759-6",
+        "type": "journal-article"
+      },
+      "exact_doi_match": true,
+      "doi_resolver": {
+        "requested_url": "https://doi.org/10.1038/s41929-022-00759-6",
+        "http_status": 200,
+        "final_url": "https://www.nature.com/articles/s41929-022-00759-6",
+        "redirect_statuses": [
+          302,
+          303,
+          302,
+          302
+        ]
+      },
+      "publisher": {
+        "requested_url": "https://doi.org/10.1038/s41929-022-00759-6",
+        "http_status": 200,
+        "final_url": "https://www.nature.com/articles/s41929-022-00759-6",
+        "redirect_statuses": [
+          302
+        ]
+      },
+      "previous_query_attempt": {
+        "url": "https://api.crossref.org/works?query.bibliographic=Early-stage+evaluation+of+catalyst+manufacturing+cost+and+environmental+impact+using+CatCost+Van+Allsburg+2022&rows=3",
+        "http_status": 429,
+        "checked_at_utc": "2026-09-06T03:10:28.023085+00:00"
+      },
+      "query_retry_at_utc": "2026-09-06T03:11:13.714510+00:00",
+      "query_candidates": [
+        {
+          "DOI": "10.1038/s41929-022-00759-6",
+          "title": [
+            "Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0003-4553-6709",
+              "authenticated-orcid": false,
+              "given": "Kurt M.",
+              "family": "Van Allsburg",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-9110-2410",
+              "authenticated-orcid": false,
+              "given": "Eric C. D.",
+              "family": "Tan",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "John D.",
+              "family": "Super",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Joshua A.",
+              "family": "Schaidle",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-5837-5804",
+              "authenticated-orcid": false,
+              "given": "Frederick G.",
+              "family": "Baddour",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Nature Catalysis"
+          ],
+          "short-container-title": [
+            "Nat Catal"
+          ],
+          "publisher": "Springer Science and Business Media LLC",
+          "volume": "5",
+          "issue": "4",
+          "page": "342-353",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                31
+              ]
+            ]
+          },
+          "published-print": null,
+          "published-online": {
+            "date-parts": [
+              [
+                2022,
+                3,
+                31
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1038/s41929-022-00759-6",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1002/adsu.202300030",
+          "title": [
+            "Cost‐Responsive Optimization of Nickel Nanoparticle Synthesis"
+          ],
+          "author": [
+            {
+              "ORCID": "https://orcid.org/0000-0002-4213-5144",
+              "authenticated-orcid": false,
+              "given": "Brittney E.",
+              "family": "Petel",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-4553-6709",
+              "authenticated-orcid": false,
+              "given": "Kurt M.",
+              "family": "Van Allsburg",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0002-5837-5804",
+              "authenticated-orcid": false,
+              "given": "Frederick G.",
+              "family": "Baddour",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Advanced Sustainable Systems"
+          ],
+          "short-container-title": [
+            "Advanced Sustainable Systems"
+          ],
+          "publisher": "Wiley",
+          "volume": "8",
+          "issue": "10",
+          "page": null,
+          "article-number": "2300030",
+          "published": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                25
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                10
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2023,
+                4,
+                25
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1002/adsu.202300030",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1002/adsu.202470037",
+          "title": [
+            "Cost‐Responsive Optimization of Nickel Nanoparticle Synthesis (Adv. Sustainable Syst. 10/2024)"
+          ],
+          "author": [
+            {
+              "given": "Brittney E.",
+              "family": "Petel",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Kurt M.",
+              "family": "Van Allsburg",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            },
+            {
+              "given": "Frederick G.",
+              "family": "Baddour",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Catalytic Carbon Transformation and Scale‐Up Center National Renewable Energy Laboratory  15013 Denver West Parkway Golden Colorado 80401–3111 USA"
+                }
+              ],
+              "role": [
+                {
+                  "role": "author",
+                  "vocabulary": "crossref"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Advanced Sustainable Systems"
+          ],
+          "short-container-title": [
+            "Advanced Sustainable Systems"
+          ],
+          "publisher": "Wiley",
+          "volume": "8",
+          "issue": "10",
+          "page": null,
+          "article-number": "2470037",
+          "published": {
+            "date-parts": [
+              [
+                2024,
+                10
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                10
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2024,
+                10,
+                16
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1002/adsu.202470037",
+          "type": "journal-article"
+        }
+      ]
+    },
+    "nuss_eckelman2014": {
+      "checked_at_utc": "2026-09-06T03:10:31.081296+00:00",
+      "expected_doi": "10.1371/journal.pone.0101298",
+      "query": "Life Cycle Assessment of Metals A Scientific Synthesis Nuss Eckelman 2014",
+      "query_http_status": 200,
+      "query_url": "https://api.crossref.org/works?query.bibliographic=Life+Cycle+Assessment+of+Metals+A+Scientific+Synthesis+Nuss+Eckelman+2014&rows=3",
+      "query_candidates": [
+        {
+          "DOI": "10.1371/journal.pone.0101298",
+          "title": [
+            "Life Cycle Assessment of Metals: A Scientific Synthesis"
+          ],
+          "author": [
+            {
+              "given": "Philip",
+              "family": "Nuss",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Matthew J.",
+              "family": "Eckelman",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "PLoS ONE"
+          ],
+          "short-container-title": [
+            "PLoS ONE"
+          ],
+          "publisher": "Public Library of Science (PLoS)",
+          "volume": "9",
+          "issue": "7",
+          "page": "e101298",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                7,
+                7
+              ]
+            ]
+          },
+          "published-print": null,
+          "published-online": {
+            "date-parts": [
+              [
+                2014,
+                7,
+                7
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1371/journal.pone.0101298",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1016/j.jclepro.2014.05.039",
+          "title": [
+            "Life cycle carbon benefits of aerospace alloy recycling"
+          ],
+          "author": [
+            {
+              "given": "Matthew J.",
+              "family": "Eckelman",
+              "sequence": "first",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Luca",
+              "family": "Ciacci",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Goksin",
+              "family": "Kavlak",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0001-9936-6886",
+              "authenticated-orcid": false,
+              "given": "Philip",
+              "family": "Nuss",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Barbara K.",
+              "family": "Reck",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "T.E.",
+              "family": "Graedel",
+              "sequence": "additional",
+              "affiliation": [],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Journal of Cleaner Production"
+          ],
+          "short-container-title": [
+            "Journal of Cleaner Production"
+          ],
+          "publisher": "Elsevier BV",
+          "volume": "80",
+          "issue": null,
+          "page": "38-45",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2014,
+                10
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                10
+              ]
+            ]
+          },
+          "published-online": null,
+          "URL": "https://doi.org/10.1016/j.jclepro.2014.05.039",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1039/c5en00075k",
+          "title": [
+            "Comparative life cycle assessment of silver nanoparticle synthesis routes"
+          ],
+          "author": [
+            {
+              "given": "Leila",
+              "family": "Pourzahedi",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "Department of Civil and Environmental Engineering"
+                },
+                {
+                  "name": "Northeastern University"
+                },
+                {
+                  "name": "Boston"
+                },
+                {
+                  "name": "USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Matthew J.",
+              "family": "Eckelman",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "Department of Civil and Environmental Engineering"
+                },
+                {
+                  "name": "Northeastern University"
+                },
+                {
+                  "name": "Boston"
+                },
+                {
+                  "name": "USA"
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "Environmental Science: Nano"
+          ],
+          "short-container-title": [
+            "Environ. Sci.: Nano"
+          ],
+          "publisher": "Royal Society of Chemistry (RSC)",
+          "volume": "2",
+          "issue": "4",
+          "page": "361-369",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2015
+              ]
+            ]
+          },
+          "published-print": null,
+          "published-online": {
+            "date-parts": [
+              [
+                2015
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1039/c5en00075k",
+          "type": "journal-article"
+        }
+      ],
+      "exact_crossref_http_status": 200,
+      "exact_crossref_url": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0101298",
+      "metadata": {
+        "DOI": "10.1371/journal.pone.0101298",
+        "title": [
+          "Life Cycle Assessment of Metals: A Scientific Synthesis"
+        ],
+        "author": [
+          {
+            "given": "Philip",
+            "family": "Nuss",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Matthew J.",
+            "family": "Eckelman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "PLoS ONE"
+        ],
+        "short-container-title": [
+          "PLoS ONE"
+        ],
+        "publisher": "Public Library of Science (PLoS)",
+        "volume": "9",
+        "issue": "7",
+        "page": "e101298",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              7,
+              7
+            ]
+          ]
+        },
+        "published-print": null,
+        "published-online": {
+          "date-parts": [
+            [
+              2014,
+              7,
+              7
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1371/journal.pone.0101298",
+        "type": "journal-article"
+      },
+      "exact_doi_match": true,
+      "doi_resolver": {
+        "requested_url": "https://doi.org/10.1371/journal.pone.0101298",
+        "http_status": 200,
+        "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101298",
+        "redirect_statuses": [
+          302,
+          301,
+          301
+        ]
+      },
+      "publisher": {
+        "requested_url": "https://doi.org/10.1371/journal.pone.0101298",
+        "http_status": 200,
+        "final_url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101298",
+        "redirect_statuses": [
+          302,
+          301,
+          301
+        ]
+      }
+    },
+    "biosteam2020": {
+      "checked_at_utc": "2026-09-06T03:10:33.977795+00:00",
+      "expected_doi": "10.1021/acssuschemeng.9b07040",
+      "query": "BioSTEAM A Fast and Flexible Platform for the Design Simulation and Techno Economic Analysis of Biorefineries under Uncertainty Cortes Pena 2020",
+      "query_http_status": 200,
+      "query_url": "https://api.crossref.org/works?query.bibliographic=BioSTEAM+A+Fast+and+Flexible+Platform+for+the+Design+Simulation+and+Techno+Economic+Analysis+of+Biorefineries+under+Uncertainty+Cortes+Pena+2020&rows=3",
+      "query_candidates": [
+        {
+          "DOI": "10.1021/acssuschemeng.9b07040.s001",
+          "title": [
+            "BioSTEAM: A Fast and Flexible Platform for the Design Simulation, and Techno-Economic Analysis of Biorefineries under Uncertainty"
+          ],
+          "author": null,
+          "container-title": null,
+          "short-container-title": null,
+          "publisher": "American Chemical Society (ACS)",
+          "volume": null,
+          "issue": null,
+          "page": null,
+          "article-number": null,
+          "published": null,
+          "published-print": null,
+          "published-online": null,
+          "URL": "https://doi.org/10.1021/acssuschemeng.9b07040.s001",
+          "type": "component"
+        },
+        {
+          "DOI": "10.1021/acssuschemeng.9b07040",
+          "title": [
+            "BioSTEAM: A Fast and Flexible Platform for the Design,\nSimulation, and Techno-Economic Analysis of Biorefineries under Uncertainty"
+          ],
+          "author": [
+            {
+              "given": "Yoel",
+              "family": "Cortes-Peña",
+              "sequence": "first",
+              "affiliation": [
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                },
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Deepak",
+              "family": "Kumar",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                },
+                {
+                  "name": "State University of New York College of Environmental Science and Forestry , , 402 Walters Hall, 1 Forestry Drive , , ,",
+                  "place": [
+                    "Syracuse, New York, United States, 13210"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "given": "Vijay",
+              "family": "Singh",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                },
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 360 G Agricultural Sciences Building, 1304 W. Pennsylvania Avenue , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            },
+            {
+              "ORCID": "https://orcid.org/0000-0003-2489-2579",
+              "authenticated-orcid": true,
+              "given": "Jeremy S.",
+              "family": "Guest",
+              "sequence": "additional",
+              "affiliation": [
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                },
+                {
+                  "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                  "place": [
+                    "Urbana, Illinois, United States, 61801"
+                  ]
+                }
+              ],
+              "role": [
+                {
+                  "vocabulary": "crossref",
+                  "role": "author"
+                }
+              ]
+            }
+          ],
+          "container-title": [
+            "ACS Sustainable Chemistry &amp; Engineering"
+          ],
+          "short-container-title": null,
+          "publisher": "American Chemical Society (ACS)",
+          "volume": "8",
+          "issue": "8",
+          "page": "3302-3310",
+          "article-number": null,
+          "published": {
+            "date-parts": [
+              [
+                2020,
+                1,
+                30
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2020,
+                3,
+                2
+              ]
+            ]
+          },
+          "published-online": {
+            "date-parts": [
+              [
+                2020,
+                1,
+                30
+              ]
+            ]
+          },
+          "URL": "https://doi.org/10.1021/acssuschemeng.9b07040",
+          "type": "journal-article"
+        },
+        {
+          "DOI": "10.1021/acssuschemeng.0c05998.s001",
+          "title": [
+            "BioSTEAM-LCA: An Integrated Modeling Framework for Agile Life Cycle Assessment of Biorefineries under Uncertainty"
+          ],
+          "author": null,
+          "container-title": null,
+          "short-container-title": null,
+          "publisher": "American Chemical Society (ACS)",
+          "volume": null,
+          "issue": null,
+          "page": null,
+          "article-number": null,
+          "published": null,
+          "published-print": null,
+          "published-online": null,
+          "URL": "https://doi.org/10.1021/acssuschemeng.0c05998.s001",
+          "type": "component"
+        }
+      ],
+      "exact_crossref_http_status": 200,
+      "exact_crossref_url": "https://api.crossref.org/works/10.1021%2Facssuschemeng.9b07040",
+      "metadata": {
+        "DOI": "10.1021/acssuschemeng.9b07040",
+        "title": [
+          "BioSTEAM: A Fast and Flexible Platform for the Design,\nSimulation, and Techno-Economic Analysis of Biorefineries under Uncertainty"
+        ],
+        "author": [
+          {
+            "given": "Yoel",
+            "family": "Cortes-Peña",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              },
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deepak",
+            "family": "Kumar",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              },
+              {
+                "name": "State University of New York College of Environmental Science and Forestry , , 402 Walters Hall, 1 Forestry Drive , , ,",
+                "place": [
+                  "Syracuse, New York, United States, 13210"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Vijay",
+            "family": "Singh",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              },
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 360 G Agricultural Sciences Building, 1304 W. Pennsylvania Avenue , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2489-2579",
+            "authenticated-orcid": true,
+            "given": "Jeremy S.",
+            "family": "Guest",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              },
+              {
+                "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+                "place": [
+                  "Urbana, Illinois, United States, 61801"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "ACS Sustainable Chemistry &amp; Engineering"
+        ],
+        "short-container-title": [],
+        "publisher": "American Chemical Society (ACS)",
+        "volume": "8",
+        "issue": "8",
+        "page": "3302-3310",
+        "article-number": null,
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              30
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              3,
+              2
+            ]
+          ]
+        },
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              1,
+              30
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1021/acssuschemeng.9b07040",
+        "type": "journal-article"
+      },
+      "exact_doi_match": true,
+      "doi_resolver": {
+        "requested_url": "https://doi.org/10.1021/acssuschemeng.9b07040",
+        "http_status": 403,
+        "final_url": "https://pubs.acs.org/ascecg/article/8/8/3302/1646301/BioSTEAM-A-Fast-and-Flexible-Platform-for-the",
+        "redirect_statuses": [
+          302
+        ]
+      },
+      "publisher": {
+        "requested_url": "https://doi.org/10.1021/acssuschemeng.9b07040",
+        "http_status": 403,
+        "final_url": "https://pubs.acs.org/ascecg/article/8/8/3302/1646301/BioSTEAM-A-Fast-and-Flexible-Platform-for-the",
+        "redirect_statuses": [
+          302
+        ]
+      }
+    }
+  }
+}
