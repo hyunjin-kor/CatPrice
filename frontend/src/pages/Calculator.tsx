@@ -35,6 +35,8 @@ import {
   type CalculatorRow,
 } from '../lib/calculator-session';
 import { formatPrice } from '../lib/format-price';
+import { compareElectroPreference } from '../lib/electrode-defaults';
+import { matchThermalTemplate, sameSteps } from '../lib/preparation-selection';
 import { useLang } from '../lib/i18n';
 import { LB_PER_KG, TROY_OZ_PER_LB } from '../lib/unit-conversion';
 import { useBasis } from '../lib/use-basis';
@@ -416,78 +418,6 @@ function calculatorMaterialLabel(material: MaterialItem) {
   return material.name;
 }
 
-function preferredScopeRank(material: MaterialItem) {
-  switch (material.price_scope) {
-    case 'literature_high_volume':
-      return 0;
-    case 'historical_bulk':
-      return 1;
-    case 'vendor_lab':
-      return 2;
-    default:
-      return 3;
-  }
-}
-
-function electrocatalystTemplateRank(
-  material: MaterialItem,
-  category: string,
-  applicationFamily: ApplicationFamily,
-  templateId: string,
-) {
-  const text = `${material.name} ${material.formula ?? ''} ${material.symbol ?? ''}`.toLowerCase();
-  const symbol = (material.symbol ?? '').toLowerCase();
-  const exactFamilyRank =
-    material.application_family === applicationFamily
-      ? 0
-      : material.application_family === 'general'
-        ? 1
-        : 2;
-
-  const isPemElectrolyzer = templateId === 'pem_electrolyzer_ccm';
-  const isDmfc = templateId === 'dmfc_gde_route';
-  const isPemRoute = templateId === 'pem_fuel_cell_ccm' || isDmfc;
-
-  if (applicationFamily !== 'electrolyzer' && !isPemRoute) {
-    return exactFamilyRank;
-  }
-  const isPfsa = text.includes('pfsa') || text.includes('aquivion');
-  const isAem = text.includes('aem') || text.includes('piperion') || text.includes('sustainion') || text.includes('pdt');
-  const isTitanium = text.includes('titanium') || text.includes('ptl') || text.includes('frit');
-  const isNickel = text.includes('nickel');
-  const isCarbon = text.includes('carbon');
-
-  if (category === 'Ionomer' || category === 'Membrane') {
-    if (isPemElectrolyzer || isPemRoute) return isPfsa ? 0 : isAem ? 1 : 2;
-    return isAem ? 0 : isPfsa ? 1 : 2;
-  }
-
-  if (category === 'Gas Diffusion Layer') {
-    if (isPemElectrolyzer) return isTitanium ? 0 : isCarbon ? 1 : isNickel ? 2 : 3;
-    if (isPemRoute) return isCarbon ? 0 : isTitanium ? 1 : isNickel ? 2 : 3;
-    return isNickel ? 0 : isCarbon ? 1 : isTitanium ? 2 : 3;
-  }
-
-  if (category === 'Electrocatalyst Powder') {
-    if (isPemElectrolyzer) {
-      if (symbol === 'ir') return 0;
-      if (symbol === 'ru') return 1;
-      if (symbol === 'ptir') return 2;
-      return 3;
-    }
-    if (isPemRoute) {
-      if (symbol === 'ptru') return isDmfc ? 0 : 1;
-      if (symbol === 'pt') return isDmfc ? 1 : 0;
-      return 2;
-    }
-    if (symbol === 'ni') return 0;
-    if (symbol === 'ag') return 1;
-    if (symbol === 'ir' || symbol === 'ru') return 2;
-    return 3;
-  }
-
-  return exactFamilyRank;
-}
 
 function MetricTile({ label, value, detail, dark = false }: { label: string; value: string; detail: string; dark?: boolean }) {
   return (
@@ -522,6 +452,7 @@ export default function Calculator() {
   const storedDraft = loadCalculatorDraft();
   const [rows, setRows] = useState<CalculatorRow[]>(() => storedDraft?.rows?.length ? storedDraft.rows : defaultRows());
   const [steps, setSteps] = useState<string[]>(() => storedDraft?.steps?.length ? storedDraft.steps : DEFAULT_STEPS);
+  const [selectedThermalTemplateId, setSelectedThermalTemplateId] = useState<string | null>(() => storedDraft?.thermalTemplateId ?? null);
   const [catalystDomain, setCatalystDomain] = useState<'thermal' | 'electrocatalyst'>(() => storedDraft?.catalystDomain ?? 'thermal');
   const [applicationFamily, setApplicationFamily] = useState<ApplicationFamily>(() => storedDraft?.applicationFamily ?? 'fuel_cell');
   const [electrocatalystConfig, setElectrocatalystConfig] = useState<ElectrocatalystDraft>(() => ({ ...defaultElectrocatalystConfig(), ...storedDraft?.electrocatalystConfig }));
@@ -554,6 +485,7 @@ export default function Calculator() {
     saveCalculatorDraft({
       rows,
       steps,
+      thermalTemplateId: selectedThermalTemplateId,
       catalystDomain,
       applicationFamily,
       orderSize,
@@ -575,15 +507,17 @@ export default function Calculator() {
     reactorType,
     rows,
     selectedBenchmark,
+    selectedThermalTemplateId,
     steps,
   ]);
 
   useEffect(() => {
+    if (catalystDomain === 'thermal' && selectedThermalTemplateId) return;
     setSteps((previous) => previous.filter((key) => {
       const step = ALL_STEPS.find((item) => item.key === key);
       return step ? (step.scales as readonly Scale[]).includes(currentScale) : false;
     }));
-  }, [currentScale]);
+  }, [currentScale, catalystDomain, selectedThermalTemplateId]);
 
   // Processing cost of every method at the current production scale, so the
   // method cards can show what the route itself costs before materials.
@@ -594,6 +528,8 @@ export default function Calculator() {
       .then((payload) => {
         if (cancelled) return;
         setTemplateCosts(Object.fromEntries(payload.templates.map((item) => [item.id, item])));
+        const selected = payload.templates.find((item) => item.id === selectedThermalTemplateId);
+        if (selected?.steps_fitted.length) setSteps([...selected.steps_fitted]);
       })
       .catch(() => {
         if (!cancelled) setTemplateCosts({});
@@ -601,7 +537,7 @@ export default function Calculator() {
     return () => {
       cancelled = true;
     };
-  }, [orderSize, catalystDomain]);
+  }, [orderSize, catalystDomain, selectedThermalTemplateId]);
 
   // Fetch live prices ONCE on mount. Each fetchPrices() returns a fresh array
   // reference, and the dedupe/derived options below depend on it — putting
@@ -737,22 +673,12 @@ export default function Calculator() {
   useEffect(() => {
     if (catalystDomain !== 'electrocatalyst' || electroMaterials.length === 0) return;
 
-    const compareElectroPreference = (left: MaterialItem, right: MaterialItem, category: string) => {
-      const templateDelta =
-        electrocatalystTemplateRank(left, category, applicationFamily, electrocatalystConfig.templateId)
-        - electrocatalystTemplateRank(right, category, applicationFamily, electrocatalystConfig.templateId);
-      if (templateDelta !== 0) return templateDelta;
-      const scopeDelta = preferredScopeRank(left) - preferredScopeRank(right);
-      if (scopeDelta !== 0) return scopeDelta;
-      const leftPrice = left.price ?? Number.POSITIVE_INFINITY;
-      const rightPrice = right.price ?? Number.POSITIVE_INFINITY;
-      if (leftPrice !== rightPrice) return leftPrice - rightPrice;
-      return left.name.localeCompare(right.name);
-    };
+    const comparePreference = (left: MaterialItem, right: MaterialItem, category: string) =>
+      compareElectroPreference(left, right, category, applicationFamily, electrocatalystConfig.templateId);
 
     const pickPreferredKey = (options: MaterialItem[], category: string) => {
       if (options.length === 0) return '';
-      const preferred = [...options].sort((left, right) => compareElectroPreference(left, right, category));
+      const preferred = [...options].sort((left, right) => comparePreference(left, right, category));
       return String(preferred[0]?.id ?? '');
     };
 
@@ -762,7 +688,7 @@ export default function Calculator() {
       const current = options.find((material) => String(material.id) === currentKey);
       const preferred = options.find((material) => String(material.id) === preferredKey);
       if (!current || !preferred) return preferredKey;
-      return compareElectroPreference(current, preferred, category) > 0 ? preferredKey : '';
+      return comparePreference(current, preferred, category) > 0 ? preferredKey : '';
     };
 
     const catalystOptions = electroMaterials.filter((material) => material.category === 'Electrocatalyst Powder');
@@ -883,13 +809,12 @@ export default function Calculator() {
     const fitted = templateCosts[template.id]?.steps_fitted;
     return fitted?.length ? fitted : template.steps;
   };
-  const sameSteps = (left: string[], right: string[]) => left.length === right.length && left.every((key) => right.includes(key));
   const matchedThermalTemplate =
-    catalystDomain === 'thermal' ? thermalTemplates.find((template) => sameSteps(routeStepsFor(template), steps)) ?? null : null;
+    catalystDomain === 'thermal' ? matchThermalTemplate(thermalTemplates, templateCosts, steps, selectedThermalTemplateId) : null;
   const benchmarkTemplate = activeBenchmark?.route.calculator_template_id
     ? thermalTemplates.find((template) => template.id === activeBenchmark.route.calculator_template_id) ?? null
     : null;
-  const thermalTemplateId = matchedThermalTemplate && matchedThermalTemplate.id !== benchmarkTemplate?.id ? matchedThermalTemplate.id : undefined;
+  const thermalTemplateId = matchedThermalTemplate && (selectedThermalTemplateId || matchedThermalTemplate.id !== benchmarkTemplate?.id) ? matchedThermalTemplate.id : undefined;
   const thermalRouteLabel = thermalTemplateId
     ? matchedThermalTemplate?.name ?? t('Manual step selection')
     : activeBenchmark
@@ -935,7 +860,8 @@ export default function Calculator() {
               const step = ALL_STEPS.find((item) => item.key === key);
               return step ? (step.scales as readonly Scale[]).includes(currentScale) : false;
             });
-      setSteps(thermalBenchmarkSteps);
+      setSteps(selectedThermalTemplateId && templateCosts[selectedThermalTemplateId]?.steps_fitted.length
+        ? [...templateCosts[selectedThermalTemplateId].steps_fitted] : thermalBenchmarkSteps);
       return;
     }
 
@@ -973,7 +899,10 @@ export default function Calculator() {
     }
     return previous.filter((row) => row.id !== id);
   });
-  const toggleStep = (stepKey: string) => setSteps((previous) => previous.includes(stepKey) ? previous.filter((item) => item !== stepKey) : [...previous, stepKey]);
+  const toggleStep = (stepKey: string) => {
+    setSelectedThermalTemplateId(null);
+    setSteps((previous) => previous.includes(stepKey) ? previous.filter((item) => item !== stepKey) : [...previous, stepKey]);
+  };
   const thermalRows = rows.filter((row) => row.role === 'active_metal' || row.role === 'promoter' || row.role === 'support');
   const supportRows = thermalRows.filter((row) => row.role === 'support');
   const nonSupportRows = thermalRows.filter((row) => row.role !== 'support');
@@ -1126,6 +1055,7 @@ export default function Calculator() {
       if (nextRows.length === 0) return;
       setCatalystDomain('thermal');
       setRows(nextRows);
+      setSelectedThermalTemplateId(input.template_id ?? null);
       setSteps(input.steps ?? []);
       setOrderSize(input.order_size_tons ?? 20);
       setLoadedSavedName(summary.name);
@@ -1475,7 +1405,7 @@ export default function Calculator() {
             <div className="mt-3 flex flex-wrap gap-2">
               <span className="cp-chip">{t(applicationFamilyLabel(applicationFamily))}</span>
               {activeElectroTemplate.manufacturing_mode ? <span className="cp-chip">{activeElectroTemplate.manufacturing_mode}</span> : null}
-              <span className="cp-chip">{activeElectroTemplate.steps.length} steps</span>
+              <span className="cp-chip">{activeElectroTemplate.steps.length} {t("steps")}</span>
             </div>
             <div className="mt-4 grid gap-3 lg:grid-cols-3">
               <div>
@@ -1531,7 +1461,7 @@ export default function Calculator() {
                   <div className="flex flex-none items-center gap-2"><input type="number" step="0.1" min="0" max="100" value={row.wt_pct} onChange={(event) => updateRow(row.id, { wt_pct: Number(event.target.value) })} className="input-base w-28 text-right font-mono" /><span className="text-xs text-slate-600">wt%</span></div>
                   {sourceChip(row)}
                   {priceField(row)}
-                  <button onClick={() => removeRow(row.id)} className="flex h-10 w-10 flex-none items-center justify-center rounded-[18px] border border-slate-300 bg-white/74 text-slate-400 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700" aria-label="Remove row">x</button>
+                  <button onClick={() => removeRow(row.id)} className="flex h-10 w-10 flex-none items-center justify-center rounded-[18px] border border-slate-300 bg-white/74 text-slate-400 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700" aria-label={t("Remove row")}>x</button>
                 </div>
                 <div className="mt-3 text-xs text-slate-600">{row.name || 'Select a material record.'}</div>
               </div>
@@ -1819,7 +1749,7 @@ export default function Calculator() {
                 )}
                 {sourceChip(row)}
                 {priceField(row)}
-                {supportRows.length > 1 ? <button onClick={() => removeRow(row.id)} className="flex h-10 w-10 flex-none items-center justify-center rounded-[18px] border border-slate-300 bg-white/74 text-slate-400 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700" aria-label="Remove support">x</button> : null}
+                {supportRows.length > 1 ? <button onClick={() => removeRow(row.id)} className="flex h-10 w-10 flex-none items-center justify-center rounded-[18px] border border-slate-300 bg-white/74 text-slate-400 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700" aria-label={t("Remove support")}>x</button> : null}
               </div>
               <div className="mt-3 text-xs text-slate-600">{row.name || t('Select a support record.')}</div>
             </div>
@@ -1916,7 +1846,7 @@ export default function Calculator() {
                   {thermalTemplates.filter((template) => (template.category || 'Other') === category).map((template) => {
                     const cost = templateCosts[template.id];
                     const routeSteps = cost?.steps_fitted?.length ? cost.steps_fitted : template.steps;
-                    const active = routeSteps.length === steps.length && routeSteps.every((key) => steps.includes(key));
+                    const active = matchedThermalTemplate?.id === template.id;
                     const uncosted = cost?.uncosted_operations ?? template.uncosted_operations ?? [];
                     const substitutions = cost?.substitutions ?? [];
                     const costLabel = cost?.processing_cost_per_lb != null
@@ -1925,7 +1855,10 @@ export default function Calculator() {
                     return (
                       <button
                         key={template.id}
-                        onClick={() => setSteps([...routeSteps])}
+                        onClick={() => {
+                          setSelectedThermalTemplateId(template.id);
+                          setSteps([...routeSteps]);
+                        }}
                         title={[
                           template.description,
                           routeSteps.map(formatStepLabel).join(' → '),
@@ -1985,7 +1918,7 @@ export default function Calculator() {
                     const available = (step.scales as readonly Scale[]).includes(currentScale);
                     const checked = steps.includes(step.key);
                     const availabilityLabel = step.scales.length === 3 ? null : step.scales.map((item) => item.charAt(0).toUpperCase()).join('/');
-                    return <button key={step.key} onClick={() => available && toggleStep(step.key)} disabled={!available} title={available ? t(step.label) : `Not available at ${scale.label.toLowerCase()} scale`} className={`rounded-[16px] border px-3 py-2 text-left text-sm transition ${!available ? 'cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400' : checked ? 'border-[#0d9488] bg-[#e6f5f2] text-[#0f766e]' : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'}`}><div className="flex items-center justify-between gap-3"><div className="font-medium">{t(step.label)}</div>{checked ? <span className="rounded-full border border-[#0d9488] bg-white px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#0f766e]">On</span> : null}</div>{availabilityLabel ? <div className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-400">{availabilityLabel}</div> : null}</button>;
+                    return <button key={step.key} onClick={() => available && toggleStep(step.key)} disabled={!available} title={available ? t(step.label) : `Not available at ${scale.label.toLowerCase()} scale`} className={`rounded-[16px] border px-3 py-2 text-left text-sm transition ${!available ? 'cursor-not-allowed border-slate-200 bg-slate-100 text-slate-400' : checked ? 'border-[#0d9488] bg-[#e6f5f2] text-[#0f766e]' : 'border-slate-200 bg-white text-slate-700 hover:border-slate-300'}`}><div className="flex items-center justify-between gap-3"><div className="font-medium">{t(step.label)}</div>{checked ? <span className="rounded-full border border-[#0d9488] bg-white px-2 py-0.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#0f766e]">{t("On")}</span> : null}</div>{availabilityLabel ? <div className="mt-1 text-xs uppercase tracking-[0.18em] text-slate-400">{availabilityLabel}</div> : null}</button>;
                   })}
                 </div>
                 {selectedInCategory.length > 0 ? (
@@ -2098,13 +2031,12 @@ export default function Calculator() {
               <button onClick={handleCalculate} disabled={loading || !isValid || steps.length === 0} className="cp-button-primary min-w-[250px]">{loading ? <><span className="mr-2 inline-flex h-4 w-4 animate-spin rounded-full border-2 border-slate-950 border-t-transparent" />{t('Running estimate')}</> : t('Run estimate')}</button>
               <div className="text-xs leading-6 text-slate-600">{t('The result screen opens separately and keeps these inputs intact.')}</div>
             </div>
-            {error ? <div className="mt-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700"><span className="font-semibold">{t('Calculation failed.')}</span> {error}</div> : null}
+            {error ? <div className="mt-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700"><span className="font-semibold">{t('Calculation failed.')}</span> {t(error)}</div> : null}
             {loadedSavedName ? (
               <div className="mt-4 rounded-[24px] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
                 {lang === 'ko'
                   ? <>저장된 계산 <span className="font-semibold">{loadedSavedName}</span>을(를) 현재 입력으로 불러왔습니다. 라이브러리 링크가 없는 행은 저장된 가격을 수동 입력값으로 복원했습니다.</>
-                  : <>Loaded saved estimate <span className="font-semibold">{loadedSavedName}</span> into the draft. Rows without a
-                library link were restored with their saved prices as manual inputs.</>}
+                  : <>{t("Loaded saved estimate")} <span className="font-semibold">{loadedSavedName}</span> {t("into the draft. Rows without a library link were restored with their saved prices as manual inputs.")}</>}
               </div>
             ) : null}
             {savedEstimates.length > 0 ? (
@@ -2128,7 +2060,7 @@ export default function Calculator() {
                           <div className="truncate text-sm font-semibold text-[#191f28]">{saved.name}</div>
                           <div className="mt-0.5 text-xs text-slate-600">
                             {saved.metal_symbol ? `${saved.metal_loading_wt_pct}% ${saved.metal_symbol}` : saved.catalyst_domain}
-                            {saved.support_name ? ` / ${saved.support_name}` : ''} · {saved.order_size_tons} tons ·{' '}
+                            {saved.support_name ? ` / ${saved.support_name}` : ''} · {saved.order_size_tons} {t("tons ·")}{' '}
                             {formatPrice(toDisplay(saved.estimated_price_per_lb))}{fmtLabel} · {saved.created_at.slice(0, 10)}
                           </div>
                         </div>
@@ -2137,7 +2069,7 @@ export default function Calculator() {
                             type="button"
                             onClick={() => void handleLoadSaved(saved)}
                             disabled={busy || !loadable}
-                            title="Restore this case into the draft"
+                            title={t("Restore this case into the draft")}
                             className={`rounded-[14px] border px-3 py-1.5 text-xs font-semibold transition ${
                               loadable
                                 ? 'border-[#0d9488] bg-[#e6f5f2] text-[#0f766e] hover:bg-[#d3efe9]'

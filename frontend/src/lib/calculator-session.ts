@@ -19,6 +19,7 @@ export interface CalculatorRow {
 export interface CalculatorDraft {
   rows: CalculatorRow[];
   steps: string[];
+  thermalTemplateId?: string | null;
   catalystDomain: 'thermal' | 'electrocatalyst';
   applicationFamily?: ApplicationFamily;
   orderSize: number;
