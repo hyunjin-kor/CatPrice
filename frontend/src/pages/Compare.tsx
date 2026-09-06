@@ -224,7 +224,7 @@ export default function Compare() {
   if (loading && !benchmark) {
     return (
       <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7">
-        <div className="cp-subtle-label">Literature Benchmarks</div>
+        <div className="cp-subtle-label">{t("Literature Benchmarks")}</div>
         <Skeleton className="mt-3 h-9 w-3/5 max-w-md" />
         <Skeleton className="mt-3 h-3 w-3/4 max-w-xl" />
         <Skeleton className="mt-2 h-3 w-2/3 max-w-lg" />
@@ -243,7 +243,7 @@ export default function Compare() {
   }
 
   if (error || !benchmark || !activeCandidate) {
-    return <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7"><span className="section-kicker">Literature Benchmarks</span><h1 className="cp-heading-xl mt-4">Literature benchmarks are unavailable.</h1><p className="cp-body-copy mt-3 max-w-xl">{error || 'The selected benchmark family did not return any candidate data.'}</p></section>;
+    return <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7"><span className="section-kicker">{t("Literature Benchmarks")}</span><h1 className="cp-heading-xl mt-4">{t("Literature benchmarks are unavailable.")}</h1><p className="cp-body-copy mt-3 max-w-xl">{t(error || 'The selected benchmark family did not return any candidate data.')}</p></section>;
   }
 
   const winner = benchmark.winner;

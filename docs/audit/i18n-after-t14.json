@@ -1,0 +1,147 @@
+{
+  "static_translation_calls": 781,
+  "korean_keys": 822,
+  "missing_key_occurrences": 0,
+  "raw_jsx_label_occurrences": 27,
+  "untranslated_ui_label_occurrences": 0,
+  "missing": [],
+  "rawLabels": [
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 56,
+      "label": "Alt +"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 69,
+      "label": "Esc"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 45,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 151,
+      "label": "kg"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 159,
+      "label": "lb"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 180,
+      "label": "EN"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 66,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 66,
+      "label": ": Catalyst Overall Manufacturing Estimation Tool"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 130,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 149,
+      "label": "kg"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 157,
+      "label": "lb"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 174,
+      "label": "EN"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1349,
+      "label": "cm²"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1357,
+      "label": "mg/cm²"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1461,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1745,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1748,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1986,
+      "label": "lb/ft³"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 343,
+      "label": "유효 면적 cm²당 전극 조립체 원가입니다 (모델 면적"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 343,
+      "label": "cm²). 질량 기준으로는 공급사 포장 단가 기준"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 468,
+      "label": "유효 면적 cm²당 전극 조립체 원가입니다. 질량 기준으로는 공급사 포장 단가 기준"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 828,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 874,
+      "label": "(DOI"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 149,
+      "label": "CatCost Ch.7"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 342,
+      "label": "FCI"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 348,
+      "label": "FCI/PE"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 662,
+      "label": "HS"
+    }
+  ],
+  "untranslatedLabels": [],
+  "scope": "Literal and conditional t(string) keys, literal JSX text, UI attributes and direct JSX template-literal fragments. Technical symbols/units, the product name and already-Korean text are explicitly excluded from untranslated UI counts. Conditional language branches, source data and variable translation keys require manual/browser review."
+}

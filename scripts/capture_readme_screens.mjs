@@ -2,7 +2,10 @@ import { mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { spawnSync } from 'node:child_process';
-import { chromium } from 'playwright';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const { chromium } = require(process.env.COMET_PLAYWRIGHT_PATH || 'playwright');
 
 const baseUrl = process.env.COMET_CAPTURE_BASE_URL ?? 'http://127.0.0.1:4173';
 const outputDir = path.resolve(process.cwd(), 'docs', 'assets');
@@ -24,6 +27,7 @@ async function captureClip(page, clip, filename) {
   await page.screenshot({
     path: path.join(outputDir, filename),
     type: 'png',
+    fullPage: true,
     clip: {
       x: Math.max(0, Math.floor(clip.x)),
       y: Math.max(0, Math.floor(clip.y)),
@@ -315,7 +319,8 @@ async function main() {
     benchmarkCandidate: null,
   };
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ channel: 'chrome', headless: true });
+  try {
   const context = await browser.newContext({
     viewport: { width: 1500, height: 1120 },
     deviceScaleFactor: 1,
@@ -330,11 +335,11 @@ async function main() {
   logStep('cost estimate workflow');
   {
     const page = await preparePage(context, draftSnapshot, resultSnapshot, '/?estimate=type');
-    await page.waitForSelector('text=Choose the workflow before you edit the recipe.');
+    await page.waitForSelector('text=Choose the catalyst class before you build the formulation.');
     await captureSelectorSliceFromText(
       page,
       'main > div > div:last-child',
-      'Choose the workflow before you edit the recipe.',
+      'Choose the catalyst class before you build the formulation.',
       'screen-cost-estimate-type.png',
       390,
     );
@@ -344,11 +349,11 @@ async function main() {
     const page = await preparePage(context, draftSnapshot, resultSnapshot, '/?estimate=composition');
     await page.setViewportSize({ width: 1500, height: 1800 });
     await waitForAppReady(page);
-    await page.waitForSelector('text=Define the catalyst recipe.');
+    await page.waitForSelector('text=Define the catalyst formulation.');
     await captureSelectorSliceFromText(
       page,
       'main > div > div:last-child',
-      'Define the catalyst recipe.',
+      'Define the catalyst formulation.',
       'screen-cost-estimate-composition.png',
       900,
     );
@@ -396,7 +401,7 @@ async function main() {
   logStep('live metal prices');
   {
     const page = await preparePage(context, draftSnapshot, resultSnapshot, '/prices?feed=quotes');
-    await page.waitForSelector('text=Scan the tracked symbols');
+    await page.waitForSelector('text=Scan the tracked metals');
     await page.locator('button').filter({ hasText: 'Platinum' }).first().click();
     await waitForAppReady(page);
     await captureSelectorBox(page, '.cp-split-workspace > section:first-child', 'screen-live-metal-prices-overview.png');
@@ -426,7 +431,7 @@ async function main() {
   {
     const page = await preparePage(context, draftSnapshot, resultSnapshot, '/library?library=materials');
     await page.waitForSelector('text=Material sources, step rates');
-    await captureSelectorSliceFromText(page, 'main > div > div:last-child', 'Search', 'screen-source-library.png', 940);
+    await captureSelectorTopSlice(page, 'main > div > div:last-child', 'screen-source-library.png', 940);
     await page.close();
   }
 
@@ -447,6 +452,9 @@ async function main() {
   await browser.close();
   roundCorners();
   logStep('done');
+  } finally {
+    await browser.close();
+  }
 }
 
 function roundCorners() {

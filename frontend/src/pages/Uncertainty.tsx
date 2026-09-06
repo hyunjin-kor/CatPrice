@@ -67,10 +67,11 @@ function FieldBlock({
 }
 
 function ChartFallback() {
+  const { t } = useLang();
   return (
     <div className="flex h-full min-h-[280px] items-center justify-center gap-3 rounded-[24px] border border-slate-200 bg-slate-50/80 text-center">
       <span className="h-5 w-5 animate-spin rounded-full border-2 border-[#0d9488] border-t-transparent" />
-      <div className="text-sm text-slate-600">Loading range chart...</div>
+      <div className="text-sm text-slate-600">{t("Loading range chart...")}</div>
     </div>
   );
 }
@@ -440,7 +441,7 @@ export default function Uncertainty() {
               </div>
 
               {error ? (
-                <div className="mt-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700">{error}</div>
+                <div className="mt-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700">{t(error)}</div>
               ) : null}
             </>
           )}

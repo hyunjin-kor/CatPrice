@@ -84,7 +84,7 @@ export function WorkspaceSectionNav({
 
   return (
     <section className="surface-card-soft flex flex-col gap-2 px-4 py-2.5 sm:flex-row sm:items-center sm:justify-between">
-      <nav aria-label="Workflow steps" className="flex flex-wrap items-center gap-1">
+      <nav aria-label={t("Workflow steps")} className="flex flex-wrap items-center gap-1">
         {sections.map((section, index) => {
           const active = section.id === activeSectionId;
           const done = index < activeIndex;

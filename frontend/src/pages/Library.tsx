@@ -18,13 +18,13 @@ import { useUnit } from '../lib/use-unit';
 type Tab = 'materials' | 'steps' | 'templates';
 type SortKey = 'name' | 'year_desc' | 'year_asc' | 'price_desc' | 'price_asc';
 
-function sortOptions(fmtLabel: string): Array<{ value: SortKey; label: string }> {
+function sortOptions(fmtLabel: string, t: (key: string) => string): Array<{ value: SortKey; label: string }> {
   return [
     { value: 'name', label: 'Name (A-Z)' },
     { value: 'year_desc', label: 'Quote year (newest)' },
     { value: 'year_asc', label: 'Quote year (oldest)' },
-    { value: 'price_desc', label: `In-calculator $${fmtLabel} (high-low)` },
-    { value: 'price_asc', label: `In-calculator $${fmtLabel} (low-high)` },
+    { value: 'price_desc', label: `${t('In-calculator price')} $${fmtLabel} (${t('high-low')})` },
+    { value: 'price_asc', label: `${t('In-calculator price')} $${fmtLabel} (${t('low-high')})` },
   ];
 }
 
@@ -351,7 +351,7 @@ export default function Library() {
 
         {error ? (
           <div className="mt-4 rounded-[18px] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700" role="alert">
-            {error}
+            {t(error)}
           </div>
         ) : null}
 
@@ -426,7 +426,7 @@ export default function Library() {
                     onChange={(event) => setSortKey(event.target.value as SortKey)}
                     className="input-base"
                   >
-                    {sortOptions(fmtLabel).map((option) => (
+                    {sortOptions(fmtLabel, t).map((option) => (
                       <option key={option.value} value={option.value}>
                         {t(option.label)}
                       </option>
@@ -456,9 +456,9 @@ export default function Library() {
                 ) : sortedMaterials.length === 0 ? (
                   <div className="flex flex-col items-start gap-3 px-5 py-8 text-sm text-slate-600">
                     <div>
-                      <div className="font-semibold text-[#191f28]">No materials match the current filters.</div>
+                      <div className="font-semibold text-[#191f28]">{t("No materials match the current filters.")}</div>
                       <div className="mt-1 text-xs leading-5 text-slate-600">
-                        Try clearing the search box or category filter to see the full library.
+                        {t("Try clearing the search box or category filter to see the full library.")}
                       </div>
                     </div>
                     {(search || category) ? (
@@ -470,7 +470,7 @@ export default function Library() {
                         }}
                         className="cp-button-secondary px-3.5 py-2 text-xs"
                       >
-                        Clear filters
+                        {t("Clear filters")}
                       </button>
                     ) : null}
                   </div>
@@ -489,7 +489,7 @@ export default function Library() {
                           <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
                             <div className="min-w-0">
                               <div className="truncate font-semibold text-[#191f28]">{material.name}</div>
-                              <div className="truncate text-xs text-slate-600">{material.symbol || material.formula || (lang === 'ko' ? '기호 없음' : 'No symbol')}</div>
+                              <div className="truncate text-xs text-slate-600">{material.symbol || material.formula || (lang === 'ko' ? '기호 없음' : t('No symbol'))}</div>
                               {material.notes ? <div className="mt-1 text-xs leading-5 text-slate-600">{material.notes}</div> : null}
                             </div>
                             <div className="text-left lg:text-right">
@@ -582,8 +582,8 @@ export default function Library() {
                 </div>
               ) : steps.length === 0 ? (
                 <div className="px-5 py-8 text-sm text-slate-600">
-                  <div className="font-semibold text-[#191f28]">No step rates loaded.</div>
-                  <div className="mt-1 text-xs leading-5 text-slate-600">The step library is empty — backend may not have published rates yet.</div>
+                  <div className="font-semibold text-[#191f28]">{t("No step rates loaded.")}</div>
+                  <div className="mt-1 text-xs leading-5 text-slate-600">{t("The step library is empty — backend may not have published rates yet.")}</div>
                 </div>
               ) : (
                 <div className="max-h-[68vh] space-y-2 overflow-auto px-4 py-4">
@@ -616,22 +616,22 @@ export default function Library() {
 
             <div className="cp-inspector-rail xl:max-h-[70vh] xl:overflow-auto">
               <section className="cp-rail-panel">
-                <div className="cp-subtle-label">Step Detail</div>
+                <div className="cp-subtle-label">{t("Step Detail")}</div>
                 <div className="mt-2 text-lg font-semibold text-[#191f28]">{selectedStep?.name ?? 'Choose a step row'}</div>
                 {selectedStep ? (
                   <>
                     <div className="mt-3 space-y-1">
-                      <InspectorRow label="Small" value={selectedStep.cost_small != null ? `${formatPrice(selectedStep.cost_small)}/hr` : 'N/A'} />
-                      <InspectorRow label="Medium" value={selectedStep.cost_medium != null ? `${formatPrice(selectedStep.cost_medium)}/hr` : 'N/A'} />
-                      <InspectorRow label="Large" value={selectedStep.cost_large != null ? `${formatPrice(selectedStep.cost_large)}/hr` : 'N/A'} />
-                      <InspectorRow label="Basis" value={selectedStep.basis || 'N/A'} detail={selectedStep.key} />
+                      <InspectorRow label={t("Small")} value={selectedStep.cost_small != null ? `${formatPrice(selectedStep.cost_small)}/hr` : 'N/A'} />
+                      <InspectorRow label={t("Medium")} value={selectedStep.cost_medium != null ? `${formatPrice(selectedStep.cost_medium)}/hr` : 'N/A'} />
+                      <InspectorRow label={t("Large")} value={selectedStep.cost_large != null ? `${formatPrice(selectedStep.cost_large)}/hr` : 'N/A'} />
+                      <InspectorRow label={t("Basis")} value={selectedStep.basis || 'N/A'} detail={selectedStep.key} />
                     </div>
                     <div className="mt-3 rounded-[18px] border border-slate-900/8 bg-white/72 px-3 py-3 text-xs leading-6 text-slate-600">
                       {selectedStep.note || 'No additional note stored for this step.'}
                     </div>
                   </>
                 ) : (
-                  <div className="mt-3 text-xs leading-6 text-slate-600">Choose a step to inspect the hourly-rate basis here.</div>
+                  <div className="mt-3 text-xs leading-6 text-slate-600">{t("Choose a step to inspect the hourly-rate basis here.")}</div>
                 )}
               </section>
             </div>
@@ -665,8 +665,8 @@ export default function Library() {
                   <SkeletonListRows count={4} />
                 ) : templates.length === 0 ? (
                   <div className="rounded-[20px] border border-slate-200 bg-white/58 px-5 py-6 text-sm text-slate-600">
-                    <div className="font-semibold text-[#191f28]">No route templates loaded.</div>
-                    <div className="mt-1 text-xs leading-5 text-slate-600">No templates are stored for the current catalyst-domain filter. Switch to "All domains" to widen the search.</div>
+                    <div className="font-semibold text-[#191f28]">{t("No route templates loaded.")}</div>
+                    <div className="mt-1 text-xs leading-5 text-slate-600">{t("No templates are stored for the current catalyst-domain filter. Switch to \"All domains\" to widen the search.")}</div>
                   </div>
                 ) : (
                   templates.map((template) => {
@@ -696,7 +696,7 @@ export default function Library() {
 
               <div className="cp-inspector-rail">
                 <section className="cp-rail-panel">
-                  <div className="cp-subtle-label">Route Audit</div>
+                  <div className="cp-subtle-label">{t("Route Audit")}</div>
                   <div className="mt-2 text-lg font-semibold text-[#191f28]">{selectedTemplate?.name ?? 'Choose a template'}</div>
                   {selectedTemplate ? (
                     <>
@@ -706,22 +706,22 @@ export default function Library() {
                         {selectedTemplate.manufacturing_mode ? <span className="cp-chip">{selectedTemplate.manufacturing_mode}</span> : null}
                       </div>
                       <div className="mt-3 space-y-1">
-                        <InspectorRow label="Steps" value={String(selectedTemplate.steps.length)} detail={selectedTemplate.source || 'Source not stated'} />
-                        <InspectorRow label="Examples" value={selectedTemplate.example_catalysts.length ? String(selectedTemplate.example_catalysts.length) : '0'} detail="Stored catalyst examples in this route." />
+                        <InspectorRow label={t("Steps")} value={String(selectedTemplate.steps.length)} detail={selectedTemplate.source || t('Source not stated')} />
+                        <InspectorRow label={t("Examples")} value={selectedTemplate.example_catalysts.length ? String(selectedTemplate.example_catalysts.length) : '0'} detail={t("Stored catalyst examples in this route.")} />
                       </div>
                       <div className="mt-3 rounded-[18px] border border-slate-900/8 bg-white/72 px-3 py-3 text-xs leading-6 text-slate-600">
                         {selectedTemplate.route_note || selectedTemplate.description}
                       </div>
                       {(selectedTemplate.preprocess?.length || selectedTemplate.synthesis?.length || selectedTemplate.postprocess?.length) ? (
                         <div className="mt-3 space-y-3">
-                          {selectedTemplate.preprocess?.length ? <div><div className="cp-subtle-label">Pre-treatment</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.preprocess.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
-                          {selectedTemplate.synthesis?.length ? <div><div className="cp-subtle-label">Synthesis</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.synthesis.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
-                          {selectedTemplate.postprocess?.length ? <div><div className="cp-subtle-label">Post-treatment</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.postprocess.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
+                          {selectedTemplate.preprocess?.length ? <div><div className="cp-subtle-label">{t("Pre-treatment")}</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.preprocess.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
+                          {selectedTemplate.synthesis?.length ? <div><div className="cp-subtle-label">{t("Synthesis")}</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.synthesis.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
+                          {selectedTemplate.postprocess?.length ? <div><div className="cp-subtle-label">{t("Post-treatment")}</div><div className="mt-2 flex flex-wrap gap-2">{selectedTemplate.postprocess.map((value) => <span key={value} className="cp-chip">{value}</span>)}</div></div> : null}
                         </div>
                       ) : null}
                     </>
                   ) : (
-                    <div className="mt-3 text-xs leading-6 text-slate-600">Choose a route template to inspect its preparation stages and audit fields here.</div>
+                    <div className="mt-3 text-xs leading-6 text-slate-600">{t("Choose a route template to inspect its preparation stages and audit fields here.")}</div>
                   )}
                 </section>
               </div>

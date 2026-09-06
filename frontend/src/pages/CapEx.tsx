@@ -320,7 +320,7 @@ export default function CapEx() {
 
         {error ? (
           <div className="mt-4 rounded-[18px] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700" role="alert">
-            {error}
+            {t(error)}
           </div>
         ) : null}
 
@@ -440,7 +440,7 @@ export default function CapEx() {
                 <div>
                   <div className="cp-subtle-label !text-emerald-700">{t('Annual OpEx')}</div>
                   <div className="cp-heading-sm mt-2">
-                    {formatUSD(result.opex.total_annual_opex)}/yr
+                    {formatUSD(result.opex.total_annual_opex)}{t("/yr")}
                   </div>
                   <div className="mt-1 text-xs leading-6 text-emerald-900">
                     {t('Layered on top of CapEx using your direct-labor / raw-material / utilities inputs and CatCost Ch.7 factors.')}

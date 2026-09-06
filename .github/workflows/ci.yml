@@ -54,6 +54,11 @@ jobs:
       - name: Audit (fail on high+ severity)
         run: npm audit --audit-level=high
 
+      - name: Translation keys and calculator rules
+        run: |
+          npm run check:i18n
+          node ../scripts/test_calculator_rules.mjs
+
       - name: Lint
         run: npm run lint
 

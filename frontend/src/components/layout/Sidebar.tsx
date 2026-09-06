@@ -50,8 +50,8 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
               type="button"
               onClick={onToggleCollapsed}
               className="no-drag flex h-7 w-7 flex-none items-center justify-center rounded-[8px] text-[#8b95a1] transition hover:bg-[#f2f4f6] hover:text-[#4e5968]"
-              title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
-              aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
+              title={t(collapsed ? 'Expand sidebar' : 'Collapse sidebar')}
+              aria-label={t(collapsed ? 'Expand sidebar' : 'Collapse sidebar')}
               aria-expanded={!collapsed}
             >
               <CollapseIcon collapsed={collapsed} />
@@ -102,8 +102,8 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                 type="button"
                 onClick={toggle}
                 className="no-drag flex h-8 w-10 items-center justify-center rounded-full bg-[#eef1f2] text-xs font-semibold text-[#0f766e] transition hover:bg-[#e6f5f2]"
-                title={`Display unit: ${unit} (click to switch)`}
-                aria-label={`Toggle output units, currently ${unit}`}
+                title={`${t('Display unit')}: ${unit} (${t('click to switch')})`}
+                aria-label={`${t('Toggle output units')}, ${t('currently')} ${unit}`}
                 aria-pressed={unit === 'lb'}
               >
                 {unit}
@@ -112,8 +112,8 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                 type="button"
                 onClick={toggleLang}
                 className="no-drag flex h-8 w-10 items-center justify-center rounded-full bg-[#eef1f2] text-xs font-semibold text-[#0f766e] transition hover:bg-[#e6f5f2]"
-                title={`Language: ${lang === 'en' ? 'English' : '한국어'} (click to switch)`}
-                aria-label={`Toggle language, currently ${lang === 'en' ? 'English' : 'Korean'}`}
+                title={`${t('Language')}: ${t(lang === 'en' ? 'English' : 'Korean')} (${t('click to switch')})`}
+                aria-label={`${t('Toggle language')}, ${t('currently')} ${t(lang === 'en' ? 'English' : 'Korean')}`}
                 aria-pressed={lang === 'ko'}
               >
                 {lang === 'en' ? 'EN' : '한'}
@@ -123,10 +123,10 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                 onClick={toggleBasis}
                 className="no-drag flex h-8 w-10 items-center justify-center rounded-full bg-[#eef1f2] text-xs font-semibold text-[#0f766e] transition hover:bg-[#e6f5f2]"
                 title={basisTitle}
-                aria-label={`Toggle price basis, currently ${basis === 'live' ? 'live quotes' : 'monthly averages'}`}
+                aria-label={`${t('Toggle price basis')}, ${t('currently')} ${t(basis === 'live' ? 'live quotes' : 'monthly averages')}`}
                 aria-pressed={basis === 'reference'}
               >
-                {basis === 'live' ? 'Live' : 'Avg'}
+                {basis === 'live' ? t('Live') : t('Monthly avg')}
               </button>
             </div>
           ) : (
@@ -138,8 +138,8 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                   type="button"
                   onClick={toggle}
                   className="no-drag flex items-center rounded-full bg-[#eef1f2] p-0.5"
-                  title="Toggle output units"
-                  aria-label={`Toggle output units, currently ${unit}`}
+                  title={t("Toggle output units")}
+                  aria-label={`${t('Toggle output units')}, ${t('currently')} ${unit}`}
                   aria-pressed={unit === 'lb'}
                 >
                   <span
@@ -167,8 +167,8 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                   type="button"
                   onClick={toggleLang}
                   className="no-drag flex items-center rounded-full bg-[#eef1f2] p-0.5"
-                  title="Toggle language"
-                  aria-label={`Toggle language, currently ${lang === 'en' ? 'English' : 'Korean'}`}
+                  title={t("Toggle language")}
+                  aria-label={`${t('Toggle language')}, ${t('currently')} ${t(lang === 'en' ? 'English' : 'Korean')}`}
                   aria-pressed={lang === 'ko'}
                 >
                   <span
@@ -197,7 +197,7 @@ export default function Sidebar({ collapsed, onToggleCollapsed }: SidebarProps) 
                   onClick={toggleBasis}
                   className="no-drag flex items-center rounded-full bg-[#eef1f2] p-0.5"
                   title={basisTitle}
-                  aria-label={`Toggle price basis, currently ${basis === 'live' ? 'live quotes' : 'monthly averages'}`}
+                  aria-label={`${t('Toggle price basis')}, ${t('currently')} ${t(basis === 'live' ? 'live quotes' : 'monthly averages')}`}
                   aria-pressed={basis === 'reference'}
                 >
                   <span

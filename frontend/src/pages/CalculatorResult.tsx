@@ -397,7 +397,7 @@ export default function CalculatorResult() {
                 <RailRow
                   label={t("Cradle-to-gate GWP")}
                   value={`${formatLcaNumber(result.lca.gwp_kg_co2eq_per_kg_catalyst)} kg CO2-eq/kg`}
-                  detail={`${result.lca.coverage_pct}% mass coverage / Nuss & Eckelman 2014`}
+                  detail={`${result.lca.coverage_pct}% ${t('mass coverage / Nuss & Eckelman 2014')}`}
                 />
               ) : null}
             </div>
@@ -937,7 +937,7 @@ export default function CalculatorResult() {
 
               <div className="mt-4 grid gap-2.5 sm:grid-cols-3 xl:grid-cols-1 2xl:grid-cols-3">
                 <MetricTile label="wt%" value={(component.wt_frac * 100).toFixed(1)} detail={t('Loaded into catalyst')} />
-                <MetricTile label={t('Unit price')} value={formatPrice(toDisplay(component.price_per_lb))} detail={`Per${fmtLabel}`} />
+                <MetricTile label={t('Unit price')} value={formatPrice(toDisplay(component.price_per_lb))} detail={`${t('Per unit mass')} (${unit})`} />
                 <MetricTile label={t('Share')} value={`${Number(component.cost_pct).toFixed(1)}%`} detail={t('Of material cost')} />
               </div>
             </div>
@@ -1059,7 +1059,7 @@ export default function CalculatorResult() {
                             : null;
                         })()}
                         {material.live_override.live_fetched_at
-                          ? ` (fetched ${new Date(material.live_override.live_fetched_at).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })})`
+                          ? ` (${t('Fetched')} ${new Date(material.live_override.live_fetched_at).toLocaleString(lang === 'ko' ? 'ko-KR' : 'en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })})`
                           : ''}
                         .
                       </div>

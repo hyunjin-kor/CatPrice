@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { exportEstimateCsv, exportEstimateJson } from '../../lib/api';
+import { useLang } from '../../lib/i18n';
 
 type ExportFormat = 'json' | 'csv';
 
@@ -30,6 +31,7 @@ export default function ExportButton({
   className = '',
   disabled = false,
 }: ExportButtonProps) {
+  const { t } = useLang();
   const [exporting, setExporting] = useState<ExportFormat | null>(null);
   const [error, setError] = useState('');
 
@@ -68,7 +70,7 @@ export default function ExportButton({
           disabled={blocked || exporting !== null}
           className="cp-button-secondary px-3 py-2 text-sm disabled:opacity-35"
         >
-          {exporting === 'json' ? 'Exporting JSON...' : 'Export JSON'}
+          {t(exporting === 'json' ? 'Exporting JSON...' : 'Export JSON')}
         </button>
         <button
           type="button"
@@ -76,12 +78,12 @@ export default function ExportButton({
           disabled={blocked || exporting !== null}
           className="cp-button-primary px-3 py-2 text-sm disabled:opacity-35"
         >
-          {exporting === 'csv' ? 'Exporting CSV...' : 'Export CSV'}
+          {t(exporting === 'csv' ? 'Exporting CSV...' : 'Export CSV')}
         </button>
       </div>
       {error ? (
         <div className="rounded-[16px] border border-red-200 bg-red-50 px-3 py-2 text-xs leading-5 text-red-700">
-          {error}
+          {t(error)}
         </div>
       ) : null}
     </div>

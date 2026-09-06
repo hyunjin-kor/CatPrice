@@ -1,0 +1,1 @@
+{"phase":"final","flows":[{"domain":"thermal","status":200,"template_id":"wet_impregnation_metal_oxide"},{"domain":"electrocatalyst","status":200,"template_id":"pem_fuel_cell_ccm"},{"domain":"thermal","status":200,"template_id":"excess_solution_impregnation_metal_oxide"}],"reference_rows":18}
