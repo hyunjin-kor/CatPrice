@@ -12,8 +12,13 @@ The package versions are 1.4.0. The latest verified public release remains v1.3.
 - Electrode headline, ledger and chart use the same area-based assembly cost. Thermal campaign and margin values are excluded from the electrode result.
 - Direct Johnson Matthey and Westmetall sources take priority for the specified metals, with slower Yahoo polling and documented fallbacks.
 - The paper reproduction command freezes input hashes and the execution environment, runs all analyses and generates six figures. Source audits distinguish verified DOI registrations, restricted URLs and observed missing pages.
+- Verified free alumina import observations now work offline on the reference basis. A keyless snapshot collector records missing months and stops at provider limits; the paper can explicitly include this snapshot and select a shared publication month.
+- Changing production scale waits for the selected method's fitted steps before calculation, preventing a stale large-scale kiln from causing a small-scale validation error. Loading failures show recovery guidance.
+- The CO2-to-methanol and HER source audit corrects reaction attribution and DOI links, adds a freely available direct NiMo study and identifies model assumptions. Benchmark scores now label price evidence explicitly. Source-specific carbon/zeolite LCA pairs are documented without filling generic-material gaps with assumed factors.
 
 Validation and remaining checks are recorded in the [run audit](audit/autonomous-run-2026-09-06.md) and [release checklist](release-checklist.md). The published Table 6.2 acceptance cases remain Pt/C to the cent, Ni within 7%, and FCC within 2% using its footnote-b rate. Pricing-input changes and display corrections are documented individually; no new rate was invented for uncosted operations.
+
+The subsequent [free-data update audit](audit/free-data-update-2026-09-06.md) records new verification, numerical effects and the remaining provider/source gaps. Data acquisition remains free; no paid purchase, subscription or billable API was used.
 
 The authoritative release log for COMET lives on GitHub:
 

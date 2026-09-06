@@ -116,6 +116,14 @@ python scripts/reproduce_paper.py --price-basis reference --month 2026-07 --seed
 
 Omit `--month` for the latest common completed publication month. Matplotlib is needed for figures. To replay exactly from committed inputs, add `--history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json`. Input hashes, source failures and Python/package versions are recorded in the reproduction manifest. See [methodology](docs/methodology.md#reproducing-the-paper) and the [run audit](docs/audit/autonomous-run-2026-09-06.md).
 
+Free support observations can be included explicitly:
+
+```bash
+python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history backend/data/support_price_history.json --out-dir docs/paper/free-data-2026-09-06
+```
+
+This selects June2026, the latest month shared with the verified alumina import observations, and preserves the original July results. The app also loads the shipped support observations offline. To collect a small new snapshot without credentials, run `python scripts/fetch_support_history.py --start 2026-04 --end 2026-07 --out support_history.json`; it records missing data and stops at provider rate limits. See the [free-data audit](docs/audit/free-data-update-2026-09-06.md). Project data acquisition must remain free: no purchases, paid subscriptions or billable API calls.
+
 ## Optional API keys
 
 COMET runs without any keys. Add them only if you want live price feeds:
@@ -124,7 +132,7 @@ COMET runs without any keys. Add them only if you want live price feeds:
 METALS_DEV_API_KEY=your_key      # metals.dev, free tier available
 METALPRICE_API_KEY=your_key      # metalpriceapi.com, free tier available
 BLS_API_KEY=your_key             # bls.gov, free with registration
-COMTRADE_API_KEY=your_key        # comtradeplus.un.org, free tier; monthly support-material unit values on the academic basis
+COMTRADE_API_KEY=your_key        # optional scheduled collection; verified shipped support observations work offline without a key
 ```
 
 ## Method basis

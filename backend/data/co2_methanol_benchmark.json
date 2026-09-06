@@ -43,7 +43,7 @@
       "label": "Nature Communications 2019",
       "url": "https://doi.org/10.1038/s41467-019-09072-6",
       "kind": "literature",
-      "note": "ZnZrOx methanol route highlighting oxide-interface control and oxygen-vacancy management for selective CO2 hydrogenation."
+      "note": "Study of ternary Cu-ZnO-ZrO2 interactions, with binary controls; not a measured Cu/ZnO/Al2O3 recipe."
     },
     {
       "id": "ni-in2o3-ncomms-2021",
@@ -57,7 +57,7 @@
       "label": "Nature Communications 2022",
       "url": "https://doi.org/10.1038/s41467-022-30958-5",
       "kind": "literature",
-      "note": "Operando study of structural evolution and oxygen-vacancy dynamics in In2O3 methanol catalysts."
+      "note": "Photothermocatalytic CO2-to-CO study on In-embedded In2O3; mechanistic context only, not direct methanol-performance evidence."
     },
     {
       "id": "pd-in2o3-zro2-ncomms-2022",
@@ -106,7 +106,7 @@
       "label": "Nat. Commun. 2019",
       "url": "https://doi.org/10.1038/s41467-019-11349-9",
       "kind": "literature",
-      "note": "0.75 wt% Pd on In2O3: methanol space-time yield 0.96 g/(h gcat) at 78% selectivity, 553 K and 5 MPa, stable over 500 h."
+      "note": "Nominal 0.75 wt% Pd/In2O3 prepared by co-precipitation sustained 0.96 gMeOH/(h gcat) with 78% methanol selectivity after 500 h at 553 K, 5 MPa, H2/CO2=4 and WHSV 48000 cm3(STP)/(h gcat) in the 2019 study."
     },
     {
       "id": "rui-apcatb-2017",
@@ -190,7 +190,7 @@
       ],
       "non_step_cost_per_lb": 1.04,
       "route_confidence": 76,
-      "route_note": "Higher-performance Cu route that relies on tighter interfacial control than the conventional CZA baseline."
+      "route_note": "The cited Cu/ZrOx-MgO study uses liquid-phase ALD. Its 14/21/65 wt% representation and generic processing chain are unvalidated screening proxies; ALD-specific processing cost is not estimated."
     },
     {
       "id": "in2o3-zro2-route",
@@ -321,7 +321,8 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "Useful when Cu economics still matter but the baseline CZA route leaves too much performance on the table.",
-        "Route overhead is higher because zirconia/basic-support contact and interface stability need tighter control."
+        "Route overhead is higher because zirconia/basic-support contact and interface stability need tighter control.",
+        "The cited Cu/ZrOx-MgO study uses liquid-phase ALD. Its 14/21/65 wt% representation and generic processing chain are unvalidated screening proxies; ALD-specific processing cost is not estimated."
       ],
       "components": [
         {
@@ -383,14 +384,14 @@
       ],
       "literature_basis_ids": [
         "ni-in2o3-ncomms-2021",
-        "in2o3-dynamics-ncomms-2022",
         "pd-in2o3-zro2-ncomms-2022",
         "inverse-in2o3-ni-ncomms-2025"
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
         "Best fit when methanol selectivity at lower temperature is worth paying for a scarcer oxide system.",
-        "Indium inventory and oxide-state control keep this route less mature than Cu-led baselines."
+        "Indium inventory and oxide-state control keep this route less mature than Cu-led baselines.",
+        "Cited Ni/Pd-promoted and flame-made oxide systems provide architectural context. They do not validate this 55 wt% elemental-In/45 wt% ZrO2 recipe, temperature window, or assigned performance score."
       ],
       "components": [
         {
@@ -428,7 +429,7 @@
       "title": "Pd/In2O3 promoted oxide",
       "archetype": "Noble-promoted reducible oxide",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "Three-quarters of a weight percent of palladium on indium oxide unlocks record methanol productivity (0.96 g/(h gcat) at 78% selectivity, 500-h stable) by feeding hydrogen to the vacancy chemistry the plain oxide already has.",
+      "summary": "Nominal 0.75 wt% Pd/In2O3 prepared by co-precipitation sustained 0.96 gMeOH/(h gcat) with 78% methanol selectivity after 500 h at 553 K, 5 MPa, H2/CO2=4 and WHSV 48000 cm3(STP)/(h gcat) in the 2019 study.",
       "route_template_id": "cza-co-precipitation",
       "order_size_tons": 20,
       "performance_index": 92,
@@ -445,7 +446,7 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "The performance ceiling of the oxide branch; indium inventory, not palladium, dominates the material term.",
-        "Screened on the family's co-precipitation chain, matching the source preparation."
+        "Co-precipitation is source-supported; the reused Cu-Zn-Al processing chain and its labels are a costing proxy, not the reported Pd/In2O3 recipe."
       ],
       "components": [
         {

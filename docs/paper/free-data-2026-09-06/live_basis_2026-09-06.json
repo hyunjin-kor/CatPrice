@@ -1,0 +1,182 @@
+{
+  "basis": "live",
+  "generated_at": "2026-09-06T03:04:51.569590+00:00",
+  "observation_started_at_utc": "2026-09-06T03:04:44.901959+00:00",
+  "observation_finished_at_utc": "2026-09-06T03:04:51.569590+00:00",
+  "source": "Read-only public feed collection replayed through the T09 source selector; optional key-based providers were not requested",
+  "input_observations_file": "docs/audit/t09-live-source-check-2026-09-06.json",
+  "input_observations_sha256": "69f02b99a161e76b90867538e90cc08bc885f13c2fb0feeab32cc28ed6c67b6b",
+  "anchor_note": "Absent public-feed metals use the unchanged get_reference_prices() USGS/CatCost anchors; quote timestamps are retained, including None for anchors. Westmetall fetched_at is collection time under current implementation.",
+  "from_anchors": [
+    "Co",
+    "Fe",
+    "Mo",
+    "Re",
+    "V",
+    "W"
+  ],
+  "price_basis": {
+    "Ag": {
+      "symbol": "Ag",
+      "name": "Silver",
+      "price": 66.748,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "ticker": "SI=F",
+      "fetched_at": "2026-09-04T20:59:55+00:00"
+    },
+    "Al": {
+      "symbol": "Al",
+      "name": "Aluminum",
+      "price": 1.4982,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:48.301338+00:00"
+    },
+    "Au": {
+      "symbol": "Au",
+      "name": "Gold",
+      "price": 4476.6,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "ticker": "GC=F",
+      "fetched_at": "2026-09-04T20:59:58+00:00"
+    },
+    "Co": {
+      "symbol": "Co",
+      "name": "Cobalt",
+      "price": 21.0,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Cu": {
+      "symbol": "Cu",
+      "name": "Copper",
+      "price": 6.5131,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:47.236928+00:00"
+    },
+    "Fe": {
+      "symbol": "Fe",
+      "name": "Iron",
+      "price": 0.0604,
+      "unit": "$/lb",
+      "source": "CatCost 2018 + ChemPPI escalation",
+      "fetched_at": null
+    },
+    "Ir": {
+      "symbol": "Ir",
+      "name": "Iridium",
+      "price": 7850.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Mo": {
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "price": 23.13,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Ni": {
+      "symbol": "Ni",
+      "name": "Nickel",
+      "price": 7.5705,
+      "unit": "$/lb",
+      "source": "Markets Insider (live)",
+      "fetched_at": "2026-09-06T03:04:47.549420+00:00",
+      "market_hint": "03:59:19 PM EDT 9/4/2026"
+    },
+    "Pd": {
+      "symbol": "Pd",
+      "name": "Palladium",
+      "price": 1418.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Pt": {
+      "symbol": "Pt",
+      "name": "Platinum",
+      "price": 1820.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Re": {
+      "symbol": "Re",
+      "name": "Rhenium",
+      "price": 1179.4,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Rh": {
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "price": 9425.0,
+      "unit": "$/troy_oz",
+      "source": "Kitco (live)",
+      "fetched_at": "2026-09-06T03:04:46.802256+00:00"
+    },
+    "Ru": {
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "price": 1675.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-04T00:00:00+00:00"
+    },
+    "Sn": {
+      "symbol": "Sn",
+      "name": "Tin",
+      "price": 24.6981,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:51.569554+00:00"
+    },
+    "V": {
+      "symbol": "V",
+      "name": "Vanadium",
+      "price": 8.96,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "W": {
+      "symbol": "W",
+      "name": "Tungsten",
+      "price": 21.74,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Zn": {
+      "symbol": "Zn",
+      "name": "Zinc",
+      "price": 1.8123,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-06T03:04:50.467783+00:00"
+    }
+  },
+  "status": "available",
+  "observed_symbols": [
+    "Ag",
+    "Al",
+    "Au",
+    "Cu",
+    "Ir",
+    "Ni",
+    "Pd",
+    "Pt",
+    "Rh",
+    "Ru",
+    "Sn",
+    "Zn"
+  ]
+}

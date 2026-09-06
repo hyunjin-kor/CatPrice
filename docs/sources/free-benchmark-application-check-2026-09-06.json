@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "approved_items": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11"
+  ],
+  "mutation_scope": {
+    "co2_methanol_benchmark.json": {
+      "unchanged_outside_approved_paths": true,
+      "allowed_paths": [
+        "/citations/0/note",
+        "/citations/2/note",
+        "/citations/9/note",
+        "/route_templates/1/route_note",
+        "/candidates/1/decision_notes",
+        "/candidates/2/decision_notes",
+        "/candidates/2/literature_basis_ids",
+        "/candidates/3/summary",
+        "/candidates/3/decision_notes/1"
+      ],
+      "post_change_sha256": "a303e72180093412c6b08d20ebe4902b4d384de9b811794d0e5316103fb9cbff"
+    },
+    "hydrogen_evolution_benchmark.json": {
+      "unchanged_outside_approved_paths": true,
+      "allowed_paths": [
+        "/citations/9/url",
+        "/citations/3/note",
+        "/citations/12/note",
+        "/candidates/0/literature_basis_ids",
+        "/candidates/1/literature_basis_ids",
+        "/candidates/3/decision_notes/1",
+        "/candidates/3/components/1/pricing/note",
+        "/candidates/3/summary"
+      ],
+      "post_change_sha256": "be5f79cc245fe2282605e8355a477f7b39b4d9ddd2c768a66dbf717b5811a8a0"
+    }
+  },
+  "comparison": {
+    "baseline": "_local/free-data-after-support.json",
+    "baseline_sha256": "284d44b6f8b53da7dcb3523caed8db46524ff2e73e1ae497e2f92266276cf5f3",
+    "after": "_local/free-data-after-citations.json",
+    "after_sha256": "284d44b6f8b53da7dcb3523caed8db46524ff2e73e1ae497e2f92266276cf5f3",
+    "command": "DATABASE_URL=sqlite:///:memory: python scripts/run_all_families.py --price-basis _local/free-data-june-with-support.json --basis-type reference --out _local/free-data-after-citations.json",
+    "price_basis_sha256": "5b7dd2e37b6aa67e62ab44e8dc8aa9f60d6327d3238684b57868ea95eaeea9cd",
+    "families": 30,
+    "candidates": 116,
+    "profile_rankings": 90,
+    "simplex_points_per_family": 286,
+    "same_price_basis": true,
+    "all_costs_scores_rankings_unchanged": true,
+    "complete_outputs_semantically_equal": true,
+    "complete_output_bytes_equal": true
+  },
+  "reviewed_candidates": [
+    {
+      "family": "co2-methanol",
+      "candidate": "cza-baseline",
+      "landed_cost_per_lb_before": 8.2013,
+      "landed_cost_per_lb_after": 8.2013,
+      "scores_before": {
+        "economics": 99.5,
+        "evidence": 85.9,
+        "route": 86.0,
+        "performance": 75.0,
+        "total": 90.4
+      },
+      "scores_after": {
+        "economics": 99.5,
+        "evidence": 85.9,
+        "route": 86.0,
+        "performance": 75.0,
+        "total": 90.4
+      }
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cu-zrox-interface",
+      "landed_cost_per_lb_before": 5.9142,
+      "landed_cost_per_lb_after": 5.9142,
+      "scores_before": {
+        "economics": 100.0,
+        "evidence": 77.1,
+        "route": 75.7,
+        "performance": 89.0,
+        "total": 88.9
+      },
+      "scores_after": {
+        "economics": 100.0,
+        "evidence": 77.1,
+        "route": 75.7,
+        "performance": 89.0,
+        "total": 88.9
+      }
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "in2o3-zro2-lowtemp",
+      "landed_cost_per_lb_before": 137.5771,
+      "landed_cost_per_lb_after": 137.5771,
+      "scores_before": {
+        "economics": 69.2,
+        "evidence": 75.9,
+        "route": 74.0,
+        "performance": 92.0,
+        "total": 74.9
+      },
+      "scores_after": {
+        "economics": 69.2,
+        "evidence": 75.9,
+        "route": 74.0,
+        "performance": 92.0,
+        "total": 74.9
+      }
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "pd-in2o3",
+      "landed_cost_per_lb_before": 433.9956,
+      "landed_cost_per_lb_after": 433.9956,
+      "scores_before": {
+        "economics": 0.0,
+        "evidence": 79.7,
+        "route": 80.0,
+        "performance": 92.0,
+        "total": 45.7
+      },
+      "scores_after": {
+        "economics": 0.0,
+        "evidence": 79.7,
+        "route": 80.0,
+        "performance": 92.0,
+        "total": 45.7
+      }
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "nimo-alkaline-her-cathode",
+      "landed_cost_per_lb_before": 31.0106,
+      "landed_cost_per_lb_after": 31.0106,
+      "scores_before": {
+        "economics": 100.0,
+        "evidence": 88.0,
+        "route": 77.7,
+        "performance": 82.0,
+        "total": 90.2
+      },
+      "scores_after": {
+        "economics": 100.0,
+        "evidence": 88.0,
+        "route": 77.7,
+        "performance": 82.0,
+        "total": 90.2
+      }
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "mos2-acidic-her-cathode",
+      "landed_cost_per_lb_before": 36.7908,
+      "landed_cost_per_lb_after": 36.7908,
+      "scores_before": {
+        "economics": 100.0,
+        "evidence": 60.0,
+        "route": 68.7,
+        "performance": 76.0,
+        "total": 81.4
+      },
+      "scores_after": {
+        "economics": 100.0,
+        "evidence": 60.0,
+        "route": 68.7,
+        "performance": 76.0,
+        "total": 81.4
+      }
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "pt-carbon-her-cathode",
+      "landed_cost_per_lb_before": 8083.2836,
+      "landed_cost_per_lb_after": 8083.2836,
+      "scores_before": {
+        "economics": 32.4,
+        "evidence": 88.0,
+        "route": 89.3,
+        "performance": 90.0,
+        "total": 65.3
+      },
+      "scores_after": {
+        "economics": 32.4,
+        "evidence": 88.0,
+        "route": 89.3,
+        "performance": 90.0,
+        "total": 65.3
+      }
+    },
+    {
+      "family": "hydrogen-evolution-reaction",
+      "candidate": "ru-c2n-her",
+      "landed_cost_per_lb_before": 11934.9317,
+      "landed_cost_per_lb_after": 11934.9317,
+      "scores_before": {
+        "economics": 0.0,
+        "evidence": 88.0,
+        "route": 74.7,
+        "performance": 90.0,
+        "total": 49.3
+      },
+      "scores_after": {
+        "economics": 0.0,
+        "evidence": 88.0,
+        "route": 74.7,
+        "performance": 90.0,
+        "total": 49.3
+      }
+    }
+  ],
+  "focused_tests": {
+    "command": "python -m pytest backend/tests/test_benchmark_source_fidelity.py backend/tests/test_benchmark_support_series.py -q",
+    "passed": 18,
+    "pytest_elapsed_seconds": 0.86,
+    "ruff": "All checks passed!"
+  }
+}

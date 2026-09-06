@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "description": "Monthly import unit values for support and precursor materials on the academic (reference) price basis. Each series is one HS 6-digit code reported by the United States (reporter 842) for imports from the world (partner 0), customs value divided by net weight. All grades and partners are combined, so a series is a bulk market level, not a catalyst-grade quote.",
-  "source": "UN Comtrade Plus, https://comtradeplus.un.org (API key required; free tier)",
+  "source": "UN Comtrade Plus, https://comtradeplus.un.org (free keyless preview snapshot; optional key for scheduled collection)",
   "reporter_code": "842",
   "flow_code": "M",
   "unit": "$/kg",

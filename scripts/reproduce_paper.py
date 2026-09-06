@@ -26,6 +26,7 @@ from statistics import mean, median, quantiles
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from backend.core.comtrade_snapshot import validate_support_snapshot  # noqa: E402
 from backend.core.reference_basis import (  # noqa: E402
     latest_common_month,
     monthly_average,
@@ -56,13 +57,14 @@ def normalize_history(payload: dict, month: str | None, today: date) -> tuple[di
         points = [p for p in entry["points"] if str(p["date"])[:7] < current_month]
         if not points:
             raise ValueError(f"{symbol}: no completed month in the input snapshot")
-        is_monthly = entry.get("cadence", payload.get("cadence")) == "monthly_average"
+        is_unit_value = entry.get("cadence") == "monthly_unit_value"
+        is_monthly = is_unit_value or entry.get("cadence", payload.get("cadence")) == "monthly_average"
         averaged = monthly_average(points)
         series[symbol] = {
             **entry,
             "source": entry["source"] if is_monthly else f"{entry['source']} (frozen observations averaged by month)",
-            "cadence": "monthly_average",
-            "transformation": "published monthly averages retained" if is_monthly else "arithmetic mean of available frozen observations; original source retained",
+            "cadence": "monthly_unit_value" if is_unit_value else "monthly_average",
+            "transformation": "monthly customs value divided by net weight; all grades" if is_unit_value else "published monthly averages retained" if is_monthly else "arithmetic mean of available frozen observations; original source retained",
             "points": averaged,
         }
     latest = latest_common_month(series)
@@ -182,13 +184,22 @@ def summarize(families: dict, volatility: dict, breakeven: dict, table62: list, 
 
 def write_results(path: Path, summary: dict, manifest: dict) -> None:
     w, lca, vol, be = (summary[k] for k in ("weight_sensitivity", "lca", "volatility", "breakeven"))
+    directory = path.parent.relative_to(ROOT) if path.parent.is_relative_to(ROOT) else path.parent
+    replay = f"python scripts/reproduce_paper.py --price-basis reference --month {manifest['basis_month']} --seed {manifest['seed']} --date {manifest['run_date']}"
+    replay += f' --history "{(directory / manifest["history"]["file"]).as_posix()}"'
+    replay += f' --live-basis "{(directory / ("live_basis_" + manifest["run_date"] + ".json")).as_posix()}"'
+    if "support_history" in manifest:
+        replay += f' --support-history "{(directory / manifest["support_history"]["file"]).as_posix()}"'
+    replay += f' --out-dir "{directory.as_posix()}"'
     lines = [f"# Paper results — {manifest['run_date']}", "", f"Price basis: **{manifest['price_basis']}**, completed month **{manifest['basis_month']}**. Seed: **{manifest['seed']}**.", "", f"Input status: {manifest['history']['status']}. {manifest['history']['note']}", "", "All numerical summaries below are generated from `paper_summary_" + manifest["run_date"] + ".json`; full commands, environment, snapshot hashes and timings are in the reproduction manifest.", "", "## CatCost Table 6.2", "", "| Case | Published $/lb | COMET $/lb | Residual % |", "|---|---:|---:|---:|"]
     for c in summary["table62"]:
         lines.append(f"| {c['name']} | {c['published_usd_per_lb']:.2f} | {c['comet_usd_per_lb']:.4f} | {c['residual_pct']:+.2f} |")
-    lines += ["", "FCC uses the published footnote-b effective production rate. The other comparison file retains the nominal-rate diagnostic; it is not the FCC validation value.", "", "## Library and weight sensitivity", "", f"{summary['families']} families and {summary['candidates']} candidates; {w['grid_points']} weight-simplex points. Balanced-winner stability median {w['median_balanced_winner_share_pct']:.2f}% (range {w['min_balanced_winner_share_pct']:.2f}–{w['max_balanced_winner_share_pct']:.2f}%); {w['families_below_50_pct']} families below 50%. Setting performance weight to zero changes {w['performance_zero_changes']} winners.", "", "Author-assigned performance, evidence and route scores are screening judgments, not measured catalytic performance. Report cost ordering and composite recommendations separately.", "", "## LCA coverage", "", f"Mean coverage {lca['coverage_mean_pct']:.2f}%; median {lca['coverage_median_pct']:.2f}%; {lca['candidates_coverage_at_least_90_pct']} candidates at or above 90%, {lca['candidates_coverage_below_50_pct']} below 50%. Carbon, silica and zeolite factors were not filled with assumed values.", "", f"Among {lca['route_share_eligible_candidates']} candidates with at least 50% materials coverage and a modeled process, median route-energy GWP share is {lca['route_share_median_pct']:.2f}% and maximum {lca['route_share_max_pct']:.2f}%.", "", "## Historical price replay", "", f"{vol['window']['states']} monthly states, {vol['window']['first']} to {vol['window']['last']}. Performance-zero recommendations change in {vol['families_flipping_performance_zero']} of {vol['families']} families; balanced recommendations change in {vol['families_flipping_balanced']}.", "", "Varying metals: " + ", ".join(vol["varying_symbols"]) + ". Incomplete series held at baseline: " + (", ".join(vol["held_at_baseline"]) or "none") + ".", "", "## Active-metal break-even", "", f"{be['families']} families; {be['contests']} contests; {len(be['errors'])} family errors. In {be['precious_vs_base_sweeps']} precious-metal sweeps against a base-metal alternative, {be['precious_cost_crossings']} cost crossings occur in the 0.001×–100× scan; {be['precious_cost_crossings_between_0_1_and_10']} lie between 0.1× and 10× of baseline. No crossing in a finite scan is not proof that free precious metal can never win.", "", "## Live versus reference", "", "Comparison status: " + summary["live_reference_comparison"]["status"] + ". The live comparison uses the frozen observed quote snapshot with its original source dates. The manifest records whether quotes came from the existing local database or an explicitly supplied collection.", ""]
+    lines += ["", "FCC uses the published footnote-b effective production rate. The other comparison file retains the nominal-rate diagnostic; it is not the FCC validation value.", "", "## Library and weight sensitivity", "", f"{summary['families']} families and {summary['candidates']} candidates; {w['grid_points']} weight-simplex points. Balanced-winner stability median {w['median_balanced_winner_share_pct']:.2f}% (range {w['min_balanced_winner_share_pct']:.2f}–{w['max_balanced_winner_share_pct']:.2f}%); {w['families_below_50_pct']} families below 50%. Setting performance weight to zero changes {w['performance_zero_changes']} winners.", "", "Performance and route scores include author-assigned screening judgments; evidence is cost-weighted price-source confidence. None is a direct measurement of catalytic performance. Report cost ordering and composite recommendations separately.", "", "## LCA coverage", "", f"Mean coverage {lca['coverage_mean_pct']:.2f}%; median {lca['coverage_median_pct']:.2f}%; {lca['candidates_coverage_at_least_90_pct']} candidates at or above 90%, {lca['candidates_coverage_below_50_pct']} below 50%. Carbon, silica and zeolite factors were not filled with assumed values.", "", f"Among {lca['route_share_eligible_candidates']} candidates with at least 50% materials coverage and a modeled process, median route-energy GWP share is {lca['route_share_median_pct']:.2f}% and maximum {lca['route_share_max_pct']:.2f}%.", "", "## Historical price replay", "", f"{vol['window']['states']} monthly states, {vol['window']['first']} to {vol['window']['last']}. Performance-zero recommendations change in {vol['families_flipping_performance_zero']} of {vol['families']} families; balanced recommendations change in {vol['families_flipping_balanced']}.", "", "Varying metals: " + ", ".join(vol["varying_symbols"]) + ". Incomplete series held at baseline: " + (", ".join(vol["held_at_baseline"]) or "none") + ".", "", "## Active-metal break-even", "", f"{be['families']} families; {be['contests']} contests; {len(be['errors'])} family errors. In {be['precious_vs_base_sweeps']} precious-metal sweeps against a base-metal alternative, {be['precious_cost_crossings']} cost crossings occur in the 0.001×–100× scan; {be['precious_cost_crossings_between_0_1_and_10']} lie between 0.1× and 10× of baseline. No crossing in a finite scan is not proof that free precious metal can never win.", "", "## Live versus reference", "", "Comparison status: " + summary["live_reference_comparison"]["status"] + ". The live comparison uses the frozen observed quote snapshot with its original source dates. The manifest records whether quotes came from the existing local database or an explicitly supplied collection.", ""]
     for profile, count in summary["live_reference_comparison"]["changed_by_profile"].items():
         lines.append(f"- {profile}: {count} changed winners of {summary['families']} families.")
-    lines += ["", "## Reproduction", "", "```bash", f"python scripts/reproduce_paper.py --price-basis reference --month {manifest['basis_month']} --seed {manifest['seed']}", "```", "", "Raw history SHA-256: `" + manifest["history"]["sha256"] + "`.", "", "The raw input is retained byte-for-byte. The separate monthly-history derivative excludes incomplete months; its source labels distinguish institutional averages from legacy observation means. The analysis DB is temporary and seeded from committed library files.", "", "Six SVG/PNG figures and their source-key contracts are generated by `scripts/generate_paper_figures.py`. Non-quantitative architecture annotations describe the implemented source-to-result flow.", ""]
+    lines += ["", "## Reproduction", "", "```bash", replay, "```", "", "Raw history SHA-256: `" + manifest["history"]["sha256"] + "`.", "", "The raw input is retained byte-for-byte. The separate monthly-history derivative excludes incomplete months; its source labels distinguish institutional averages from legacy observation means. The analysis DB is temporary and seeded from committed library files.", "", "Six SVG/PNG figures and their source-key contracts are generated by `scripts/generate_paper_figures.py`. Non-quantitative architecture annotations describe the implemented source-to-result flow.", ""]
+    if "support_history" in manifest:
+        lines += ["Support snapshot SHA-256: `" + manifest["support_history"]["sha256"] + "`.", ""]
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -200,6 +211,7 @@ def main() -> None:
     parser.add_argument("--out-dir", type=Path, default=ROOT / "docs/paper")
     parser.add_argument("--date", default=date.today().isoformat(), help="output filename date")
     parser.add_argument("--history", type=Path, help="use an existing frozen input without network collection")
+    parser.add_argument("--support-history", type=Path, help="validated free Comtrade snapshot; included in latest_common_month")
     parser.add_argument("--live-basis", type=Path, help="reuse an explicitly frozen live-basis snapshot for the comparison")
     args = parser.parse_args()
     date.fromisoformat(args.date)
@@ -229,10 +241,26 @@ def main() -> None:
             if source != paths["price_history"]:
                 shutil.copyfile(source, paths["price_history"])
             manifest["history"] = {"status": status, "note": note, "source": str(source) if source != fetched else "scripts/fetch_price_history.py", "file": paths["price_history"].name, "sha256": sha256(paths["price_history"])}
-            normalized, month = normalize_history(read_json(paths["price_history"]), args.month, date.today())
+            history_payload = read_json(paths["price_history"])
+            if args.support_history:
+                support_path = args.out_dir / f"support_history_{args.date}.json"
+                if args.support_history.resolve() != support_path:
+                    shutil.copyfile(args.support_history, support_path)
+                supports = validate_support_snapshot(read_json(support_path))
+                if not supports:
+                    raise ValueError("support history contains no verified observations")
+                overlap = set(supports) & set(history_payload["series"])
+                if overlap:
+                    raise ValueError(f"duplicate series in metal and support histories: {sorted(overlap)}")
+                history_payload["series"].update(supports)
+                manifest["support_history"] = {"file": support_path.name, "sha256": sha256(support_path), "series": sorted(supports), "note": "Exact monthly all-grade import unit values; missing months are not interpolated. Included in latest_common_month."}
+                paths["support_history"] = support_path
+            normalized, month = normalize_history(history_payload, args.month, date.today())
             manifest["basis_month"] = month
             manifest["history"]["upstream_metadata"] = {k: v for k, v in read_json(paths["price_history"]).items() if k != "series"}
             normalized["raw_input_sha256"] = manifest["history"]["sha256"]
+            if "support_history" in manifest:
+                normalized["support_input_sha256"] = manifest["support_history"]["sha256"]
             write_json(paths["monthly_history"], normalized)
             if args.live_basis:
                 live = classify_live_snapshot(read_json(args.live_basis))

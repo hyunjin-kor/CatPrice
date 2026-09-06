@@ -13,7 +13,7 @@ async function loadHelper(name) {
   return import(`data:text/javascript;base64,${Buffer.from(outputText).toString('base64')}`);
 }
 
-const { sameSteps, matchThermalTemplate } = await loadHelper('preparation-selection');
+const { sameSteps, matchThermalTemplate, isThermalTemplateReady } = await loadHelper('preparation-selection');
 const { compareElectroPreference } = await loadHelper('electrode-defaults');
 const { electrodeCostRows } = await loadHelper('electrode-result');
 
@@ -29,6 +29,15 @@ test('selected card identity survives identical routes and scale fitting', () =>
   const fitted = Object.fromEntries(templates.map(({ id }) => [id, { steps_fitted: ['mix', 'kiln_continuous_indirect'] }]));
   assert.equal(matchThermalTemplate(templates, fitted, fitted.selected.steps_fitted, 'selected').id, 'selected');
   assert.equal(matchThermalTemplate(templates, fitted, ['mix'], 'selected'), null);
+});
+
+test('selected method waits for current-scale steps, while manual routes stay usable', () => {
+  const costs = { selected: { steps_fitted: ['mix', 'kiln_batch'] } };
+  assert.equal(isThermalTemplateReady('selected', {}, ['mix'], 2, null), false);
+  assert.equal(isThermalTemplateReady('selected', costs, ['mix', 'kiln_batch'], 2, 20), false);
+  assert.equal(isThermalTemplateReady('selected', costs, ['mix', 'kiln_continuous'], 2, 2), false);
+  assert.equal(isThermalTemplateReady('selected', costs, ['mix', 'kiln_batch'], 2, 2), true);
+  assert.equal(isThermalTemplateReady(null, {}, ['mix'], 2, null), true);
 });
 
 const categories = ['Electrocatalyst Powder', 'Ionomer', 'Membrane', 'Gas Diffusion Layer'];

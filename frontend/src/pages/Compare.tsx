@@ -275,7 +275,7 @@ export default function Compare() {
                 <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Top route')}</div><div className="mt-2 text-xl font-display text-white">{winner.title}</div></div>
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t(winner.summary.economics_basis_label)}</div><div className="mt-2 text-xl font-display text-white">{benchmarkCostValue(winner)}</div><div className="mt-1 text-xs text-slate-400">{benchmarkCostDetail(winner)}</div></div>
-                  <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Evidence')}</div><div className="mt-2 text-xl font-display text-white">{winner.scores.evidence.toFixed(1)}</div></div>
+                  <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Price evidence')}</div><div className="mt-2 text-xl font-display text-white">{winner.scores.evidence.toFixed(1)}</div></div>
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Literature bank')}</div><div className="mt-2 text-xl font-display text-white">{benchmark.citations.length}</div><div className="mt-1 text-xs text-slate-400">{t('Public benchmark links in the active reaction family')}</div></div>
                 </div>
               ) : null}

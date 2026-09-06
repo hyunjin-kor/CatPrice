@@ -1,0 +1,9 @@
+{
+  "command": "python scripts/reproduce_paper.py --price-basis reference --month 2026-06 --seed 20260906 --date 2026-09-06 --history \"docs/paper/free-data-2026-09-06/price_history_2026-09-06.json\" --live-basis \"docs/paper/free-data-2026-09-06/live_basis_2026-09-06.json\" --support-history \"docs/paper/free-data-2026-09-06/support_history_2026-09-06.json\" --out-dir \"docs/paper/free-data-2026-09-06\"",
+  "returncode": 0,
+  "byte_identical_outputs": {
+    "all_families_2026-09-06.json": "6d7cd25bf8f02d1a75dacf79a26ba790c233fa01588840636d16d3ce4bba8f13",
+    "all_families_live_2026-09-06.json": "d9b0672bff803f5db23c13e3578b13e4a8e4e78844e434046436cae7c73db59e",
+    "paper_summary_2026-09-06.json": "e14cfac0c11ab60c774576c1a8d5e2ecf026fbade29cb23fb73505f0db4abd11"
+  }
+}

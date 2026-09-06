@@ -31,6 +31,19 @@ def test_reference_history_uses_latest_common_completed_month():
         normalize_history(payload, "2026-09", date(2026, 9, 6))
 
 
+def test_support_publication_month_limits_combined_basis_without_interpolation():
+    payload = {"cadence": "monthly_average", "series": {
+        "Cu": {"source": "IMF", "unit": "$/lb", "points": [{"date": "2026-06-30", "price": 4}, {"date": "2026-07-31", "price": 5}]},
+        "HS281820": {"source": "UN Comtrade (monthly unit value)", "cadence": "monthly_unit_value", "unit": "$/kg", "points": [{"date": "2026-06-30", "price": 0.55}]},
+    }}
+    result, month = normalize_history(payload, None, date(2026, 9, 6))
+    assert month == "2026-06"
+    assert result["series"]["HS281820"]["cadence"] == "monthly_unit_value"
+    assert result["series"]["HS281820"]["source"] == "UN Comtrade (monthly unit value)"
+    with pytest.raises(ValueError, match="latest_common_month"):
+        normalize_history(payload, "2026-07", date(2026, 9, 6))
+
+
 def test_hash_tracks_exact_snapshot_bytes(tmp_path: Path):
     path = tmp_path / "snapshot.json"
     path.write_bytes(b'{"price": 1}\n')

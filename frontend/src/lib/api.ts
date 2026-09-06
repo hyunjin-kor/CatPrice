@@ -270,6 +270,7 @@ export interface CostResult {
     live_override?:
       | {
           applied: true;
+          basis?: PriceBasis;
           live_price: number;
           live_price_unit: string;
           live_source: string;
@@ -278,6 +279,7 @@ export interface CostResult {
           fallback_price_unit: string;
           fallback_source: string;
           fallback_quote_year: number | null;
+          fallback_reference_url?: string;
         }
       | {
           applied: false;

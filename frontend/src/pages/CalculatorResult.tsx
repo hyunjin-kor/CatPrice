@@ -687,7 +687,7 @@ export default function CalculatorResult() {
               <span className="cp-chip">
                 {t(benchmarkCandidate.catalyst_domain === 'electrocatalyst' ? 'Electrocatalyst' : 'Thermocatalyst')}
               </span>
-              <span className="cp-chip">{t('Evidence')} {benchmarkCandidate.scores.evidence.toFixed(1)}</span>
+              <span className="cp-chip">{t('Price evidence')} {benchmarkCandidate.scores.evidence.toFixed(1)}</span>
             </div>
           </div>
         ) : null}
@@ -1048,7 +1048,7 @@ export default function CalculatorResult() {
                   {material.live_override?.applied ? (
                     <div className="mt-3 rounded-[14px] border border-[#0d9488] bg-[#e6f5f2] px-3 py-2.5 text-xs leading-5 text-[#115e59]">
                       <div className="font-bold uppercase tracking-[0.16em] text-[#0f766e]">
-                        {t("Live market quote in use")}
+                        {material.live_override.basis === 'reference' ? t('Monthly reference quote in use') : t('Live market quote in use')}
                       </div>
                       <div className="mt-1 text-[#191f28]">
                         {t("Catalyst price uses the latest")} <span className="font-semibold">{material.live_override.live_source}</span> {t("quote of")} <span className="font-mono font-semibold">{formatPrice(material.live_override.live_price)} {material.live_override.live_price_unit}</span>
@@ -1059,14 +1059,19 @@ export default function CalculatorResult() {
                             : null;
                         })()}
                         {material.live_override.live_fetched_at
-                          ? ` (${t('Fetched')} ${new Date(material.live_override.live_fetched_at).toLocaleString(lang === 'ko' ? 'ko-KR' : 'en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })})`
+                          ? material.live_override.basis === 'reference'
+                            ? ` (${t('Observation month')} ${material.live_override.live_fetched_at.slice(0, 7)})`
+                            : ` (${t('Fetched')} ${new Date(material.live_override.live_fetched_at).toLocaleString(lang === 'ko' ? 'ko-KR' : 'en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })})`
                           : ''}
                         .
                       </div>
                       <div className="mt-1 text-[#4e5968]">
-                        {t("Offline reference price:")} <span className="font-mono">{formatPrice(material.live_override.fallback_price)} {material.live_override.fallback_price_unit}</span> {t("from")} {material.live_override.fallback_source}
+                        {t('Original library price:')} <span className="font-mono">{formatPrice(material.live_override.fallback_price)} {material.live_override.fallback_price_unit}</span> {t("from")} {material.live_override.fallback_source}
                         {material.live_override.fallback_quote_year ? ` (${material.live_override.fallback_quote_year})` : ''}
                         .
+                        {material.live_override.fallback_reference_url ? (
+                          <> <a href={material.live_override.fallback_reference_url} target="_blank" rel="noreferrer" className="underline underline-offset-2">{t('Open original library source')} ↗</a></>
+                        ) : null}
                       </div>
                     </div>
                   ) : material.live_override && material.live_override.applied === false ? (

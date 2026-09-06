@@ -1,0 +1,252 @@
+{
+ "generated_at": "2026-09-06T06:50:15.225956+00:00",
+ "endpoint": "https://comtradeapi.un.org/public/v1/preview/C/M/HS",
+ "access": "free public preview; no credentials",
+ "source": "UN Comtrade",
+ "policy_url": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+ "scope": "Monthly import unit values for support and precursor materials on the academic (reference) price basis. Each series is one HS 6-digit code reported by the United States (reporter 842) for imports from the world (partner 0), customs value divided by net weight. All grades and partners are combined, so a series is a bulk market level, not a catalyst-grade quote.",
+ "requested_months": [
+  "202604",
+  "202605",
+  "202606",
+  "202607"
+ ],
+ "series": {
+  "HS281820": {
+   "name": "Calcined alumina (non-corundum), U.S. import unit value",
+   "unit": "$/kg",
+   "source": "UN Comtrade (monthly unit value)",
+   "grade_note": "Dominated by smelter-grade flows; catalyst-carrier gamma alumina trades above this level.",
+   "points": [
+    {
+     "date": "2026-04-30",
+     "price": 0.5782
+    },
+    {
+     "date": "2026-05-31",
+     "price": 0.6728
+    },
+    {
+     "date": "2026-06-30",
+     "price": 0.5558
+    }
+   ],
+   "first": "2026-04-30",
+   "last": "2026-06-30",
+   "n": 3,
+   "cadence": "monthly_unit_value"
+  }
+ },
+ "requests": [
+  {
+   "symbol": "HS281820",
+   "period": "202604",
+   "status": "accepted",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281820&flowCode=M&period=202604&customsCode=C00&motCode=0&maxRecords=10",
+   "http_status": 200,
+   "response": {
+    "elapsedTime": "0.51 secs",
+    "count": 1,
+    "data": [
+     {
+      "typeCode": "C",
+      "freqCode": "M",
+      "refPeriodId": 20260401,
+      "refYear": 2026,
+      "refMonth": 4,
+      "period": "202604",
+      "reporterCode": 842,
+      "reporterISO": null,
+      "reporterDesc": null,
+      "flowCode": "M",
+      "flowDesc": null,
+      "partnerCode": 0,
+      "partnerISO": null,
+      "partnerDesc": null,
+      "partner2Code": 0,
+      "partner2ISO": null,
+      "partner2Desc": null,
+      "classificationCode": "H6",
+      "classificationSearchCode": "HS",
+      "isOriginalClassification": true,
+      "cmdCode": "281820",
+      "cmdDesc": null,
+      "aggrLevel": null,
+      "isLeaf": null,
+      "customsCode": "C00",
+      "customsDesc": null,
+      "mosCode": "0",
+      "motCode": 0,
+      "motDesc": null,
+      "qtyUnitCode": 8,
+      "qtyUnitAbbr": null,
+      "qty": 54979810.0,
+      "isQtyEstimated": false,
+      "altQtyUnitCode": 8,
+      "altQtyUnitAbbr": null,
+      "altQty": 54979810.0,
+      "isAltQtyEstimated": false,
+      "netWgt": 54979810.0,
+      "isNetWgtEstimated": false,
+      "grossWgt": 0.0,
+      "isGrossWgtEstimated": false,
+      "cifvalue": 31789433.0,
+      "fobvalue": 30756500.0,
+      "primaryValue": 31789433.0,
+      "legacyEstimationFlag": 0,
+      "isReported": false,
+      "isAggregate": true
+     }
+    ],
+    "error": ""
+   }
+  },
+  {
+   "symbol": "HS281820",
+   "period": "202605",
+   "status": "accepted",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281820&flowCode=M&period=202605&customsCode=C00&motCode=0&maxRecords=10",
+   "http_status": 200,
+   "response": {
+    "elapsedTime": "0.72 secs",
+    "count": 1,
+    "data": [
+     {
+      "typeCode": "C",
+      "freqCode": "M",
+      "refPeriodId": 20260501,
+      "refYear": 2026,
+      "refMonth": 5,
+      "period": "202605",
+      "reporterCode": 842,
+      "reporterISO": null,
+      "reporterDesc": null,
+      "flowCode": "M",
+      "flowDesc": null,
+      "partnerCode": 0,
+      "partnerISO": null,
+      "partnerDesc": null,
+      "partner2Code": 0,
+      "partner2ISO": null,
+      "partner2Desc": null,
+      "classificationCode": "H6",
+      "classificationSearchCode": "HS",
+      "isOriginalClassification": true,
+      "cmdCode": "281820",
+      "cmdDesc": null,
+      "aggrLevel": null,
+      "isLeaf": null,
+      "customsCode": "C00",
+      "customsDesc": null,
+      "mosCode": "0",
+      "motCode": 0,
+      "motDesc": null,
+      "qtyUnitCode": 8,
+      "qtyUnitAbbr": null,
+      "qty": 99538941.0,
+      "isQtyEstimated": false,
+      "altQtyUnitCode": 8,
+      "altQtyUnitAbbr": null,
+      "altQty": 99538941.0,
+      "isAltQtyEstimated": false,
+      "netWgt": 99538941.0,
+      "isNetWgtEstimated": false,
+      "grossWgt": 0.0,
+      "isGrossWgtEstimated": false,
+      "cifvalue": 66966944.0,
+      "fobvalue": 65286037.0,
+      "primaryValue": 66966944.0,
+      "legacyEstimationFlag": 0,
+      "isReported": false,
+      "isAggregate": true
+     }
+    ],
+    "error": ""
+   }
+  },
+  {
+   "symbol": "HS281820",
+   "period": "202606",
+   "status": "accepted",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281820&flowCode=M&period=202606&customsCode=C00&motCode=0&maxRecords=10",
+   "http_status": 200,
+   "response": {
+    "elapsedTime": "1.33 secs",
+    "count": 1,
+    "data": [
+     {
+      "typeCode": "C",
+      "freqCode": "M",
+      "refPeriodId": 20260601,
+      "refYear": 2026,
+      "refMonth": 6,
+      "period": "202606",
+      "reporterCode": 842,
+      "reporterISO": null,
+      "reporterDesc": null,
+      "flowCode": "M",
+      "flowDesc": null,
+      "partnerCode": 0,
+      "partnerISO": null,
+      "partnerDesc": null,
+      "partner2Code": 0,
+      "partner2ISO": null,
+      "partner2Desc": null,
+      "classificationCode": "H6",
+      "classificationSearchCode": "HS",
+      "isOriginalClassification": true,
+      "cmdCode": "281820",
+      "cmdDesc": null,
+      "aggrLevel": null,
+      "isLeaf": null,
+      "customsCode": "C00",
+      "customsDesc": null,
+      "mosCode": "0",
+      "motCode": 0,
+      "motDesc": null,
+      "qtyUnitCode": 8,
+      "qtyUnitAbbr": null,
+      "qty": 111008405.0,
+      "isQtyEstimated": false,
+      "altQtyUnitCode": 8,
+      "altQtyUnitAbbr": null,
+      "altQty": 111008405.0,
+      "isAltQtyEstimated": false,
+      "netWgt": 111008405.0,
+      "isNetWgtEstimated": false,
+      "grossWgt": 0.0,
+      "isGrossWgtEstimated": false,
+      "cifvalue": 61699469.0,
+      "fobvalue": 59642590.0,
+      "primaryValue": 61699469.0,
+      "legacyEstimationFlag": 0,
+      "isReported": false,
+      "isAggregate": true
+     }
+    ],
+    "error": ""
+   }
+  },
+  {
+   "symbol": "HS281820",
+   "period": "202607",
+   "status": "not_published",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281820&flowCode=M&period=202607&customsCode=C00&motCode=0&maxRecords=10",
+   "http_status": 200,
+   "response": {
+    "elapsedTime": "0.05 secs",
+    "count": 0,
+    "data": [],
+    "error": ""
+   }
+  },
+  {
+   "symbol": "HS281810",
+   "period": "202604",
+   "status": "unverified",
+   "url": "https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281810&flowCode=M&period=202604&customsCode=C00&motCode=0&maxRecords=10",
+   "http_status": 429,
+   "reason": "Client error '429 Too Many Requests' for url 'https://comtradeapi.un.org/public/v1/preview/C/M/HS?reporterCode=842&partnerCode=0&partner2Code=0&cmdCode=281810&flowCode=M&period=202604&customsCode=C00&motCode=0&maxRecords=10'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+  }
+ ]
+}

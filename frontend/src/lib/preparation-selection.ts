@@ -5,6 +5,18 @@ export function sameSteps(left: string[], right: string[]) {
   return left.length === right.length && [...left].sort().every((key, index) => key === orderedRight[index]);
 }
 
+export function isThermalTemplateReady(
+  selectedId: string | null,
+  costs: Record<string, TemplateCost>,
+  steps: string[],
+  orderSize: number,
+  costOrderSize: number | null,
+) {
+  if (!selectedId) return true;
+  const fitted = costs[selectedId]?.steps_fitted;
+  return orderSize === costOrderSize && !!fitted?.length && sameSteps(fitted, steps);
+}
+
 export function matchThermalTemplate(
   templates: ProcessTemplate[],
   costs: Record<string, TemplateCost>,

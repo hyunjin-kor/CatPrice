@@ -9,6 +9,9 @@ const LANG_KEY = 'comet_lang';
 // so partial coverage degrades gracefully. Data content (citations, evidence
 // notes, candidate summaries) deliberately stays in its source language.
 const KO: Record<string, string> = {
+  'Price evidence': '가격 근거',
+  'Waiting for the preparation steps at the selected production scale.': '선택한 생산 규모에 맞는 제조 단계를 불러오고 있습니다.',
+  'Preparation costs could not be loaded. Refresh this page or choose the preparation steps manually.': '제조법별 가공비를 불러오지 못했습니다. 페이지를 새로고침하거나 제조 단계를 직접 선택하세요.',
   'mass coverage / Nuss & Eckelman 2014': '질량 반영률 / Nuss & Eckelman 2014',
   'Per unit mass': '단위 질량당',
   'Unavailable at this production scale': '현재 생산 규모에서 선택할 수 없습니다',
@@ -104,6 +107,10 @@ const KO: Record<string, string> = {
   'to land at the in-calculator value': '환산 후 계산 적용 가격:',
   'ChemPPI tracks chemical-manufacturing producer prices and is the same index CatCost uses for materials and operating costs.': 'ChemPPI는 화학 제조업 생산자물가지수이며, CatCost도 재료비와 운영비 환산에 사용합니다.',
   'Live market quote in use': '실시간 시세 적용 중',
+  'Monthly reference quote in use': '월평균 기준 가격 적용 중',
+  'Observation month': '관측 월',
+  'Original library price:': '기존 자료 가격:',
+  'Open original library source': '기존 자료 출처 열기',
   'Catalyst price uses the latest': '촉매 원가에 반영한 최신 시세:',
   'Offline reference price:': '오프라인 기준 가격:',
   'from': '출처:',

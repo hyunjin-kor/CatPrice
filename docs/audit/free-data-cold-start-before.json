@@ -1,0 +1,381 @@
+{
+  "baseUrl": "http://127.0.0.1:8876",
+  "phase": "before",
+  "scenarios": [
+    {
+      "scenario": "cold-offline-default",
+      "page_errors": [],
+      "run_disabled_while_pending": false,
+      "status": 200,
+      "request": {
+        "components": [
+          {
+            "role": "active_metal",
+            "name": "Ni",
+            "wt_pct": 20,
+            "price_per_lb": 7.7362
+          },
+          {
+            "role": "support",
+            "name": "Al2O3",
+            "material_key": "lit:comtrade-calcined-alumina-2024",
+            "wt_pct": 80
+          }
+        ],
+        "steps": [
+          "mixer_slurry",
+          "incipient_wetness",
+          "dryer_rotary_100_300C",
+          "kiln_continuous_indirect",
+          "mill",
+          "scrubber_nox"
+        ],
+        "template_id": "wet_impregnation_metal_oxide",
+        "catalyst_domain": "thermal",
+        "application_family": "fuel_cell",
+        "order_size_tons": 20,
+        "include_spent_value": false,
+        "reactor_type": "fixed",
+        "catalyst_bulk_density": 50,
+        "price_basis": "live"
+      },
+      "response": {
+        "input_summary": {
+          "composition": "20.0% Ni/Al2O3",
+          "catalyst_domain": "thermal",
+          "application_family": "fuel_cell",
+          "n_components": 2,
+          "order_size_tons": 20,
+          "basis_year": 2017,
+          "target_year": 2026,
+          "chemppi_escalation": 1.33,
+          "price_basis": "live"
+        },
+        "materials": {
+          "components": [
+            {
+              "role": "active_metal",
+              "name": "Ni",
+              "wt_pct": 20,
+              "wt_frac": 0.2,
+              "price_per_lb": 7.7362,
+              "precursor_markup": 1,
+              "cost_per_lb_cat": 1.54724,
+              "cost_pct": 87.2
+            },
+            {
+              "role": "support",
+              "name": "Al2O3",
+              "wt_pct": 80,
+              "wt_frac": 0.8,
+              "price_per_lb": 0.2832,
+              "precursor_markup": 1,
+              "cost_per_lb_cat": 0.22656,
+              "cost_pct": 12.8
+            }
+          ],
+          "total_materials_cost_per_lb": 1.7738
+        },
+        "step_method": {
+          "scale": "medium",
+          "order_size_tons": 20,
+          "production_rate_ton_per_day": 10,
+          "campaign_days": 3,
+          "step_cost_per_hr": 930.98,
+          "chemppi_escalation": 1.3299711815561959,
+          "campaign_cost": 67030.55,
+          "total_production_lb": 40000,
+          "materials_cost_per_lb": 1.7738,
+          "processing_cost_per_lb": 1.6758,
+          "subtotal_per_lb": 3.4496,
+          "ga_per_lb": 0.1725,
+          "sard_per_lb": 0.1811,
+          "pre_margin_per_lb": 3.8031,
+          "margin_pct": 19.47,
+          "margin_per_lb": 0.9193,
+          "estimated_price_per_lb": 4.7224,
+          "estimated_price_per_kg": 10.4111,
+          "step_details": [
+            {
+              "step": "mixer_slurry",
+              "hourly_cost": 100
+            },
+            {
+              "step": "incipient_wetness",
+              "hourly_cost": 100
+            },
+            {
+              "step": "dryer_rotary_100_300C",
+              "hourly_cost": 150
+            },
+            {
+              "step": "kiln_continuous_indirect",
+              "hourly_cost": 175
+            },
+            {
+              "step": "mill",
+              "hourly_cost": 100
+            },
+            {
+              "step": "scrubber_nox",
+              "hourly_cost": 75
+            }
+          ]
+        },
+        "spent_catalyst": null,
+        "electrode_model": null,
+        "route_summary": {
+          "template_id": "wet_impregnation_metal_oxide",
+          "name": "Incipient Wetness Impregnation - Metal on Oxide Support",
+          "catalyst_domain": "thermal",
+          "application_family": "general",
+          "manufacturing_mode": "batch",
+          "preprocess": [],
+          "synthesis": [],
+          "postprocess": [],
+          "quality_gates": [],
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "route_note": "Renamed from 'Wet Impregnation'. The step list has never contained a filtration stage, which is the defining difference between the two routes, so the previous name described a route this template does not model.",
+          "source": "Jimenez et al., Industrial Catalyst Impregnation: Modern Equipment, Techniques, and Scaling Challenges, Ind. Eng. Chem. Res. 65, 12447 (2026)",
+          "reference_urls": [
+            "https://doi.org/10.1021/acs.iecr.6c01082"
+          ]
+        },
+        "resolved_materials": [
+          {
+            "material_key": "lit:comtrade-calcined-alumina-2024",
+            "used_for": "component:support",
+            "name": "Calcined alumina (non-corundum), import unit value (UN Comtrade 2024)",
+            "category": "Support",
+            "catalyst_domain": "general",
+            "application_family": "general",
+            "price": 0.5956,
+            "price_unit": "$/kg",
+            "price_scope": "literature_high_volume",
+            "pack_quantity": null,
+            "pack_unit": null,
+            "quote_year": 2024,
+            "quote_source": "UN Comtrade (U.S. imports)",
+            "pricing_basis": "us_import_cif_unit_value_2024_hs281820_world",
+            "reference_url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=842&period=2024&cmdCode=281820&flowCode=M",
+            "notes": "2024 U.S. imports of HS 281820 (aluminium oxide other than artificial corundum): $639.56M / 1,073.87M kg = $0.60/kg CIF. Dominated by smelter-grade Brazil flows at $0.45/kg; specialty flows (Germany) reach $3.64/kg.",
+            "raw_price_per_lb": 0.27016,
+            "escalation_factor": 1.0483,
+            "escalation_target_year": 2026,
+            "escalation_basis_year": 2024,
+            "normalized_price_per_lb": 0.2832
+          }
+        ],
+        "warnings": [],
+        "lca": {
+          "gwp_kg_co2eq_per_kg_catalyst": 8.1029,
+          "ced_mj_per_kg_catalyst": 132.3522,
+          "materials": {
+            "gwp_kg_co2eq_per_kg_catalyst": 7.86,
+            "ced_mj_per_kg_catalyst": 127
+          },
+          "process": {
+            "gwp_kg_co2eq_per_kg_catalyst": 0.2429,
+            "ced_mj_per_kg_catalyst": 5.3522,
+            "natural_gas_mj_per_kg": 4.6657,
+            "electricity_kwh_per_kg": 0.022,
+            "per_step": [
+              {
+                "step": "mixer_slurry",
+                "class": "mechanical",
+                "modeled": true,
+                "fuel": "electricity",
+                "kwh_per_kg": 0.002,
+                "gwp_kg_co2eq_per_kg": 0.00073,
+                "ced_mj_per_kg": 0.02
+              },
+              {
+                "step": "incipient_wetness",
+                "class": "mechanical",
+                "modeled": true,
+                "fuel": "electricity",
+                "kwh_per_kg": 0.003,
+                "gwp_kg_co2eq_per_kg": 0.0011,
+                "ced_mj_per_kg": 0.03
+              },
+              {
+                "step": "dryer_rotary_100_300C",
+                "class": "thermal_drying",
+                "modeled": true,
+                "fuel": "natural_gas",
+                "fuel_mj_per_kg": 3.5375,
+                "water_kg_per_kg_solid": 0.7,
+                "outlet_temp_c": 150,
+                "duty_kj_per_kg": 1945.6,
+                "efficiency": 0.55,
+                "gwp_kg_co2eq_per_kg": 0.17808,
+                "ced_mj_per_kg": 3.8913
+              },
+              {
+                "step": "kiln_continuous_indirect",
+                "class": "thermal_calcination",
+                "modeled": true,
+                "fuel": "natural_gas",
+                "fuel_mj_per_kg": 1.1281,
+                "temp_c": 500,
+                "duty_kj_per_kg": 451.2,
+                "efficiency": 0.4,
+                "gwp_kg_co2eq_per_kg": 0.05679,
+                "ced_mj_per_kg": 1.2409
+              },
+              {
+                "step": "mill",
+                "class": "mechanical",
+                "modeled": true,
+                "fuel": "electricity",
+                "kwh_per_kg": 0.015,
+                "gwp_kg_co2eq_per_kg": 0.0055,
+                "ced_mj_per_kg": 0.15
+              },
+              {
+                "step": "scrubber_nox",
+                "class": "mechanical",
+                "modeled": true,
+                "fuel": "electricity",
+                "kwh_per_kg": 0.002,
+                "gwp_kg_co2eq_per_kg": 0.00073,
+                "ced_mj_per_kg": 0.02
+              }
+            ],
+            "modeled_step_count": 6,
+            "total_step_count": 6,
+            "unmodeled_steps": [],
+            "assumptions": {
+              "calcination_temp_c": null,
+              "cp_solid_kj_per_kg_k": 0.95,
+              "kiln_thermal_efficiency": 0.4,
+              "dryer_thermal_efficiency": 0.55,
+              "electricity_gwp_kg_per_kwh": 0.367,
+              "natural_gas_gwp_kg_per_mj": 0.05034
+            },
+            "boundary_note": "Covers energy delivered to the unit operations listed in `steps`. Not covered: reaction enthalpies of precursor decomposition, process emissions (NOx from nitrate calcination, flare CO2), solvent and water supply, wastewater treatment, equipment embodied impacts, and the electrocatalyst coating line (area-based, listed as unmodeled). Each occurrence of a step in a route is counted in full.",
+            "reference": {
+              "electricity": "EPA GHG Emission Factors Hub (January 2025), Table 6, US Average row: 771.5 lb CO2/MWh, 0.057 lb CH4/MWh, 0.008 lb N2O/MWh, eGRID2023; grid gross loss 4.2%. GWP100 AR5 (CH4 = 28, N2O = 265).",
+              "natural_gas": "EPA GHG Emission Factors Hub (January 2025), Table 1 Stationary Combustion, Natural Gas: 53.06 kg CO2/mmBtu, 1.0 g CH4/mmBtu, 0.10 g N2O/mmBtu (HHV). GWP100 AR5.",
+              "thermo": "Fuel-to-product thermal efficiency of indirect calciners (0.3-0.5) and rotary/spray dryers (0.4-0.7); Perry's Chemical Engineers' Handbook, 9th ed., Sec. 12 (drying) and rotary-kiln practice. Screening values, replace with measured duty where available.",
+              "mechanical": "Perry's Chemical Engineers' Handbook, 9th ed.: order-of-magnitude specific energies for agitated vessels (0.1-1 kW/m3), fine grinding of soft solids (5-30 kWh/t), paste extrusion (20-60 kWh/t), vacuum filtration (1-5 kWh/t). Screening values with ranges; evidence_tier engineering_assumption."
+            }
+          },
+          "system_boundary": "cradle-to-gate, materials + route energy (6/6 steps modeled)",
+          "per_component": [
+            {
+              "name": "Ni",
+              "role": "active_metal",
+              "wt_pct": 20,
+              "matched_key": "Ni",
+              "factor_status": "matched",
+              "gwp_kg_co2eq_per_kg_material": 6.5,
+              "ced_mj_per_kg_material": 111,
+              "gwp_contribution_kg_co2eq_per_kg_catalyst": 1.3,
+              "ced_contribution_mj_per_kg_catalyst": 22.2,
+              "process_name": "Ni TOTAL (Table S38)",
+              "data_origin": "Ecoinvent 2.2"
+            },
+            {
+              "name": "Al2O3",
+              "role": "support",
+              "wt_pct": 80,
+              "matched_key": "Al",
+              "factor_status": "matched_alias",
+              "gwp_kg_co2eq_per_kg_material": 8.2,
+              "ced_mj_per_kg_material": 131,
+              "gwp_contribution_kg_co2eq_per_kg_catalyst": 6.56,
+              "ced_contribution_mj_per_kg_catalyst": 104.8,
+              "process_name": "Al TOTAL (Table S38)",
+              "data_origin": "Ecoinvent 2.2"
+            }
+          ],
+          "data_gap_pct": 0,
+          "coverage_pct": 100,
+          "warnings": [],
+          "reference": {
+            "citation": "Nuss P, Eckelman MJ (2014). Life Cycle Assessment of Metals: A Scientific Synthesis. PLOS ONE 9(7): e101298.",
+            "doi": "10.1371/journal.pone.0101298",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0101298",
+            "license": "CC BY 4.0",
+            "table_of_origin": "Supporting Information S1, Table S38 (per-element TOTAL row, weight-averaged across supply mix forms in 2008)",
+            "underlying_lci_database": "Ecoinvent 2.2 (most rows) + Idemat 2001, ProBas, BeST, and authors' own assessments where stated in Table S38",
+            "uncertainty_basis": "2.5%/97.5% lognormal bounds reported in the same table",
+            "notes": "Values are cradle-to-gate per kg of metal output (not per kg of catalyst). The catalyst-level impact is computed as a wt%-weighted sum at calculation time. Secondary (recycled) supply was excluded so the seed values represent primary-route impact, which is the conservative case for a new catalyst manufacturing run."
+          },
+          "impact_categories": {
+            "gwp_kg_co2eq_per_kg": {
+              "label": "Global Warming Potential (100a)",
+              "unit": "kg CO2-eq / kg",
+              "characterization": "IPCC GWP100a"
+            },
+            "ced_mj_per_kg": {
+              "label": "Cumulative Energy Demand",
+              "unit": "MJ / kg",
+              "characterization": "CED, total non-renewable + renewable primary energy"
+            }
+          }
+        },
+        "summary": {
+          "estimated_price_per_lb": 4.7224,
+          "estimated_price_per_kg": 10.4111,
+          "net_cost_per_lb": 4.7224,
+          "net_cost_per_kg": 10.4111,
+          "materials_pct": 37.6,
+          "processing_pct": 35.5,
+          "gwp_kg_co2eq_per_kg_catalyst": 8.1029,
+          "ced_mj_per_kg_catalyst": 132.3522,
+          "lca_coverage_pct": 100
+        }
+      }
+    },
+    {
+      "scenario": "delayed-scale-fitting",
+      "page_errors": [],
+      "run_disabled_while_pending": false,
+      "status": 422,
+      "request": {
+        "components": [
+          {
+            "role": "active_metal",
+            "name": "Ni",
+            "wt_pct": 20,
+            "price_per_lb": 7.7362
+          },
+          {
+            "role": "support",
+            "name": "Al2O3",
+            "material_key": "lit:comtrade-calcined-alumina-2024",
+            "wt_pct": 80
+          }
+        ],
+        "steps": [
+          "mixer_slurry",
+          "incipient_wetness",
+          "dryer_rotary_100_300C",
+          "kiln_continuous_indirect",
+          "mill",
+          "scrubber_nox"
+        ],
+        "template_id": "wet_impregnation_metal_oxide",
+        "catalyst_domain": "thermal",
+        "application_family": "fuel_cell",
+        "order_size_tons": 2,
+        "include_spent_value": false,
+        "reactor_type": "fixed",
+        "catalyst_bulk_density": 50,
+        "price_basis": "live"
+      },
+      "response": {
+        "detail": "Step 'kiln_continuous_indirect' is not available at 'small' scale. Try a different scale or substitute step."
+      }
+    }
+  ]
+}

@@ -2,3 +2,7 @@
 docs/paper/*_2026-09-06.json -text
 docs/paper/figures/*_2026-09-06.svg -text
 docs/paper/results_2026-09-06.md -text
+backend/data/support_price_history.json -text
+docs/paper/free-data-2026-09-06/*.json -text
+docs/paper/free-data-2026-09-06/*.md -text
+docs/paper/free-data-2026-09-06/figures/*.svg -text

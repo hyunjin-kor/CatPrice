@@ -15,6 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from sqlmodel import Session
 
 from backend.config import settings
+from backend.core.comtrade_snapshot import load_support_history
 from backend.database import create_db_and_tables, engine, sync_material_library
 from backend.routers import (
     calculator,
@@ -31,7 +32,7 @@ from backend.routers import (
     templates,
     uncertainty,
 )
-from backend.services.price_scheduler import collect_prices
+from backend.services.price_scheduler import collect_prices, save_reference_series
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +67,7 @@ async def lifespan(app: FastAPI):
     create_db_and_tables()
     with Session(engine) as session:
         sync_material_library(session, force=True)
+        save_reference_series(session, load_support_history())
 
     # Fetch prices immediately on startup without blocking the Electron shell.
     # Hold a reference so the task can't be garbage-collected mid-flight.

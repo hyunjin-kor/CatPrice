@@ -36,7 +36,7 @@ import {
 } from '../lib/calculator-session';
 import { formatPrice } from '../lib/format-price';
 import { compareElectroPreference } from '../lib/electrode-defaults';
-import { matchThermalTemplate, sameSteps } from '../lib/preparation-selection';
+import { isThermalTemplateReady, matchThermalTemplate, sameSteps } from '../lib/preparation-selection';
 import { useLang } from '../lib/i18n';
 import { LB_PER_KG, TROY_OZ_PER_LB } from '../lib/unit-conversion';
 import { useBasis } from '../lib/use-basis';
@@ -471,6 +471,8 @@ export default function Calculator() {
   const [electroTemplates, setElectroTemplates] = useState<ProcessTemplate[]>([]);
   const [thermalTemplates, setThermalTemplates] = useState<ProcessTemplate[]>([]);
   const [templateCosts, setTemplateCosts] = useState<Record<string, TemplateCost>>({});
+  const [templateCostsOrderSize, setTemplateCostsOrderSize] = useState<number | null>(null);
+  const [templateCostsError, setTemplateCostsError] = useState(false);
   const [savedEstimates, setSavedEstimates] = useState<SavedEstimateSummary[]>([]);
   const [savedBusyId, setSavedBusyId] = useState<number | null>(null);
   const [loadedSavedName, setLoadedSavedName] = useState<string | null>(null);
@@ -524,15 +526,20 @@ export default function Calculator() {
   useEffect(() => {
     if (catalystDomain !== 'thermal') return;
     let cancelled = false;
+    setTemplateCostsError(false);
     fetchTemplateCosts(orderSize, 'thermal')
       .then((payload) => {
         if (cancelled) return;
         setTemplateCosts(Object.fromEntries(payload.templates.map((item) => [item.id, item])));
+        setTemplateCostsOrderSize(payload.order_size_tons);
         const selected = payload.templates.find((item) => item.id === selectedThermalTemplateId);
         if (selected?.steps_fitted.length) setSteps([...selected.steps_fitted]);
       })
       .catch(() => {
-        if (!cancelled) setTemplateCosts({});
+        if (!cancelled) {
+          setTemplateCosts({});
+          setTemplateCostsError(true);
+        }
       });
     return () => {
       cancelled = true;
@@ -963,6 +970,10 @@ export default function Calculator() {
   const isCompositionSectionValid = catalystDomain === 'electrocatalyst' ? isElectroValid : isThermalValid;
   const isManufacturingSectionValid = isCompositionSectionValid && steps.length > 0;
   const isValid = catalystDomain === 'electrocatalyst' ? isElectroValid : isThermalValid;
+  const isRouteReady = catalystDomain !== 'thermal' || isThermalTemplateReady(
+    selectedThermalTemplateId, templateCosts, steps, orderSize, templateCostsOrderSize,
+  );
+  const canCalculate = isValid && steps.length > 0 && isRouteReady;
   const latestSnapshotForCurrentCase = latestSnapshot
     && latestSnapshot.result.input_summary.catalyst_domain === catalystDomain
     && (
@@ -1090,7 +1101,7 @@ export default function Calculator() {
   }
 
   async function handleCalculate() {
-    if (!isValid || steps.length === 0) return;
+    if (!canCalculate) return;
     setLoading(true);
     setError('');
 
@@ -2022,13 +2033,18 @@ export default function Calculator() {
         : (
           <section className="surface-card p-4">
             <div className={`rounded-[24px] border px-4 py-4 text-sm ${isValid ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : 'border-amber-200 bg-amber-50 text-amber-800'}`}>{validationMessage}</div>
+            {!isRouteReady ? <div className="mt-3 rounded-[18px] border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              {templateCostsError
+                ? t('Preparation costs could not be loaded. Refresh this page or choose the preparation steps manually.')
+                : t('Waiting for the preparation steps at the selected production scale.')}
+            </div> : null}
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               <MetricTile label={t('Catalyst type')} value={t(catalystDomainLabel(catalystDomain))} detail={t('Current case basis')} />
-              <MetricTile label={t('Preparation steps')} value={String(steps.length)} detail={steps.length > 0 ? t('Ready to run') : t('Choose at least one preparation step')} />
+              <MetricTile label={t('Preparation steps')} value={String(steps.length)} detail={!isRouteReady ? t('Pending') : steps.length > 0 ? t('Ready to run') : t('Choose at least one preparation step')} />
               <MetricTile label={t('Production scale')} value={lang === 'ko' ? `${orderSize}톤` : `${orderSize} tons`} detail={`${t(scale.label)} / ${scale.rate}`} />
             </div>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button onClick={handleCalculate} disabled={loading || !isValid || steps.length === 0} className="cp-button-primary min-w-[250px]">{loading ? <><span className="mr-2 inline-flex h-4 w-4 animate-spin rounded-full border-2 border-slate-950 border-t-transparent" />{t('Running estimate')}</> : t('Run estimate')}</button>
+              <button onClick={handleCalculate} disabled={loading || !canCalculate} className="cp-button-primary min-w-[250px]">{loading ? <><span className="mr-2 inline-flex h-4 w-4 animate-spin rounded-full border-2 border-slate-950 border-t-transparent" />{t('Running estimate')}</> : t('Run estimate')}</button>
               <div className="text-xs leading-6 text-slate-600">{t('The result screen opens separately and keeps these inputs intact.')}</div>
             </div>
             {error ? <div className="mt-4 rounded-[24px] border border-red-200 bg-red-50 px-4 py-4 text-sm text-red-700"><span className="font-semibold">{t('Calculation failed.')}</span> {t(error)}</div> : null}

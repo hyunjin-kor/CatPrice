@@ -1,0 +1,543 @@
+{
+  "basis_month": "2026-06",
+  "comparison": "Same code, metal prices, compositions, score weights and LCA factors; only accepted support observations added. Price-evidence scores can change with the source and cost shares.",
+  "inputs": [
+    {
+      "file": "docs/paper/price_history_2026-09-06.json",
+      "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69"
+    },
+    {
+      "file": "backend/data/support_price_history.json",
+      "sha256": "4d0dccdf351ea3ecbebca9233da5cd6a97d5a790ecab313749fcd9b6c8af5896"
+    }
+  ],
+  "support_symbols": [
+    "HS281820"
+  ],
+  "price_basis_before": {
+    "Ag": {
+      "symbol": "Ag",
+      "name": "Silver",
+      "price": 66.7307,
+      "unit": "$/troy_oz",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Al": {
+      "symbol": "Al",
+      "name": "Aluminum",
+      "price": 1.5598,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Au": {
+      "symbol": "Au",
+      "name": "Gold",
+      "price": 4237.0718,
+      "unit": "$/troy_oz",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Co": {
+      "symbol": "Co",
+      "name": "Cobalt",
+      "price": 25.3352,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Cu": {
+      "symbol": "Cu",
+      "name": "Copper",
+      "price": 6.1471,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ir": {
+      "symbol": "Ir",
+      "name": "Iridium",
+      "price": 7357.9545,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Mo": {
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "price": 30.25,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ni": {
+      "symbol": "Ni",
+      "name": "Nickel",
+      "price": 7.9779,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Pd": {
+      "symbol": "Pd",
+      "name": "Palladium",
+      "price": 1286.4091,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Pt": {
+      "symbol": "Pt",
+      "name": "Platinum",
+      "price": 1748.0455,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Rh": {
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "price": 8022.7273,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ru": {
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "price": 1531.8182,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Sn": {
+      "symbol": "Sn",
+      "name": "Tin",
+      "price": 24.057,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Zn": {
+      "symbol": "Zn",
+      "name": "Zinc",
+      "price": 1.6051,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Fe": {
+      "symbol": "Fe",
+      "name": "Iron",
+      "price": 0.0604,
+      "unit": "$/lb",
+      "source": "CatCost 2018 + ChemPPI escalation",
+      "fetched_at": null
+    },
+    "W": {
+      "symbol": "W",
+      "name": "Tungsten",
+      "price": 21.74,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "V": {
+      "symbol": "V",
+      "name": "Vanadium",
+      "price": 8.96,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Re": {
+      "symbol": "Re",
+      "name": "Rhenium",
+      "price": 1179.4,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    }
+  },
+  "price_basis_after": {
+    "Ag": {
+      "symbol": "Ag",
+      "name": "Silver",
+      "price": 66.7307,
+      "unit": "$/troy_oz",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Al": {
+      "symbol": "Al",
+      "name": "Aluminum",
+      "price": 1.5598,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Au": {
+      "symbol": "Au",
+      "name": "Gold",
+      "price": 4237.0718,
+      "unit": "$/troy_oz",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Co": {
+      "symbol": "Co",
+      "name": "Cobalt",
+      "price": 25.3352,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Cu": {
+      "symbol": "Cu",
+      "name": "Copper",
+      "price": 6.1471,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "HS281820": {
+      "symbol": "HS281820",
+      "name": "HS281820",
+      "price": 0.5558,
+      "unit": "$/kg",
+      "source": "UN Comtrade (monthly unit value)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ir": {
+      "symbol": "Ir",
+      "name": "Iridium",
+      "price": 7357.9545,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Mo": {
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "price": 30.25,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ni": {
+      "symbol": "Ni",
+      "name": "Nickel",
+      "price": 7.9779,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Pd": {
+      "symbol": "Pd",
+      "name": "Palladium",
+      "price": 1286.4091,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Pt": {
+      "symbol": "Pt",
+      "name": "Platinum",
+      "price": 1748.0455,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Rh": {
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "price": 8022.7273,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Ru": {
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "price": 1531.8182,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Sn": {
+      "symbol": "Sn",
+      "name": "Tin",
+      "price": 24.057,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Zn": {
+      "symbol": "Zn",
+      "name": "Zinc",
+      "price": 1.6051,
+      "unit": "$/lb",
+      "source": "IMF PCPS (monthly average)",
+      "fetched_at": "2026-06-30"
+    },
+    "Fe": {
+      "symbol": "Fe",
+      "name": "Iron",
+      "price": 0.0604,
+      "unit": "$/lb",
+      "source": "CatCost 2018 + ChemPPI escalation",
+      "fetched_at": null
+    },
+    "W": {
+      "symbol": "W",
+      "name": "Tungsten",
+      "price": 21.74,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "V": {
+      "symbol": "V",
+      "name": "Vanadium",
+      "price": 8.96,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    },
+    "Re": {
+      "symbol": "Re",
+      "name": "Rhenium",
+      "price": 1179.4,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": null
+    }
+  },
+  "families": 30,
+  "candidates": 116,
+  "candidate_cost_changes": [
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ni-alumina-baseline",
+      "before_usd_per_lb": 4.4861,
+      "after_usd_per_lb": 4.1874,
+      "change_pct": -6.6583,
+      "price_evidence_before": 81.3,
+      "price_evidence_after": 85.4
+    },
+    {
+      "family": "ammonia-synthesis",
+      "candidate": "fused-iron-baseline",
+      "before_usd_per_lb": 5.0716,
+      "after_usd_per_lb": 5.0709,
+      "change_pct": -0.0138,
+      "price_evidence_before": 55.1,
+      "price_evidence_after": 55.1
+    },
+    {
+      "family": "co2-methanation",
+      "candidate": "ni-alumina-baseline",
+      "before_usd_per_lb": 5.2294,
+      "after_usd_per_lb": 5.2124,
+      "change_pct": -0.3251,
+      "price_evidence_before": 86.2,
+      "price_evidence_after": 86.3
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cza-baseline",
+      "before_usd_per_lb": 8.2077,
+      "after_usd_per_lb": 8.2013,
+      "change_pct": -0.078,
+      "price_evidence_before": 85.8,
+      "price_evidence_after": 85.9
+    },
+    {
+      "family": "co-prox",
+      "candidate": "pt-fe-alumina",
+      "before_usd_per_lb": 254.4526,
+      "after_usd_per_lb": 254.4272,
+      "change_pct": -0.01,
+      "price_evidence_before": 88.0,
+      "price_evidence_after": 88.0
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "co-alumina-fts",
+      "before_usd_per_lb": 15.3481,
+      "after_usd_per_lb": 14.6743,
+      "change_pct": -4.3901,
+      "price_evidence_before": 82.0,
+      "price_evidence_after": 82.7
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "comos-hdo",
+      "before_usd_per_lb": 11.6278,
+      "after_usd_per_lb": 10.8827,
+      "change_pct": -6.4079,
+      "price_evidence_before": 85.7,
+      "price_evidence_after": 87.4
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "fe-alumina-pyrolysis",
+      "before_usd_per_lb": 4.5474,
+      "after_usd_per_lb": 4.5394,
+      "change_pct": -0.1759,
+      "price_evidence_before": 56.1,
+      "price_evidence_after": 56.0
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "w-h-alumina",
+      "before_usd_per_lb": 9.4117,
+      "after_usd_per_lb": 9.3871,
+      "change_pct": -0.2614,
+      "price_evidence_before": 58.0,
+      "price_evidence_after": 57.8
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "re2o7-alumina-mild",
+      "before_usd_per_lb": 114.3953,
+      "after_usd_per_lb": 113.3146,
+      "change_pct": -0.9447,
+      "price_evidence_before": 73.9,
+      "price_evidence_after": 74.0
+    },
+    {
+      "family": "propane-dehydrogenation",
+      "candidate": "crox-alumina-catofin",
+      "before_usd_per_lb": 3.5879,
+      "after_usd_per_lb": 3.5718,
+      "change_pct": -0.4487,
+      "price_evidence_before": 70.6,
+      "price_evidence_after": 70.6
+    },
+    {
+      "family": "propane-dehydrogenation",
+      "candidate": "ptsn-alumina-pdh",
+      "before_usd_per_lb": 179.4396,
+      "after_usd_per_lb": 178.6006,
+      "change_pct": -0.4676,
+      "price_evidence_before": 87.9,
+      "price_evidence_after": 88.0
+    },
+    {
+      "family": "rwgs",
+      "candidate": "mo2n-hightemp",
+      "before_usd_per_lb": 34.0107,
+      "after_usd_per_lb": 34.0032,
+      "change_pct": -0.0221,
+      "price_evidence_before": 87.9,
+      "price_evidence_after": 87.9
+    },
+    {
+      "family": "rwgs",
+      "candidate": "cs-fe-cu-alumina",
+      "before_usd_per_lb": 8.1923,
+      "after_usd_per_lb": 8.1751,
+      "change_pct": -0.21,
+      "price_evidence_before": 64.0,
+      "price_evidence_after": 63.9
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "nizn-intermetallic",
+      "before_usd_per_lb": 5.7764,
+      "after_usd_per_lb": 5.7594,
+      "change_pct": -0.2943,
+      "price_evidence_before": 85.9,
+      "price_evidence_after": 86.0
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pdcu-saa",
+      "before_usd_per_lb": 10.6986,
+      "after_usd_per_lb": 9.7702,
+      "change_pct": -8.6778,
+      "price_evidence_before": 83.3,
+      "price_evidence_after": 86.5
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pd-alumina-baseline",
+      "before_usd_per_lb": 14.6549,
+      "after_usd_per_lb": 13.8077,
+      "change_pct": -5.781,
+      "price_evidence_before": 86.2,
+      "price_evidence_after": 87.5
+    },
+    {
+      "family": "selective-acetylene-hydrogenation",
+      "candidate": "pdag-bimetallic",
+      "before_usd_per_lb": 17.4057,
+      "after_usd_per_lb": 16.5602,
+      "change_pct": -4.8576,
+      "price_evidence_before": 86.5,
+      "price_evidence_after": 87.6
+    },
+    {
+      "family": "steam-methane-reforming",
+      "candidate": "sn-ni-coking-resistant",
+      "before_usd_per_lb": 4.69,
+      "after_usd_per_lb": 4.6721,
+      "change_pct": -0.3817,
+      "price_evidence_before": 85.8,
+      "price_evidence_after": 85.9
+    },
+    {
+      "family": "steam-methane-reforming",
+      "candidate": "rh-alumina-compact",
+      "before_usd_per_lb": 2236.9999,
+      "after_usd_per_lb": 2236.9745,
+      "change_pct": -0.0011,
+      "price_evidence_before": 88.0,
+      "price_evidence_after": 88.0
+    },
+    {
+      "family": "syngas-methanol",
+      "candidate": "cza-industrial",
+      "before_usd_per_lb": 9.0897,
+      "after_usd_per_lb": 9.0873,
+      "change_pct": -0.0264,
+      "price_evidence_before": 85.9,
+      "price_evidence_after": 85.9
+    },
+    {
+      "family": "syngas-methanol",
+      "candidate": "ga-promoted-cza",
+      "before_usd_per_lb": 16.3923,
+      "after_usd_per_lb": 16.387,
+      "change_pct": -0.0323,
+      "price_evidence_before": 73.4,
+      "price_evidence_after": 73.4
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "cu-zno-baseline",
+      "before_usd_per_lb": 7.7516,
+      "after_usd_per_lb": 7.7442,
+      "change_pct": -0.0955,
+      "price_evidence_before": 85.5,
+      "price_evidence_after": 85.6
+    }
+  ],
+  "winner_changes": [
+    {
+      "family": "ammonia-cracking",
+      "profile": "performance_zero",
+      "before": "co-mgo-la2o3",
+      "after": "ni-alumina-baseline"
+    },
+    {
+      "family": "co2-methanation",
+      "profile": "balanced",
+      "before": "ni-ceo2-lowtemp",
+      "after": "ni-alumina-baseline"
+    }
+  ],
+  "all_lca_values_unchanged": true
+}
