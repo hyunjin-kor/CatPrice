@@ -255,3 +255,96 @@ CLAUDE.md → AGENTS.md → README.md → docs/methodology.md → docs/api-refer
 ```
 
 숫자는 명령 출력을 그대로 붙이고, 확인하지 못한 것은 "확인 못 함"이라고 쓴다.
+
+---
+
+## 7. 무인 실행 프롬프트 (사람 개입 없이 한 번에 끝까지)
+
+3절의 단계를 사람 승인 없이 이어서 돌리는 버전이다. 결정 백로그는 아래 표의 값으로 미리 정해 두었고, 되돌리기 어려운 동작(태그·릴리스·문서 사이트 게시·master 직접 푸시)은 금지한다. 같은 프롬프트를 다시 보내면 로그 파일을 읽고 중단 지점부터 이어서 한다.
+
+```text
+당신은 COMET 저장소의 수석 엔지니어이자 논문 공동저자다. 이번 실행은 무인 모드다: 질문하지 말고, 아래 "미리 정한 결정"으로 판단하고, 끝까지 진행한 뒤 최종 보고를 남긴다. 사람은 나중에 PR 하나와 로그 파일만 본다.
+
+## 프로젝트 요약
+- COMET (Catalyst Overall Manufacturing Estimation Tool): 촉매 제조 원가를 계산하는 Windows 데스크톱/웹 도구. 저장소 https://github.com/hyunjin-kor/COMET, 기본 브랜치 master. 라이선스 PolyForm Noncommercial 1.0.0 (OSI 승인 라이선스가 아님, 바꾸지 말 것).
+- 방법론: NREL CatCost의 Step Method(Table 6.1 시간당 단가, Small/Medium/Large 규모, 2017 기준 ChemPPI 물가지수 환산)와 간접비·판매 마진 구조를 독립 재구현. CatCost User Guide Table 6.2의 세 검증 사례(Pt/C 센트 단위 일치, Ni/Al2O3 7% 이내, FCC 각주 b 단가 기준 2% 이내) 재현이 방법론 변경의 합격 기준. CatCost 원본 워크북(CatCost_v1-1-1/)은 독점 자료라 재배포 금지.
+- 가격 기준 두 계층(metal_prices.basis): live(야후 파이낸스·Johnson Matthey·Kitco·Markets Insider·Westmetall + USGS/CatCost 앵커)와 reference(IMF PCPS 월평균 Al Cu Ni Zn Sn Co Mo Au Ag, Johnson Matthey 일별→월평균 Pt Pd Rh Ru Ir, W Re V Fe는 앵커). 앱과 논문 스크립트 모두 --price-basis / price_basis로 선택. 담체 11종은 UN Comtrade HS 코드 수입 단가 시계열(backend/data/support_series.json)로 reference 기준에서 덮어씀(COMTRADE_API_KEY 없으면 라이브러리 가격 유지).
+- 기능 모듈: 원가 계산 마법사(열촉매 조성·담체·제조법 카탈로그 28종·규모별 장비 치환 fit_steps_to_scale·방법별 가공비 GET /api/templates/costs·폐촉매 회수 가치; 전기촉매 면적 기준 전극 조립체 모델), 결과 화면(원가 내역·제조법·cradle-to-gate GWP/CED·출처 근거), 시세와 이력, 문헌 벤치마크 30 반응군·116 후보 의사결정 엔진, 추정 범위(몬테카를로), 설비·운영비(Lang 계수), 자료 라이브러리, 한/영 UI, kg/lb, Electron 패키징과 자동 업데이트.
+- 스택(고정): React 19 + TypeScript + Vite + Tailwind 4 + Recharts / FastAPI + SQLModel + SQLite + APScheduler + httpx / Electron 41 + PyInstaller / pytest, tsc+vite build, PowerShell 스모크 / GitHub Actions. 새 프레임워크·ORM·빌드 도구 도입 금지.
+- 시작 상태(2026-09-06): master dd04fa9, 백엔드 테스트 573개 통과, 프론트 lint/build 통과, 데스크톱 스모크 통과. 최신 릴리스 v1.3.24 = package 버전 1.3.24, PR #104~#110의 기능은 미릴리스. 논문 초안 docs/paper/manuscript_draft_2026-09-02.md는 2026-07 기준월 reference basis, 잠정 배너 있음.
+
+## 먼저 읽을 것 (순서대로)
+CLAUDE.md → AGENTS.md → README.md → docs/methodology.md → docs/api-reference.md → docs/roadmap.md → docs/paper/manuscript_draft_2026-09-02.md → docs/paper/results_2026-09-02.md → docs/gpt-handoff.md → backend/tests/conftest.py, backend/tests/test_api.py.
+
+## 절대 규칙
+1. 지어내지 않는다. 가격·인용·DOI·URL·벤치마크 값·릴리스 상태를 확인 없이 쓰지 않는다. DOI는 Crossref, URL은 실제 응답으로 확인. 확인 못 하면 "확인 못 함"으로 남긴다.
+2. 비밀값 커밋 금지. CatCost 원본 데이터 재배포 금지. CatCost는 학술 인용만(NREL 보증 주장 금지). 라이선스 파일 변경 금지.
+3. 계산 결과가 바뀌는 변경은 scripts/reproduce_catcost_table62.py와 관련 테스트로 증명하고, 바뀐 수치와 이유를 로그에 쓴다.
+4. 버전은 package.json, frontend/package.json, pyproject.toml, backend/main.py APP_VERSION을 함께 올린다(test_version_sync.py가 검사).
+5. 커밋은 Conventional Commits(영어). --no-verify, 서명 우회, force push, 히스토리 재작성, 브랜치 삭제 금지.
+6. UI 문구는 촉매 연구자 어휘(생산 규모/생산 기간, 제조 단계, 전극 조립체, 납품 기준 촉매 단가, 회수 가치, 시세). 한국어는 외래어 직역을 피한다(루트→제조 경로, 레코드→항목, 벤더→공급사, 커버리지→적용 금속/반영률, 팩터→계수). 새 UI 문자열은 frontend/src/lib/i18n.tsx의 t('English key')로 넣고 한국어 값을 함께 추가.
+7. 요청된 범위만 바꾼다. 리팩터링·재포맷·이름 바꾸기·의존성 추가를 끼워 넣지 않는다.
+
+## 무인 모드 규칙
+- 브랜치: master에서 autonomous/2026-09-06 을 만들고 모든 작업을 그 브랜치에서 한다. master에 직접 푸시하지 않는다. 시작 직후 Draft PR을 하나 열고(제목 "chore: autonomous run 2026-09-06"), 작업마다 커밋·푸시해 CI가 돌게 한다. 끝나면 PR 본문을 최종 보고로 바꾸고 Draft를 해제한다. 머지는 하지 않는다.
+- 되돌리기 어려운 동작 금지: git tag, GitHub 릴리스 생성, Zenodo, GitHub Pages 배포, 외부 서비스 게시, 이슈·PR 코멘트 대량 생성, API 키 발급·저장, 데이터 파일 삭제, DB 스키마 파괴적 변경. 릴리스는 "준비"까지만(버전 범프·릴리스 노트·체크리스트).
+- 로그: docs/audit/autonomous-run-2026-09-06.md 를 첫 커밋에서 만들고, 아래 작업 목록을 표(ID | 상태 대기/진행/완료/보류 | 커밋 | 근거 명령 출력 요약 | 메모)로 유지한다. 작업 하나가 끝날 때마다 표를 갱신해 커밋한다. 재개 규칙: 이 프롬프트를 다시 받으면 로그를 먼저 읽고 "완료"가 아닌 첫 항목부터 이어서 한다.
+- 실패 처리: 한 작업에서 진실 신호가 3번 연속 실패하면 그 작업의 변경을 되돌리고(git checkout -- / git revert) 상태를 "보류"로 적은 뒤 다음 작업으로 간다. 브랜치는 항상 lint·build·pytest가 통과하는 상태로만 커밋한다. 이미 있던 실패(네트워크 차단으로 외부 가격 수집이 안 되는 경우 등)는 원인을 적고 우회(테스트는 conftest가 오프라인으로 막아 줌).
+- 시간 예산: 작업 목록의 [필수]를 먼저 모두 끝내고, 그다음 [권장], 남으면 [선택]. 하나에 오래 걸리면(예: 2시간) 부분 결과를 커밋하고 로그에 "부분 완료"로 적은 뒤 다음으로 간다.
+- 질문 금지: 판단이 필요하면 "미리 정한 결정" 표를 따르고, 표에 없으면 보수적인 쪽(현행 유지, 데이터 추가 안 함, 계산식 불변)을 고르고 로그에 "가정"으로 적는다.
+- 브라우저 확인: UI를 바꿨으면 실제로 앱을 띄워(백엔드 uvicorn backend.main:app --port 8765 + frontend/dist 또는 npm run dev) 화면을 확인하고 스크린샷을 docs/audit/screens/ 에 저장한다. 타입체크만으로 "된다"고 쓰지 않는다.
+
+## 진실 신호
+- python -m pytest backend/tests -q  (기준 573 passed, 약 7.5분)
+- cd frontend && npm run lint && npm run build
+- npm run build && npm run smoke:desktop  (릴리스 준비 단계에서 1회 이상)
+- python scripts/reproduce_catcost_table62.py
+- 논문 파이프라인: scripts/fetch_price_history.py → scripts/build_reference_basis.py → scripts/run_all_families.py / price_volatility_screen.py / active_metal_breakeven.py (--price-basis reference)
+
+## 미리 정한 결정
+A. 미산정 공정(오토클레이브·환원로·원심분리·체·코터·동결건조·CVD/ALD): 이번 실행에서는 "미산정" 유지. 단가 유도 안 함.
+B. live 계층 출처: Pt/Pd → Johnson Matthey 우선(야후 폴백), Cu/Al → Westmetall 우선(야후 폴백), 야후 폴링 주기는 현재 값의 5배 이상으로 늘림. 폴백 순서를 docs/methodology.md에 표로 기록.
+C. 담체 데이터: Comtrade 시계열만. USGS/BLS PPI 확장 안 함.
+D. Mo 큐레이션 항목: 앵커 23.13 $/lb 유지. 근거 대조 결과만 로그에.
+E. 벤치마크 담체 reference_series: 연결한다(HS 코드가 명확한 담체만, 나머지는 미연결로 표시).
+F. 탄소·실리카·제올라이트 LCA 계수: 추가 안 함. 반영률에 정직하게 반영.
+G. 투고 저널: ACS Sustainable Chemistry & Engineering 기준으로 원고 형식을 맞춘다(분량·그림 수는 저널 안내를 실제로 확인해 로그에 인용, 확인 못 하면 현행 초안 구조 유지).
+H. 릴리스 번호: 1.4.0. 버전 범프와 릴리스 노트까지만, 태그는 사람이.
+I. 번역 정책: UI 라벨만 번역, 데이터 문자열(벤치마크 요약·경고문·출처 메모)은 원문 유지.
+J. 몬테카를로 시드: 요청 필드 seed(선택, 기본 없음=비결정), 논문 파이프라인은 seed=20260906 고정.
+K. 재현 파이프라인 기준월: reference basis에서 가장 최근에 완전한 발표 월(build_reference_basis가 정하는 latest_common_month). 네트워크가 막혀 새 이력을 못 받으면 docs/paper/price_history_2026-09-02.json을 그대로 쓰고 로그에 적는다.
+
+## 작업 목록 (이 순서대로, ID를 로그 표에 그대로 쓴다)
+T01 [필수] 로그 파일 생성, 브랜치·Draft PR 생성, 진실 신호 4개 실행해 기준선(테스트 수·시간, 빌드 시간, Table 6.2 오차)을 로그 표 위에 기록.
+T02 [필수] 감사: 열촉매·전기촉매 경로를 브라우저에서 끝까지 실행하고 API 응답 시간(/api/calculate 20회 중앙값, /api/uncertainty 1,000회·10,000회), run_all_families.py 소요 시간, i18n 미번역 UI 라벨 수, 출처 필드 없는 데이터 항목 수를 측정해 docs/audit/2026-09-06-baseline.md에 저장.
+T03 [필수] reference 기준의 시세 신선도 판정 수정: 월평균은 발표 월 기준(최근 발표 월이면 정상), 7일 규칙은 live에만. 테스트 추가. UI "점검 필요" 수가 reference 기준에서 0이 되는 것을 브라우저로 확인.
+T04 [필수] 결정론: /api/uncertainty에 seed 필드 추가, 같은 seed → 같은 결과 테스트. 벤치마크 정렬 타이브레이크 고정. run_all_families.py를 두 번 실행해 JSON이 동일함을 확인.
+T05 [필수] 재현 파이프라인 1명령화: scripts/reproduce_paper.py --price-basis reference --month <YYYY-MM> --seed 20260906 이 이력 수집→기준 생성→세 분석→그림 생성까지 실행하고, 입력 스냅샷 SHA-256과 실행 환경(파이썬·패키지 버전)을 결과 JSON에 기록. README와 docs/methodology.md에 사용법 추가.
+T06 [필수] 데이터 출처 감사: backend/data/*.json 전 항목의 quote_source/reference_url/DOI 유무 표, DOI는 Crossref로·URL은 HTTP 응답으로 전수 확인, 결과를 docs/sources/provenance-2026-09-06.md에 저장. 죽은 링크는 목록만 만들고 데이터는 바꾸지 않는다(원출처를 다시 찾아 확신할 때만 수정).
+T07 [필수] 제조법 카탈로그 대조: 28종의 단계·출처·규모별 가공비가 docs/methodology.md와 일치하는지 확인하고 불일치를 고친다. 카드 선택→결과 라벨·template_id 전달 테스트 추가.
+T08 [필수] 전기촉매 기본 재료 규칙(응용 분야×템플릿)을 표로 문서화하고 테스트로 고정. 전극 결과 화면에 열촉매 값이 섞이지 않는 테스트.
+T09 [권장] live 계층 출처 재배치(결정 B)와 폴백 순서 문서화. 외부 네트워크가 막혀 있으면 코드·테스트만 하고 실제 수집은 "확인 못 함"으로.
+T10 [권장] 벤치마크 담체 reference_series 연결(결정 E)과 가중치 프로파일별 순위 변화 테스트.
+T11 [권장] 성능: T02 기준선 대비 /api/calculate, MC 10,000회, run_all_families 시간을 개선(벡터화·캐시). 결과 분포가 통계적으로 같음을 검증. 개선 전후 표를 로그에.
+T12 [권장] 오차 예산 절을 docs/methodology.md에 추가(가격 변동성, 물가지수, 규모 치환, 회수 가치 가정, LCA 반영률, 미산정 공정). 각 항목에 수치 근거 파일을 인용.
+T13 [권장] 테스트 커버리지: pytest --cov로 backend/core 커버리지 측정, 80% 미만 모듈에 테스트 보강. 프론트에 i18n 키 누락 검사 스크립트(npm run check:i18n) 추가.
+T14 [권장] 남은 미번역 UI 라벨 전부 i18n 처리(결정 I). docs/getting-started.ko.md 작성. README 스크린샷 갱신(scripts/capture_readme_screens.mjs).
+T15 [필수] 릴리스 준비(결정 H): 버전 네 곳 1.4.0, docs/release-notes.md에 #104~#110과 이번 실행의 변경을 사용자 관점으로 정리, CITATION.cff·codemeta.json(없으면 추가)·docs/project-links.md 갱신, docs/release-checklist.md 작성, npm run build && npm run smoke:desktop 통과 기록. 태그·릴리스는 만들지 않는다.
+T16 [필수] 논문 결과 재생성: T05 파이프라인을 결정 K·J로 실행해 docs/paper/*_2026-09-06.json, results_2026-09-06.md, 그림 6종(아키텍처·데이터 흐름, Table 6.2 재현, 라이브러리 GWP 대 원가, 가중치 민감도, live 대 reference 추천 변화, 손익분기 스윕)을 스크립트로 생성.
+T17 [필수] 원고: docs/paper/manuscript_2026-09-06.md 를 초안에서 만들되, 모든 수치를 T16 산출 파일의 키로 대응(수치 옆에 HTML 주석으로 파일명·키), 잠정 배너 제거, 3.4·3.5절을 새 결과로 재작성, 3.6절 "제조법별 가공비 범위" 신설, Limitations·Data and code availability(저장소, 예정 태그 v1.4.0, concept DOI 10.5281/zenodo.21451931, 재현 명령, 스냅샷 해시) 갱신, SI 표 4종(반응군·후보, 제조법 28종, 출처·라이선스, 오차 예산)을 docs/paper/si_2026-09-06.md로.
+T18 [선택] 리뷰어 체크리스트와 예상 질문 10개·답을 docs/paper/reviewer_prep_2026-09-06.md로.
+T19 [필수] 마무리: 전체 진실 신호 재실행, 로그 표 최종화, PR 본문을 최종 보고로 교체(아래 형식), Draft 해제. master 머지는 하지 않는다.
+
+## 최종 보고 형식 (PR 본문과 로그 파일 끝에)
+- 한 줄 결론과 완료/보류/부분 완료 개수
+- 작업 표(T01~T19): 상태, 커밋, 근거 명령 출력 요약
+- 계산 결과가 바뀐 곳과 이유, Table 6.2 재현 결과
+- 성능 전후 표
+- 사람이 해야 할 남은 일: 태그 v1.4.0 푸시, 릴리스 확인, Zenodo DOI 확인, 투고 저널 최종 확인, 보류 항목 결정
+- 가정한 것 목록(결정 표에 없어서 보수적으로 고른 것)
+- 확인 못 한 것 목록
+
+지금 시작하라. 첫 행동은 브랜치 생성과 로그 파일 생성이다.
+```
+
+**재개**: 실행이 끊겼으면 같은 프롬프트를 다시 보낸다. 로그 파일의 미완료 항목부터 이어서 한다. 사람이 돌아와서 할 일은 PR 하나를 읽고, 보류 항목을 결정하고, 태그를 푸시하는 것이다.
