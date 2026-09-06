@@ -149,6 +149,7 @@
           "evidence_tier": "public_index", "confidence_score": 68, "transparency": "derived_index",
           "note": "USGS MCS 2026 North American SHG zinc, 2025e $1.49/lb, x 0.803 Zn mass fraction of ZnO = $1.20/lb contained-metal floor; oxide conversion cost not included."}},
         {"role": "support", "name": "Al2O3", "wt_pct": 10.0, "pricing": {
+          "reference_series": "HS281820",
           "type": "fixed", "price_per_lb": 0.2676, "evidence_label": "USGS industrial alumina proxy",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025 USGS alumina import value used as the structural-promoter term."}}
@@ -213,6 +214,7 @@
           "evidence_tier": "public_index", "confidence_score": 66, "transparency": "derived_index",
           "note": "USGS 2025 refined gallium import value $580/kg = $263.1/lb x 0.744 Ga mass fraction of Ga2O3 = $195.7/lb contained-metal floor; oxide conversion cost not included."}},
         {"role": "support", "name": "Al2O3", "wt_pct": 25.0, "pricing": {
+          "reference_series": "HS281820",
           "type": "fixed", "price_per_lb": 0.2676, "evidence_label": "USGS industrial alumina proxy",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025 USGS alumina import value used as the balance-of-formulation oxide term."}}

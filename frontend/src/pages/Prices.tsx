@@ -310,7 +310,7 @@ export default function Prices() {
   }, [load]);
 
   // Two-tier live polling while the page is open, using only free sources:
-  //   - every 60s: Yahoo Finance quotes (Pt, Pd, Au, Ag, Cu, Al)
+  //   - every 5 min: Yahoo Finance quotes (primary-source protection is server-side)
   //   - every 5 min: full refresh — also pulls Kitco / Johnson Matthey /
   //     Markets Insider so Rh, Ru, Ir, Ni, Co, Mo, W, Fe stay current
   //     without any paid API. The slower cadence keeps the scrapers polite.
@@ -331,7 +331,7 @@ export default function Prices() {
         // Transient network blips shouldn't disturb the displayed quotes.
       }
     };
-    const yahooId = window.setInterval(yahooTick, 60_000);
+    const yahooId = window.setInterval(yahooTick, 5 * 60_000);
     const fullId = window.setInterval(fullTick, 5 * 60_000);
     return () => {
       window.clearInterval(yahooId);
@@ -457,9 +457,7 @@ export default function Prices() {
     null,
   );
   const reviewFlagCount = prices.filter(
-    // Backend freshness vocabulary is current / stale / reference — "current"
-    // is the healthy state; everything else deserves a look.
-    (row) => row.evidence.freshness_status.toLowerCase() !== 'current' || row.evidence.confidence_score < 75,
+    (row) => row.needs_review,
   ).length;
   const trendFor = (symbol: string): PriceTrend | null => {
     const trend = trends?.[symbol];
@@ -493,7 +491,7 @@ export default function Prices() {
     return (
       <section className="surface-card cp-enter overflow-hidden px-5 py-6 sm:px-6">
         <div className="mb-5 flex flex-col gap-2">
-          <div className="cp-subtle-label">Live Metal Prices</div>
+          <div className="cp-subtle-label">{t("Live Metal Prices")}</div>
           <div className="h-9 w-2/3 max-w-md rounded-[10px] bg-[rgba(229,232,235,0.55)] cp-skeleton" />
           <div className="h-3 w-3/4 max-w-xl rounded-[8px] bg-[rgba(229,232,235,0.45)] cp-skeleton" />
         </div>
@@ -507,7 +505,7 @@ export default function Prices() {
             <div key={title} className="surface-ghost overflow-hidden p-4">
               <div className="mb-3 flex items-center justify-between gap-3">
                 <div className="cp-subtle-label">{title}</div>
-                <span className="cp-chip">Loading…</span>
+                <span className="cp-chip">{t("Loading…")}</span>
               </div>
               <SkeletonListRows count={idx === 2 ? 5 : 3} />
             </div>
@@ -522,9 +520,9 @@ export default function Prices() {
       return (
         <div className="cp-inspector-rail">
           <section className="cp-rail-panel">
-            <div className="cp-subtle-label">Evidence Surface</div>
-            <div className="mt-2 text-lg font-semibold text-[#191f28]">Choose a tracked symbol.</div>
-            <div className="mt-2 text-xs leading-6 text-slate-600">The inspector keeps source quality, freshness, and normalization context visible.</div>
+            <div className="cp-subtle-label">{t("Evidence Surface")}</div>
+            <div className="mt-2 text-lg font-semibold text-[#191f28]">{t("Choose a tracked symbol.")}</div>
+            <div className="mt-2 text-xs leading-6 text-slate-600">{t("The inspector keeps source quality, freshness, and normalization context visible.")}</div>
           </section>
         </div>
       );
@@ -587,7 +585,7 @@ export default function Prices() {
           <div className="cp-subtle-label">{t('Price Coverage')}</div>
           <div className="mt-3 grid gap-2 sm:grid-cols-2 xl:grid-cols-1">
             <StatusTile label={t('Tracked metals')} value={String(prices.length)} detail={t('Metals with a stored price basis.')} />
-            <StatusTile label={t('Needs review')} value={String(reviewFlagCount)} detail={t('Stale quotes or low-confidence sources worth checking.')} />
+            <StatusTile label={t('Needs review')} value={String(reviewFlagCount)} detail={basis === 'reference' ? t('Monthly quotes behind the latest stored publication month. Anchors retain their source confidence.') : t('Stale quotes or low-confidence sources worth checking.')} />
           </div>
         </section>
       </div>
@@ -633,7 +631,7 @@ export default function Prices() {
 
           {error ? (
             <div className="mb-4 rounded-[18px] border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-700" role="alert">
-              {error}
+              {t(error)}
             </div>
           ) : null}
 
@@ -643,7 +641,7 @@ export default function Prices() {
               ? <StatusTile label={t('Monthly-average coverage')} value={`${monthlyQuoteCount}/${prices.length}`} detail={t('Metals with a stored monthly average.')} />
               : <StatusTile label={t('Live coverage')} value={`${liveQuoteCount}/${prices.length}`} detail={t('Metals backed by current live sources.')} />}
             <StatusTile label={t('Indexed & manual quotes')} value={String(indexedQuoteCount + manualQuoteCount)} detail={lang === 'ko' ? `지수 보정 ${indexedQuoteCount}건, 수동 ${manualQuoteCount}건 시세를 계속 쓸 수 있습니다.` : `${indexedQuoteCount} indexed and ${manualQuoteCount} manual quotes remain usable.`} />
-            <StatusTile label={t('Needs review')} value={String(reviewFlagCount)} detail={t('Stale quotes or low-confidence sources worth checking.')} />
+            <StatusTile label={t('Needs review')} value={String(reviewFlagCount)} detail={basis === 'reference' ? t('Monthly quotes behind the latest stored publication month. Anchors retain their source confidence.') : t('Stale quotes or low-confidence sources worth checking.')} />
           </div>
 
           {basis === 'reference' && supportSeries ? (
@@ -818,7 +816,7 @@ export default function Prices() {
           <div className="cp-subtle-label">{t('Trend Evidence')}</div>
           <div className="mt-2 text-lg font-semibold text-[#191f28]">{t(selectedRow.name)}</div>
           <div className="mt-3 space-y-1">
-            <InspectorRow label="Current" value={fmtConverted(currentValue)} detail={displayTrackedUnit(selectedRow.unit, unit)} />
+            <InspectorRow label={t("Current")} value={fmtConverted(currentValue)} detail={displayTrackedUnit(selectedRow.unit, unit)} />
             <InspectorRow label={t('Period high')} value={fmtConverted(periodHigh)} />
             <InspectorRow label={t('Period low')} value={fmtConverted(periodLow)} detail={historySource || t('Stored metal price series')} />
             <InspectorRow label={t('Direction')} value={pctChange != null ? `${pctChange >= 0 ? '+' : ''}${pctChange.toFixed(1)}%` : 'N/A'} detail={lang === 'ko' ? `${PERIOD_LABELS[period]} 구간` : `${PERIOD_LABELS[period]} window`} />
@@ -880,13 +878,13 @@ export default function Prices() {
             {histLoading ? (
               <div className="flex h-[320px] items-center justify-center gap-3 text-slate-300">
                 <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#0d9488] border-t-transparent" />
-                Loading history...
+                {t("Loading history...")}
               </div>
             ) : displayHistory.length === 0 ? (
               <div className="flex h-[320px] flex-col items-center justify-center gap-3 rounded-[28px] border border-dashed border-white/10 bg-white/4 text-center">
-                <div className="font-display text-2xl text-white">No stored price history</div>
+                <div className="font-display text-2xl text-white">{t("No stored price history")}</div>
                 <div className="max-w-md text-sm leading-7 text-slate-400">
-                  Refresh quotes or choose a symbol that already has stored history.
+                  {t("Refresh quotes or choose a symbol that already has stored history.")}
                 </div>
                 <button
                   type="button"
@@ -894,13 +892,13 @@ export default function Prices() {
                   disabled={refreshing}
                   className="cp-button-ink mt-2 px-4 py-2 text-xs"
                 >
-                  {refreshing ? 'Refreshing now…' : 'Refresh quotes'}
+                  {refreshing ? t('Refreshing now…') : t('Refresh quotes')}
                 </button>
               </div>
             ) : (
               <>
                 <div className="h-[320px]">
-                  <Suspense fallback={<DarkChartFallback label="Loading trend chart..." />}>
+                  <Suspense fallback={<DarkChartFallback label={t("Loading trend chart...")} />}>
                     <MetalTrendChart
                       data={displayHistory}
                       period={period}

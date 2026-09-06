@@ -93,10 +93,11 @@ def advantage_of_b(
     metric: str = "cost",
     weights: dict[str, float] | None = None,
     profile: str = "balanced",
+    basis: str = "live",
 ) -> float:
     """Positive when B beats A at these prices, negative when A beats B."""
     result = evaluate_benchmark_family(
-        session=session, family=family, profile=profile, weights=weights, prices=prices
+        session=session, family=family, profile=profile, weights=weights, prices=prices, basis=basis
     )
     by = {c["slug"]: c for c in result["candidates"]}
     a, b = by[slug_a], by[slug_b]
@@ -136,6 +137,7 @@ def breakeven_for_pair(
     lo_factor: float = 0.001,
     hi_factor: float = 100.0,
     scan: int = 32,
+    basis: str = "live",
 ) -> dict[str, Any]:
     """Sweep ``symbol`` and report where B overtakes A. Never raises; errors are returned.
 
@@ -158,7 +160,7 @@ def breakeven_for_pair(
 
     try:
         def f(p: float) -> float:
-            return advantage_of_b(session, family, slug_a, slug_b, swept(p), metric=metric, weights=weights, profile=profile)
+            return advantage_of_b(session, family, slug_a, slug_b, swept(p), metric=metric, weights=weights, profile=profile, basis=basis)
 
         at_baseline = f(p0)
         lo, hi = p0 * lo_factor, p0 * hi_factor

@@ -1,0 +1,541 @@
+{
+  "static_translation_calls": 607,
+  "korean_keys": 699,
+  "missing_key_occurrences": 2,
+  "raw_jsx_label_occurrences": 104,
+  "missing": [
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1526,
+      "key": "Indexed and manual prices still apply. Refresh to retry the live sources."
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1576,
+      "key": "Application family currently selected."
+    }
+  ],
+  "rawLabels": [
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 43,
+      "label": "Keyboard"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 45,
+      "label": "Shortcuts"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 47,
+      "label": "Quick keys for moving around COMET."
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 54,
+      "label": "Alt +"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 59,
+      "label": "Toggle this dialog"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 65,
+      "label": "Close"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 67,
+      "label": "Esc"
+    },
+    {
+      "file": "frontend/src/components/layout/KeyboardHints.tsx",
+      "line": 74,
+      "label": "Close"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 45,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 151,
+      "label": "kg"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 159,
+      "label": "lb"
+    },
+    {
+      "file": "frontend/src/components/layout/Sidebar.tsx",
+      "line": 180,
+      "label": "EN"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 66,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 66,
+      "label": ": Catalyst Overall Manufacturing Estimation Tool"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 130,
+      "label": "COMET"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 149,
+      "label": "kg"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 157,
+      "label": "lb"
+    },
+    {
+      "file": "frontend/src/components/layout/TopNavigation.tsx",
+      "line": 174,
+      "label": "EN"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1349,
+      "label": "cm²"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1357,
+      "label": "mg/cm²"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1408,
+      "label": "steps"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1461,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1745,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1748,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1921,
+      "label": "On"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 1986,
+      "label": "lb/ft³"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 2039,
+      "label": "Loaded saved estimate"
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 2039,
+      "label": "into the draft. Rows without a library link were restored with their saved prices as manual inputs."
+    },
+    {
+      "file": "frontend/src/pages/Calculator.tsx",
+      "line": 2064,
+      "label": "tons ·"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 147,
+      "label": "Loading breakdown chart..."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 342,
+      "label": "유효 면적 cm²당 전극 조립체 원가입니다 (모델 면적"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 342,
+      "label": "cm²). 질량 기준으로는 공급사 포장 단가 기준"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 345,
+      "label": "Electrode-stack cost per cm² of active area ("
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 345,
+      "label": "cm² modeled). Per-mass view"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 347,
+      "label": "on vendor-pack material prices."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 355,
+      "label": "Net cost"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 356,
+      "label": "before selling margin treatment. Alternate view"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 468,
+      "label": "유효 면적 cm²당 전극 조립체 원가입니다. 질량 기준으로는 공급사 포장 단가 기준"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 471,
+      "label": "Electrode-stack cost per cm² of active area. Per-mass view"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 473,
+      "label": "on vendor-pack material prices."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 481,
+      "label": "Net cost"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 482,
+      "label": "before selling margin treatment."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 545,
+      "label": "added ("
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 546,
+      "label": "$/cm² — equipment, labor, facility; consumables stay priced as materials). Derived from"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 547,
+      "label": "€/m² at EUR→USD"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 549,
+      "label": "Source"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 745,
+      "label": "Lifecycle proxy"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 747,
+      "label": "Net cost includes spent catalyst recovery for"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 747,
+      "label": ". The model uses support and reactor-type loss assumptions from the CatCost-style recovery proxy, not a full deactivation-regeneration cycle."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 830,
+      "label": "wt%"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 832,
+      "label": "GWP (kg CO2-eq/kg cat)"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 833,
+      "label": "CED (MJ/kg cat)"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 842,
+      "label": "(via"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 872,
+      "label": ". Underlying LCI:"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 872,
+      "label": ". Uncertainty:"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 872,
+      "label": ". License:"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 876,
+      "label": "(DOI"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1035,
+      "label": "Inflated to"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1035,
+      "label": "basis"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1038,
+      "label": "Original"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1038,
+      "label": "quote of"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1040,
+      "label": "is multiplied by ChemPPI factor"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1042,
+      "label": "to land at the in-calculator value"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1046,
+      "label": "ChemPPI tracks chemical-manufacturing producer prices and is the same index CatCost uses for materials and operating costs."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1053,
+      "label": "Live market quote in use"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1056,
+      "label": "Catalyst price uses the latest"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1056,
+      "label": "quote of"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1070,
+      "label": "Offline reference price:"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1070,
+      "label": "from"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1077,
+      "label": "No live quote"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1079,
+      "label": "This metal can carry a live market quote, but none is stored. Using the static catalog price. Refresh the prices feed to populate."
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1098,
+      "label": "Route References"
+    },
+    {
+      "file": "frontend/src/pages/CalculatorResult.tsx",
+      "line": 1102,
+      "label": "Open route reference"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 149,
+      "label": "CatCost Ch.7"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 342,
+      "label": "FCI"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 348,
+      "label": "FCI/PE"
+    },
+    {
+      "file": "frontend/src/pages/CapEx.tsx",
+      "line": 443,
+      "label": "/yr"
+    },
+    {
+      "file": "frontend/src/pages/Compare.tsx",
+      "line": 227,
+      "label": "Literature Benchmarks"
+    },
+    {
+      "file": "frontend/src/pages/Compare.tsx",
+      "line": 246,
+      "label": "Literature Benchmarks"
+    },
+    {
+      "file": "frontend/src/pages/Compare.tsx",
+      "line": 246,
+      "label": "Literature benchmarks are unavailable."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 459,
+      "label": "No materials match the current filters."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 461,
+      "label": "Try clearing the search box or category filter to see the full library."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 473,
+      "label": "Clear filters"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 585,
+      "label": "No step rates loaded."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 586,
+      "label": "The step library is empty — backend may not have published rates yet."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 619,
+      "label": "Step Detail"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 634,
+      "label": "Choose a step to inspect the hourly-rate basis here."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 668,
+      "label": "No route templates loaded."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 669,
+      "label": "No templates are stored for the current catalyst-domain filter. Switch to \"All domains\" to widen the search."
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 699,
+      "label": "Route Audit"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 717,
+      "label": "Pre-treatment"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 718,
+      "label": "Synthesis"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 719,
+      "label": "Post-treatment"
+    },
+    {
+      "file": "frontend/src/pages/Library.tsx",
+      "line": 724,
+      "label": "Choose a route template to inspect its preparation stages and audit fields here."
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 494,
+      "label": "Live Metal Prices"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 508,
+      "label": "Loading…"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 523,
+      "label": "Evidence Surface"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 524,
+      "label": "Choose a tracked symbol."
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 525,
+      "label": "The inspector keeps source quality, freshness, and normalization context visible."
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 662,
+      "label": "HS"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 881,
+      "label": "Loading history..."
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 885,
+      "label": "No stored price history"
+    },
+    {
+      "file": "frontend/src/pages/Prices.tsx",
+      "line": 887,
+      "label": "Refresh quotes or choose a symbol that already has stored history."
+    },
+    {
+      "file": "frontend/src/pages/Uncertainty.tsx",
+      "line": 73,
+      "label": "Loading range chart..."
+    }
+  ],
+  "scope": "Static t(string) keys and literal JSX text. Data strings and dynamic translation keys require manual/browser review."
+}

@@ -8,6 +8,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
+import { useLang } from '../../lib/i18n';
 
 export type CompareSeries = {
   symbol: string;
@@ -19,6 +20,7 @@ export type CompareSeries = {
 // its first point inside the window so metals with very different absolute
 // prices ($30/ozt silver vs $5,000/ozt rhodium) stay comparable.
 export default function MetalCompareChart({ series }: { series: CompareSeries[] }) {
+  const { lang } = useLang();
   const byDate = new Map<string, Record<string, number | string>>();
   for (const entry of series) {
     const base = entry.points[0]?.price;
@@ -41,7 +43,7 @@ export default function MetalCompareChart({ series }: { series: CompareSeries[] 
           axisLine={false}
           tickLine={false}
           tickFormatter={(value) =>
-            new Date(String(value)).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+            new Date(String(value)).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { month: 'short', day: 'numeric' })
           }
         />
         <YAxis
@@ -56,7 +58,7 @@ export default function MetalCompareChart({ series }: { series: CompareSeries[] 
           cursor={{ stroke: 'rgba(13,148,136,0.35)', strokeWidth: 1, strokeDasharray: '3 3' }}
           formatter={(value, name) => [`${Number(value).toFixed(1)}`, String(name)]}
           labelFormatter={(value) =>
-            new Date(String(value)).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            new Date(String(value)).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' })
           }
           contentStyle={{
             borderRadius: 12,

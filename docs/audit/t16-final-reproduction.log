@@ -1,0 +1,8 @@
+build_reference_basis.py: returncode=0, 0.713s
+reproduce_catcost_table62.py: returncode=0, 0.120s
+run_all_families.py: returncode=0, 1.587s
+price_volatility_screen.py: returncode=0, 7.681s
+active_metal_breakeven.py: returncode=0, 9.136s
+run_all_families.py: returncode=0, 1.341s
+generate_paper_figures.py: returncode=0, 4.522s
+wrote C:\Users\user\Desktop\COMET-autonomous-2026-09-06\docs\paper\reproduction_manifest_2026-09-06.json (complete)

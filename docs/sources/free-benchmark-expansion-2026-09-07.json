@@ -1,0 +1,2492 @@
+{
+  "audit_date": "2026-09-07",
+  "generated_at_utc": "2026-09-06T16:18:52.514694+00:00",
+  "scope": {
+    "families": 4,
+    "candidates": 15,
+    "candidate_counts": {
+      "ammonia_cracking": 4,
+      "olefin_metathesis": 4,
+      "hydrodeoxygenation": 4,
+      "nh3_scr": 3
+    },
+    "unique_existing_dois_checked": 40,
+    "crossref_matches": 40,
+    "exact_recipe_upgrades": 0,
+    "numerical_inputs_changed": false,
+    "paid_data_purchases": 0
+  },
+  "method": "Public publisher and author/institution sources only. Crossref verifies bibliographic identity, not recipe fidelity. HTTP responses, full text, abstract-only access and source gaps are recorded separately. Catalogue price quotes were not re-priced in this literature-only audit. No article/PDF/SI is included in distributable files.",
+  "candidate_findings": [
+    {
+      "id": "E01",
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "candidate_slug": "ni-alumina-baseline",
+      "outcome": "Primary full-text scope mismatch",
+      "source_ids": [
+        "patched-ni-fe-ncomms-2015",
+        "hea-ammonia-ncomms-2019"
+      ],
+      "verified_scope": "Ni/Pt(111) simulations and 10 wt% CoMoFeNiCu/carbon nanofibers are not a 12 wt% Ni/gamma-alumina recipe.",
+      "remaining_gap": "Exact gamma-alumina grade, loading, 550-700 C window and manufacture remain engineering assumptions.",
+      "retained_component_wt_pct": {
+        "Ni": 12.0,
+        "Al2O3": 88.0
+      },
+      "retained_temperature_window_c": [
+        550,
+        700
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E02",
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "candidate_slug": "ni-mgo-ceo2-interface",
+      "outcome": "Primary full-text scope mismatch",
+      "source_ids": [
+        "ni-ceo2x-ncomms-2025"
+      ],
+      "verified_scope": "The paper uses 10 wt% Ni on CeO2-x/CNT with CeO2:CNT = 0.5 by mass, NaBH4 reduction and light.",
+      "remaining_gap": "15/15/70 wt% Ni/CeO2/MgO, thermal activity and the generic oxide route are not reproduced experiments.",
+      "retained_component_wt_pct": {
+        "Ni": 15.0,
+        "CeO2": 15.0,
+        "MgO": 70.0
+      },
+      "retained_temperature_window_c": [
+        475,
+        650
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E03",
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "candidate_slug": "ru-mgo-premium",
+      "outcome": "Primary full-text scope mismatch",
+      "source_ids": [
+        "ru-mgo-nature-2023",
+        "gan-ru-ncomms-2024"
+      ],
+      "verified_scope": "Ru/MgO paper uses 3.1 wt% Ru and Ru3(CO)12 on preferential MgO(111); GaN-supported Ru is light-driven.",
+      "remaining_gap": "3 wt% Ru on generic MgO with chloride-price markup and wet impregnation remains a grade and route proxy.",
+      "retained_component_wt_pct": {
+        "Ru": 3.0,
+        "MgO": 97.0
+      },
+      "retained_temperature_window_c": [
+        400,
+        575
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E04",
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "candidate_slug": "co-mgo-la2o3",
+      "outcome": "Primary abstract plus secondary-source limitation",
+      "source_ids": [
+        "podila-ijhe-2015",
+        "bell-ijhe-2020",
+        "lucentini-iecr-2021"
+      ],
+      "verified_scope": "The primary abstract verifies 5 wt% Co impregnation and an optimum Mg/La molar ratio of 5; tests span 300-550 C at atmospheric pressure.",
+      "remaining_gap": "The 85/10 wt% MgO/La2O3 split is not that ratio. A review-transcribed 92% conversion was not independently reverified. Bell concerns alumina.",
+      "retained_component_wt_pct": {
+        "Co": 5.0,
+        "MgO": 85.0,
+        "La2O3": 10.0
+      },
+      "retained_temperature_window_c": [
+        450,
+        600
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E05",
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "candidate_slug": "re2o7-alumina-mild",
+      "outcome": "Primary public abstract",
+      "source_ids": [
+        "balcar-re2o7-catlett-2004"
+      ],
+      "verified_scope": "Balcar reports an optimum 9-15 wt% elemental Re on organized mesoporous alumina.",
+      "remaining_gap": "The input retains 8 wt% elemental Re, generic alumina and a 25-100 C screening band; these are not the verified optimum recipe.",
+      "retained_component_wt_pct": {
+        "Re": 8.0,
+        "Al2O3": 92.0
+      },
+      "retained_temperature_window_c": [
+        25,
+        100
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E06",
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "candidate_slug": "wo3-silica-oct",
+      "outcome": "Mismatched primary removed; review context retained",
+      "source_ids": [
+        "handzlik-mo-comparison-apcata-2006",
+        "metathesis-oxides-acscatal-2014",
+        "mol-industrial-jmolcat-2004"
+      ],
+      "verified_scope": "Handzlik studies molybdena rather than tungsten and was removed from this candidate.",
+      "remaining_gap": "No proprietary OCT composition or silica grade was verified. The input is 7 wt% elemental W, not 7 wt% WO3.",
+      "retained_component_wt_pct": {
+        "W": 7.0,
+        "SiO2": 93.0
+      },
+      "retained_temperature_window_c": [
+        300,
+        450
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E07",
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "candidate_slug": "mo-silica-alumina",
+      "outcome": "Primary abstract and author abstract",
+      "source_ids": [
+        "handzlik-mo-comparison-apcata-2006",
+        "leroux-w-alkane-adsc-2007",
+        "merle-mo-bipodal-cc-2017"
+      ],
+      "verified_scope": "Handzlik directly studies supported Mo using thermal spreading of MoO2(acac)2. Merle concerns grafted Mo species on silica; Le Roux concerns W alkane metathesis.",
+      "remaining_gap": "8 wt% elemental Mo, silica/alumina ratio and generic wet route remain assumptions. The wrong W paper was removed and the direct Mo comparison linked.",
+      "retained_component_wt_pct": {
+        "Mo": 8.0,
+        "SiO2-Al2O3": 92.0
+      },
+      "retained_temperature_window_c": [
+        100,
+        300
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E08",
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "candidate_slug": "w-h-alumina",
+      "outcome": "Bibliographic architecture confirmed; experimental access gap",
+      "source_ids": [
+        "taoufik-angew-2007"
+      ],
+      "verified_scope": "Primary title and Crossref metadata identify supported W hydride and direct ethylene-to-propylene chemistry.",
+      "remaining_gap": "Free experimental full text/SI, 4 wt% loading, 120-250 C window and air-free precursor manufacturing cost were not verified.",
+      "retained_component_wt_pct": {
+        "W": 4.0,
+        "Al2O3": 96.0
+      },
+      "retained_temperature_window_c": [
+        120,
+        250
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E09",
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "candidate_slug": "pt-silica-hdo",
+      "outcome": "Primary public abstract contradicts broad selectivity claim",
+      "source_ids": [
+        "nie-mcresol-jcat-2014"
+      ],
+      "verified_scope": "At 300 C, m-cresol on Pt/silica shows faster hydrogenation/dehydrogenation than HDO; titania/zirconia increase toluene selectivity.",
+      "remaining_gap": "No general arene-preserving guarantee follows. 1 wt% Pt, silica grade and 250-400 C band remain assumptions; other catalyst architectures are no longer direct evidence.",
+      "retained_component_wt_pct": {
+        "Pt": 1.0,
+        "SiO2": 99.0
+      },
+      "retained_temperature_window_c": [
+        250,
+        400
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E10",
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "candidate_slug": "comos-hdo",
+      "outcome": "Primary public abstract; SI blocked",
+      "source_ids": [
+        "song-comos-acscatal-2018"
+      ],
+      "verified_scope": "The paper describes surface Co-Mo-S phases in Co-incorporated MoS2 nanosulfide. Issue year is 2019, online publication 2018.",
+      "remaining_gap": "12/4/84 wt% Mo/Co/alumina and sulfur inventory are not established by the accessible text.",
+      "retained_component_wt_pct": {
+        "Mo": 12.0,
+        "Co": 4.0,
+        "Al2O3": 84.0
+      },
+      "retained_temperature_window_c": [
+        300,
+        400
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E11",
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "candidate_slug": "nimo-carbon-hdo",
+      "outcome": "Primary publisher full text via web retrieval; direct HTTP blocked",
+      "source_ids": [
+        "jiang-nimo-greenchem-2024"
+      ],
+      "verified_scope": "Ni1Mo3N/C uses 1:3 Ni/Mo molar ratio, glucose-derived carbon and sol-gel preparation; 500 C H2 treatment forms nitride/carbide phases. Phenolics tests use 220-260 C.",
+      "remaining_gap": "5/10/85 wt% Ni/Mo/activated-carbon, 250-380 C and generic impregnation are not that experiment. No new numerical performance value was adopted.",
+      "retained_component_wt_pct": {
+        "Mo": 10.0,
+        "Ni": 5.0,
+        "Activated carbon": 85.0
+      },
+      "retained_temperature_window_c": [
+        250,
+        380
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E12",
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "candidate_slug": "ru-carbon-hdo",
+      "outcome": "Primary public abstract",
+      "source_ids": [
+        "wildschut-ees-2010"
+      ],
+      "verified_scope": "5 wt% Ru/C at 350 C, 200 bar gave maximum 65 wt% oil yield at 4 h with 5 wt% catalyst intake relative to oil.",
+      "remaining_gap": "Ru loading and catalyst intake have different denominators. Simultaneous 90 wt% deoxygenation, exact carbon grade and manufacturing route were not verified.",
+      "retained_component_wt_pct": {
+        "Ru": 5.0,
+        "Activated carbon": 95.0
+      },
+      "retained_temperature_window_c": [
+        250,
+        350
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E13",
+      "file": "backend/data/nh3_scr_benchmark.json",
+      "candidate_slug": "v2o5-wo3-tio2",
+      "outcome": "Primary full PDF and institutional abstract",
+      "source_ids": [
+        "monolith-18000h-catalysts-2019",
+        "washcoat-app-2021"
+      ],
+      "verified_scope": "The commercial case ran about 200 C for 18,000 h; virgin XRF shows 3.51 wt% V2O5 and 6.36 wt% WO3. The washcoat paper studies printed alumina lattices.",
+      "remaining_gap": "2.5/7/90.5 wt% inputs and 260-420 C are not this service case. Fibers, grade, forming and substrate geometry remain unresolved.",
+      "retained_component_wt_pct": {
+        "V2O5": 2.5,
+        "WO3": 7.0,
+        "TiO2": 90.5
+      },
+      "retained_temperature_window_c": [
+        260,
+        420
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E14",
+      "file": "backend/data/nh3_scr_benchmark.json",
+      "candidate_slug": "cu-ssz-13",
+      "outcome": "Primary author abstract; full-methods access gap",
+      "source_ids": [
+        "kwak-jcat-2010",
+        "paolucci-science-2017"
+      ],
+      "verified_scope": "Kwak compares Cu-SSZ-13 with Cu-beta and Cu-ZSM-5; the primary abstract reports activity/selectivity advantages. Cu pairing is mechanistic context.",
+      "remaining_gap": "2.5 wt% Cu, Si/Al, matched hydrothermal aging, washcoat mass and the 200-500 C band were not validated as one recipe. The prior sole-preprint statement was removed.",
+      "retained_component_wt_pct": {
+        "Cu": 2.5,
+        "SSZ-13 zeolite": 97.5
+      },
+      "retained_temperature_window_c": [
+        200,
+        500
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    },
+    {
+      "id": "E15",
+      "file": "backend/data/nh3_scr_benchmark.json",
+      "candidate_slug": "fe-zsm-5",
+      "outcome": "Primary public abstract; review framework mismatch",
+      "source_ids": [
+        "long-yang-jcat-1999",
+        "fe-smallpore-catalysts-2020"
+      ],
+      "verified_scope": "Long-Yang reports nearly complete NO conversion at 400-500 C with strong exchange-level and Si/Al effects. The Gao review concerns other, small-pore frameworks.",
+      "remaining_gap": "The small-pore stability claim is not proof for ZSM-5. 2 wt% Fe, grade, 300-550 C band and manufacturing recipe remain assumptions.",
+      "retained_component_wt_pct": {
+        "Fe": 2.0,
+        "H-ZSM-5": 98.0
+      },
+      "retained_temperature_window_c": [
+        300,
+        550
+      ],
+      "exact_recipe_upgrade": false,
+      "score_policy": "Authored performance, readiness and route assessments are separate from experimental performance and pricing-provenance confidence."
+    }
+  ],
+  "sources": [
+    {
+      "id": "patched-ni-fe-ncomms-2015",
+      "doi": "10.1038/ncomms9619",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1038/ncomms9619",
+      "title": [
+        "Patched bimetallic surfaces are active catalysts for ammonia decomposition"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            10,
+            7
+          ]
+        ]
+      },
+      "journal": [
+        "Nature Communications"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2015-10-07T00:00:00Z",
+            "timestamp": 1444176000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                7
+              ]
+            ],
+            "date-time": "2015-10-07T00:00:00Z",
+            "timestamp": 1444176000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.nature.com/articles/ncomms9619",
+      "response_bytes": 406598,
+      "response_sha256": "948046f04a01c96a9d0d85c1aa269818bc21f30ca35ada474cc015106e7f14fd",
+      "text_chars": 50629,
+      "access_note": "Publisher HTML full text inspected."
+    },
+    {
+      "id": "hea-ammonia-ncomms-2019",
+      "doi": "10.1038/s41467-019-11848-9",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1038%2Fs41467-019-11848-9",
+      "title": [
+        "Highly efficient decomposition of ammonia using high-entropy alloy catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            9,
+            5
+          ]
+        ]
+      },
+      "journal": [
+        "Nature Communications"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2019-09-05T00:00:00Z",
+            "timestamp": 1567641600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                9,
+                5
+              ]
+            ],
+            "date-time": "2019-09-05T00:00:00Z",
+            "timestamp": 1567641600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.nature.com/articles/s41467-019-11848-9",
+      "response_bytes": 475443,
+      "response_sha256": "1c3f3ffce5ce321205751dfcfedfee8b666cb47f61c833b0af7123f1960c7cf6",
+      "text_chars": 65815,
+      "access_note": "Publisher HTML full text inspected."
+    },
+    {
+      "id": "ru-mgo-nature-2023",
+      "doi": "10.1038/s41467-023-36339-w",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1038%2Fs41467-023-36339-w",
+      "title": [
+        "Dispersed surface Ru ensembles on MgO(111) for catalytic ammonia decomposition"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2023,
+            2,
+            6
+          ]
+        ]
+      },
+      "journal": [
+        "Nature Communications"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2023,
+                2,
+                6
+              ]
+            ],
+            "date-time": "2023-02-06T00:00:00Z",
+            "timestamp": 1675641600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2023,
+                2,
+                6
+              ]
+            ],
+            "date-time": "2023-02-06T00:00:00Z",
+            "timestamp": 1675641600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.nature.com/articles/s41467-023-36339-w",
+      "response_bytes": 560653,
+      "response_sha256": "fd48129191122e98cc78cde5379b8a3402e33ca6fe4cc499023156a07b5e381f",
+      "text_chars": 94094,
+      "access_note": "Publisher HTML full text inspected."
+    },
+    {
+      "id": "gan-ru-ncomms-2024",
+      "doi": "10.1038/s41467-024-51810-y",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1038%2Fs41467-024-51810-y",
+      "title": [
+        "Utilizing full-spectrum sunlight for ammonia decomposition to hydrogen over GaN nanowires-supported Ru nanoparticles on silicon"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            27
+          ]
+        ]
+      },
+      "journal": [
+        "Nature Communications"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                27
+              ]
+            ],
+            "date-time": "2024-08-27T00:00:00Z",
+            "timestamp": 1724716800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2024,
+                8,
+                27
+              ]
+            ],
+            "date-time": "2024-08-27T00:00:00Z",
+            "timestamp": 1724716800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.nature.com/articles/s41467-024-51810-y",
+      "response_bytes": 468505,
+      "response_sha256": "d63fe1cced109d7bff6b6b22f09feb075c28a2355fd75033a23c5a3585d705cb",
+      "text_chars": 66949,
+      "access_note": "Publisher HTML full text inspected."
+    },
+    {
+      "id": "ni-ceo2x-ncomms-2025",
+      "doi": "10.1038/s41467-025-66325-3",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1038%2Fs41467-025-66325-3",
+      "title": [
+        "Breakthrough photothermal ammonia decomposition via low-barrier Ni-CeO2-x interfaces on carbon nanotubes"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            17
+          ]
+        ]
+      },
+      "journal": [
+        "Nature Communications"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                17
+              ]
+            ],
+            "date-time": "2025-12-17T00:00:00Z",
+            "timestamp": 1765929600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                29
+              ]
+            ],
+            "date-time": "2025-12-29T00:00:00Z",
+            "timestamp": 1766966400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 12,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.nature.com/articles/s41467-025-66325-3",
+      "response_bytes": 386160,
+      "response_sha256": "ab4704e7984860d847ee58157a962c2730cf3f2bade920f2df79b937045adfc1",
+      "text_chars": 51095,
+      "access_note": "Publisher HTML full text inspected."
+    },
+    {
+      "id": "lucentini-iecr-2021",
+      "doi": "10.1021/acs.iecr.1c00843",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Facs.iecr.1c00843",
+      "title": [
+        "Review of the Decomposition of Ammonia to Generate Hydrogen"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            21
+          ]
+        ]
+      },
+      "journal": [
+        "Industrial &amp; Engineering Chemistry Research"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                11,
+                16
+              ]
+            ],
+            "date-time": "2021-11-16T00:00:00Z",
+            "timestamp": 1637020800000
+          },
+          "content-version": "unspecified",
+          "delay-in-days": 179,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/acs.iecr.1c00843",
+      "response_bytes": 5572,
+      "response_sha256": "9bcedad7a1fe193c9ca3b158c49973058e1cfeeb789d9649147153b45c9bb880",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "podila-ijhe-2015",
+      "doi": "10.1016/j.ijhydene.2015.09.057",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.ijhydene.2015.09.057",
+      "title": [
+        "Hydrogen production by ammonia decomposition using Co catalyst supported on Mg mixed oxide systems"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            12
+          ]
+        ]
+      },
+      "journal": [
+        "International Journal of Hydrogen Energy"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                12,
+                1
+              ]
+            ],
+            "date-time": "2015-12-01T00:00:00Z",
+            "timestamp": 1448928000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0360319915023472",
+      "response_bytes": 2799,
+      "response_sha256": "2e651a48e2d9054acfc23d06ba2db17fe3e3c374152518a64478aa548fee39f5",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "bell-ijhe-2020",
+      "doi": "10.1016/j.ijhydene.2020.07.090",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.ijhydene.2020.07.090",
+      "title": [
+        "Hydrogen production from ammonia decomposition using Co/γ-Al2O3 catalysts – Insights into the effect of synthetic method"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            10
+          ]
+        ]
+      },
+      "journal": [
+        "International Journal of Hydrogen Energy"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2020-10-01T00:00:00Z",
+            "timestamp": 1601510400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2020-10-01T00:00:00Z",
+            "timestamp": 1601510400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/legal/tdmrep-license"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0360319920326653",
+      "response_bytes": 2829,
+      "response_sha256": "cac212d2e45a65e4087eac84569977fe9cda0282fe4b87a4a15c3e30b0f2eceb",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "mol-oleochem-greenchem-2002",
+      "doi": "10.1039/b109896a",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2Fb109896a",
+      "title": [
+        "Application of olefin metathesis in oleochemistry: an example of green chemistry"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2002,
+            2,
+            1
+          ]
+        ]
+      },
+      "journal": [
+        "Green Chemistry"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/gc/article/4/1/5-13/173009",
+      "response_bytes": 5566,
+      "response_sha256": "ee4a99e0964f23b9c0cb52027f40df4492d7ea33965a7e6c389239619acaae8f",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "onaka-re2o7-cl-2002",
+      "doi": "10.1246/cl.2002.850",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1246%2Fcl.2002.850",
+      "title": [
+        "Olefin Metathesis over Mesoporous Alumina-supported Rhenium Oxide Catalyst"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2002,
+            8,
+            1
+          ]
+        ]
+      },
+      "journal": [
+        "Chemistry Letters"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2002,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2002-08-01T00:00:00Z",
+            "timestamp": 1028160000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://academic.oup.com/pages/standard-publication-reuse-rights"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://academic.oup.com/chemlett/article/31/8/850/7382868",
+      "response_bytes": 5612,
+      "response_sha256": "16aeeab485df6c23508463464c2b2370790f4e0dfbdae18c12d3bb6cbe0a5179",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "mol-industrial-jmolcat-2004",
+      "doi": "10.1016/j.molcata.2003.10.049",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.molcata.2003.10.049",
+      "title": [
+        "Industrial applications of olefin metathesis"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            4,
+            13
+          ]
+        ]
+      },
+      "journal": [
+        "Journal of Molecular Catalysis A: Chemical"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                13
+              ]
+            ],
+            "date-time": "2004-04-13T00:00:00Z",
+            "timestamp": 1081814400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S1381116903007830",
+      "response_bytes": 2740,
+      "response_sha256": "3d53d91e488df62f1989bb0e17a6e03625f523c35bd00682241cc42ea7c5a7d9",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "balcar-re2o7-catlett-2004",
+      "doi": "10.1023/b:catl.0000034280.35570.26",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1023%2Fb%3Acatl.0000034280.35570.26",
+      "title": [
+        "Rhenium Oxide Supported on Mesoporous Organised Alumina as a Catalyst for Metathesis of 1-Alkenes"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            8
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysis Letters"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2004-08-01T00:00:00Z",
+            "timestamp": 1091318400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2004-08-01T00:00:00Z",
+            "timestamp": 1091318400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1023/B:CATL.0000034280.35570.26",
+      "response_bytes": 260783,
+      "response_sha256": "b0044d275a343cb537cf6acaf4099b058a15a4c597e1c0d54946151ebbfa4329",
+      "text_chars": 6066,
+      "access_note": "Public publisher abstract inspected; subscription full text was not used."
+    },
+    {
+      "id": "handzlik-mo-comparison-apcata-2006",
+      "doi": "10.1016/j.apcata.2006.07.002",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apcata.2006.07.002",
+      "title": [
+        "Properties and metathesis activity of molybdena-alumina, molybdena-silica-alumina and molybdena-silica catalysts—a comparative study"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2006,
+            9
+          ]
+        ]
+      },
+      "journal": [
+        "Applied Catalysis A: General"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2006,
+                9,
+                1
+              ]
+            ],
+            "date-time": "2006-09-01T00:00:00Z",
+            "timestamp": 1157068800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2006,
+                9,
+                1
+              ]
+            ],
+            "date-time": "2006-09-01T00:00:00Z",
+            "timestamp": 1157068800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/legal/tdmrep-license"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0926860X06005333",
+      "response_bytes": 2834,
+      "response_sha256": "b3b097512858ad8d2ee180738e32c77d4fccc71c0e4003ee421c21e88a8b21aa",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "leroux-w-alkane-adsc-2007",
+      "doi": "10.1002/adsc.200600436",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1002%2Fadsc.200600436",
+      "title": [
+        "Silica‐Alumina‐Supported, Tungsten‐Based Heterogeneous Alkane Metathesis Catalyst: Is it Closer to a Silica‐ or an Alumina‐Supported System?"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            1,
+            8
+          ]
+        ]
+      },
+      "journal": [
+        "Advanced Synthesis &amp; Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2007,
+                1,
+                18
+              ]
+            ],
+            "date-time": "2007-01-18T00:00:00Z",
+            "timestamp": 1169078400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 10,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adsc.200600436",
+      "response_bytes": 5671,
+      "response_sha256": "9e1a87f7b795e0c561a440111d3523f144e74ac32d146b45b80425a015effca0",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "merle-mo-bipodal-cc-2017",
+      "doi": "10.1039/c7cc06041f",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2Fc7cc06041f",
+      "title": [
+        "Well-defined silica supported bipodal molybdenum oxo alkyl complexes: a model of the active sites of industrial olefin metathesis catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2017
+          ]
+        ]
+      },
+      "journal": [
+        "Chem. Commun."
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/cc/article/53/82/11338-11341/556202",
+      "response_bytes": 5614,
+      "response_sha256": "db6e5bf3563ac7d0d78a4e118edbc70d00a0b1c9be8b56d18f3f1916452fc542",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "taoufik-angew-2007",
+      "doi": "10.1002/anie.200701199",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1002%2Fanie.200701199",
+      "title": [
+        "Direct Transformation of Ethylene into Propylene Catalyzed by a Tungsten Hydride Supported on Alumina: Trifunctional Single‐Site Catalysis"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            9,
+            17
+          ]
+        ]
+      },
+      "journal": [
+        "Angewandte Chemie International Edition"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2007,
+                7,
+                12
+              ]
+            ],
+            "date-time": "2007-07-12T00:00:00Z",
+            "timestamp": 1184198400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://onlinelibrary.wiley.com/termsAndConditions#vor"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://onlinelibrary.wiley.com/doi/10.1002/anie.200701199",
+      "response_bytes": 5662,
+      "response_sha256": "d0ae5e621aa8a32b3c57209af62d4e7432a2b5229aad936222d264024cfb81a3",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "metathesis-oxides-acscatal-2014",
+      "doi": "10.1021/cs500528h",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Fcs500528h",
+      "title": [
+        "Olefin Metathesis by Supported Metal Oxide Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            6,
+            30
+          ]
+        ]
+      },
+      "journal": [
+        "ACS Catalysis"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/cs500528h",
+      "response_bytes": 5551,
+      "response_sha256": "f1403639a44a4cab27fd384eff951ee33be0ddd94a5dc66c7349e927709a6c3e",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "gutierrez-guaiacol-cattoday-2009",
+      "doi": "10.1016/j.cattod.2008.10.037",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.cattod.2008.10.037",
+      "title": [
+        "Hydrodeoxygenation of guaiacol on noble metal catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2009,
+            10
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysis Today"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2009,
+                10,
+                1
+              ]
+            ],
+            "date-time": "2009-10-01T00:00:00Z",
+            "timestamp": 1254355200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0920586108005397",
+      "response_bytes": 2751,
+      "response_sha256": "2b75ccc396bc4ac4633ae341e003f6d0d1e18e3262844e05856d69746ff60a19",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "gonzalez-borja-anisole-ef-2011",
+      "doi": "10.1021/ef200728r",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Fef200728r",
+      "title": [
+        "Anisole and Guaiacol Hydrodeoxygenation over Monolithic Pt–Sn Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2011,
+            8,
+            8
+          ]
+        ]
+      },
+      "journal": [
+        "Energy &amp; Fuels"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/ef200728r",
+      "response_bytes": 5551,
+      "response_sha256": "920f6557df7924f7d523f28da2a21b82a4144a221169378c456835a1a03dc797",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "nie-mcresol-jcat-2014",
+      "doi": "10.1016/j.jcat.2014.05.024",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.jcat.2014.05.024",
+      "title": [
+        "Kinetics and mechanism of m-cresol hydrodeoxygenation on a Pt/SiO2 catalyst"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2014,
+            8
+          ]
+        ]
+      },
+      "journal": [
+        "Journal of Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                8,
+                1
+              ]
+            ],
+            "date-time": "2014-08-01T00:00:00Z",
+            "timestamp": 1406851200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0021951714001456",
+      "response_bytes": 2772,
+      "response_sha256": "2bb2b75676b071c9dbaebffebf69415a9d47f9619b36f733b04c7e10ae1748e3",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "roldugina-mesoporous-apcata-2018",
+      "doi": "10.1016/j.apcata.2018.01.008",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.apcata.2018.01.008",
+      "title": [
+        "Hydrodeoxygenation of guaiacol as a model compound of bio-oil in methanol over mesoporous noble metal catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            3
+          ]
+        ]
+      },
+      "journal": [
+        "Applied Catalysis A: General"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2018-03-01T00:00:00Z",
+            "timestamp": 1519862400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2018,
+                3,
+                1
+              ]
+            ],
+            "date-time": "2018-03-01T00:00:00Z",
+            "timestamp": 1519862400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/legal/tdmrep-license"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0926860X18300164",
+      "response_bytes": 2807,
+      "response_sha256": "40faab8c93141dc30ecfac9bae2f730dab28e02bb70483459033d76b3c1258e8",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "song-comos-acscatal-2018",
+      "doi": "10.1021/acscatal.8b03402",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Facscatal.8b03402",
+      "title": [
+        "Surface Engineering of CoMoS Nanosulfide for Hydrodeoxygenation of Lignin-Derived Phenols to Arenes"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            12,
+            3
+          ]
+        ]
+      },
+      "journal": [
+        "ACS Catalysis"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/acscatal.8b03402",
+      "response_bytes": 5572,
+      "response_sha256": "cc2572aec768a4f8e3d91f4671b5f2fc4959aa9a861116a032d4406dbf5f8578",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "resasco-pt-isolated-acscatal-2019",
+      "doi": "10.1021/acscatal.9b04330",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Facscatal.9b04330",
+      "title": [
+        "Relationship between Atomic Scale Structure and Reactivity of Pt Catalysts: Hydrodeoxygenation of <i>m</i>-Cresol over Isolated Pt Cations and Clusters"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            12,
+            3
+          ]
+        ]
+      },
+      "journal": [
+        "ACS Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                3
+              ]
+            ],
+            "date-time": "2019-12-03T00:00:00Z",
+            "timestamp": 1575331200000
+          },
+          "content-version": "stm-asf",
+          "delay-in-days": 0,
+          "URL": "https://doi.org/10.15223/policy-029"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                3
+              ]
+            ],
+            "date-time": "2019-12-03T00:00:00Z",
+            "timestamp": 1575331200000
+          },
+          "content-version": "stm-asf",
+          "delay-in-days": 0,
+          "URL": "https://doi.org/10.15223/policy-037"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                3
+              ]
+            ],
+            "date-time": "2019-12-03T00:00:00Z",
+            "timestamp": 1575331200000
+          },
+          "content-version": "stm-asf",
+          "delay-in-days": 0,
+          "URL": "https://doi.org/10.15223/policy-045"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/acscatal.9b04330",
+      "response_bytes": 5572,
+      "response_sha256": "b2cfa432afe1967c80827964f8d78e9091047704f7b8e45899a4e7798798bb2d",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "jiang-nimo-greenchem-2024",
+      "doi": "10.1039/d4gc02298j",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2Fd4gc02298j",
+      "title": [
+        "Efficient hydrodeoxygenation of lignin-derived phenolic compounds under acid-free conditions over carbon-supported NiMo catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024
+          ]
+        ]
+      },
+      "journal": [
+        "Green Chemistry"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                7,
+                17
+              ]
+            ],
+            "date-time": "2025-07-17T00:00:00Z",
+            "timestamp": 1752710400000
+          },
+          "content-version": "am",
+          "delay-in-days": 563,
+          "URL": "http://rsc.li/journals-terms-of-use"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/gc/article/26/17/9330-9345/851899",
+      "response_bytes": 5608,
+      "response_sha256": "9658c72276a0a4c6a917d11d9a0820a8eab00b01343c192f2671a93e1184d2e3",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "wildschut-iecr-2009",
+      "doi": "10.1021/ie9006003",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Fie9006003",
+      "title": [
+        "Hydrotreatment of Fast Pyrolysis Oil Using Heterogeneous Noble-Metal Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2009,
+            10,
+            26
+          ]
+        ]
+      },
+      "journal": [
+        "Industrial &amp; Engineering Chemistry Research"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/ie9006003",
+      "response_bytes": 5551,
+      "response_sha256": "4a2a3250b52f23ca555e86807aaf5f1b1a48c503f8f77a9b23910dc55c6195c6",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "wildschut-ees-2010",
+      "doi": "10.1039/b923170f",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2Fb923170f",
+      "title": [
+        "Insights in the hydrotreatment of fast pyrolysis oil using a ruthenium on carbon catalyst"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2010
+          ]
+        ]
+      },
+      "journal": [
+        "Energy &amp; Environmental Science"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/ee/article/3/7/962-970/320725",
+      "response_bytes": 5575,
+      "response_sha256": "45a7d90cc45bb1509ee0f3d70bf030bb9870e5c9cfb3b406fd5fabcea45b3cab",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "elliott-ef-2007",
+      "doi": "10.1021/ef070044u",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1021%2Fef070044u",
+      "title": [
+        "Historical Developments in Hydroprocessing Bio-oils"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2007,
+            5,
+            1
+          ]
+        ]
+      },
+      "journal": [
+        "Energy &amp; Fuels"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.acs.org/doi/10.1021/ef070044u",
+      "response_bytes": 5551,
+      "response_sha256": "59b8752da3f87070cdb054b97c735c0bfa86442631a945fcb63a45f11a62c2a0",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "busca-apcatb-1998",
+      "doi": "10.1016/s0926-3373(98)00040-x",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2FS0926-3373%2898%2900040-X",
+      "title": [
+        "Chemical and mechanistic aspects of the selective catalytic reduction of NO  by ammonia over oxide catalysts: A review"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            1998,
+            9
+          ]
+        ]
+      },
+      "journal": [
+        "Applied Catalysis B: Environmental"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1998,
+                9,
+                1
+              ]
+            ],
+            "date-time": "1998-09-01T00:00:00Z",
+            "timestamp": 904608000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                1998,
+                9,
+                1
+              ]
+            ],
+            "date-time": "1998-09-01T00:00:00Z",
+            "timestamp": 904608000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/legal/tdmrep-license"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S092633739800040X",
+      "response_bytes": 2814,
+      "response_sha256": "556382c98e9fdae2979451f45d2b143c224855422a3ed68a8b85f860d8920408",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "forzatti-apcata-2001",
+      "doi": "10.1016/s0926-860x(01)00832-8",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2FS0926-860X%2801%2900832-8",
+      "title": [
+        "Present status and perspectives in de-NOx SCR catalysis"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2001,
+            12
+          ]
+        ]
+      },
+      "journal": [
+        "Applied Catalysis A: General"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2001,
+                12,
+                1
+              ]
+            ],
+            "date-time": "2001-12-01T00:00:00Z",
+            "timestamp": 1007164800000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0926860X01008328",
+      "response_bytes": 2751,
+      "response_sha256": "9d7f59a74c9c522684b2482821bd22523c39096c5375aa698ab1d38bd53a3e61",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "v-loading-catalysts-2015",
+      "doi": "10.3390/catal5041704",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.3390%2Fcatal5041704",
+      "title": [
+        "VOx Surface Coverage Optimization of V2O5/WO3-TiO2 SCR Catalysts by Variation of the V Loading and by Aging"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2015,
+            10,
+            14
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysts"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                10,
+                14
+              ]
+            ],
+            "date-time": "2015-10-14T00:00:00Z",
+            "timestamp": 1444780800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.mdpi.com/2073-4344/5/4/1704",
+      "response_bytes": 2209,
+      "response_sha256": "1e102dcca4a179f314bae07a3d21b9afa8c85bc5c7948a55b02ed50cd9202861",
+      "text_chars": 0,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "monolith-18000h-catalysts-2019",
+      "doi": "10.3390/catal9050464",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.3390%2Fcatal9050464",
+      "title": [
+        "A Case Study for the Deactivation and Regeneration of a V2O5-WO3/TiO2 Catalyst in a Tail-End SCR Unit of a Municipal Waste Incineration Plant"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2019,
+            5,
+            20
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysts"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                5,
+                20
+              ]
+            ],
+            "date-time": "2019-05-20T00:00:00Z",
+            "timestamp": 1558310400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.mdpi.com/2073-4344/9/5/464",
+      "response_bytes": 2207,
+      "response_sha256": "30dfd4dbcd8d5fdefd8f0cca625a8c37e857c376c18fd5fc9af3465cc64df262",
+      "text_chars": 0,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "kwak-jcat-2010",
+      "doi": "10.1016/j.jcat.2010.07.031",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1016%2Fj.jcat.2010.07.031",
+      "title": [
+        "Excellent activity and selectivity of Cu-SSZ-13 in the selective catalytic reduction of NOx with NH3"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2010,
+            10,
+            22
+          ]
+        ]
+      },
+      "journal": [
+        "Journal of Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2010,
+                10,
+                22
+              ]
+            ],
+            "date-time": "2010-10-22T00:00:00Z",
+            "timestamp": 1287705600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S0021951710002691",
+      "response_bytes": 2796,
+      "response_sha256": "19397765b422239f9a6cc33531e6547d576b96b796be427fe7de7bec396491b5",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "gao-topcatal-2013",
+      "doi": "10.1007/s11244-013-0145-8",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1007%2Fs11244-013-0145-8",
+      "title": [
+        "Current Understanding of Cu-Exchanged Chabazite Molecular Sieves for Use as Commercial Diesel Engine DeNOx Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2013,
+            8,
+            14
+          ]
+        ]
+      },
+      "journal": [
+        "Topics in Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2013,
+                8,
+                14
+              ]
+            ],
+            "date-time": "2013-08-14T00:00:00Z",
+            "timestamp": 1376438400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://link.springer.com/article/10.1007/s11244-013-0145-8",
+      "response_bytes": 512362,
+      "response_sha256": "748bd57607ffde772999dfab03b79c2fc9d5660cd3561f176e16f541370b3b04",
+      "text_chars": 76932,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "paolucci-science-2017",
+      "doi": "10.1126/science.aan5630",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1126%2Fscience.aan5630",
+      "title": [
+        "Dynamic multinuclear sites formed by mobilized copper ions in NO\n                    <i>\n                      <sub>x</sub>\n                    </i>\n                    selective catalytic reduction"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2017,
+            9
+          ]
+        ]
+      },
+      "journal": [
+        "Science"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://www.science.org/doi/10.1126/science.aan5630",
+      "response_bytes": 5636,
+      "response_sha256": "6aa1a666b0c52a5b72bb108450ebe42aaf92bc6b0d5cd388b158158075c12ab1",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "cu-cha-csr-2018",
+      "doi": "10.1039/c8cs00373d",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2Fc8cs00373d",
+      "title": [
+        "Cu-CHA – a model system for applied selective redox catalysis"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2018
+          ]
+        ]
+      },
+      "journal": [
+        "Chemical Society Reviews"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                8,
+                7
+              ]
+            ],
+            "date-time": "2019-08-07T00:00:00Z",
+            "timestamp": 1565136000000
+          },
+          "content-version": "am",
+          "delay-in-days": 583,
+          "URL": "http://rsc.li/journals-terms-of-use"
+        }
+      ],
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/cs/article/47/22/8097-8133/600686",
+      "response_bytes": 5608,
+      "response_sha256": "1265e6e326f385171bbd68a4dc9cab8b4e9bce804dcf4683806da7cad6fca3f7",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "long-yang-jcat-1999",
+      "doi": "10.1006/jcat.1999.2674",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1006%2Fjcat.1999.2674",
+      "title": [
+        "Catalytic Performance of Fe–ZSM-5 Catalysts for Selective Catalytic Reduction of Nitric Oxide by Ammonia"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            1999,
+            12
+          ]
+        ]
+      },
+      "journal": [
+        "Journal of Catalysis"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                1999,
+                12,
+                1
+              ]
+            ],
+            "date-time": "1999-12-01T00:00:00Z",
+            "timestamp": 944006400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://linkinghub.elsevier.com/retrieve/pii/S002195179992674X",
+      "response_bytes": 2806,
+      "response_sha256": "3a93bab899813c0a5bc2f2e89e93e409099afb19c798672fc67fda85dfe0398b",
+      "text_chars": 11,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "brandenberger-catrev-2008",
+      "doi": "10.1080/01614940802480122",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1080%2F01614940802480122",
+      "title": [
+        "The State of the Art in Selective Catalytic Reduction of NO<sub>x</sub>by Ammonia Using Metal‐Exchanged Zeolite Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2008,
+            12
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysis Reviews"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://www.tandfonline.com/doi/abs/10.1080/01614940802480122",
+      "response_bytes": 5679,
+      "response_sha256": "a41d93c53610ad7968e71dfd0d515a473e189cce371e1ac7d919e46d51f80dff",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "fe-smallpore-catalysts-2020",
+      "doi": "10.3390/catal10111324",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.3390%2Fcatal10111324",
+      "title": [
+        "Fe-Exchanged Small-Pore Zeolites as Ammonia Selective Catalytic Reduction (NH3-SCR) Catalysts"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            14
+          ]
+        ]
+      },
+      "journal": [
+        "Catalysts"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                11,
+                14
+              ]
+            ],
+            "date-time": "2020-11-14T00:00:00Z",
+            "timestamp": 1605312000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.mdpi.com/2073-4344/10/11/1324",
+      "response_bytes": 2218,
+      "response_sha256": "f7c5d5125c857d795ebd64b1ea91a5980201f7e7b5ac78ed7f10934f6116ae67",
+      "text_chars": 0,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "beale-csr-2015",
+      "doi": "10.1039/c5cs00108k",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.1039%2FC5CS00108K",
+      "title": [
+        "Recent advances in automotive catalysis for NO\n                    <sub>x</sub>\n                    emission control by small-pore microporous materials"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2015
+          ]
+        ]
+      },
+      "journal": [
+        "Chemical Society Reviews"
+      ],
+      "registered_licenses": null,
+      "doi_http_status": 403,
+      "resolved_url": "https://pubs.rsc.org/cs/article/44/20/7371-7405/475081",
+      "response_bytes": 5608,
+      "response_sha256": "306036afbdf939f0d51f5a2a15342e3bf779f705919d7bbf849dbf97fc3bc799",
+      "text_chars": 58,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    },
+    {
+      "id": "washcoat-app-2021",
+      "doi": "10.3390/app11178239",
+      "crossref_http_status": 200,
+      "crossref_url": "https://api.crossref.org/works/10.3390%2Fapp11178239",
+      "title": [
+        "Structured Alumina Substrates for Environmental Catalysis Produced by Stereolithography"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            9,
+            6
+          ]
+        ]
+      },
+      "journal": [
+        "Applied Sciences"
+      ],
+      "registered_licenses": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                6
+              ]
+            ],
+            "date-time": "2021-09-06T00:00:00Z",
+            "timestamp": 1630886400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ],
+      "doi_http_status": 200,
+      "resolved_url": "https://www.mdpi.com/2076-3417/11/17/8239",
+      "response_bytes": 2218,
+      "response_sha256": "d9d60730cefac4a96feaeadd2ed77f849899e07c6d9084611d6f105bb9265a57",
+      "text_chars": 0,
+      "access_note": "DOI response alone does not establish readable source content; see supplementary accesses and candidate findings."
+    }
+  ],
+  "supplementary_http_accesses": [
+    {
+      "id": "jiang-full",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2024/gc/d4gc02298j",
+      "final_url": "https://pubs.rsc.org/en/content/articlehtml/2024/gc/d4gc02298j",
+      "http_status": 403,
+      "bytes": 5569,
+      "sha256": "ebe5c6e64d7f10e374b72948697092cc809d52544eed37d0207b666983955313",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 58
+    },
+    {
+      "id": "monolith-pdf",
+      "url": "https://mdpi-res.com/catalysts/catalysts-09-00464/article_deploy/catalysts-09-00464.pdf?attachment=1&filename=",
+      "final_url": "https://mdpi-res.com/catalysts/catalysts-09-00464/article_deploy/catalysts-09-00464.pdf?attachment=1&filename=",
+      "http_status": 200,
+      "bytes": 2580888,
+      "sha256": "5e345630bffab7ece4aee4780435949acdc0b0c7707c8d09e170e2448f58a3f4",
+      "content_type": "application/pdf",
+      "text_chars": 50020
+    },
+    {
+      "id": "kwak-pdf",
+      "url": "https://ptacts.uspto.gov/ptacts/public-informations/petitions/1462831/download-documents?artifactId=EugKB0ulBWF4LLexvpZy7oaYbSzLZFYcu7goMN8CQKbehE5qlT__Ub8",
+      "final_url": "https://ptacts.uspto.gov/ptacts/public-informations/petitions/1462831/download-documents?artifactId=EugKB0ulBWF4LLexvpZy7oaYbSzLZFYcu7goMN8CQKbehE5qlT__Ub8",
+      "http_status": 403,
+      "bytes": 919,
+      "sha256": "154d1ffc850a023e5b0da632a5c8158e967f50800f4d58f27db38a6bbcd5b8f4",
+      "content_type": "text/html",
+      "text_chars": 553
+    },
+    {
+      "id": "wildschut-full",
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2010/ee/b923170f",
+      "final_url": "https://pubs.rsc.org/en/content/articlehtml/2010/ee/b923170f",
+      "http_status": 403,
+      "bytes": 5563,
+      "sha256": "fbe8b0e79ee6550b841e9e0eaff02c453f35d26a8cbf3a412bbe69b009740484",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 58
+    },
+    {
+      "id": "v-loading-full",
+      "url": "https://www.mdpi.com/2073-4344/5/4/1704",
+      "final_url": "https://www.mdpi.com/2073-4344/5/4/1704",
+      "http_status": 403,
+      "bytes": 400,
+      "sha256": "f5e42f00ebcd55939479c6e5b8ca577d23be8462a34cc3b9dcccf7483f47c0d8",
+      "content_type": "text/html",
+      "text_chars": 224
+    },
+    {
+      "id": "fe-smallpore-full",
+      "url": "https://www.mdpi.com/2073-4344/10/11/1324",
+      "final_url": "https://www.mdpi.com/2073-4344/10/11/1324",
+      "http_status": 403,
+      "bytes": 402,
+      "sha256": "2e239f4346b23dbf385829ef627f1293ae01afcabad9381c8d11881e6671c359",
+      "content_type": "text/html",
+      "text_chars": 226
+    },
+    {
+      "id": "washcoat-full",
+      "url": "https://www.mdpi.com/2076-3417/11/17/8239",
+      "final_url": "https://www.mdpi.com/2076-3417/11/17/8239",
+      "http_status": 403,
+      "bytes": 402,
+      "sha256": "9ffb68ec9ce864eb6d7a8a270ede2ea663a1157dcaae4816982b02f086ea3b10",
+      "content_type": "text/html",
+      "text_chars": 226
+    },
+    {
+      "id": "handzlik-abstract",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0926860X06005333",
+      "final_url": "https://www.sciencedirect.com/science/article/abs/pii/S0926860X06005333",
+      "http_status": 403,
+      "bytes": 832806,
+      "sha256": "86650ba18a9731ef22ecbc0e1a79041a89ff9c43d84bb7ab8e6e9d1161e63e3a",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 643
+    },
+    {
+      "id": "patched-crossref",
+      "url": "https://api.crossref.org/works/10.1038/ncomms9619",
+      "final_url": "https://api.crossref.org/works/10.1038/ncomms9619",
+      "http_status": 200,
+      "bytes": 23894,
+      "sha256": "fac1a07fc2ad76402b1117b22ed64a68457bb6ea9394da55a31fe16ee96c94d5",
+      "content_type": "application/json",
+      "text_chars": 23858
+    },
+    {
+      "id": "merle-author-pdf",
+      "url": "https://repository.kaust.edu.sa/bitstreams/d87554ee-52bc-454c-848d-0e66b6ba9e12/download",
+      "final_url": "https://repository.kaust.edu.sa/bitstreams/d87554ee-52bc-454c-848d-0e66b6ba9e12/download",
+      "http_status": 200,
+      "bytes": 212,
+      "sha256": "d02032286070b4dd9d8fbd985a7bdca8af8edf52b89ff177db3bfcb2c8a9c43d",
+      "content_type": "text/html",
+      "text_chars": 0
+    },
+    {
+      "id": "washcoat-author-pdf",
+      "url": "https://www.research.unipd.it/retrieve/e14fb26e-d8dd-3de1-e053-1705fe0ac030/2021%20-%20Structured%20Alumina%20Substrates%20for%20Environmental%20Catalysis.pdf",
+      "final_url": "https://www.research.unipd.it/retrieve/e14fb26e-d8dd-3de1-e053-1705fe0ac030/2021%20-%20Structured%20Alumina%20Substrates%20for%20Environmental%20Catalysis.pdf",
+      "http_status": 403,
+      "bytes": 6017,
+      "sha256": "aadc0f166a675593437f7fc3e0798d45a78d850e31fedd384d06aabb1b941fc0",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 58
+    },
+    {
+      "id": "fe-review-osti-pdf",
+      "url": "https://www.osti.gov/servlets/purl/1726145",
+      "final_url": "https://www.osti.gov/servlets/purl/1726145",
+      "http_status": 200,
+      "bytes": 1627701,
+      "sha256": "966ddba97ad2633b9016e5a1fa2d38c0228bfb7184b678dad8ea378ab617ae83",
+      "content_type": "application/pdf",
+      "text_chars": 110597
+    },
+    {
+      "id": "pt-abstract",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021951714001456",
+      "final_url": "https://www.sciencedirect.com/science/article/abs/pii/S0021951714001456",
+      "http_status": 403,
+      "bytes": 832806,
+      "sha256": "facc2a46963b0fd1a766d400f7c29c223f580c1f5c3ed990ecce0284265b525a",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 643
+    },
+    {
+      "id": "fe-abstract",
+      "url": "https://www.sciencedirect.com/science/article/pii/S002195179992674X",
+      "final_url": "https://www.sciencedirect.com/science/article/pii/S002195179992674X",
+      "http_status": 403,
+      "bytes": 832806,
+      "sha256": "21908e1e91e8d6a6a065d7ad7474dbc8e06b35eefa91f36488e1aced5f0b366e",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 643
+    },
+    {
+      "id": "co-abstract",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360319915023472",
+      "final_url": "https://www.sciencedirect.com/science/article/pii/S0360319915023472",
+      "http_status": 403,
+      "bytes": 832806,
+      "sha256": "df30315e9c7778ea60db79e502625270ee9e0646062149b6af53b166adfdb90b",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 643
+    },
+    {
+      "id": "ru-abstract",
+      "url": "https://pubs.rsc.org/en/content/articlelanding/2010/ee/b923170f/unauth",
+      "final_url": "https://pubs.rsc.org/en/content/articlelanding/2010/ee/b923170f/unauth",
+      "http_status": 403,
+      "bytes": 5614,
+      "sha256": "409d6866f705424957b7d3359c6f6d6ba57f7a34d5ed4e4e24d2caa1357cb7ac",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 58
+    },
+    {
+      "id": "cu-author-abstract",
+      "url": "https://snu.elsevierpure.com/en/publications/excellent-activity-and-selectivity-of-cu-ssz-13-in-the-selective-/",
+      "final_url": "https://snu.elsevierpure.com/en/publications/excellent-activity-and-selectivity-of-cu-ssz-13-in-the-selective-/",
+      "http_status": 200,
+      "bytes": 51018,
+      "sha256": "ee823b878d54937f4ddd9f0acf2c379d61371d78224e21dd855dafa355c667bf",
+      "content_type": "text/html;charset=UTF-8",
+      "text_chars": 7961
+    },
+    {
+      "id": "comos-si",
+      "url": "https://doi.org/10.1021/acscatal.8b03402.s001",
+      "final_url": "https://pubs.acs.org/doi/suppl/10.1021/acscatal.8b03402/suppl_file/cs8b03402_si_001.pdf",
+      "http_status": 403,
+      "bytes": 5686,
+      "sha256": "d0f204add79c649733ad90388b7de05bb506cedb668b6204459f684ea6a9f533",
+      "content_type": "text/html; charset=UTF-8",
+      "text_chars": 58
+    }
+  ],
+  "web_readable_primary_sources": [
+    {
+      "url": "https://pubs.rsc.org/en/content/articlehtml/2024/gc/d4gc02298j",
+      "content_observed": "Full publisher article text, including Materials and methods. Direct local HTTP is 403, recorded separately."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0360319915023472",
+      "content_observed": "Primary abstract, highlights and conclusion excerpt for the Co/Mg-La study."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0926860X06005333",
+      "content_observed": "Primary abstract for Mo support comparison."
+    },
+    {
+      "url": "https://pure.kfupm.edu.sa/en/publications/well-defined-silica-supported-bipodal-molybdenum-oxo-alkyl-comple/",
+      "content_observed": "Author-institution primary abstract for grafted Mo on silica."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021951714001456",
+      "content_observed": "Primary abstract and highlights for Pt/silica m-cresol kinetics."
+    },
+    {
+      "url": "https://doi.org/10.1021/acscatal.8b03402.s001",
+      "content_observed": "Primary article abstract and SI description; SI file itself not obtained."
+    },
+    {
+      "url": "https://pubs.rsc.org/en/content/articlelanding/2010/ee/b923170f/unauth",
+      "content_observed": "Primary public Ru/C abstract; full text not used."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S002195179992674X",
+      "content_observed": "Primary abstract for Fe-ZSM-5; source typography of GHSV is ambiguous and no converted flow value is adopted."
+    },
+    {
+      "url": "https://research.unipd.it/handle/11577/3400925",
+      "content_observed": "Author-institution abstract for structured alumina SCR substrate study."
+    },
+    {
+      "url": "https://www.purdue.edu/newsroom/releases/2017/Q3/discovery-could-lead-to-new-catalyst-design-to-reduce-nitrogen-oxides-in-diesel-exhaust.html",
+      "content_observed": "Primary-author abstract appended to institutional news; mechanistic context only."
+    }
+  ],
+  "file_key_diff_map": [
+    {
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "changed_json_pointers": [
+        "/candidates/0/decision_notes",
+        "/candidates/0/literature_basis_ids",
+        "/candidates/1/decision_notes",
+        "/candidates/1/literature_basis_ids",
+        "/candidates/1/summary",
+        "/candidates/2/decision_notes",
+        "/candidates/2/literature_basis_ids",
+        "/candidates/2/summary",
+        "/candidates/3/decision_notes",
+        "/candidates/3/literature_basis_ids",
+        "/candidates/3/summary",
+        "/citations/0/note",
+        "/citations/1/note",
+        "/citations/2/note",
+        "/citations/3/note",
+        "/citations/4/note",
+        "/citations/10/note",
+        "/citations/11/note",
+        "/citations/12/note"
+      ],
+      "only_allowed_metadata_paths": true,
+      "before_canonical_sha256": "7b76d417aac60f42b7b2da7247d34668ca793fc5c763bd5f73a7a9d6f1440972",
+      "after_canonical_sha256": "5b53415172c204f2b7d8257c0350bc66c929cb1fdd9e8ea0f6fd29f040eebf72",
+      "before_raw_sha256": "61a0d9909038ba697d846db03c4db6ded8217ccfd0d89cb0595c81f0e172c035",
+      "after_raw_sha256": "8283ec3fb4edee4da230bfd6e00731ec9a8a499fcbc510db7c38c4947c48deb8"
+    },
+    {
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "changed_json_pointers": [
+        "/candidates/0/decision_notes",
+        "/candidates/1/decision_notes",
+        "/candidates/1/literature_basis_ids/1",
+        "/candidates/1/summary",
+        "/candidates/2/decision_notes",
+        "/candidates/2/literature_basis_ids/0",
+        "/candidates/3/decision_notes",
+        "/citations/3/note",
+        "/citations/4/note",
+        "/citations/5/note",
+        "/citations/6/note"
+      ],
+      "only_allowed_metadata_paths": true,
+      "before_canonical_sha256": "d5586789dfdb6a0eb21c78341d414c8ca61fd6d332704562c4101ef5bd695a26",
+      "after_canonical_sha256": "4acc14f11d027d7fbfd028d18ea1b26e756cc65353cd7581e747895b3bba42ed",
+      "before_raw_sha256": "2504596e2ca3c0e28bd1a1670f87e00a985926d11d5de06ab76f879ef6af01bf",
+      "after_raw_sha256": "412f091d461f2dbcb02953df9e41dacfbb9e1bac9d33436177fad73eba89309e"
+    },
+    {
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "changed_json_pointers": [
+        "/candidates/0/decision_notes",
+        "/candidates/0/literature_basis_ids",
+        "/candidates/0/summary",
+        "/candidates/1/decision_notes",
+        "/candidates/2/decision_notes",
+        "/candidates/2/summary",
+        "/candidates/3/decision_notes",
+        "/candidates/3/summary",
+        "/citations/2/note",
+        "/citations/4/label",
+        "/citations/4/note",
+        "/citations/6/note",
+        "/citations/8/note"
+      ],
+      "only_allowed_metadata_paths": true,
+      "before_canonical_sha256": "954940abe3ca12f36f57e72f0e010555c84f4293e0268e5b8ecf55445421eba3",
+      "after_canonical_sha256": "11fb0ea53436633b3fa07663acf0cacb5fdd4503c15797496ab775178f5f735e",
+      "before_raw_sha256": "1d8830c1fb02835c960e70b31ae2f5ff27181082771dd366fc27e7bbb2dd3816",
+      "after_raw_sha256": "cd99d2c994bab8f3d3001883b8f2075e319e1d14d492271dd1695bbd6d809935"
+    },
+    {
+      "file": "backend/data/nh3_scr_benchmark.json",
+      "changed_json_pointers": [
+        "/candidates/0/decision_notes",
+        "/candidates/0/summary",
+        "/candidates/1/components/0/pricing/note",
+        "/candidates/1/decision_notes",
+        "/candidates/2/decision_notes",
+        "/candidates/2/literature_basis_ids",
+        "/candidates/2/summary",
+        "/citations/3/note",
+        "/citations/10/note",
+        "/citations/12/note"
+      ],
+      "only_allowed_metadata_paths": true,
+      "before_canonical_sha256": "0d93b92ddec0742b0f271cfd4112f4b41c5478c71a10fd76c372c4df23dbabe1",
+      "after_canonical_sha256": "aba7f3507a2bbc6b98cb7654401101fced428130e7a0a6d2341019e1a3f21f75",
+      "before_raw_sha256": "9f9e709014c9398117ff8860505bc1df732ad9af0ff29e4e76c85d7042318953",
+      "after_raw_sha256": "889e44181166a5b25cc22a5b92ab66ede4493adce367bd0fb62ab089042832ca"
+    }
+  ],
+  "validation": {
+    "targeted_pytest": {
+      "command": "python -m pytest backend/tests/test_benchmark_source_fidelity_expansion.py -q",
+      "passed": 20,
+      "seconds": 1.3
+    },
+    "ruff": {
+      "command": "python -m ruff check backend/tests/test_benchmark_source_fidelity_expansion.py",
+      "result": "All checks passed"
+    },
+    "all_families": {
+      "command": "python scripts/run_all_families.py --price-basis docs/paper/free-data-2026-09-07/reference_basis_2026-09-07.json --basis-type reference --out <before-or-after>.json",
+      "database_env": "DATABASE_URL=sqlite://",
+      "families": 30,
+      "candidates": 116,
+      "weight_grid_points": 286,
+      "same_price_output_byte_identical": true,
+      "before_sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c",
+      "after_sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c",
+      "comparison_method": "Loaded the retained pre-edit and revised JSON catalogs through the same run_all_families.main entrypoint in one process, substituting only the four catalog-loader results; DATABASE_URL=sqlite:// was set before importing the backend. An initial comparison used a misnamed environment variable; this final isolated replay supersedes it."
+    },
+    "catcost_table62": {
+      "pt_usd_per_lb": 27.3695,
+      "ni_usd_per_lb": 19.2206,
+      "ni_error_pct": -6.65,
+      "fcc_footnote_b_usd_per_lb": 2.438,
+      "fcc_footnote_b_error_pct": 1.16,
+      "changed": false
+    },
+    "combined_source_tests": {
+      "command": "python -m pytest backend/tests/test_benchmark_source_fidelity.py backend/tests/test_benchmark_source_fidelity_expansion.py -q",
+      "passed": 29,
+      "seconds": 1.81
+    }
+  }
+}

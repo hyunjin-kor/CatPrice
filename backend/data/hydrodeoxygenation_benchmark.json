@@ -57,7 +57,7 @@
       "label": "J. Catal. 2014",
       "url": "https://doi.org/10.1016/j.jcat.2014.05.024",
       "kind": "literature",
-      "note": "Nie and Resasco: kinetics and mechanism of m-cresol HDO on a Pt / SiO2 catalyst, providing transferable kinetic baselines for Pt-based HDO."
+      "note": "Vapor-phase m-cresol kinetics over Pt/SiO2 at 300 C: hydrogenation/dehydrogenation outpaces HDO, while TiO2 and ZrO2 supports enhance toluene selectivity. This does not justify a general arene-preserving claim for Pt/silica."
     },
     {
       "id": "roldugina-mesoporous-apcata-2018",
@@ -68,10 +68,10 @@
     },
     {
       "id": "song-comos-acscatal-2018",
-      "label": "ACS Catal. 2018",
+      "label": "ACS Catal. 2019 (online 2018)",
       "url": "https://doi.org/10.1021/acscatal.8b03402",
       "kind": "literature",
-      "note": "Song, Zhou et al.: surface engineering of CoMoS nanosulfide for HDO of lignin-derived phenols to arenes; key reference for the sulfide-based HDO route."
+      "note": "Co-incorporated MoS2 nanosulfide with surface Co-Mo-S phases; the accessible primary abstract does not establish a 12 wt% Mo/4 wt% Co/alumina recipe. Journal issue is 2019; first online publication was 2018."
     },
     {
       "id": "resasco-pt-isolated-acscatal-2019",
@@ -85,7 +85,7 @@
       "label": "Green Chem. 2024",
       "url": "https://doi.org/10.1039/d4gc02298j",
       "kind": "literature",
-      "note": "Jiang, Shu et al.: efficient HDO of lignin-derived phenolic compounds under acid-free conditions over carbon-supported NiMo catalysts."
+      "note": "Sol-gel Ni1Mo3N/C from Ni chloride, ammonium molybdate and glucose, treated in H2 at 500 C; nitride/carbide phases and 1:3 Ni/Mo molar ratio differ from a generic NiMo/activated-carbon impregnation proxy."
     },
     {
       "id": "wildschut-iecr-2009",
@@ -99,7 +99,7 @@
       "label": "Energy Environ. Sci. 2010",
       "url": "https://doi.org/10.1039/b923170f",
       "kind": "literature",
-      "note": "5 wt% Ru/C at 350 C and 200 bar: oil yields to ~65 wt% and deoxygenation to 90 wt%."
+      "note": "5 wt% Ru/C, 350 C and 200 bar in a batch reactor; the primary abstract reports maximum 65 wt% oil yield after 4 h at 5 wt% catalyst intake relative to oil. A simultaneous 90 wt% deoxygenation claim was not verified from that abstract."
     },
     {
       "id": "elliott-ef-2007",
@@ -231,7 +231,7 @@
       "title": "Pt / SiO2 HDO",
       "archetype": "Noble-metal benchmark",
       "screening_basis": "engineering_proxy",
-      "summary": "Pt on silica used as the canonical HDO benchmark for arene-preserving deoxygenation of guaiacol / anisole / m-cresol.",
+      "summary": "Pt/silica cost-screening baseline for phenolic HDO; published m-cresol kinetics show substantial competing ring hydrogenation, so arene selectivity is not assured.",
       "route_template_id": "pt-silica-hdo-route",
       "order_size_tons": 5,
       "performance_index": 88,
@@ -242,16 +242,13 @@
         400
       ],
       "literature_basis_ids": [
-        "gutierrez-guaiacol-cattoday-2009",
-        "gonzalez-borja-anisole-ef-2011",
-        "nie-mcresol-jcat-2014",
-        "resasco-pt-isolated-acscatal-2019",
-        "roldugina-mesoporous-apcata-2018"
+        "nie-mcresol-jcat-2014"
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "Best fit for arene-preserving HDO duty where Pt economics are acceptable.",
-        "Pt loading typically <2 wt% so support-cost share is meaningful relative to Pt."
+        "The 1 wt% Pt loading, silica grade, 250-400 C window and generic preparation route are engineering assumptions; the accessible primary abstract describes m-cresol at 300 C.",
+        "Pt-Sn monoliths, other oxide supports and isolated-Pt studies are contextual literature, not direct evidence for the screened unpromoted Pt/silica recipe.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -270,6 +267,7 @@
           "name": "SiO2",
           "wt_pct": 99.0,
           "pricing": {
+            "reference_series": "HS281122",
             "type": "fixed",
             "price_per_lb": 1.1,
             "evidence_label": "Silica support screening proxy",
@@ -302,7 +300,9 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "Best fit when industrial hydrotreating-style HDO is acceptable and sulfided-catalyst handling is in scope.",
-        "Sulfidation discipline (atmosphere, temperature ramp) drives long-hold activity."
+        "Sulfidation discipline (atmosphere, temperature ramp) drives long-hold activity.",
+        "The cited surface-engineered CoMoS nanosulfide is not evidence for the retained 12/4/84 wt% Mo/Co/alumina composition. Sulfur inventory and the exact precursor/sulfidation recipe are not resolved by these elemental cost fractions.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -332,6 +332,7 @@
           "name": "Al2O3",
           "wt_pct": 84.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.9,
             "evidence_label": "Alumina support screening proxy",
@@ -348,7 +349,7 @@
       "title": "NiMo / carbon (acid-free)",
       "archetype": "Non-noble emerging route",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "NiMo on carbon for acid-free HDO of lignin phenols, a non-noble option that avoids alumina acidity and sulfur handling.",
+      "summary": "NiMo/carbon cost proxy inspired by acid-free HDO with a Ni-Mo nitride/carbide catalyst; its glucose-derived carbon and sol-gel synthesis differ from the generic activated-carbon route.",
       "route_template_id": "nimo-carbon-hdo-route",
       "order_size_tons": 5,
       "performance_index": 80,
@@ -363,8 +364,9 @@
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "Best fit when avoiding noble metals and sulfide handling is the program goal.",
-        "NiMo / carbon trades sulfide-route maturity for cleaner reduction chemistry; activity is competitive with sulfides on selected substrates."
+        "The primary Ni1Mo3N/C uses a 1:3 Ni/Mo molar ratio, glucose-derived carbon and sol-gel preparation followed by 500 C H2 treatment. The retained 5/10/85 wt% Ni/Mo/activated-carbon recipe is not its measured composition.",
+        "The paper tests phenolics at 220-260 C; the retained 250-380 C window and generic impregnation route are screening assumptions. Do not transfer its activity to a simple sulfur-free NiMo alloy or to commodity activated carbon.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -394,6 +396,7 @@
           "name": "Activated carbon",
           "wt_pct": 85.0,
           "pricing": {
+            "reference_series": "HS380210",
             "type": "fixed",
             "price_per_lb": 1.2247,
             "evidence_label": "UN Comtrade activated-carbon import unit value",
@@ -410,7 +413,7 @@
       "title": "Ru/C noble-metal route",
       "archetype": "Noble metal on carbon",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "Five percent ruthenium on activated carbon upgrades real pyrolysis oil at 350 C and 200 bar to ~65 wt% oil yield with 90 wt% deoxygenation, beating the sulfide baselines without sulfur management.",
+      "summary": "A primary batch study used 5 wt% Ru/C at 350 C and 200 bar and reported maximum oil yield of 65 wt% after 4 h, with catalyst intake of 5 wt% relative to pyrolysis oil.",
       "route_template_id": "nimo-carbon-hdo-route",
       "order_size_tons": 20,
       "performance_index": 88,
@@ -427,8 +430,9 @@
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "The sulfur-free premium option proven on real (not model) bio-oil; ruthenium inventory is the whole cost story.",
-        "Rides the family's existing carbon-impregnation route."
+        "The paper distinguishes Ru loading within the catalyst from catalyst intake relative to oil. The 65 wt% oil yield must not be paired with an unverified simultaneous 90 wt% deoxygenation claim.",
+        "Carbon grade, manufacturing details and the full 250-350 C screening window are not established by the accessible abstract; the shared generic carbon route remains a cost proxy.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -447,6 +451,7 @@
           "name": "Activated carbon",
           "wt_pct": 95.0,
           "pricing": {
+            "reference_series": "HS380210",
             "type": "fixed",
             "price_per_lb": 1.2247,
             "evidence_label": "UN Comtrade activated-carbon import unit value",

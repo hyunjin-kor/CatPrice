@@ -26,16 +26,16 @@
     {"id": "busca-apcatb-1998", "label": "Appl. Catal. B 1998", "url": "https://doi.org/10.1016/S0926-3373(98)00040-X", "kind": "literature", "note": "Busca's classic review of the chemistry of oxide-based NH3-SCR catalysis."},
     {"id": "forzatti-apcata-2001", "label": "Appl. Catal. A 2001", "url": "https://doi.org/10.1016/S0926-860X(01)00832-8", "kind": "literature", "note": "Forzatti's status review of commercial de-NOx SCR including V2O5-WO3/TiO2 honeycomb practice."},
     {"id": "v-loading-catalysts-2015", "label": "Catalysts 2015", "url": "https://doi.org/10.3390/catal5041704", "kind": "literature", "note": "Vanadium-loading optimization across 1.7-3.5 wt% V2O5 with the optimum at 2.0-2.6 wt%."},
-    {"id": "monolith-18000h-catalysts-2019", "label": "Catalysts 2019", "url": "https://doi.org/10.3390/catal9050464", "kind": "literature", "note": "Commercial V2O5-WO3/TiO2 monolith running 18,000 h in a municipal-waste-incinerator tail-end SCR unit."},
+    {"id": "monolith-18000h-catalysts-2019", "label": "Catalysts 2019", "url": "https://doi.org/10.3390/catal9050464", "kind": "literature", "note": "Commercial tail-end SCR monolith operated around 200 C for 18,000 h. XRF of the virgin material gives 3.51 wt% V2O5 and 6.36 wt% WO3 (oxide basis); this is not the screened 2.5/7/90.5 formulation."},
     {"id": "kwak-jcat-2010", "label": "J. Catal. 2010", "url": "https://doi.org/10.1016/j.jcat.2010.07.031", "kind": "literature", "note": "Kwak et al.: the discovery-scale demonstration of Cu-SSZ-13 activity and selectivity for NOx SCR."},
     {"id": "gao-topcatal-2013", "label": "Top. Catal. 2013", "url": "https://doi.org/10.1007/s11244-013-0145-8", "kind": "literature", "note": "Cu-chabazite as the commercially deployed diesel DeNOx catalyst."},
     {"id": "paolucci-science-2017", "label": "Science 2017", "url": "https://doi.org/10.1126/science.aan5630", "kind": "literature", "note": "Dynamic multinuclear Cu sites govern low-temperature SCR in Cu-CHA."},
     {"id": "cu-cha-csr-2018", "label": "Chem. Soc. Rev. 2018", "url": "https://doi.org/10.1039/c8cs00373d", "kind": "literature", "note": "Cu-CHA as an industrially applied model system; Si/Al and Cu/Al ratios control performance."},
     {"id": "long-yang-jcat-1999", "label": "J. Catal. 1999", "url": "https://doi.org/10.1006/jcat.1999.2674", "kind": "literature", "note": "Long and Yang's Fe-ZSM-5 NH3-SCR benchmark study."},
     {"id": "brandenberger-catrev-2008", "label": "Catal. Rev. 2008", "url": "https://doi.org/10.1080/01614940802480122", "kind": "literature", "note": "State-of-the-art review of metal-exchanged zeolite SCR; isolated Fe sites the most active, TOF falls at higher Fe content."},
-    {"id": "fe-smallpore-catalysts-2020", "label": "Catalysts 2020", "url": "https://doi.org/10.3390/catal10111324", "kind": "literature", "note": "Fe-exchanged small-pore zeolites: better high-temperature selectivity and stability than Cu."},
+    {"id": "fe-smallpore-catalysts-2020", "label": "Catalysts 2020", "url": "https://doi.org/10.3390/catal10111324", "kind": "literature", "note": "Review of Fe/SSZ-13, Fe/SAPO-34, Fe/SSZ-39 and Fe/LTA. Its small-pore stability comparison is context, not direct performance evidence for medium-pore Fe-ZSM-5."},
     {"id": "beale-csr-2015", "label": "Chem. Soc. Rev. 2015", "url": "https://doi.org/10.1039/C5CS00108K", "kind": "literature", "note": "Beale's review of small-pore zeolites for NOx control."},
-    {"id": "washcoat-app-2021", "label": "Appl. Sci. 2021", "url": "https://doi.org/10.3390/app11178239", "kind": "literature", "note": "Honeycomb substrates with washcoated active phases as the commercial SCR catalyst form."}
+    {"id": "washcoat-app-2021", "label": "Appl. Sci. 2021", "url": "https://doi.org/10.3390/app11178239", "kind": "literature", "note": "Experimental stereolithography-printed alumina lattices washcoated with V2O5-WO3-TiO2 and compared with cordierite honeycombs; evidence for a specific substrate study, not a commercial production recipe."}
   ],
   "catalog_quotes": [],
   "route_templates": [
@@ -126,7 +126,7 @@
       "title": "V2O5-WO3/TiO2 monolith (stationary standard)",
       "archetype": "Industrial stationary baseline",
       "screening_basis": "engineering_proxy",
-      "summary": "2-3 wt% V2O5 with WO3 stabilizer on anatase titania, extruded or washcoated as honeycomb blocks; the stationary-source standard with documented 18,000-hour commercial service at 260-420 C.",
+      "summary": "V-W/TiO2 stationary SCR cost proxy. A separate commercial monolith study documents 18,000 h of tail-end service around 200 C with a different measured oxide composition.",
       "route_template_id": "vwti-impregnation-extrusion",
       "order_size_tons": 20,
       "performance_index": 76,
@@ -136,8 +136,9 @@
       "literature_basis_ids": ["busca-apcatb-1998", "forzatti-apcata-2001", "v-loading-catalysts-2015", "monolith-18000h-catalysts-2019", "washcoat-app-2021"],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "The stationary-source economics anchor: cheap oxides, decades of practice, and vanadium toxicity handling as the known operating burden.",
-        "WO3 screened at 7 wt%: the loading study documents benefit up to ~6 wt% and the often-quoted ~10 wt% commercial figure was not abstract-verified."
+        "The retained 2.5 wt% V2O5, 7 wt% WO3 and 90.5 wt% TiO2 are screening inputs. The service study instead reports 3.51 wt% V2O5 and 6.36 wt% WO3, plus reinforcing fibers and other constituents.",
+        "The 260-420 C screening window is not the approximately 200 C service temperature in the 18,000 h case. Catalyst-grade anatase, forming aids, monolith geometry and price parity with TiO2 pigment remain assumptions.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {"role": "active_metal", "name": "V2O5", "wt_pct": 2.5, "pricing": {
@@ -149,6 +150,7 @@
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "Annual average WO3 concentrate price 2024, $25/kg = $11.34/lb (USGS MCS 2025)."}},
         {"role": "support", "name": "TiO2", "wt_pct": 90.5, "pricing": {
+          "reference_series": "HS282300",
           "type": "fixed", "price_per_lb": 1.4515, "evidence_label": "USGS TiO2 pigment import index",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025e landed duty-paid unit value of U.S. TiO2 pigment imports, $3,200/t (USGS MCS Feb 2026); anatase SCR grade carried at pigment parity."}}
@@ -169,13 +171,14 @@
       "literature_basis_ids": ["kwak-jcat-2010", "gao-topcatal-2013", "paolucci-science-2017", "cu-cha-csr-2018", "beale-csr-2015"],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "The mobile-duty benchmark; economics ride on the template-heavy SSZ-13 synthesis, not the ~2 wt% copper.",
-        "Cu loading screened at 2.5 wt%: the only abstract-grounded figure (~2 wt%) comes from a preprint, so treat the metal term as a screening assumption."
+        "The primary Cu-SSZ-13 study establishes the architecture and activity/selectivity relative to Cu-beta and Cu-ZSM-5, but the exact 2.5 wt% Cu recipe was not verified from accessible primary experimental text.",
+        "Cu loading, Si/Al ratio, hydrothermal-aging conditions, washcoat/substrate mass and the 200-500 C screening window must be specified for a quantitative comparison. The SSZ-13 material price remains an engineering proxy.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {"role": "active_metal", "name": "Cu", "wt_pct": 2.5, "pricing": {
           "type": "market_feed", "symbol": "Cu", "precursor_markup": 1.1,
-          "note": "Live Cu feed with a mild precursor markup; ~2 wt% exchange levels are preprint-grade evidence, flagged in decision notes."}},
+          "note": "Cu market basis with an assumed precursor markup; the retained 2.5 wt% loading is a screening input, not a newly verified experimental composition."}},
         {"role": "support", "name": "SSZ-13 zeolite", "wt_pct": 97.5, "pricing": {
           "type": "fixed", "price_per_lb": 12.0, "evidence_label": "SSZ-13 screening proxy",
           "evidence_tier": "engineering_proxy", "confidence_score": 55, "transparency": "derived_proxy",
@@ -187,18 +190,19 @@
       "title": "Fe-ZSM-5 high-temperature variant",
       "archetype": "High-temperature zeolite",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "Iron-exchanged ZSM-5 trades low-temperature activity for better high-temperature selectivity and stability than copper systems, extending zeolite SCR operation toward 550 C on a commodity zeolite base.",
+      "summary": "Fe-ZSM-5 screening archetype with primary evidence for high-temperature NH3-SCR; comparisons with Cu catalysts require matched zeolite topology, loading and reaction conditions.",
       "route_template_id": "fe-zsm5-exchange-washcoat",
       "order_size_tons": 20,
       "performance_index": 74,
       "manufacturing_readiness": 84,
       "screening_exactness": 68,
       "temperature_window_c": [300, 550],
-      "literature_basis_ids": ["long-yang-jcat-1999", "brandenberger-catrev-2008", "fe-smallpore-catalysts-2020"],
+      "literature_basis_ids": ["long-yang-jcat-1999", "brandenberger-catrev-2008"],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "The high-exhaust-temperature complement to Cu-CHA on a far cheaper zeolite base.",
-        "Fe loading screened at 2 wt%: the cited abstracts establish speciation-activity rules but state no weight loading."
+        "The Long-Yang primary abstract reports nearly complete NO conversion at 400-500 C and strong exchange-level and Si/Al effects; it does not establish the retained 2 wt% Fe recipe or 300-550 C window.",
+        "The Fe small-pore-zeolite review concerns other framework types and does not prove superior stability of this ZSM-5 candidate. Generic ion exchange, commodity support pricing and isolated-Fe speciation remain assumptions.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {"role": "active_metal", "name": "Fe", "wt_pct": 2.0, "pricing": {

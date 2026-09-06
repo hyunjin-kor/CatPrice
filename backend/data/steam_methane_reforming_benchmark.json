@@ -177,6 +177,7 @@
           "type": "market_feed", "symbol": "Rh", "precursor_markup": 1.15,
           "note": "Live Rh feed with a precursor conversion markup; loadings of 0.5-2 wt% are source-quoted for compact duty."}},
         {"role": "support", "name": "Al2O3", "wt_pct": 99.0, "pricing": {
+          "reference_series": "HS281820",
           "type": "fixed", "price_per_lb": 0.2676, "evidence_label": "USGS industrial alumina proxy",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025 USGS alumina import value used as a bulk oxide support proxy."}}
@@ -208,6 +209,7 @@
           "type": "market_feed", "symbol": "Sn", "precursor_markup": 1.1,
           "note": "Live Sn feed (LME settlement via Westmetall, USGS MCS fallback) with a precursor / conversion markup; upgraded from the fixed USGS LME-average proxy."}},
         {"role": "support", "name": "Al2O3", "wt_pct": 84.5, "pricing": {
+          "reference_series": "HS281820",
           "type": "fixed", "price_per_lb": 0.2676, "evidence_label": "USGS industrial alumina proxy",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025 USGS alumina import value used as a bulk oxide support proxy."}}

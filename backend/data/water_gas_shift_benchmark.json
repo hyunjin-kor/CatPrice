@@ -324,6 +324,7 @@
           "name": "Al2O3",
           "wt_pct": 35.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",
@@ -485,6 +486,7 @@
           "name": "Cr2O3",
           "wt_pct": 9.0,
           "pricing": {
+            "reference_series": "HS281990",
             "type": "fixed",
             "price_per_lb": 2.5651,
             "evidence_label": "UN Comtrade chromium-oxide import unit value",

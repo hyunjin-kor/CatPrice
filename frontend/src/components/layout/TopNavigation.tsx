@@ -73,13 +73,13 @@ export default function TopNavigation() {
             ) : null}
           </div>
 
-          <div className="no-drag absolute right-0 top-0 flex h-full items-stretch" role="group" aria-label="Window controls">
+          <div className="no-drag absolute right-0 top-0 flex h-full items-stretch" role="group" aria-label={t("Window controls")}>
             <button
               type="button"
               onClick={() => window.cometDesktop?.minimizeWindow?.()}
               className="flex w-12 items-center justify-center text-[#68727f] transition hover:bg-[#f2f4f6] hover:text-[#191f28]"
-              title="Minimize"
-              aria-label="Minimize window"
+              title={t("Minimize")}
+              aria-label={t("Minimize window")}
             >
               <MinimizeIcon />
             </button>
@@ -88,8 +88,8 @@ export default function TopNavigation() {
               type="button"
               onClick={() => window.cometDesktop?.toggleMaximizeWindow?.()}
               className="flex w-12 items-center justify-center text-[#68727f] transition hover:bg-[#f2f4f6] hover:text-[#191f28]"
-              title={isMaximized ? 'Restore' : 'Maximize'}
-              aria-label={isMaximized ? 'Restore window' : 'Maximize window'}
+              title={t(isMaximized ? 'Restore' : 'Maximize')}
+              aria-label={t(isMaximized ? 'Restore window' : 'Maximize window')}
             >
               <MaximizeIcon maximized={isMaximized} />
             </button>
@@ -98,8 +98,8 @@ export default function TopNavigation() {
               type="button"
               onClick={() => window.cometDesktop?.closeWindow?.()}
               className="flex w-12 items-center justify-center text-[#68727f] transition hover:bg-[#f04452] hover:text-white"
-              title="Close"
-              aria-label="Close window"
+              title={t("Close")}
+              aria-label={t("Close window")}
             >
               <CloseIcon />
             </button>
@@ -136,8 +136,8 @@ export default function TopNavigation() {
               type="button"
               onClick={toggle}
               className="flex items-center gap-1 rounded-full border border-[#e5e8eb] bg-[#f2f4f6] p-1"
-              title="Toggle output units"
-              aria-label={`Toggle output units, currently ${unit}`}
+              title={t("Toggle output units")}
+              aria-label={`${t('Toggle output units')}, ${t('currently')} ${unit}`}
               aria-pressed={unit === 'lb'}
             >
               <span
@@ -161,8 +161,8 @@ export default function TopNavigation() {
               type="button"
               onClick={toggleLang}
               className="flex items-center gap-1 rounded-full border border-[#e5e8eb] bg-[#f2f4f6] p-1"
-              title="Toggle language"
-              aria-label={`Toggle language, currently ${lang === 'en' ? 'English' : 'Korean'}`}
+              title={t("Toggle language")}
+              aria-label={`${t('Toggle language')}, ${t('currently')} ${t(lang === 'en' ? 'English' : 'Korean')}`}
               aria-pressed={lang === 'ko'}
             >
               <span
@@ -186,8 +186,8 @@ export default function TopNavigation() {
               type="button"
               onClick={toggleBasis}
               className="flex items-center gap-1 rounded-full border border-[#e5e8eb] bg-[#f2f4f6] p-1"
-              title="Price basis: live quotes for practical work, monthly averages for academic work"
-              aria-label={`Toggle price basis, currently ${basis === 'live' ? 'live quotes' : 'monthly averages'}`}
+              title={t("Price basis: live quotes for practical work, monthly averages for academic work")}
+              aria-label={`${t('Toggle price basis')}, ${t('currently')} ${t(basis === 'live' ? 'live quotes' : 'monthly averages')}`}
               aria-pressed={basis === 'reference'}
             >
               <span

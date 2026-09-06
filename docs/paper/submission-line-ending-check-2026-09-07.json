@@ -1,0 +1,14 @@
+{
+  "source": "backend/data/process_templates/aem_fuel_cell_ccm.json",
+  "manifest_sha256": "934b73b6dfb70e8bb49091a2d4ae9afb31e6b6d9fa6a1732226acd28d730ee49",
+  "git_blob_sha256": "b39cca278535d989573b330e2bff9d60b0f05b2e7062de11fe3ea55778bfba31",
+  "working_sha256": "934b73b6dfb70e8bb49091a2d4ae9afb31e6b6d9fa6a1732226acd28d730ee49",
+  "assertions": {
+    "actual_lf_git_blob_accepted": true,
+    "working_crlf_accepted": true,
+    "converted_crlf_accepted": true,
+    "changed_json_id_rejected": true,
+    "extra_space_rejected": true
+  },
+  "policy": "Only exact raw/LF/CRLF representations accepted; all other bytes remain strict."
+}

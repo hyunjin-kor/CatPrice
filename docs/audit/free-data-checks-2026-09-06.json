@@ -1,0 +1,51 @@
+{
+  "pytest": {
+    "exit_code": 0,
+    "command": "python -m pytest backend/tests -q",
+    "elapsed_seconds": 390.2640749
+  },
+  "pytest_output": "........................................................................ [ 10%]\n........................................................................ [ 21%]\n........................................................................ [ 31%]\n........................................................................ [ 42%]\n........................................................................ [ 53%]\n........................................................................ [ 63%]\n........................................................................ [ 74%]\n........................................................................ [ 84%]\n........................................................................ [ 95%]\n...............................                                          [100%]\n679 passed in 386.99s (0:06:26)\n",
+  "new_module_coverage": ".................................                                        [100%]\n=============================== tests coverage ================================\n_______________ coverage: platform win32, python 3.14.0-final-0 _______________\n\nName                                Stmts   Miss  Cover   Missing\n-----------------------------------------------------------------\nbackend\\core\\comtrade_snapshot.py     101      7    93%   67, 79, 86, 90, 98, 115, 124\n-----------------------------------------------------------------\nTOTAL                                 101      7    93%\n33 passed in 0.93s\n",
+  "desktop": {
+    "exit_code": 0,
+    "elapsed_seconds": 204.077421,
+    "command": "npm run build then npm run smoke:desktop"
+  },
+  "desktop_smoke": "\n> comet@1.4.0 smoke:desktop\n> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/smoke_test_desktop.ps1\n\n[COMET] Launching packaged desktop app...\n[COMET] Re-launching app to verify single-instance recovery...\n\n\nStatus              : ok\nVersion             : 1.4.0\nMainWindowCount     : 1\nPricesStatus        : 200\nCalculateStatus     : 200\nEstimatedPricePerKg : 9.0374\nLauncherLog         : C:\\Users\\user\\AppData\\Roaming\\COMET\\comet-launcher.log\n\n\n\n",
+  "coverage_environment": "Existing temporary comet-coverage-20260906 venv reused; no project dependency changes. Default Python lacked pytest-cov; incorrect PYTHONPATH attempt did not load the plugin; the existing venv interpreter succeeded.",
+  "code_quality": "python -m ruff check backend scripts: passed",
+  "frontend": "check:i18n 787 static calls,829 Korean keys,0 missing,0 untranslated under documented scanner scope; lint/build passed; Node10 passed.",
+  "browser": "Five cold-start scenarios passed after support integration. Reference and live calculator/Evidence UI verified in installed Chrome; see free-data-support-ui-2026-09-06.json.",
+  "desktop_final_commit": {
+    "command": "npm run build then npm run smoke:desktop",
+    "exit_code": 0,
+    "elapsed_seconds": 192.7693258,
+    "source_commit": "a300071"
+  },
+  "desktop_final_smoke": "\n> comet@1.4.0 smoke:desktop\n> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/smoke_test_desktop.ps1\n\n[COMET] Launching packaged desktop app...\n[COMET] Re-launching app to verify single-instance recovery...\n\n\nStatus              : ok\nVersion             : 1.4.0\nMainWindowCount     : 1\nPricesStatus        : 200\nCalculateStatus     : 200\nEstimatedPricePerKg : 9.0374\nLauncherLog         : C:\\Users\\user\\AppData\\Roaming\\COMET\\comet-launcher.log\n\n\n\n",
+  "whitespace_note": "Frozen JSON/SVG bytes are retained, including CRLF and Matplotlib SVG path whitespace. Source whitespace check passed with CR-at-EOL recognized and generated SVG excluded. No git hooks were bypassed.",
+  "ci_code_commit": {
+    "run_id": 34018926982,
+    "url": "https://github.com/hyunjin-kor/COMET/actions/runs/34018926982",
+    "head_sha": "a300071683a9fe0719ebd389b7a01d543ec90b77",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "frontend",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-09-06T07:21:32Z",
+        "completedAt": "2026-09-06T07:22:02Z"
+      },
+      {
+        "name": "backend",
+        "status": "completed",
+        "conclusion": "success",
+        "startedAt": "2026-09-06T07:21:32Z",
+        "completedAt": "2026-09-06T07:32:35Z"
+      }
+    ],
+    "backend_summary": "backend\tTest\t2026-09-06T07:32:31.7520823Z ================= 679 passed, 2 warnings in 630.64s (0:10:30) =================="
+  }
+}

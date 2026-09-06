@@ -1,0 +1,847 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-09-06",
+  "generated_at_utc": "2026-09-06T06:58:01.980311+00:00",
+  "scope": [
+    "activated carbon",
+    "carbon black",
+    "silica",
+    "zeolites"
+  ],
+  "decision_definitions": {
+    "adopt": "Retain verified published aggregate as explicitly named evidence/scenario; does not authorize generic default mapping.",
+    "pending": "Insufficient evidence for the stated use.",
+    "reject": "The stated automatic interpretation conflicts with source scope, metric, or verification."
+  },
+  "purchases_or_billable_apis_used": false,
+  "source_fulltexts_redistributed": false,
+  "raw_background_inventories_redistributed": false,
+  "backend_data_or_code_changed_by_review": false,
+  "counts": {
+    "primary_sources": 8,
+    "matching_crossref_article_dois": 7,
+    "full_sources_verified": 6,
+    "verified_gwp_ced_pairs": 4,
+    "unconditional_generic_aliases_approved": 0
+  },
+  "sources": [
+    {
+      "id": "gu2018",
+      "materials": [
+        "coal-derived activated carbon",
+        "woody-biochar activated carbon"
+      ],
+      "full_source_verified": true,
+      "license": "Article-specific public-domain declaration: US government employees on official time; first-page footnote. Generic journal copyright footer also appears.",
+      "license_locator": "PDF printed p.229, footnote 1",
+      "functional_unit": "1 kg activated carbon",
+      "boundary": "Cradle-to-gate",
+      "gwp_method": "TRACI 2.1",
+      "ced_definition": "Total renewable plus nonrenewable cumulative energy demand",
+      "upstream_inventory": "Modified Bayer/Agri-footprint coal model; primary woody process observations, database backgrounds. No source inventory redistributed.",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "pending",
+      "mapping_blocker": "Current Activated carbon labels and HS380210 price evidence do not identify feedstock, grade, or route; generic Carbon is broader.",
+      "limitations": [
+        "Coal comparison is a modified published model, not new independently measured industrial production.",
+        "Woody route uses pilot observations with engineering scale-up, mass allocation and biogenic CO2 neutrality.",
+        "Source region/electricity and material properties do not establish catalyst-grade equivalence."
+      ],
+      "bibliography": {
+        "doi": "10.22382/wfs-2018-024",
+        "title": "LIFE-CYCLE ASSESSMENT OF ACTIVATED CARBON FROM WOODY BIOMASS",
+        "authors": [
+          {
+            "given": "Hongmei",
+            "family": "Gu"
+          },
+          {
+            "given": "Richard",
+            "family": "Bergman"
+          },
+          {
+            "given": "Nathaniel",
+            "family": "Anderson"
+          },
+          {
+            "given": "Sevda",
+            "family": "Alanya-Rosenbaum"
+          }
+        ],
+        "journal": "Wood and Fiber Science",
+        "volume": "50",
+        "issue": "3",
+        "pages_or_article": "229-243",
+        "published": {
+          "date-parts": [
+            [
+              2018,
+              7,
+              20
+            ]
+          ]
+        },
+        "crossref_license_urls": [],
+        "crossref_check_url": "https://api.crossref.org/works/10.22382/wfs-2018-024",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        0,
+        5,
+        12
+      ]
+    },
+    {
+      "id": "zeolite13x2026",
+      "materials": [
+        "chemical-route zeolite 13X",
+        "bentonite-derived zeolite 13X"
+      ],
+      "full_source_verified": true,
+      "license": "CC BY 3.0; explicit Europe PMC article XML permissions",
+      "license_locator": "JATS article-meta/permissions/license",
+      "functional_unit": "1 kg zeolite 13X powder",
+      "boundary": "Cradle-to-gate, precursor production/transport through synthesis/washing/drying; excludes use, end of life and equipment maintenance",
+      "gwp_method": "IPCC 2013 GWP 100a",
+      "ced_definition": "Total renewable plus nonrenewable cumulative energy demand",
+      "upstream_inventory": "Paper names ecoinvent and other inventory backgrounds/proxies; raw inventory not acquired or redistributed.",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "pending",
+      "mapping_blocker": "13X modeled routes do not establish values for generic zeolite, zeolite A, ZSM-5, Beta, or USY.",
+      "limitations": [
+        "Natural-gas heat and average Swiss electricity assumptions.",
+        "Chemical-route precursor inventories include literature/stoichiometric proxies.",
+        "Background dataset/version descriptions span several databases; this review did not reproduce the inventory."
+      ],
+      "bibliography": {
+        "doi": "10.1039/d5se01375e",
+        "title": "A sustainable multi-zeolite synthetic framework from a single natural clay: CO 2 /H 2 O adsorption performance and life cycle assessment benefits",
+        "authors": [
+          {
+            "given": "Biruktait Ayele",
+            "family": "Lemecho"
+          },
+          {
+            "given": "Jordi",
+            "family": "Espín"
+          },
+          {
+            "given": "Pattaraphon",
+            "family": "Rodlamul"
+          },
+          {
+            "given": "Florian",
+            "family": "Kiefer"
+          },
+          {
+            "given": "Wendy Lee",
+            "family": "Queen"
+          },
+          {
+            "given": "Vivek",
+            "family": "Subramanian"
+          }
+        ],
+        "journal": "Sustainable Energy & Fuels",
+        "volume": "10",
+        "issue": "4",
+        "pages_or_article": "1038-1058",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "http://creativecommons.org/licenses/by/3.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.1039/D5SE01375E",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        3,
+        8,
+        14
+      ]
+    },
+    {
+      "id": "icba2025",
+      "title": "ICBA Industry Average LCA Report — Executive Summary",
+      "materials": [
+        "industry-average furnace carbon black"
+      ],
+      "full_source_verified": true,
+      "license": null,
+      "license_locator": "No explicit reuse license established in executive summary or checked official landing page.",
+      "functional_unit": "1 metric tonne furnace carbon black",
+      "boundary": "Cradle-to-gate, system expansion with coproduct credits",
+      "gwp_method": "IPCC 2021 GWP100-Fossil",
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "pending",
+      "mapping_blocker": "Unresolved prose/plot units, no established reuse license, fossil-only metric and missing total CED. Furnace carbon black is not every carbon/electrode grade.",
+      "limitations": [
+        "Prose says MT CO2eq per MT carbon black; plot axis says kg CO2eq per ton.",
+        "Executive summary says critical review is underway.",
+        "Member inventory uses 2023 data and fossil feedstocks."
+      ],
+      "observed_gwp_prose": {
+        "value": 3.91,
+        "unit": "metric tonnes CO2 eq per metric tonne furnace carbon black",
+        "locator": "Executive summary p.4 (PDF page 2), main findings",
+        "normalization_if_prose_is_correct": "Numerically equal to 3.91 kg/kg, but not adopted due to unresolved label inconsistency.",
+        "automatically_usable": false
+      },
+      "checks": [
+        4
+      ]
+    },
+    {
+      "id": "meisel2022",
+      "materials": [
+        "carbon black",
+        "activated silica"
+      ],
+      "full_source_verified": true,
+      "license": "CC BY 4.0 for article; rights to underlying database inventory not inferred",
+      "license_locator": "First page",
+      "functional_unit": "1 kg functional filler",
+      "boundary": "Cradle-to-gate; use/end of life excluded",
+      "gwp_method": "IPCC 2013",
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "reject",
+      "mapping_blocker": "Exact supplementary table not acquired; no bar-chart interpolation or assumed transfer of rights to unmodified ecoinvent 3.6 reference factors.",
+      "limitations": [
+        "Reference carbon black and activated silica values are taken directly from ecoinvent 3.6.",
+        "No independent reference-production balance.",
+        "Total CED not established."
+      ],
+      "bibliography": {
+        "doi": "10.3390/su14095393",
+        "title": "A Comparison of Functional Fillers—Greenhouse Gas Emissions and Air Pollutants from Lignin-Based Filler, Carbon Black and Silica",
+        "authors": [
+          {
+            "given": "Kathleen",
+            "family": "Meisel"
+          },
+          {
+            "given": "Lisa",
+            "family": "Röver"
+          },
+          {
+            "given": "Stefan",
+            "family": "Majer"
+          },
+          {
+            "given": "Benjamin",
+            "family": "Herklotz"
+          },
+          {
+            "given": "Daniela",
+            "family": "Thrän"
+          }
+        ],
+        "journal": "Sustainability",
+        "volume": "14",
+        "issue": "9",
+        "pages_or_article": "5393",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              29
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "https://creativecommons.org/licenses/by/4.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.3390/su14095393",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        1,
+        6,
+        11,
+        13
+      ]
+    },
+    {
+      "id": "grimaldi2021",
+      "materials": [
+        "zeolite A, industrial batch and scaled-out continuous-flow synthesis"
+      ],
+      "full_source_verified": true,
+      "license": "CC BY 4.0",
+      "license_locator": "Full article / Crossref license",
+      "functional_unit": "1 kton zeolite A",
+      "boundary": "Production comparison with raw-material and energy backgrounds; mother-liquor recycling scenarios",
+      "gwp_method": "ILCD/PEF recommendation 1.09, climate change excluding biogenic carbon",
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "reject",
+      "mapping_blocker": "Absolute supplementary results not acquired; zeolite A is not generic zeolite/ZSM-5/Beta/USY.",
+      "limitations": [
+        "Functional unit is one million kg, not one kg or one tonne.",
+        "Main-text normalized results do not establish an absolute factor.",
+        "GaBi/ecoinvent backgrounds; no raw inventory redistribution.",
+        "Resource-depletion MJ is not total CED."
+      ],
+      "bibliography": {
+        "doi": "10.1111/jiec.13180",
+        "title": "Intensified production of zeolite A: Life cycle assessment of a continuous flow pilot plant and comparison with a conventional batch plant",
+        "authors": [
+          {
+            "given": "Fabio",
+            "family": "Grimaldi"
+          },
+          {
+            "given": "Heidy",
+            "family": "Ramirez"
+          },
+          {
+            "given": "Cécile",
+            "family": "Lutz"
+          },
+          {
+            "given": "Paola",
+            "family": "Lettieri"
+          }
+        ],
+        "journal": "Journal of Industrial Ecology",
+        "volume": "25",
+        "issue": "6",
+        "pages_or_article": "1617-1630",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              13
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "http://creativecommons.org/licenses/by/4.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.1111/jiec.13180",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        2,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "silica2024",
+      "materials": [
+        "mesoporous silica, route and scale dependent"
+      ],
+      "full_source_verified": false,
+      "license": "CC BY-NC 3.0 according to Crossref and author-university publication record",
+      "license_locator": "Crossref license / University of Aberdeen publication record",
+      "functional_unit": null,
+      "boundary": null,
+      "gwp_method": null,
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "pending",
+      "mapping_blocker": "Full methods and per-material tables not verified; no abstract-derived scalar used.",
+      "limitations": [
+        "Specific synthesis routes cannot be collapsed to generic SiO2."
+      ],
+      "bibliography": {
+        "doi": "10.1039/d4gc02347a",
+        "title": "A comparative life cycle assessment of the synthesis of mesoporous silica materials on a small and a large scale",
+        "authors": [
+          {
+            "given": "Jose Vicente",
+            "family": "Ros-Lis"
+          },
+          {
+            "given": "Sylvia",
+            "family": "Vetter"
+          },
+          {
+            "given": "Pete",
+            "family": "Smith"
+          }
+        ],
+        "journal": "Green Chemistry",
+        "volume": "26",
+        "issue": "19",
+        "pages_or_article": "10107-10114",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "http://creativecommons.org/licenses/by-nc/3.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.1039/d4gc02347a",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        16,
+        17
+      ]
+    },
+    {
+      "id": "silica2025",
+      "materials": [
+        "rice-husk-derived nanosilica"
+      ],
+      "full_source_verified": false,
+      "license": "CC BY 4.0 according to Crossref",
+      "license_locator": "Crossref license",
+      "functional_unit": null,
+      "boundary": null,
+      "gwp_method": null,
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "pending",
+      "mapping_blocker": "Full source not acquired, exact GWP/CED pair unverified.",
+      "limitations": [
+        "No factor transcribed from abstract or secondary citation."
+      ],
+      "bibliography": {
+        "doi": "10.3390/pr13020483",
+        "title": "Utilizing Life Cycle Assessment to Optimize Processes and Identify Emission Reduction Potential in Rice Husk-Derived Nanosilica Production",
+        "authors": [
+          {
+            "given": "Shan",
+            "family": "Gu"
+          },
+          {
+            "given": "Li",
+            "family": "Yang"
+          },
+          {
+            "given": "Xiaoye",
+            "family": "Liang"
+          },
+          {
+            "given": "Jingsong",
+            "family": "Zhou"
+          }
+        ],
+        "journal": "Processes",
+        "volume": "13",
+        "issue": "2",
+        "pages_or_article": "483",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              10
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "https://creativecommons.org/licenses/by/4.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.3390/pr13020483",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        15,
+        18
+      ]
+    },
+    {
+      "id": "silica_precip2024",
+      "materials": [
+        "high-dispersion precipitated nanosilica from water glass"
+      ],
+      "full_source_verified": true,
+      "license": "CC BY 4.0",
+      "license_locator": "PDF first page",
+      "functional_unit": "1 kg nanosilica",
+      "boundary": "Cradle-to-gate: feedstock acquisition, transport, synthesis; excludes use and post-treatment",
+      "gwp_method": "CML 2001",
+      "ced_definition": null,
+      "evidence_decision": "pending",
+      "automatic_mapping_decision": "reject",
+      "mapping_blocker": "Figure 5 GWP bars lack exact scalar labels; ADP-fossil is not total CED.",
+      "limitations": [
+        "Chinese plant-report foreground and ecoinvent 3.8 backgrounds.",
+        "Precipitated nanosilica is not every silica grade or synthesis route.",
+        "Figure 5 visually inspected; no scalar digitized."
+      ],
+      "bibliography": {
+        "doi": "10.3390/en17225621",
+        "title": "Life Cycle Assessment and Process Optimization of Precipitated Nanosilica—A Case Study in China",
+        "authors": [
+          {
+            "given": "Shan",
+            "family": "Gu"
+          },
+          {
+            "given": "Li",
+            "family": "Yang"
+          },
+          {
+            "given": "Xiaoye",
+            "family": "Liang"
+          },
+          {
+            "given": "Jingsong",
+            "family": "Zhou"
+          }
+        ],
+        "journal": "Energies",
+        "volume": "17",
+        "issue": "22",
+        "pages_or_article": "5621",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              10
+            ]
+          ]
+        },
+        "crossref_license_urls": [
+          "https://creativecommons.org/licenses/by/4.0/"
+        ],
+        "crossref_check_url": "https://api.crossref.org/works/10.3390/en17225621",
+        "crossref_http_status": 200
+      },
+      "checks": [
+        19,
+        20
+      ]
+    }
+  ],
+  "verified_metric_pairs": [
+    {
+      "id": "gu2018_coal_ac",
+      "source_id": "gu2018",
+      "material": "Coal-derived activated carbon",
+      "gwp_kg_co2_eq_per_kg": 18.28,
+      "ced_mj_per_kg": 241.62,
+      "gwp_locator": "Table 8, printed p.239 / PDF page 11",
+      "ced_locator": "Table 7, printed p.239 / PDF page 11",
+      "gwp_method": "TRACI 2.1",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "pending",
+      "requires_explicit_scenario": true,
+      "functional_unit_kg": 1,
+      "boundary": "cradle-to-gate",
+      "ced_definition": "total renewable plus nonrenewable cumulative energy demand",
+      "backend_default_changed": false
+    },
+    {
+      "id": "gu2018_woody_ac",
+      "source_id": "gu2018",
+      "material": "Woody-biochar activated carbon",
+      "gwp_kg_co2_eq_per_kg": 8.6,
+      "ced_mj_per_kg": 158.33,
+      "gwp_locator": "Table 8, printed p.239 / PDF page 11",
+      "ced_locator": "Table 6, printed p.238 / PDF page 10",
+      "gwp_method": "TRACI 2.1",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "reject",
+      "requires_explicit_scenario": true,
+      "critical_assumption": "Published GWP assumes biogenic CO2 neutrality; no silent neutrality or recalculated alternative adopted.",
+      "functional_unit_kg": 1,
+      "boundary": "cradle-to-gate",
+      "ced_definition": "total renewable plus nonrenewable cumulative energy demand",
+      "backend_default_changed": false
+    },
+    {
+      "id": "lemecho2026_chemical_13x",
+      "source_id": "zeolite13x2026",
+      "material": "Chemical-route zeolite 13X",
+      "gwp_kg_co2_eq_per_kg": 24.25,
+      "ced_mj_per_kg": 253.0,
+      "gwp_locator": "Results section 3.2, text accompanying Figure 10",
+      "ced_locator": "Results section 3.2, text accompanying Figure 11",
+      "gwp_method": "IPCC 2013 GWP 100a",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "pending",
+      "requires_explicit_scenario": true,
+      "functional_unit_kg": 1,
+      "boundary": "cradle-to-gate",
+      "ced_definition": "total renewable plus nonrenewable cumulative energy demand",
+      "backend_default_changed": false
+    },
+    {
+      "id": "lemecho2026_clay_13x",
+      "source_id": "zeolite13x2026",
+      "material": "Bentonite-clay-route zeolite 13X",
+      "gwp_kg_co2_eq_per_kg": 2.48,
+      "ced_mj_per_kg": 11.15,
+      "gwp_locator": "Results section 3.2, text accompanying Figure 10",
+      "ced_locator": "Results section 3.2, text accompanying Figure 11",
+      "gwp_method": "IPCC 2013 GWP 100a",
+      "evidence_decision": "adopt",
+      "automatic_mapping_decision": "pending",
+      "requires_explicit_scenario": true,
+      "functional_unit_kg": 1,
+      "boundary": "cradle-to-gate",
+      "ced_definition": "total renewable plus nonrenewable cumulative energy demand",
+      "backend_default_changed": false
+    }
+  ],
+  "existing_activated_carbon_components": [
+    {
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "json_path": "/candidates/2/components/2",
+      "name": "Activated carbon",
+      "role": "support",
+      "wt_pct": 85.0,
+      "route_or_feedstock_identified": false
+    },
+    {
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "json_path": "/candidates/3/components/1",
+      "name": "Activated carbon",
+      "role": "support",
+      "wt_pct": 95.0,
+      "route_or_feedstock_identified": false
+    },
+    {
+      "file": "backend/data/methane_pyrolysis_benchmark.json",
+      "json_path": "/candidates/2/components/0",
+      "name": "Activated carbon",
+      "role": "active_catalyst",
+      "wt_pct": 100.0,
+      "route_or_feedstock_identified": false
+    }
+  ],
+  "http_checks": [
+    {
+      "name": "gu2018",
+      "kind": "pdf",
+      "url": "https://wfs.swst.org/index.php/wfs/article/download/2654/2492",
+      "checked_at_utc": "2026-09-06T06:41:02.864233+00:00",
+      "http_status": 200,
+      "final_url": "https://wfs.swst.org/index.php/wfs/article/download/2654/2492",
+      "content_type": "application/pdf",
+      "sha256": "e0e8f7f4fae497035146a8d0bc125af4156eb0a4047705534051d3614bcde467",
+      "content_verified": true
+    },
+    {
+      "name": "meisel2022",
+      "kind": "pdf",
+      "url": "https://mdpi-res.com/d_attachment/sustainability/sustainability-14-05393/article_deploy/sustainability-14-05393.pdf",
+      "checked_at_utc": "2026-09-06T06:41:02.869121+00:00",
+      "http_status": 200,
+      "final_url": "https://mdpi-res.com/d_attachment/sustainability/sustainability-14-05393/article_deploy/sustainability-14-05393.pdf",
+      "content_type": "application/pdf",
+      "sha256": "2f22058017b18b254bff3a7b76186f8038d00921b9c4f9539edb457539ada2c4",
+      "content_verified": true
+    },
+    {
+      "name": "grimaldi2021",
+      "kind": "pdf",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10133450/1/jiec.13180.pdf",
+      "checked_at_utc": "2026-09-06T06:41:02.869289+00:00",
+      "http_status": 200,
+      "final_url": "https://discovery.ucl.ac.uk/id/eprint/10133450/1/jiec.13180.pdf",
+      "content_type": "application/pdf",
+      "sha256": "f67c570746da7a4275c1bb6daeffe0fedef281baffedba43a758763e71a00847",
+      "content_verified": true
+    },
+    {
+      "name": "zeolite13x2026",
+      "kind": "pdf",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2026/se/d5se01375e",
+      "checked_at_utc": "2026-09-06T06:41:02.869373+00:00",
+      "http_status": 403,
+      "final_url": "https://pubs.rsc.org/en/content/articlepdf/2026/se/d5se01375e",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f6d6620d0ead981e17de00e194c1b44bbae675585b77c006d382ad8099eb79aa"
+    },
+    {
+      "name": "icba2025",
+      "kind": "pdf",
+      "url": "https://static1.squarespace.com/static/5fd161c5b1bc2872873bd5ee/t/682f4138aca5ce037ba8db7f/1747927352960/ICBA%2BIndustry%2BAverage%2BLCA%2Breport_Executive%2BSummary.pdf",
+      "checked_at_utc": "2026-09-06T06:41:02.869449+00:00",
+      "http_status": 200,
+      "final_url": "https://static1.squarespace.com/static/5fd161c5b1bc2872873bd5ee/t/682f4138aca5ce037ba8db7f/1747927352960/ICBA%2BIndustry%2BAverage%2BLCA%2Breport_Executive%2BSummary.pdf",
+      "content_type": "application/pdf",
+      "sha256": "5d63a1b1e2b4d5aa14ffc3cdfb0bb5d2f2a9f9d8769f73604882eaa2af84b4aa",
+      "content_verified": true
+    },
+    {
+      "name": "gu2018",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.22382/wfs-2018-024",
+      "checked_at_utc": "2026-09-06T06:41:02.869535+00:00",
+      "http_status": 429,
+      "final_url": "https://api.crossref.org/works/10.22382/wfs-2018-024",
+      "content_type": null,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "meisel2022",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.3390/su14095393",
+      "checked_at_utc": "2026-09-06T06:41:02.869600+00:00",
+      "http_status": 429,
+      "final_url": "https://api.crossref.org/works/10.3390/su14095393",
+      "content_type": null,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "grimaldi2021",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.1111/jiec.13180",
+      "checked_at_utc": "2026-09-06T06:41:02.869665+00:00",
+      "http_status": 200,
+      "final_url": "https://api.crossref.org/works/10.1111/jiec.13180",
+      "content_type": "application/json",
+      "sha256": "36932fcf6433e08bebe0faa92cb5b53809089d918f3d6bcd3b0cb59ca970447e"
+    },
+    {
+      "name": "zeolite13x2026",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.1039/D5SE01375E",
+      "checked_at_utc": "2026-09-06T06:41:02.869727+00:00",
+      "http_status": 200,
+      "final_url": "https://api.crossref.org/works/10.1039/D5SE01375E",
+      "content_type": "application/json",
+      "sha256": "8862d2696cdf1dd9e1d5ee879c0e64d6be4c511dc2af8712b831db2e955c6fab"
+    },
+    {
+      "name": "grimaldi2021_s1.docx",
+      "kind": "supplement",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1111%2Fjiec.13180/MediaObjects/44498_2021_2506017_MOESM1_ESM.docx",
+      "checked_at_utc": "2026-09-06T06:43:49.279171+00:00",
+      "http_status": 200,
+      "final_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1111%2Fjiec.13180/MediaObjects/44498_2021_2506017_MOESM1_ESM.docx",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "content_verified": false,
+      "content_issue": "HTTP 200 returned HTML challenge, not DOCX/XLSX (no ZIP signature)."
+    },
+    {
+      "name": "grimaldi2021_s2.xlsx",
+      "kind": "supplement",
+      "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1111%2Fjiec.13180/MediaObjects/44498_2021_2506017_MOESM2_ESM.xlsx",
+      "checked_at_utc": "2026-09-06T06:43:49.537167+00:00",
+      "http_status": 200,
+      "final_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1111%2Fjiec.13180/MediaObjects/44498_2021_2506017_MOESM2_ESM.xlsx",
+      "content_type": "text/html; charset=utf-8",
+      "sha256": "32ed63159c77e21ee19ca1b9aa3213ccf0218eb59539560b132a8e68ef0e18ea",
+      "content_verified": false,
+      "content_issue": "HTTP 200 returned HTML challenge, not DOCX/XLSX (no ZIP signature)."
+    },
+    {
+      "name": "meisel2022_supp",
+      "kind": "supplement",
+      "url": "https://www.mdpi.com/article/10.3390/su14095393/s1",
+      "checked_at_utc": "2026-09-06T06:43:49.611087+00:00",
+      "http_status": 403,
+      "final_url": "https://www.mdpi.com/article/10.3390/su14095393/s1",
+      "content_type": "text/html",
+      "sha256": "3e2f2cdeaed1e62406624a392ed550a3fc16ffb4c00497463d17cc7e5d8af36b"
+    },
+    {
+      "name": "gu2018",
+      "kind": "crossref_retry",
+      "url": "https://api.crossref.org/works/10.22382/wfs-2018-024",
+      "http_status": 200,
+      "checked_at_utc": "2026-09-06T06:43:50.212876+00:00"
+    },
+    {
+      "name": "meisel2022",
+      "kind": "crossref_retry",
+      "url": "https://api.crossref.org/works/10.3390/su14095393",
+      "http_status": 200,
+      "checked_at_utc": "2026-09-06T06:43:50.412231+00:00"
+    },
+    {
+      "name": "zeolite13x2026.xml",
+      "kind": "fulltext",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12826357/fullTextXML",
+      "checked_at_utc": "2026-09-06T06:46:06.760934+00:00",
+      "http_status": 200,
+      "final_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12826357/fullTextXML",
+      "content_type": "application/xml",
+      "sha256": "87f38577bd82d9fea152739414ee3d3c22fd8b5565fcaf68944c934875960a35",
+      "content_verified": true
+    },
+    {
+      "name": "silica2025.pdf",
+      "kind": "fulltext",
+      "url": "https://www.mdpi.com/2227-9717/13/2/483/pdf",
+      "checked_at_utc": "2026-09-06T06:46:10.501321+00:00",
+      "http_status": 403,
+      "final_url": "https://www.mdpi.com/2227-9717/13/2/483/pdf",
+      "content_type": "text/html",
+      "sha256": "9994e7ebe3400b37c1dbb1b27fe9dfc5f8bb4836a71191987f0068357716642c"
+    },
+    {
+      "name": "silica2024.pdf",
+      "kind": "fulltext",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2024/gc/d4gc02347a",
+      "checked_at_utc": "2026-09-06T06:46:10.559157+00:00",
+      "http_status": 403,
+      "final_url": "https://pubs.rsc.org/en/content/articlepdf/2024/gc/d4gc02347a",
+      "content_type": "text/html; charset=UTF-8",
+      "sha256": "f456af74a33dc87a428e8efca19b975544284cae16b44705f45326d91ce2aa20"
+    },
+    {
+      "name": "silica2024",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.1039/d4gc02347a",
+      "http_status": 200,
+      "checked_at_utc": "2026-09-06T06:46:11.213097+00:00"
+    },
+    {
+      "name": "silica2025",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.3390/pr13020483",
+      "http_status": 200,
+      "checked_at_utc": "2026-09-06T06:46:11.417321+00:00"
+    },
+    {
+      "name": "silica_precip2024",
+      "kind": "crossref",
+      "url": "https://api.crossref.org/works/10.3390/en17225621",
+      "checked_at_utc": "2026-09-06T06:52:11.156351+00:00",
+      "http_status": 200,
+      "final_url": "https://api.crossref.org/works/10.3390/en17225621",
+      "content_type": "application/json",
+      "sha256": "fdb9e9da607f9c7855272b18cd907e19a730f030b8a65e96dbd25329d9eb81b6"
+    },
+    {
+      "name": "silica_precip2024.pdf",
+      "kind": "pdf",
+      "url": "https://mdpi-res.com/d_attachment/energies/energies-17-05621/article_deploy/energies-17-05621.pdf",
+      "checked_at_utc": "2026-09-06T06:52:12.264154+00:00",
+      "http_status": 200,
+      "final_url": "https://mdpi-res.com/d_attachment/energies/energies-17-05621/article_deploy/energies-17-05621.pdf",
+      "content_type": "application/pdf",
+      "sha256": "7739fb6205ba59252be6a164fd37d1ff0dc19c79ddf4e6cb80dd44006f222de4",
+      "content_verified": true
+    }
+  ],
+  "not_verified": [
+    "Source-specific catalyst-grade equivalence for existing generic component labels.",
+    "Independent reconstruction or scientific validation of upstream LCA inventories.",
+    "Absolute supplementary results where access returned HTTP403/HTML challenges.",
+    "ICBA reuse permission, total CED and inconsistent chart units."
+  ],
+  "conservative_decisions": [
+    "No generic Carbon/SiO2/Zeolite alias added.",
+    "No carbon-neutrality assumption introduced.",
+    "No ADP-fossil, MJ surplus or process energy substituted for total CED.",
+    "No chart interpolation or abstract-only factor adopted.",
+    "An article license is not treated as an inventory-database redistribution license."
+  ],
+  "search_completion": "Bounded review complete; does not assert no other free source exists."
+}

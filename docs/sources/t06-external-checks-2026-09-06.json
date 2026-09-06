@@ -1,0 +1,183 @@
+{
+  "acs": {
+    "request_url": "https://researcher-resources.acs.org/publish/author_guidelines?coden=ascecg",
+    "checked_at_utc": "2026-09-06T02:47:22.532232+00:00",
+    "http_status": 200,
+    "final_url": "https://researcher-resources.acs.org/publish/author_guidelines?coden=ascecg",
+    "sha256": "a5c0851da56fc6d6ee3c1316bfa2425260312b5a1cffffddabc0f0de0233356f"
+  },
+  "concept_crossref": {
+    "request_url": "https://api.crossref.org/works/10.5281%2Fzenodo.21451931",
+    "checked_at_utc": "2026-09-06T02:47:23.929363+00:00",
+    "http_status": 404,
+    "final_url": "https://api.crossref.org/works/10.5281%2Fzenodo.21451931",
+    "sha256": "ae8462e3af85ca7577aaa97ff22a194f9dfd7fada58cf4944b53d2fdfa7b1f92"
+  },
+  "concept_resolver": {
+    "request_url": "https://doi.org/10.5281/zenodo.21451931",
+    "checked_at_utc": "2026-09-06T02:47:24.502383+00:00",
+    "http_status": 200,
+    "final_url": "https://zenodo.org/records/22213096",
+    "sha256": "2d1056c3bc2a942a88c5cfd9086ab845d7f712e179adbef1404bfa219fe1f2b1"
+  },
+  "concept_datacite": {
+    "request_url": "https://api.datacite.org/dois/10.5281/zenodo.21451931",
+    "checked_at_utc": "2026-09-06T02:47:26.340799+00:00",
+    "http_status": 200,
+    "final_url": "https://api.datacite.org/dois/10.5281/zenodo.21451931",
+    "sha256": "13ec3c591e775e1653cb443a17214c51ed43cc2a90fcf9feb43f90c16e2448da",
+    "metadata": {
+      "doi": "10.5281/zenodo.21451931",
+      "titles": [
+        {
+          "title": "COMET: Catalyst Overall Manufacturing Estimation Tool"
+        }
+      ],
+      "publisher": "Zenodo",
+      "publicationYear": 2026,
+      "url": "https://zenodo.org/doi/10.5281/zenodo.21451931",
+      "state": "findable",
+      "types": {
+        "ris": "COMP",
+        "bibtex": "misc",
+        "citeproc": "article",
+        "schemaOrg": "SoftwareSourceCode",
+        "resourceType": "",
+        "resourceTypeGeneral": "Software"
+      },
+      "relatedIdentifiers": [
+        {
+          "relationType": "IsSupplementTo",
+          "relatedIdentifier": "https://github.com/hyunjin-kor/COMET/tree/v1.3.24",
+          "resourceTypeGeneral": "Software",
+          "relatedIdentifierType": "URL"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21455388",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21467715",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21465275",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22193286",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22136501",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22212313",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21456638",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22123306",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22110422",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21451932",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.22213096",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21461102",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21466271",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21465711",
+          "relatedIdentifierType": "DOI"
+        },
+        {
+          "relationType": "HasVersion",
+          "relatedIdentifier": "10.5281/zenodo.21460919",
+          "relatedIdentifierType": "DOI"
+        }
+      ]
+    }
+  },
+  "concept_zenodo": {
+    "request_url": "https://zenodo.org/api/records/21451931",
+    "checked_at_utc": "2026-09-06T02:47:27.788245+00:00",
+    "http_status": 200,
+    "final_url": "https://zenodo.org/api/records/22213096",
+    "sha256": "37bb0b15c9bf6b3ed0d589aab45bc83501c9e1ab6b3e371d4824234ca77273cc",
+    "metadata": {
+      "id": 22213096,
+      "conceptrecid": "21451931",
+      "doi": "10.5281/zenodo.22213096",
+      "conceptdoi": "10.5281/zenodo.21451931",
+      "links": {
+        "self": "https://zenodo.org/api/records/22213096",
+        "self_html": "https://zenodo.org/records/22213096",
+        "doi": "https://doi.org/10.5281/zenodo.22213096",
+        "parent_doi": "https://doi.org/10.5281/zenodo.21451931",
+        "latest": "https://zenodo.org/api/records/22213096/versions/latest"
+      }
+    },
+    "title": "COMET: Catalyst Overall Manufacturing Estimation Tool"
+  },
+  "mo_2025": {
+    "request_url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-molybdenum.pdf",
+    "checked_at_utc": "2026-09-06T02:47:28.418019+00:00",
+    "http_status": 200,
+    "final_url": "https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-molybdenum.pdf",
+    "sha256": "9285569c53125fc28306f40c1d8301d5e5625bf1bc8072b80f40155c885a0a8e",
+    "price_context": "Price, average, dollars per kilogram3 \n19.19 \n35.62 \n41.72 \n54.32 \n47  \nStocks, consumer materials \n2,010 \n2,040 \n2,040 \ne1,900 \n1,800 \nNet import reliance4 as a percentage of apparent consumption \nE \nE \nE \nE \nE \nRecycling: Molybdenum is recycled as a component of catalysts, ferrous scrap, and superalloy scrap. Ferrous scrap \nconsists of revert, ne"
+  },
+  "mo_2026": {
+    "request_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-molybdenum.pdf",
+    "checked_at_utc": "2026-09-06T02:47:29.614439+00:00",
+    "http_status": 200,
+    "final_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-molybdenum.pdf",
+    "sha256": "497f50f03629ccccbc6b5b7b1c3dea02be0ebb02122c37314fed59d5c77294e1",
+    "price_context": "Price, average, dollars per kilogram4 \n35.62 \n41.72 \n54.32 \n47.72 \n51 \nStocks, consumer materials \n2,040 \n2,040 \ne1,900 \ne1,900 \n2,000 \nNet import reliance5 as a percentage of apparent consumption \nE \nE \nE \nE \nE \nRecycling: Molybdenum is recycled as a component of catalysts, ferrous scrap, and superalloy scrap. Revert scrap \ncomes from steelmaking ",
+    "footnote_4": "4U.S. molybdic oxide (MoO3) price, 57% molybdenum content. Source: Argus Media group, Argus Non-Ferrous Markets."
+  },
+  "mo_argus_methodology": {
+    "request_url": "https://www.argusmedia.com/-/media/project/argusmedia/mainsite/english/documents-and-files/methodology/argus-non-ferrous-markets.pdf?rev=4c19438e88c24c4e82b0ff02cfc875f3",
+    "checked_at_utc": "2026-09-06T02:49:24.041820+00:00",
+    "http_status": 200,
+    "final_url": "https://www.argusmedia.com/-/media/project/argusmedia/mainsite/english/documents-and-files/methodology/argus-non-ferrous-markets.pdf?rev=4c19438e88c24c4e82b0ff02cfc875f3",
+    "sha256": "786473c3d01bb460f9774b0c35e9aac4942bc79711b0ff407f8b54e6f7e795d6",
+    "page": 34,
+    "assessment_labels": [
+      "Oxide min 57% Mo du Rotterdam (per lb of Mo)",
+      "Oxide min 57% fob US warehouse"
+    ]
+  }
+}

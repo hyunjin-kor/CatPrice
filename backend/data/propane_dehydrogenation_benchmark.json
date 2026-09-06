@@ -331,6 +331,7 @@
           "name": "Al2O3",
           "wt_pct": 99.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.9,
             "evidence_label": "Gamma-alumina support screening proxy",
@@ -507,6 +508,7 @@
           "name": "Al2O3",
           "wt_pct": 79.5,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",

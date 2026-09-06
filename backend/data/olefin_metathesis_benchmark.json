@@ -64,28 +64,28 @@
       "label": "Catal. Lett. 2004",
       "url": "https://doi.org/10.1023/b:catl.0000034280.35570.26",
       "kind": "literature",
-      "note": "Balcar, Hamtil et al.: Re2O7 supported on mesoporous organised alumina as a catalyst for metathesis of 1-alkenes."
+      "note": "Primary abstract reports organized mesoporous alumina with an optimum 9-15 wt% elemental Re; this does not verify the screened 8 wt% Re or generic alumina grade."
     },
     {
       "id": "handzlik-mo-comparison-apcata-2006",
       "label": "Appl. Catal. A 2006",
       "url": "https://doi.org/10.1016/j.apcata.2006.07.002",
       "kind": "literature",
-      "note": "Handzlik and Ogonowski: properties and metathesis activity of molybdena-alumina, molybdena-silica-alumina and molybdena-silica catalysts; comparative support-effect study."
+      "note": "Primary study of molybdena on alumina, silica-alumina and silica, prepared by thermal spreading of MoO2(acac)2 and tested in propene metathesis; this is not a WO3/SiO2 study."
     },
     {
       "id": "leroux-w-alkane-adsc-2007",
       "label": "Adv. Synth. Catal. 2007",
       "url": "https://doi.org/10.1002/adsc.200600436",
       "kind": "literature",
-      "note": "Le Roux, Taoufik et al.: silica-alumina-supported tungsten-based heterogeneous alkane metathesis catalyst, foundational for surface-organometallic alkane metathesis."
+      "note": "Tungsten-based silica-alumina-supported alkane metathesis study; context only, not direct evidence for molybdena olefin metathesis or its screened loading."
     },
     {
       "id": "merle-mo-bipodal-cc-2017",
       "label": "Chem. Commun. 2017",
       "url": "https://doi.org/10.1039/c7cc06041f",
       "kind": "literature",
-      "note": "Merle, Le Quemener et al.: well-defined silica-supported bipodal molybdenum oxo alkyl complexes as a model of the active sites of industrial olefin metathesis catalysts."
+      "note": "Well-defined Mo oxo alkyl species grafted onto silica dehydroxylated at 200 C; an active-site model using surface organometallic chemistry, not the generic MoO3/silica-alumina impregnation recipe."
     },
     {
       "id": "taoufik-angew-2007",
@@ -276,7 +276,9 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "Best fit when mild-condition metathesis is required and Re economics are acceptable.",
-        "Catalyst economics dominated by Re; Al2O3 support is a small fraction of cost."
+        "Catalyst economics dominated by Re; Al2O3 support is a small fraction of cost.",
+        "The screened 8 wt% is elemental Re, not Re2O7 mass. The Balcar primary abstract reports an optimum 9-15 wt% Re on organized mesoporous alumina; loading, pore structure and the 25-100 C window are retained as proxy inputs.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -298,6 +300,7 @@
           "name": "Al2O3",
           "wt_pct": 92.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.9,
             "evidence_label": "Alumina support screening proxy",
@@ -314,7 +317,7 @@
       "title": "WO3 / SiO2 (Lummus OCT)",
       "archetype": "Industrial benchmark",
       "screening_basis": "engineering_proxy",
-      "summary": "WO3 on silica, the industrial OCT (Lummus / Sinopec) metathesis catalyst for ethylene + 2-butene to propylene.",
+      "summary": "Supported tungsten-oxide screening archetype for ethylene/2-butene metathesis to propylene; this is not a verified proprietary OCT catalyst formulation.",
       "route_template_id": "wo3-silica-met-route",
       "order_size_tons": 50,
       "performance_index": 88,
@@ -326,12 +329,13 @@
       ],
       "literature_basis_ids": [
         "mol-industrial-jmolcat-2004",
-        "handzlik-mo-comparison-apcata-2006"
+        "metathesis-oxides-acscatal-2014"
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "Most transferable industrial metathesis basis and the dominant on-purpose propylene route.",
-        "WO3 / SiO2 needs higher temperature than Re2O7 but tungsten is far cheaper than rhenium."
+        "The 7 wt% cost input is elemental W, not WO3 mass. Silica grade, the 300-450 C window and industrial manufacturing assumptions were not verified against a licensor recipe.",
+        "The Handzlik molybdena study does not validate this tungsten catalyst; retained reviews supply industrial and supported-oxide context only.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -350,6 +354,7 @@
           "name": "SiO2",
           "wt_pct": 93.0,
           "pricing": {
+            "reference_series": "HS281122",
             "type": "fixed",
             "price_per_lb": 1.1,
             "evidence_label": "Silica support screening proxy",
@@ -377,13 +382,14 @@
         300
       ],
       "literature_basis_ids": [
-        "leroux-w-alkane-adsc-2007",
+        "handzlik-mo-comparison-apcata-2006",
         "merle-mo-bipodal-cc-2017"
       ],
       "catalog_quote_ids": [],
       "decision_notes": [
-        "Best fit when intermediate-temperature metathesis is desired and Mo economics are preferred over Re.",
-        "Support acidity (silica-alumina) increases activity but introduces side-reactions; balance vs pure silica."
+        "The Handzlik primary study directly examines Mo on silica-alumina using thermal spreading of MoO2(acac)2, not the screened generic wet route. The 8 wt% input is elemental Mo, not MoO3.",
+        "Merle studies grafted Mo species on silica rather than silica-alumina; the W alkane-metathesis paper is not direct evidence for this candidate. Exact support composition, loading and the 100-300 C screening window remain assumptions.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -436,7 +442,9 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "Screens the feed-simplification upside (no 2-butene loop) against a lab-bound air-free synthesis.",
-        "Operating conditions are not stated in the fetched abstract; the window shown is the mild band this chemistry targets. W loading screened at 4 wt%."
+        "Operating conditions are not stated in the fetched abstract; the window shown is the mild band this chemistry targets. W loading screened at 4 wt%.",
+        "The title and primary bibliographic record support the tungsten-hydride/ethylene-to-propylene architecture. Free full experimental conditions and the 4 wt% W recipe were not verified; metal-price markup does not establish the cost of air-free organometallic precursor preparation.",
+        "Performance, readiness and route scores are authored screening assessments, not measured conversion, selectivity or lifetime; price-evidence scores assess pricing provenance separately."
       ],
       "components": [
         {
@@ -455,6 +463,7 @@
           "name": "Al2O3",
           "wt_pct": 96.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",

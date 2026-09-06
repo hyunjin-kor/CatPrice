@@ -246,6 +246,7 @@ def main() -> None:
                              "present on all dates (reproduces the coverage artefact)")
     parser.add_argument("--price-basis", type=Path,
                         help="frozen price basis JSON (a previous run's output, or its price_basis map) instead of the local database")
+    parser.add_argument("--basis-type", choices=("live", "reference"), default="live")
     args = parser.parse_args()
 
     create_db_and_tables()
@@ -256,7 +257,7 @@ def main() -> None:
             payload = json.loads(args.price_basis.read_text(encoding="utf-8"))
             baseline = payload.get("price_basis", payload)
         else:
-            baseline = _latest_price_map(session)
+            baseline = _latest_price_map(session, args.basis_type)
         if args.history:
             series, partial = load_frozen_series(args.history, args.since)
             dropped, excluded = [], {}
@@ -290,7 +291,7 @@ def main() -> None:
 
         for fam in families:
             key = fam["family"]
-            base = evaluate_benchmark_family(session=session, family=key, profile="balanced", prices=baseline)
+            base = evaluate_benchmark_family(session=session, family=key, profile="balanced", prices=baseline, basis=args.basis_type)
             base_weights = dict(base["decision_profile"]["weights"])
             perf0 = performance_zero_weights(base_weights)
 
@@ -300,11 +301,11 @@ def main() -> None:
 
             for state in states:
                 bal = evaluate_benchmark_family(
-                    session=session, family=key, profile="balanced", prices=state["prices"]
+                    session=session, family=key, profile="balanced", prices=state["prices"], basis=args.basis_type
                 )
                 p0 = evaluate_benchmark_family(
                     session=session, family=key, profile="balanced",
-                    weights=perf0, prices=state["prices"],
+                    weights=perf0, prices=state["prices"], basis=args.basis_type,
                 )
                 bal_win = bal["winner"]["slug"] if bal["winner"] else None
                 p0_win = p0["winner"]["slug"] if p0["winner"] else None
@@ -362,6 +363,7 @@ def main() -> None:
         "price_source": str(args.history) if args.history else "application database",
         "price_basis_source": str(args.price_basis) if args.price_basis else "application database",
         "price_basis": baseline,
+        "basis_type": args.basis_type,
         "window_since": args.since,
         "held_at_baseline_incomplete_coverage": partial,
         "dropped_outliers": dropped,

@@ -270,6 +270,7 @@ export interface CostResult {
     live_override?:
       | {
           applied: true;
+          basis?: PriceBasis;
           live_price: number;
           live_price_unit: string;
           live_source: string;
@@ -278,6 +279,7 @@ export interface CostResult {
           fallback_price_unit: string;
           fallback_source: string;
           fallback_quote_year: number | null;
+          fallback_reference_url?: string;
         }
       | {
           applied: false;
@@ -416,6 +418,7 @@ export interface MetalPrice {
   fetched_at: string | null;
   basis: PriceBasis;
   basis_month: string | null;
+  needs_review: boolean;
   evidence: {
     tier: string;
     confidence_score: number;

@@ -1,0 +1,40 @@
+{
+  "basis_month": "2026-05",
+  "seed": 20260906,
+  "pipeline_status": "complete",
+  "code_changed_during_run": [],
+  "pipeline_seconds": [
+    23.151398800000607,
+    24.239947800000664
+  ],
+  "stable_scientific_json": {
+    "all_families": true,
+    "all_families_live": true,
+    "paper_summary": true,
+    "table62_reproduction": true,
+    "manufacturing_costs": true,
+    "breakeven_sweep_points": true,
+    "monthly_history": true
+  },
+  "timestamp_excluded_only_generated_at": {
+    "reference_basis": true,
+    "price_volatility": true,
+    "active_metal_breakeven": true
+  },
+  "outputs_hash_match": true,
+  "output_count": 27,
+  "code_hash_match": true,
+  "code_input_count": 39,
+  "data_hash_match": true,
+  "data_input_count": 81,
+  "readme_separate_directory_replay": {
+    "all_families": true,
+    "all_families_live": true,
+    "paper_summary": true,
+    "table62_reproduction": true,
+    "manufacturing_costs": true,
+    "breakeven_sweep_points": true,
+    "monthly_history": true
+  },
+  "readme_output_directory": "_local/submission-replay-2026-09-07"
+}

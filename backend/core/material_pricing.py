@@ -7,6 +7,7 @@ from functools import lru_cache
 
 from sqlmodel import Session, select
 
+from backend.core.comtrade_snapshot import load_support_quote_urls
 from backend.core.constants import LB_PER_KG, TROY_OZ_PER_LB
 from backend.core.price_escalation import get_escalation_factor, latest_index_year
 from backend.core.price_fetcher import load_support_series
@@ -336,6 +337,13 @@ def resolve_component_input(
         snapshot["price_unit"] = live["price_unit"]
         snapshot["price_scope"] = "live_market" if basis == "live" else "reference_monthly"
         snapshot["quote_source"] = live["source"]
+        if basis == "reference":
+            observed_date = (live["fetched_at"] or "")[:10]
+            snapshot["quote_year"] = int(observed_date[:4]) if observed_date else None
+            snapshot["pricing_basis"] = f"reference_monthly:{live['symbol']}:{observed_date[:7]}"
+            snapshot["reference_url"] = load_support_quote_urls().get(
+                (live["symbol"], observed_date, live["price"]), ""
+            ) if live["source"] == "UN Comtrade (monthly unit value)" and live["price_unit"] == "$/kg" else ""
         snapshot["normalized_price_per_lb"] = live_per_lb
         snapshot["raw_price_per_lb"] = live_per_lb
         # Live quotes are by definition current; escalation is a no-op.
@@ -352,6 +360,7 @@ def resolve_component_input(
             "fallback_price_unit": material.price_unit,
             "fallback_source": material.source,
             "fallback_quote_year": material.quote_year,
+            "fallback_reference_url": material.reference_url,
             "basis": basis,
         }
     else:

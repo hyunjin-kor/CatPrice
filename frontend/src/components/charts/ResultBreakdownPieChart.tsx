@@ -1,4 +1,5 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
+import { useLang } from '../../lib/i18n';
 
 type PieSlice = {
   name: string;
@@ -12,6 +13,7 @@ export default function ResultBreakdownPieChart({
   data: PieSlice[];
   colors: string[];
 }) {
+  const { t } = useLang();
   return (
     <ResponsiveContainer width="100%" height="100%">
       <PieChart>
@@ -21,7 +23,7 @@ export default function ResultBreakdownPieChart({
           ))}
         </Pie>
         <Tooltip
-          formatter={(value) => [`${Number(value).toFixed(1)}%`, 'Share']}
+          formatter={(value) => [`${Number(value).toFixed(1)}%`, t('Share')]}
           contentStyle={{
             borderRadius: 14,
             border: '1px solid rgba(25,31,40,0.10)',

@@ -1,0 +1,1144 @@
+{
+  "run_date": "2026-09-07",
+  "started_at": "2026-09-06T16:34:48.720944+00:00",
+  "price_basis": "reference",
+  "seed": 20260906,
+  "seed_scope": "PYTHONHASHSEED; all three analyses use deterministic enumeration and do not invoke Monte Carlo",
+  "environment": {
+    "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "about-time": "4.2.1",
+      "accelerate": "1.12.0",
+      "acres": "0.5.0",
+      "aiofile": "3.9.0",
+      "aiohappyeyeballs": "2.6.1",
+      "aiohttp": "3.13.5",
+      "aiosignal": "1.4.0",
+      "alive-progress": "3.3.0",
+      "annotated-doc": "0.0.4",
+      "annotated-types": "0.7.0",
+      "antlr4-python3-runtime": "4.9.3",
+      "anyio": "4.12.1",
+      "APScheduler": "3.11.2",
+      "argcomplete": "3.6.3",
+      "asttokens": "3.0.2",
+      "attrs": "25.4.0",
+      "audioop-lts": "0.2.2",
+      "audioread": "3.1.0",
+      "Authlib": "1.6.9",
+      "autograd": "1.8.0",
+      "autograd-gamma": "0.5.0",
+      "beartype": "0.22.9",
+      "beautifulsoup4": "4.14.3",
+      "blinker": "1.9.0",
+      "boolean.py": "5.0",
+      "browser-cookie3": "0.20.1",
+      "CacheControl": "0.14.4",
+      "cachetools": "7.0.2",
+      "caio": "0.9.25",
+      "cairocffi": "1.7.1",
+      "CairoSVG": "2.9.0",
+      "certifi": "2026.1.4",
+      "cffi": "2.0.0",
+      "charset-normalizer": "3.4.4",
+      "ci-info": "0.4.0",
+      "click": "8.3.1",
+      "cloudpickle": "3.1.2",
+      "cloudscraper": "1.2.71",
+      "cma": "4.4.4",
+      "colorama": "0.4.6",
+      "colorlog": "6.10.1",
+      "comm": "0.2.3",
+      "comtypes": "1.4.16",
+      "configobj": "5.0.9",
+      "configparser": "7.2.0",
+      "contourpy": "1.3.3",
+      "CoolProp": "7.2.0",
+      "cryptography": "46.0.5",
+      "cssselect2": "0.9.0",
+      "curl_cffi": "0.14.0",
+      "cycler": "0.12.1",
+      "cyclonedx-python-lib": "11.7.0",
+      "cyclopts": "4.6.0",
+      "debugpy": "1.8.21",
+      "decorator": "5.3.1",
+      "deep-translator": "1.11.4",
+      "defusedxml": "0.7.1",
+      "Deprecated": "1.3.1",
+      "dill": "0.4.1",
+      "dnspython": "2.8.0",
+      "docling": "2.74.0",
+      "docling-core": "2.65.1",
+      "docling-ibm-models": "3.11.0",
+      "docling-parse": "5.3.3",
+      "docstring_parser": "0.17.0",
+      "docutils": "0.22.4",
+      "duckduckgo_search": "6.3.0",
+      "easyocr": "1.7.2",
+      "email-validator": "2.3.0",
+      "et_xmlfile": "2.0.0",
+      "etelemetry": "0.3.1",
+      "exceptiongroup": "1.3.1",
+      "executing": "2.2.1",
+      "Faker": "40.4.0",
+      "fastapi": "0.135.1",
+      "fastjsonschema": "2.21.2",
+      "fastmcp": "3.1.0",
+      "ffmpeg_downloader": "0.5.2",
+      "filelock": "3.24.3",
+      "filetype": "1.2.0",
+      "firecrawl-py": "4.22.1",
+      "Flask": "3.1.3",
+      "flatbuffers": "25.12.19",
+      "fonttools": "4.61.1",
+      "formulaic": "1.2.1",
+      "freetype-py": "2.5.1",
+      "frozenlist": "1.8.0",
+      "fsspec": "2026.2.0",
+      "graphemeu": "0.7.2",
+      "greenlet": "3.3.2",
+      "h11": "0.16.0",
+      "httpcore": "1.0.9",
+      "httplib2": "0.31.2",
+      "httpx": "0.28.1",
+      "httpx-sse": "0.4.3",
+      "huggingface_hub": "0.36.2",
+      "idna": "3.11",
+      "ImageIO": "2.37.3",
+      "imageio-ffmpeg": "0.6.0",
+      "importlib_metadata": "8.7.1",
+      "iniconfig": "2.3.0",
+      "interface-meta": "1.3.0",
+      "ipykernel": "7.3.0",
+      "ipython": "9.15.0",
+      "ipython_pygments_lexers": "1.1.1",
+      "itsdangerous": "2.2.0",
+      "jaraco.classes": "3.4.0",
+      "jaraco.context": "6.1.0",
+      "jaraco.functools": "4.4.0",
+      "jedi": "0.20.0",
+      "Jinja2": "3.1.6",
+      "joblib": "1.5.3",
+      "jsonlines": "4.0.0",
+      "jsonref": "1.1.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-path": "0.4.5",
+      "jsonschema-specifications": "2025.9.1",
+      "jupyter_client": "8.9.1",
+      "jupyter_core": "5.9.1",
+      "keyring": "25.7.0",
+      "kiwisolver": "1.4.9",
+      "korail2": "0.4.0",
+      "latex2mathml": "3.78.1",
+      "lazy-loader": "0.5",
+      "librosa": "0.11.0",
+      "license-expression": "30.4.4",
+      "lifelines": "0.30.0",
+      "llvmlite": "0.46.0",
+      "loguru": "0.7.3",
+      "looseversion": "1.3.0",
+      "lxml": "6.0.2",
+      "lz4": "4.4.5",
+      "magika": "0.6.2",
+      "markdown-it-py": "4.0.0",
+      "markdownify": "1.2.2",
+      "markitdown": "0.1.5",
+      "marko": "2.2.2",
+      "MarkupSafe": "3.0.3",
+      "matplotlib": "3.10.8",
+      "matplotlib-inline": "0.2.2",
+      "maxun": "0.0.4",
+      "mcp": "1.26.0",
+      "mdurl": "0.1.2",
+      "mido": "1.3.3",
+      "moocore": "0.3.1",
+      "more-itertools": "10.8.0",
+      "MouseInfo": "0.1.3",
+      "mpire": "2.10.2",
+      "mpmath": "1.3.0",
+      "msgpack": "1.1.2",
+      "mss": "10.2.0",
+      "multidict": "6.7.1",
+      "multiprocess": "0.70.19",
+      "narwhals": "2.14.0",
+      "nbclient": "0.11.0",
+      "nbformat": "5.10.4",
+      "nest-asyncio": "1.6.0",
+      "nest-asyncio2": "1.7.2",
+      "networkx": "3.6.1",
+      "ngboost": "0.5.10",
+      "nibabel": "5.4.2",
+      "ninja": "1.13.0",
+      "nipype": "1.11.0",
+      "numba": "0.64.0",
+      "numpy": "2.3.5",
+      "olefile": "0.47",
+      "omegaconf": "2.3.0",
+      "onnxruntime": "1.24.3",
+      "openapi-pydantic": "0.5.1",
+      "opencv-python": "4.13.0.92",
+      "opencv-python-headless": "4.13.0.92",
+      "openpyxl": "3.1.5",
+      "opentelemetry-api": "1.39.1",
+      "outcome": "1.3.0.post0",
+      "packageurl-python": "0.17.6",
+      "packaging": "26.2",
+      "pandas": "2.3.3",
+      "parso": "0.8.7",
+      "pathable": "0.5.0",
+      "pathlib": "1.0.1",
+      "pdf2image": "1.17.0",
+      "pdfminer.six": "20251230",
+      "pdfplumber": "0.11.9",
+      "pefile": "2024.8.26",
+      "pillow": "12.0.0",
+      "pip": "25.2",
+      "pip-api": "0.0.34",
+      "pip-requirements-parser": "32.0.1",
+      "pip_audit": "2.10.0",
+      "pipx": "1.8.0",
+      "platformdirs": "4.9.2",
+      "playwright": "1.58.0",
+      "pluggy": "1.6.0",
+      "polyfactory": "3.2.0",
+      "pooch": "1.9.0",
+      "primp": "1.2.1",
+      "prompt_toolkit": "3.0.52",
+      "propcache": "0.4.1",
+      "protobuf": "7.34.0",
+      "prov": "2.1.1",
+      "psutil": "7.2.2",
+      "pure_eval": "0.2.3",
+      "puremagic": "2.2.0",
+      "py-key-value-aio": "0.4.4",
+      "py-serializable": "2.1.0",
+      "PyAutoGUI": "0.9.54",
+      "pycairo": "1.29.0",
+      "pyclipper": "1.4.0",
+      "pycparser": "3.0",
+      "pycryptodome": "3.23.0",
+      "pycryptodomex": "3.23.0",
+      "pydantic": "2.12.5",
+      "pydantic-settings": "2.13.1",
+      "pydantic_core": "2.41.5",
+      "pyDOE2": "1.3.0",
+      "pydot": "4.0.1",
+      "pyee": "13.0.1",
+      "PyGetWindow": "0.0.9",
+      "Pygments": "2.19.2",
+      "pyhwp": "0.1b15",
+      "pyhwpx": "1.7.2",
+      "PyJWT": "2.11.0",
+      "pylatexenc": "2.10",
+      "pyloudnorm": "0.2.0",
+      "pymoo": "0.6.1.6",
+      "PyMsgBox": "2.0.1",
+      "PyMuPDF": "1.27.2.3",
+      "pyparsing": "3.2.5",
+      "pypdf": "6.9.2",
+      "PyPDF2": "3.0.1",
+      "pypdfium2": "5.5.0",
+      "pyperclip": "1.11.0",
+      "PyRect": "0.2.0",
+      "PyScreeze": "1.0.1",
+      "PySocks": "1.7.1",
+      "pyspellchecker": "0.9.0",
+      "pytesseract": "0.3.13",
+      "pytest": "9.0.2",
+      "python-bidi": "0.6.7",
+      "python-calamine": "0.8.2",
+      "python-dateutil": "2.9.0.post0",
+      "python-docx": "1.2.0",
+      "python-dotenv": "1.2.1",
+      "python-multipart": "0.0.22",
+      "python-pptx": "1.0.2",
+      "pytweening": "1.2.0",
+      "pytz": "2025.2",
+      "pywin32": "311",
+      "pywin32-ctypes": "0.2.3",
+      "pywinauto": "0.6.9",
+      "pyxnat": "1.6.4",
+      "PyYAML": "6.0.3",
+      "pyzmq": "27.1.0",
+      "rapidocr": "3.6.0",
+      "rapidocr-onnxruntime": "1.2.3",
+      "rdflib": "7.6.0",
+      "referencing": "0.37.0",
+      "regex": "2026.2.19",
+      "reportlab": "4.5.0",
+      "requests": "2.32.5",
+      "requests-toolbelt": "1.0.0",
+      "rich": "14.3.3",
+      "rich-rst": "1.3.2",
+      "rlPyCairo": "0.4.0",
+      "rpds-py": "0.30.0",
+      "rtree": "1.4.1",
+      "ruff": "0.15.12",
+      "sacremoses": "0.1.1",
+      "safetensors": "0.7.0",
+      "SALib": "1.5.2",
+      "scikit-image": "0.26.0",
+      "scikit-learn": "1.8.0",
+      "scipy": "1.16.3",
+      "seaborn": "0.13.2",
+      "selenium": "4.41.0",
+      "semchunk": "2.2.2",
+      "sentence-transformers": "5.6.0",
+      "sentencepiece": "0.2.2",
+      "setuptools": "82.0.0",
+      "shadowcopy": "0.0.4",
+      "shap": "0.51.0",
+      "shapely": "2.1.2",
+      "shellingham": "1.5.4",
+      "simplejson": "4.1.1",
+      "six": "1.17.0",
+      "slicer": "0.0.8",
+      "sniffio": "1.3.1",
+      "sortedcontainers": "2.4.0",
+      "soundfile": "0.14.0",
+      "soupsieve": "2.8.3",
+      "soxr": "1.1.0",
+      "SQLAlchemy": "2.0.48",
+      "sqlmodel": "0.0.37",
+      "sse-starlette": "3.3.2",
+      "stack-data": "0.6.3",
+      "standard-aifc": "3.13.0",
+      "standard-chunk": "3.13.0",
+      "standard-sunau": "3.13.0",
+      "starlette": "0.52.1",
+      "svglib": "1.6.0",
+      "sympy": "1.14.0",
+      "tabulate": "0.9.0",
+      "threadpoolctl": "3.6.0",
+      "tifffile": "2026.3.3",
+      "tinycss2": "1.5.1",
+      "tokenizers": "0.22.2",
+      "tomli": "2.4.1",
+      "tomli_w": "1.2.0",
+      "torch": "2.10.0",
+      "torchvision": "0.25.0",
+      "tornado": "6.5.7",
+      "tqdm": "4.67.1",
+      "traitlets": "5.15.1",
+      "traits": "7.1.0",
+      "transformers": "4.57.6",
+      "tree-sitter": "0.25.2",
+      "tree-sitter-c": "0.24.1",
+      "tree-sitter-javascript": "0.25.0",
+      "tree-sitter-python": "0.25.0",
+      "tree-sitter-typescript": "0.23.2",
+      "trio": "0.33.0",
+      "trio-websocket": "0.12.2",
+      "typer": "0.21.2",
+      "typing-inspection": "0.4.2",
+      "typing_extensions": "4.15.0",
+      "tzdata": "2025.3",
+      "tzlocal": "5.3.1",
+      "uiautomation": "2.0.29",
+      "uncalled-for": "0.2.0",
+      "urllib3": "2.6.3",
+      "userpath": "1.9.2",
+      "uv": "0.11.19",
+      "uvicorn": "0.41.0",
+      "vtracer": "0.6.15",
+      "watchfiles": "1.1.1",
+      "wcwidth": "0.8.2",
+      "webencodings": "0.5.1",
+      "websocket-client": "1.9.0",
+      "websockets": "16.0",
+      "Werkzeug": "3.1.8",
+      "win32_setctime": "1.2.0",
+      "WMI": "1.5.1",
+      "wrapt": "2.0.1",
+      "wsproto": "1.3.2",
+      "xlrd": "2.0.2",
+      "xlsxwriter": "3.2.9",
+      "yarl": "1.23.0",
+      "youtube-transcript-api": "1.2.4",
+      "yt-dlp": "2026.6.9",
+      "zipp": "3.23.0"
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/build_reference_basis.py",
+        "--history",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\monthly_history_2026-09-07.json",
+        "--month",
+        "2026-05",
+        "--out",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\reference_basis_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "basis month 2026-05\nsymbol         price  unit       source\nAg           77.5155  $/troy_oz  IMF PCPS (monthly average)\nAl            1.6593  $/lb       IMF PCPS (monthly average)\nAu         4590.5043  $/troy_oz  IMF PCPS (monthly average)\nCo           25.3348  $/lb       IMF PCPS (monthly average)\nCu            6.1290  $/lb       IMF PCPS (monthly average)\nFe            0.0604  $/lb       CatCost 2018 + ChemPPI escalation\nHS251990      0.8226  $/kg       UN Comtrade (monthly unit value)\nHS281122      2.3614  $/kg       UN Comtrade (monthly unit value)\nHS281810      1.0214  $/kg       UN Comtrade (monthly unit value)\nHS281820      0.6728  $/kg       UN Comtrade (monthly unit value)\nHS281990      4.8345  $/kg       UN Comtrade (monthly unit value)\nHS282010      2.8975  $/kg       UN Comtrade (monthly unit value)\nHS282300      3.3076  $/kg       UN Comtrade (monthly unit value)\nHS284210      3.8812  $/kg       UN Comtrade (monthly unit value)\nHS284610     12.4547  $/kg       UN Comtrade (monthly unit value)\nHS380210      3.4256  $/kg       UN Comtrade (monthly unit value)\nIr         7472.5000  $/troy_oz  Johnson Matthey (monthly average)\nMo           29.7738  $/lb       IMF PCPS (monthly average)\nNi            8.5243  $/lb       IMF PCPS (monthly average)\nPd         1447.8500  $/troy_oz  Johnson Matthey (monthly average)\nPt         2002.8500  $/troy_oz  Johnson Matthey (monthly average)\nRe         1179.4000  $/lb       USGS MCS 2026 (2025 avg)\nRh         9706.2500  $/troy_oz  Johnson Matthey (monthly average)\nRu         1597.5000  $/troy_oz  Johnson Matthey (monthly average)\nSn           24.1486  $/lb       IMF PCPS (monthly average)\nV             8.9600  $/lb       USGS MCS 2026 (2025 avg)\nW            21.7400  $/lb       USGS MCS 2026 (2025 avg)\nZn            1.5774  $/lb       IMF PCPS (monthly average)\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\reference_basis_2026-09-07.json  (series=24, anchors=4)\n",
+      "stderr": "",
+      "elapsed_seconds": 0.579
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/reproduce_catcost_table62.py",
+        "--json",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\table62_reproduction_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "\n## 2 wt% Pt/C  (order 2 ton)\nmaterials: published total 10.7  |  sum of rows 10.7013\n                                 COMET   Table 6.2    dev %\nstep_cost_per_hr              390.0000    390.0000    +0.00\ncampaign_days                   2.5000      2.5000    +0.00\ncampaign_cost               23400.0000  23400.0000    +0.00\nprocessing_cost_per_lb          5.8500      5.8500    +0.00\nsubtotal_per_lb                16.5500     16.5500    +0.00\nga_per_lb                       0.8275      0.8300    -0.30\nsard_per_lb                     0.8689      0.8700    -0.13\nmargin_per_lb                   9.1231      9.1200    +0.03\nestimated_price_per_lb         27.3695     27.3700    -0.00\nmargin basis: COMET 33.33% of selling price = 50.0% of pre-margin  |  table footnote 50.0% of pre-margin\nvs market $34.09: COMET -19.7%  |  CatCost published -19.7%\n\n## 21 wt% Ni/Al2O3  (order 20 ton)\nmaterials: published total 11.88  |  sum of rows 11.8918\n                                 COMET   Table 6.2    dev %\nstep_cost_per_hr             1200.0000   1200.0000    +0.00\ncampaign_days                   3.0000      3.0000    +0.00\ncampaign_cost               86400.0000  86400.0000    +0.00\nprocessing_cost_per_lb          2.1600      2.1600    +0.00\nsubtotal_per_lb                14.0400     14.0400    +0.00\nga_per_lb                       0.7020      0.7000    +0.29\nsard_per_lb                     0.7371      0.7400    -0.39\nmargin_per_lb                   3.7415      5.1100   -26.78\nestimated_price_per_lb         19.2206     20.5900    -6.65\nmargin basis: COMET 19.47% of selling price = 24.17% of pre-margin  |  table footnote 33.0% of pre-margin\nvs market $21.33: COMET -9.9%  |  CatCost published -3.5%\n\n## USY-based FCC (with RE)  (order 200 ton)\nmaterials: published total 0.352  |  sum of rows 0.3524\n                                 COMET   Table 6.2    dev %\nstep_cost_per_hr             6725.0000   6725.0000    +0.00\ncampaign_days                   2.3300      4.0000   -41.75\ncampaign_cost              376600.0000 645600.0000   -41.67\nprocessing_cost_per_lb          0.9415      1.6100   -41.52\nsubtotal_per_lb                 1.2935      1.9700   -34.34\nga_per_lb                       0.0647      0.1000   -35.30\nsard_per_lb                     0.0679      0.1000   -32.10\nmargin_per_lb                   0.1829      0.2400   -23.79\nestimated_price_per_lb          1.6090      2.4100   -33.24\nmargin basis: COMET 11.37% of selling price = 12.83% of pre-margin  |  table footnote 11.0% of pre-margin\nvs market $2.73: COMET -41.1%  |  CatCost published -11.7%\nwith footnote-b rate 67 t/d: campaign 3.985 d, processing 1.6080, price 2.4380 (+1.16% vs published)\n\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\table62_reproduction_2026-09-07.json\n",
+      "stderr": "",
+      "elapsed_seconds": 0.078
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/run_all_families.py",
+        "--price-basis",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\reference_basis_2026-09-07.json",
+        "--basis-type",
+        "reference",
+        "--out",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\all_families_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "family                              dom       n  grid#  stab%  proc%  cov%  winner(balanced) -> perf0\naem-electrolyzer-oer                electro   4      4   70.6   0.00   100  cr-doped-amorphous = cr-doped-amorphous\nammonia-cracking                    thermal   4      4   38.8   2.61   100  co-mgo-la2o3 != ni-alumina-baseline\nammonia-synthesis                   thermal   4      4   48.6   2.40    54  cs-co3mo3n = cs-co3mo3n\nco2-electroreduction                electro   4      3   92.7   0.00   100  ag-co-mea = ag-co-mea\nco2-methanation                     thermal   4      4   45.1   1.32    52  ni-ceo2-lowtemp != ni-alumina-baseline\nco2-methanol                        thermal   4      4   54.9   2.92    95  cza-baseline = cza-baseline\nco2-to-formate                      thermal   4      4   59.1   0.43    18  pdag-ndcarbon-co2fa = pdag-ndcarbon-co2fa\nco-prox                             thermal   3      3   22.0   0.77   100  cuo-ceo2 = cuo-ceo2\ndry-reforming                       thermal   4      4   50.3  12.77    55  ni-co-almgo = ni-co-almgo\nethylene-epoxidation                thermal   4      3   64.7   0.70   100  agcs-industrial != ag-alumina-baseline\nfischer-tropsch-synthesis           thermal   4      3   36.7  17.48    59  fe-silica-lower-olefin = fe-silica-lower-olefin\nformic-acid-dehydrogenation         thermal   4      3   48.6  12.32     4  co-nc-nonnoble = co-nc-nonnoble\nfuel-cell-orr                       electro   4      4   25.2  17.19    33  fen-c-pgmfree-cathode = fen-c-pgmfree-cathode\nglycerol-electrooxidation           electro   4      2   72.0   0.00    47  niooh-glycerol-anode = niooh-glycerol-anode\nhydrodeoxygenation                  thermal   4      3   82.9   6.24    30  comos-hdo = comos-hdo\nhydrogen-evolution-reaction         electro   4      2   71.3   0.00    62  nimo-alkaline-her-cathode = nimo-alkaline-her-cathode\nmethane-pyrolysis                   thermal   4      4   49.7  27.58    50  activated-carbon-autocatalytic = activated-carbon-autocatalytic\nmethanol-to-olefins                 thermal   4      3   54.9  93.36     1  hzsm5-mth = hzsm5-mth\nnh3-scr                             thermal   3      3   78.0  56.74    35  v2o5-wo3-tio2 = v2o5-wo3-tio2\nnitrogen-reduction-reaction         electro   4      2   80.4   0.00    50  li-mediated-nrr != plasma-nrr\nolefin-metathesis                   thermal   4      2   57.3  14.98    54  wo3-silica-oct != mo-silica-alumina\npem-electrolyzer-oer                electro   4      3   77.3   0.00   100  pem-low-ir-interface = pem-low-ir-interface\nphotocatalytic-co2-reduction        thermal   4      4   77.6  55.70    35  tio2-photo-co2 = tio2-photo-co2\nphotocatalytic-water-splitting      thermal   4      4   54.9  26.21    50  pt-tio2-cocatalyst != tio2-anatase-baseline\npropane-dehydrogenation             thermal   4      4   66.4  26.14    45  crox-alumina-catofin = crox-alumina-catofin\nrwgs                                thermal   4      4   37.8   2.24   100  cu-ceria-baseline = cu-ceria-baseline\nselective-acetylene-hydrogenation   thermal   4      4   58.0   2.79   100  nizn-intermetallic = nizn-intermetallic\nsteam-methane-reforming             thermal   3      3   56.6   8.08    72  ni-calcium-aluminate = ni-calcium-aluminate\nsyngas-methanol                     thermal   3      3   88.8   4.06    99  cza-industrial = cza-industrial\nwater-gas-shift                     thermal   4      4   35.3   5.53    97  cu-zno-baseline = cu-zno-baseline\n\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\all_families_2026-09-07.json  (families=30, candidates=116, grid points=286)\n",
+      "stderr": "",
+      "elapsed_seconds": 1.375
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/price_volatility_screen.py",
+        "--history",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\monthly_history_2026-09-07.json",
+        "--since",
+        "2019-01",
+        "--price-basis",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\reference_basis_2026-09-07.json",
+        "--basis-type",
+        "reference",
+        "--out",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\price_volatility_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "frozen history: C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\monthly_history_2026-09-07.json since 2019-01\nheld at baseline (incomplete coverage of the window): HS251990, HS281122, HS281810, HS281820, HS281990, HS282010, HS282300, HS284210, HS284610, HS380210\nprice states: 89 dates (2019-01-31 .. 2026-05-31), outlier rows dropped: 0\nvarying symbols (14): Ag, Al, Au, Co, Cu, Ir, Mo, Ni, Pd, Pt, Rh, Ru, Sn, Zn\n  aem-electrolyzer-oer                   balanced:1  perf0:1  stable\n  ammonia-cracking                       balanced:1  perf0:1  stable\n  ammonia-synthesis                      balanced:1  perf0:2  FLIPS\n  co2-electroreduction                   balanced:1  perf0:1  stable\n  co2-methanation                        balanced:2  perf0:1  stable\n  co2-methanol                           balanced:1  perf0:1  stable\n  co2-to-formate                         balanced:2  perf0:2  FLIPS\n  co-prox                                balanced:2  perf0:2  FLIPS\n  dry-reforming                          balanced:1  perf0:1  stable\n  ethylene-epoxidation                   balanced:1  perf0:1  stable\n  fischer-tropsch-synthesis              balanced:1  perf0:1  stable\n  formic-acid-dehydrogenation            balanced:1  perf0:1  stable\n  fuel-cell-orr                          balanced:1  perf0:1  stable\n  glycerol-electrooxidation              balanced:1  perf0:1  stable\n  hydrodeoxygenation                     balanced:1  perf0:1  stable\n  hydrogen-evolution-reaction            balanced:1  perf0:1  stable\n  methane-pyrolysis                      balanced:1  perf0:1  stable\n  methanol-to-olefins                    balanced:1  perf0:1  stable\n  nh3-scr                                balanced:1  perf0:1  stable\n  nitrogen-reduction-reaction            balanced:2  perf0:2  FLIPS\n  olefin-metathesis                      balanced:1  perf0:1  stable\n  pem-electrolyzer-oer                   balanced:1  perf0:1  stable\n  photocatalytic-co2-reduction           balanced:1  perf0:1  stable\n  photocatalytic-water-splitting         balanced:2  perf0:2  FLIPS\n  propane-dehydrogenation                balanced:1  perf0:1  stable\n  rwgs                                   balanced:2  perf0:1  stable\n  selective-acetylene-hydrogenation      balanced:1  perf0:1  stable\n  steam-methane-reforming                balanced:1  perf0:1  stable\n  syngas-methanol                        balanced:1  perf0:1  stable\n  water-gas-shift                        balanced:1  perf0:1  stable\n\nfamilies whose winner changes across the price window:\n  balanced profile      : 6 / 30\n  performance-zero      : 5 / 30\n    ammonia-synthesis                      fused-iron-baseline×65, cs-co3mo3n×24\n    co2-to-formate                         ru-sa-ldh×53, pdag-ndcarbon-co2fa×36\n    co-prox                                cuo-ceo2×87, pt-fe-alumina×2\n    nitrogen-reduction-reaction            li-mediated-nrr×77, plasma-nrr×12\n    photocatalytic-water-splitting         tio2-anatase-baseline×50, pt-tio2-cocatalyst×39\n\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\price_volatility_2026-09-07.json\n",
+      "stderr": "",
+      "elapsed_seconds": 6.739
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/active_metal_breakeven.py",
+        "--history",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\monthly_history_2026-09-07.json",
+        "--price-basis",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\reference_basis_2026-09-07.json",
+        "--basis-type",
+        "reference",
+        "--out",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\active_metal_breakeven_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "family                            exposure            A = cost winner               B                             metal         cost break-even         perf0 composite  hist B%\naem-electrolyzer-oer              metal_vs_none       cr-doped-amorphous            nico2o4-spinel                Co                   A always                A always        -\naem-electrolyzer-oer              metal_vs_none       cr-doped-amorphous            nico2o4-spinel                Ni                   A always                A always        -\nammonia-cracking                  precious_vs_base    ni-alumina-baseline           co-mgo-la2o3                  Co             20.24 (0.799x)          24.41 (0.964x)       67\nammonia-cracking                  precious_vs_base    ni-alumina-baseline           co-mgo-la2o3                  Ni               10.5 (1.23x)          8.214 (0.964x)       12\nammonia-cracking                  precious_vs_base    ni-alumina-baseline           ru-mgo-premium                Ni                   A always                A always        -\nammonia-cracking                  precious_vs_base    ni-alumina-baseline           ru-mgo-premium                Ru            1.726 (0.0011x)         1.703 (0.0011x)        0\nammonia-synthesis                 metal_vs_none       fused-iron-baseline           cs-co3mo3n                    Co                   A always           313.7 (12.4x)        -\nammonia-synthesis                 metal_vs_none       fused-iron-baseline           cs-co3mo3n                    Mo                   A always        0.02977 (0.001x)        -\nammonia-synthesis                 metal_vs_none       fused-iron-baseline           ru-graphite-kaap              Ru                   A always                A always        -\nammonia-synthesis                 metal_vs_none       fused-iron-baseline           ru-cafh-lowtemp               Ru                   A always                A always        -\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              ag-co-mea                     Ag            1.663 (0.0215x)           130.4 (1.68x)        0\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              ag-co-mea                     Sn               1229 (50.9x)                B always        0\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              cu-multicarbon-co2rr          Cu                   A always                A always        -\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              cu-multicarbon-co2rr          Sn                   A always             313.2 (13x)        -\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              au-co-co2rr                   Au                   A always                A always        -\nco2-electroreduction              precious_vs_base    sn-formate-co2rr              au-co-co2rr                   Sn                   A always                A always        -\nco2-methanation                   precious_vs_base    ni-ceo2-lowtemp               ru-layered-titanate           Ni                   A always                A always        -\nco2-methanation                   precious_vs_base    ni-ceo2-lowtemp               ru-layered-titanate           Ru                   A always                A always        -\nco2-methanation                   precious_vs_base    ni-ceo2-lowtemp               ru-mnox-photothermal          Ni                   A always                A always        -\nco2-methanation                   precious_vs_base    ni-ceo2-lowtemp               ru-mnox-photothermal          Ru                   A always                A always        -\nco2-methanol                      precious_vs_base    cu-zrox-interface             in2o3-zro2-lowtemp            Cu                   A always                A always        -\nco2-methanol                      precious_vs_base    cu-zrox-interface             pd-in2o3                      Cu                   A always                A always        -\nco2-methanol                      precious_vs_base    cu-zrox-interface             pd-in2o3                      Pd                   A always                A always        -\nco2-to-formate                    precious_vs_preciousru-sa-ldh                     pdag-ndcarbon-co2fa           Ag                   A always            1103 (14.2x)        -\nco2-to-formate                    precious_vs_preciousru-sa-ldh                     pdag-ndcarbon-co2fa           Pd            111.6 (0.0771x)            2435 (1.68x)        0\nco2-to-formate                    precious_vs_preciousru-sa-ldh                     pdag-ndcarbon-co2fa           Ru           1.27e+04 (7.95x)                B always        0\nco2-to-formate                    precious_vs_preciousru-sa-ldh                     ir-pincer-co2fa               Ir                   A always                A always        -\nco2-to-formate                    precious_vs_preciousru-sa-ldh                     ir-pincer-co2fa               Ru                   A always       1.077e+05 (67.4x)        -\nco-prox                           precious_vs_base    cuo-ceo2                      pt-fe-alumina                 Cu                   A always                A always        -\nco-prox                           precious_vs_base    cuo-ceo2                      pt-fe-alumina                 Pt                   A always           1394 (0.696x)        -\nco-prox                           precious_vs_base    cuo-ceo2                      au-tio2-nanogold              Au                   A always                A always        -\nco-prox                           precious_vs_base    cuo-ceo2                      au-tio2-nanogold              Cu                   A always                A always        -\ndry-reforming                     precious_vs_base    ni-zeolite-stable             ni-co-almgo                   Co             19.28 (0.761x)         1.814 (0.0716x)       64\ndry-reforming                     precious_vs_base    ni-zeolite-stable             ir-ceria-premium              Ir            10.93 (0.0015x)         10.88 (0.0015x)        0\ndry-reforming                     precious_vs_base    ni-zeolite-stable             ir-ceria-premium              Ni                   A always                A always        -\nethylene-epoxidation              base_vs_base        ag-alumina-baseline           cu-ag-bimetallic              Cu                   A always                A always        -\nfischer-tropsch-synthesis         metal_vs_none       fe-silica-lower-olefin        fe-cu-k-precipitated          Cu                   A always                A always        -\nfischer-tropsch-synthesis         metal_vs_none       fe-silica-lower-olefin        co-alumina-fts                Co                   A always         2.184 (0.0862x)        -\nfischer-tropsch-synthesis         metal_vs_none       fe-silica-lower-olefin        co-cnt-structured             Co                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                ptmo-gasphase-premium         Co                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                ptmo-gasphase-premium         Mo                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                ptmo-gasphase-premium         Pt                   A always          538.4 (0.269x)        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                pd-carbon-baseline            Co                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                pd-carbon-baseline            Pd            2.651 (0.0018x)            363 (0.251x)        0\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                aupd-mil101                   Au                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                aupd-mil101                   Co                   A always                A always        -\nformic-acid-dehydrogenation       precious_vs_base    co-nc-nonnoble                aupd-mil101                   Pd                   A always                A always        -\nfuel-cell-orr                     metal_vs_none       fen-c-pgmfree-cathode         ptco-intermetallic-cathode    Co                   A always                A always        -\nfuel-cell-orr                     metal_vs_none       fen-c-pgmfree-cathode         ptco-intermetallic-cathode    Pt                   A always                A always        -\nfuel-cell-orr                     metal_vs_none       fen-c-pgmfree-cathode         ptc-baseline-cathode          Pt                   A always         18.59 (0.0093x)        -\nfuel-cell-orr                     metal_vs_none       fen-c-pgmfree-cathode         ptni-octahedra                Ni                   A always                A always        -\nfuel-cell-orr                     metal_vs_none       fen-c-pgmfree-cathode         ptni-octahedra                Pt                   A always                A always        -\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          pt-c-glycerol-anode           Ni                   A always                A always        -\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          pt-c-glycerol-anode           Pt              1020 (0.509x)         119.1 (0.0595x)       66\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          pt-bi-dha                     Ni                   A always                A always        -\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          pt-bi-dha                     Pt                   A always                A always        -\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          au-c-glycerol-selectivity     Au              1020 (0.222x)          35.4 (0.0077x)        0\nglycerol-electrooxidation         precious_vs_base    niooh-glycerol-anode          au-c-glycerol-selectivity     Ni                   A always                A always        -\nhydrodeoxygenation                precious_vs_base    comos-hdo                     nimo-carbon-hdo               Co              64.33 (2.54x)            2104 (83.1x)        0\nhydrodeoxygenation                precious_vs_base    comos-hdo                     nimo-carbon-hdo               Ni                   A always                A always        -\nhydrodeoxygenation                precious_vs_base    comos-hdo                     pt-silica-hdo                 Co                   A always                A always        -\nhydrodeoxygenation                precious_vs_base    comos-hdo                     pt-silica-hdo                 Mo               2578 (86.6x)            2667 (89.6x)        0\nhydrodeoxygenation                precious_vs_base    comos-hdo                     pt-silica-hdo                 Pt            9.034 (0.0045x)                A always        0\nhydrodeoxygenation                precious_vs_base    comos-hdo                     ru-carbon-hdo                 Co                   A always                A always        -\nhydrodeoxygenation                precious_vs_base    comos-hdo                     ru-carbon-hdo                 Mo                   A always                A always        -\nhydrodeoxygenation                precious_vs_base    comos-hdo                     ru-carbon-hdo                 Ru            4.986 (0.0031x)                A always        0\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     mos2-acidic-her-cathode       Mo                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     mos2-acidic-her-cathode       Ni                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     pt-carbon-her-cathode         Mo                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     pt-carbon-her-cathode         Ni                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     pt-carbon-her-cathode         Pt                   A always         124.7 (0.0623x)        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     ru-c2n-her                    Mo                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     ru-c2n-her                    Ni                   A always                A always        -\nhydrogen-evolution-reaction       precious_vs_base    nimo-alkaline-her-cathode     ru-c2n-her                    Ru                3 (0.0019x)                A always        0\nmethane-pyrolysis                 metal_vs_none       activated-carbon-autocatalyti ni-sio2-highload              Ni                   A always                A always        -\nmethane-pyrolysis                 metal_vs_none       activated-carbon-autocatalyti molten-ni-bi                  Ni                   A always                A always        -\nmethanol-to-olefins               metal_vs_none       hzsm5-mth                     zn-zsm5-aromatics             Zn                   A always                A always        -\nnh3-scr                           metal_vs_none       fe-zsm-5                      cu-ssz-13                     Cu                   A always                A always        -\nnitrogen-reduction-reaction       base_vs_base        plasma-nrr                    li-mediated-nrr               Cu                   A always           5.94 (0.969x)        -\nnitrogen-reduction-reaction       base_vs_base        plasma-nrr                    li-mediated-nrr               Ni                   A always            8.73 (1.02x)        -\nnitrogen-reduction-reaction       base_vs_base        plasma-nrr                    aqueous-nrr-cu                Cu                   A always           5.32 (0.868x)        -\nnitrogen-reduction-reaction       base_vs_base        plasma-nrr                    aqueous-nrr-cu                Ni                   A always            9.386 (1.1x)        -\nnitrogen-reduction-reaction       base_vs_base        plasma-nrr                    li-flow-shuttle               Ni              22.23 (2.61x)            28.11 (3.3x)        0\nolefin-metathesis                 base_vs_base        wo3-silica-oct                mo-silica-alumina             Mo                   A always          4.083 (0.137x)        -\nolefin-metathesis                 base_vs_base        wo3-silica-oct                mo-silica-alumina             W               67.58 (3.11x)          11.93 (0.549x)  no hist\nolefin-metathesis                 base_vs_base        wo3-silica-oct                re2o7-alumina-mild            W                1084 (49.9x)            1008 (46.4x)  no hist\npem-electrolyzer-oer              metal_vs_none       pem-low-ir-interface          iro2-tio2-supported           Ir                   A always                A always        -\nphotocatalytic-co2-reduction      metal_vs_none       tio2-photo-co2                cu2o-mof-co2                  Cu                   A always                A always        -\nphotocatalytic-water-splitting    metal_vs_none       tio2-anatase-baseline         pt-tio2-cocatalyst            Pt                   A always         4.161 (0.0021x)        -\nphotocatalytic-water-splitting    metal_vs_none       tio2-anatase-baseline         srtio3-al-qe-benchmark        Co                   A always                A always        -\nphotocatalytic-water-splitting    metal_vs_none       tio2-anatase-baseline         srtio3-al-qe-benchmark        Rh                   A always                A always        -\npropane-dehydrogenation           metal_vs_none       crox-alumina-catofin          ptsn-alumina-pdh              Pt                   A always         21.37 (0.0107x)        -\npropane-dehydrogenation           metal_vs_none       crox-alumina-catofin          ptsn-alumina-pdh              Sn                   A always                A always        -\npropane-dehydrogenation           metal_vs_none       crox-alumina-catofin          ptzn-intermetallic-pdh        Pt                   A always                A always        -\npropane-dehydrogenation           metal_vs_none       crox-alumina-catofin          ptzn-intermetallic-pdh        Zn                   A always                A always        -\nrwgs                              precious_vs_base    cu-ceria-baseline             mo2n-hightemp                 Cu              132.1 (21.6x)        0.1734 (0.0283x)        0\nrwgs                              precious_vs_base    cu-ceria-baseline             mo2n-hightemp                 Mo            1.738 (0.0584x)                A always        0\nrwgs                              precious_vs_base    cu-ceria-baseline             pt-tio2-premium               Cu                   A always                A always        -\nrwgs                              precious_vs_base    cu-ceria-baseline             pt-tio2-premium               Pt                   A always                A always        -\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdcu-saa                      Cu                   A always                A always        -\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdcu-saa                      Ni              27.54 (3.23x)            27.7 (3.25x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdcu-saa                      Pd                   A always                A always        -\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdcu-saa                      Zn              58.64 (37.2x)           59.16 (37.5x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pd-alumina-baseline           Ni              49.56 (5.81x)           47.11 (5.53x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pd-alumina-baseline           Pd             323.1 (0.223x)          351.6 (0.243x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pd-alumina-baseline           Zn                124.7 (79x)           117.3 (74.4x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdag-bimetallic               Ag                   A always                A always        -\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdag-bimetallic               Ni              63.66 (7.47x)           61.61 (7.23x)        0\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdag-bimetallic               Pd                   A always                A always        -\nselective-acetylene-hydrogenation precious_vs_base    nizn-intermetallic            pdag-bimetallic               Zn                   A always                A always        -\nsteam-methane-reforming           precious_vs_base    sn-ni-coking-resistant        ni-calcium-aluminate          Sn              127.8 (5.29x)                B always        0\nsteam-methane-reforming           precious_vs_base    sn-ni-coking-resistant        rh-alumina-compact            Ni                   A always                A always        -\nsteam-methane-reforming           precious_vs_base    sn-ni-coking-resistant        rh-alumina-compact            Rh                   A always                A always        -\nsteam-methane-reforming           precious_vs_base    sn-ni-coking-resistant        rh-alumina-compact            Sn                   A always                A always        -\nsyngas-methanol                   precious_vs_base    cza-industrial                pd-zno-intermetallic          Cu                   A always                A always        -\nsyngas-methanol                   precious_vs_base    cza-industrial                pd-zno-intermetallic          Pd             9.44 (0.0065x)         8.161 (0.0056x)        0\nwater-gas-shift                   precious_vs_base    fe-cr-hts                     co-ceria-interface            Co             9.234 (0.364x)             328.6 (13x)        0\nwater-gas-shift                   precious_vs_base    fe-cr-hts                     co-ceria-interface            Cu              106.5 (17.4x)           115.2 (18.8x)        0\nwater-gas-shift                   precious_vs_base    fe-cr-hts                     pt-ceria-premium              Cu                   A always                A always        -\nwater-gas-shift                   precious_vs_base    fe-cr-hts                     pt-ceria-premium              Pt            5.254 (0.0026x)         5.709 (0.0029x)        0\n\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\active_metal_breakeven_2026-09-07.json  (families=30, contests=120, errors=0)\n",
+      "stderr": "",
+      "elapsed_seconds": 9.071
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/run_all_families.py",
+        "--price-basis",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\live_basis_2026-09-07.json",
+        "--basis-type",
+        "live",
+        "--out",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\all_families_live_2026-09-07.json"
+      ],
+      "returncode": 0,
+      "stdout": "family                              dom       n  grid#  stab%  proc%  cov%  winner(balanced) -> perf0\naem-electrolyzer-oer                electro   4      3   76.6   0.00   100  cr-doped-amorphous = cr-doped-amorphous\nammonia-cracking                    thermal   4      4   31.1   2.61   100  ni-mgo-ceo2-interface != ni-alumina-baseline\nammonia-synthesis                   thermal   4      4   42.7   2.40    54  fused-iron-baseline = fused-iron-baseline\nco2-electroreduction                electro   4      3   92.7   0.00   100  ag-co-mea = ag-co-mea\nco2-methanation                     thermal   4      4   59.8   1.32    52  ni-ceo2-lowtemp != ni-alumina-baseline\nco2-methanol                        thermal   4      4   55.6   2.92    95  cza-baseline = cza-baseline\nco2-to-formate                      thermal   4      4   58.4   0.43    18  pdag-ndcarbon-co2fa = pdag-ndcarbon-co2fa\nco-prox                             thermal   3      3   77.6   0.77   100  pt-fe-alumina != cuo-ceo2\ndry-reforming                       thermal   4      4   61.2  12.77    55  ni-single-atom-ceria = ni-single-atom-ceria\nethylene-epoxidation                thermal   4      3   63.6   0.70   100  agcs-industrial != ag-alumina-baseline\nfischer-tropsch-synthesis           thermal   4      3   57.0  17.48    59  fe-silica-lower-olefin = fe-silica-lower-olefin\nformic-acid-dehydrogenation         thermal   4      3   40.6  12.32     4  co-nc-nonnoble = co-nc-nonnoble\nfuel-cell-orr                       electro   4      4   24.1  17.19    33  fen-c-pgmfree-cathode != ptc-baseline-cathode\nglycerol-electrooxidation           electro   4      2   54.2   0.00    47  niooh-glycerol-anode = niooh-glycerol-anode\nhydrodeoxygenation                  thermal   4      4   37.8   6.24    30  comos-hdo = comos-hdo\nhydrogen-evolution-reaction         electro   4      2   51.7   0.00    62  nimo-alkaline-her-cathode = nimo-alkaline-her-cathode\nmethane-pyrolysis                   thermal   4      4   58.4  27.58    50  activated-carbon-autocatalytic = activated-carbon-autocatalytic\nmethanol-to-olefins                 thermal   4      3   55.2  93.36     1  hzsm5-mth = hzsm5-mth\nnh3-scr                             thermal   3      3   78.0  56.74    35  v2o5-wo3-tio2 = v2o5-wo3-tio2\nnitrogen-reduction-reaction         electro   4      3   29.7   0.00    50  plasma-nrr = plasma-nrr\nolefin-metathesis                   thermal   4      2   88.8  14.98    54  wo3-silica-oct = wo3-silica-oct\npem-electrolyzer-oer                electro   4      3   75.9   0.00   100  pem-low-ir-interface = pem-low-ir-interface\nphotocatalytic-co2-reduction        thermal   4      4   77.6  55.70    35  tio2-photo-co2 = tio2-photo-co2\nphotocatalytic-water-splitting      thermal   4      4   62.2  26.21    50  pt-tio2-cocatalyst != tio2-anatase-baseline\npropane-dehydrogenation             thermal   4      3   65.4  26.14    45  crox-alumina-catofin = crox-alumina-catofin\nrwgs                                thermal   4      4   70.3   2.24   100  cu-ceria-baseline = cu-ceria-baseline\nselective-acetylene-hydrogenation   thermal   4      4   53.5   2.79   100  nizn-intermetallic = nizn-intermetallic\nsteam-methane-reforming             thermal   3      3   54.5   8.08    72  ni-calcium-aluminate = ni-calcium-aluminate\nsyngas-methanol                     thermal   3      3   86.0   4.06    99  cza-industrial = cza-industrial\nwater-gas-shift                     thermal   4      4   60.5   5.53    97  cu-zno-baseline = cu-zno-baseline\n\nwrote C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\all_families_live_2026-09-07.json  (families=30, candidates=116, grid points=286)\n",
+      "stderr": "",
+      "elapsed_seconds": 1.295
+    },
+    {
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/generate_paper_figures.py",
+        "--directory",
+        "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07",
+        "--date",
+        "2026-09-07"
+      ],
+      "returncode": 0,
+      "stdout": "wrote 6 SVG and PNG figure pairs to C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\figures\n",
+      "stderr": "",
+      "elapsed_seconds": 3.671
+    }
+  ],
+  "status": "complete",
+  "history": {
+    "status": "provided_snapshot",
+    "note": "Network collection skipped explicitly via --history.",
+    "source": "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\submission-2026-09-07\\price_history_2026-09-07.json",
+    "file": "price_history_2026-09-07.json",
+    "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+    "upstream_metadata": {
+      "generated_at": "2026-09-06T02:54:10.766728+00:00",
+      "requested": {
+        "start": "2019-01-01",
+        "end": "2026-09-06"
+      },
+      "cadence": "monthly_average",
+      "last_month": "2026-07",
+      "failures": {}
+    }
+  },
+  "support_history": {
+    "file": "support_history_2026-09-07.json",
+    "sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29",
+    "series": [
+      "HS251990",
+      "HS281122",
+      "HS281810",
+      "HS281820",
+      "HS281990",
+      "HS282010",
+      "HS282300",
+      "HS284210",
+      "HS284610",
+      "HS380210"
+    ],
+    "note": "Exact monthly all-grade import unit values; missing months are not interpolated. Included in latest_common_month."
+  },
+  "basis_month": "2026-05",
+  "live_snapshot": {
+    "basis": "live",
+    "generated_at": "2026-09-06T03:04:51.569590+00:00",
+    "observation_started_at_utc": "2026-09-06T03:04:44.901959+00:00",
+    "observation_finished_at_utc": "2026-09-06T03:04:51.569590+00:00",
+    "source": "Read-only public feed collection replayed through the T09 source selector; optional key-based providers were not requested",
+    "input_observations_file": "docs/audit/t09-live-source-check-2026-09-06.json",
+    "input_observations_sha256": "69f02b99a161e76b90867538e90cc08bc885f13c2fb0feeab32cc28ed6c67b6b",
+    "anchor_note": "Absent public-feed metals use the unchanged get_reference_prices() USGS/CatCost anchors; quote timestamps are retained, including None for anchors. Westmetall fetched_at is collection time under current implementation.",
+    "from_anchors": [
+      "Co",
+      "Fe",
+      "Mo",
+      "Re",
+      "V",
+      "W"
+    ],
+    "status": "available",
+    "observed_symbols": [
+      "Ag",
+      "Al",
+      "Au",
+      "Cu",
+      "Ir",
+      "Ni",
+      "Pd",
+      "Pt",
+      "Rh",
+      "Ru",
+      "Sn",
+      "Zn"
+    ]
+  },
+  "inputs": [
+    {
+      "file": "backend/data/aem_electrolyzer_oer_benchmark.json",
+      "sha256": "e5b93781fe0c4da8cba1b14e4fe384ae0d35b6206932d128498cc1c66791b668"
+    },
+    {
+      "file": "backend/data/ammonia_cracking_benchmark.json",
+      "sha256": "8283ec3fb4edee4da230bfd6e00731ec9a8a499fcbc510db7c38c4947c48deb8"
+    },
+    {
+      "file": "backend/data/ammonia_synthesis_benchmark.json",
+      "sha256": "366326d8f5f01ab06610b25afe9c5851494b3f5c7a36ebde951ed50433efd98b"
+    },
+    {
+      "file": "backend/data/capex_factors.json",
+      "sha256": "a8976a7a6924e35653a5d3426c1d4fd101ff83e705f55f5c857f6253f81f2cd8"
+    },
+    {
+      "file": "backend/data/cepci.json",
+      "sha256": "25cd7e13c1b849825bcbcce53bac14359f75f9f0e10294aa6b238c6cd30c27a9"
+    },
+    {
+      "file": "backend/data/chemppi.json",
+      "sha256": "b00aa54d03a1b0b855751585d73355976d09ceaccf6caf2de681c14c7719d775"
+    },
+    {
+      "file": "backend/data/co2_electroreduction_benchmark.json",
+      "sha256": "13628f565cd342274a0656ca1a2f6b85ab12e747b352e3ad5870866ea58a96d7"
+    },
+    {
+      "file": "backend/data/co2_methanation_benchmark.json",
+      "sha256": "07fac53e6e2a57b514608d9eeb64c3f5f4d50519e8a2afdeed9904f36e02c1b3"
+    },
+    {
+      "file": "backend/data/co2_methanol_benchmark.json",
+      "sha256": "a303e72180093412c6b08d20ebe4902b4d384de9b811794d0e5316103fb9cbff"
+    },
+    {
+      "file": "backend/data/co2_to_formate_benchmark.json",
+      "sha256": "b65f09c933a1037b7214bcf47b17950462c9f2566c24bd951b851fe049c91d08"
+    },
+    {
+      "file": "backend/data/co_prox_benchmark.json",
+      "sha256": "b364560ce902c1564f1e0e1f881bc020fa1a1556598297b9ec97265e0dabd187"
+    },
+    {
+      "file": "backend/data/dry_reforming_benchmark.json",
+      "sha256": "476eb0a3096638a1132abdd5ce1ffa866210d9b0864f77ae938aed721a20cbf0"
+    },
+    {
+      "file": "backend/data/electrocatalyst_library.json",
+      "sha256": "9c2d3cff354f8e0b61f3395ef763f94429599d7269edb468d2c945d9e9d6f16d"
+    },
+    {
+      "file": "backend/data/equipment_library.json",
+      "sha256": "1e5adead1a20343ea0e4e8b56fdb1ff82326f031c8c5d824260acc2f668c20d3"
+    },
+    {
+      "file": "backend/data/ethylene_epoxidation_benchmark.json",
+      "sha256": "1b641f08308cafd1f0892ca8937b12aa5ed49f215b00b093195828d81169f8e2"
+    },
+    {
+      "file": "backend/data/fischer_tropsch_benchmark.json",
+      "sha256": "30eb3d2789dad08e18abac3d7b9759665441dfaf0abe23d44668ba6bec13d17d"
+    },
+    {
+      "file": "backend/data/formic_acid_dehydrogenation_benchmark.json",
+      "sha256": "d84d5c0da4d8457727196eea54c8e532ba52eb59082c57e6bb43509cc886530e"
+    },
+    {
+      "file": "backend/data/fuel_cell_orr_benchmark.json",
+      "sha256": "02949aabd9707bc9d4f6f6a724db488d4faf72890b0dc97ac4834a3d739740ec"
+    },
+    {
+      "file": "backend/data/glycerol_oxidation_benchmark.json",
+      "sha256": "24d86d1fc03f95ec313ab30a183d275324afff2e352feb89051a50e14f84ed72"
+    },
+    {
+      "file": "backend/data/hydrodeoxygenation_benchmark.json",
+      "sha256": "cd99d2c994bab8f3d3001883b8f2075e319e1d14d492271dd1695bbd6d809935"
+    },
+    {
+      "file": "backend/data/hydrogen_evolution_benchmark.json",
+      "sha256": "be5f79cc245fe2282605e8355a477f7b39b4d9ddd2c768a66dbf717b5811a8a0"
+    },
+    {
+      "file": "backend/data/lca_factors.json",
+      "sha256": "d9a360919a20b7dc2f1c0bcf57511711bdfd6d1fd817008440961329911afde6"
+    },
+    {
+      "file": "backend/data/loh2002_step_anchors.json",
+      "sha256": "f55c5e42cb84eb2eafac18d4a335869bbc848d4379163c338a5fd1679e3de2f3"
+    },
+    {
+      "file": "backend/data/materials_curated.json",
+      "sha256": "b99e8e6ac0d7f8938ff59d8896df103d8949337e9a6a15187d135a4d64d03fee"
+    },
+    {
+      "file": "backend/data/materials_library.json",
+      "sha256": "391502d24d75c16509c33bd2c7f4240225efb9f1a46e4dd8708a2d6769fe2e0d"
+    },
+    {
+      "file": "backend/data/mea_manufacturing.json",
+      "sha256": "a6e9bbaba16d9e6a29ae0b4cbf489d7fc979b2dd408b6c7695a7fb103103ab42"
+    },
+    {
+      "file": "backend/data/methane_pyrolysis_benchmark.json",
+      "sha256": "1c8e9713377a99e223816a9fbf7c75199f62437ddfd26f5f9f1b1f00fe0415a2"
+    },
+    {
+      "file": "backend/data/methanol_to_olefins_benchmark.json",
+      "sha256": "b1fb6cb1a04f6a8c90fa3402e2588f5a7802929529e21033a49e3ba2c3ba2ea6"
+    },
+    {
+      "file": "backend/data/nh3_scr_benchmark.json",
+      "sha256": "889e44181166a5b25cc22a5b92ab66ede4493adce367bd0fb62ab089042832ca"
+    },
+    {
+      "file": "backend/data/nitrogen_reduction_benchmark.json",
+      "sha256": "bafc158d5d5b77676bb75a40dd5969342086a9368718fbf687159486c9930aa4"
+    },
+    {
+      "file": "backend/data/olefin_metathesis_benchmark.json",
+      "sha256": "412f091d461f2dbcb02953df9e41dacfbb9e1bac9d33436177fad73eba89309e"
+    },
+    {
+      "file": "backend/data/opex_factors.json",
+      "sha256": "7034d4a7cfa94c19d65994ac9e32dae416b8b14d4c67ae7b49623e0d30b2262d"
+    },
+    {
+      "file": "backend/data/pem_electrolyzer_oer_benchmark.json",
+      "sha256": "e5d03c8be44049edd8812401d867a2bc8505ce365500ea7ad871e0825d634154"
+    },
+    {
+      "file": "backend/data/photocatalytic_co2_reduction_benchmark.json",
+      "sha256": "1f04a4c9c0daf82f2a24d8f6ef79038967902e2bc311707c3a414d6b3fa653cf"
+    },
+    {
+      "file": "backend/data/photocatalytic_water_splitting_benchmark.json",
+      "sha256": "0c5e8bbe3b00243bb11d558d1fd50b65cd0f3591e6d12b6500a73710a28bfbbe"
+    },
+    {
+      "file": "backend/data/process_energy_factors.json",
+      "sha256": "34936c1baa605c710f8df5043d0707ffd52a36e2457c0b3fdde02a86f0fc2067"
+    },
+    {
+      "file": "backend/data/process_templates/aem_fuel_cell_ccm.json",
+      "sha256": "934b73b6dfb70e8bb49091a2d4ae9afb31e6b6d9fa6a1732226acd28d730ee49"
+    },
+    {
+      "file": "backend/data/process_templates/alkaline_electrolyzer_gde.json",
+      "sha256": "3905b0246f38f4dec9c68acaccf9c02a973681090e3529bb4b463267b0ceb321"
+    },
+    {
+      "file": "backend/data/process_templates/colloidal_nanoparticle_deposition.json",
+      "sha256": "60de52ac9160973821cf3d92991180a94945b6ec879c9cf1cbc6c28e5491dc81"
+    },
+    {
+      "file": "backend/data/process_templates/combustion_synthesis_mixed_oxide.json",
+      "sha256": "f23fdaa0246f124880d22bb98847ad8f092fbe9af671ebf2e4681e62916de183"
+    },
+    {
+      "file": "backend/data/process_templates/coprecipitation_metal_oxide.json",
+      "sha256": "42908089894c9f1968b9de1b17386834543cc1051ca503889e1d5c6747056278"
+    },
+    {
+      "file": "backend/data/process_templates/custom_step_process.json",
+      "sha256": "40426e34eb3ff86aab5dd02944572f9c557a6cbfbf676816f51a64658fe489b7"
+    },
+    {
+      "file": "backend/data/process_templates/deposition_precipitation_metal_oxide.json",
+      "sha256": "39f62ccd2ae98032b93a073085d187502366fc02fb392eb186a738451e6e6e2f"
+    },
+    {
+      "file": "backend/data/process_templates/dmfc_gde_route.json",
+      "sha256": "1119d3d1203cb05b5fbebeb3375cf3622786b2793045802cbb8e38fef46f1558"
+    },
+    {
+      "file": "backend/data/process_templates/excess_solution_impregnation_metal_oxide.json",
+      "sha256": "587d81435bb043f22bb32242316c5b4475750b6484d26b76870cd723d8b285e6"
+    },
+    {
+      "file": "backend/data/process_templates/fcc_catalyst_usy_w_re.json",
+      "sha256": "ef21ca2a31180bb69fe3135e87908e987fb57af57a313d66a738558ac70f09a1"
+    },
+    {
+      "file": "backend/data/process_templates/fusion_promoted_magnetite.json",
+      "sha256": "3cbdf560cdfc98c4337db049fd9c5dbc0f0c5e59a26dfaed41f1a4493896b415"
+    },
+    {
+      "file": "backend/data/process_templates/hydrothermal_oxide_nanostructure.json",
+      "sha256": "831f9b6f46373ccc69af6cac94d3d5774a4a226bccbe49ab5d6233af36742eb4"
+    },
+    {
+      "file": "backend/data/process_templates/ion_exchange_zeolite_metal.json",
+      "sha256": "c25d50825569f8ce98bf91bc0f9cbb3053a62ae58738e9552d85bcd0a54c0a1e"
+    },
+    {
+      "file": "backend/data/process_templates/magnesia_alumina.json",
+      "sha256": "c4c89486a424a1ef07beda882757a8400c5113531029be6415f5c57d76bf9aab"
+    },
+    {
+      "file": "backend/data/process_templates/metal_carbide_bulk.json",
+      "sha256": "7c24e605e26fe30bd903901f94bcdeecedf784b7df78608c1dede5a35cdb7ec0"
+    },
+    {
+      "file": "backend/data/process_templates/metal_carbide_on_metal_oxide.json",
+      "sha256": "1bdb63d1ef69c281d5f427341cd929d9ab316dd0c98ba04c6524482bfcda2d77"
+    },
+    {
+      "file": "backend/data/process_templates/metal_earth_abundant_on_metal_oxide.json",
+      "sha256": "e5f79ae9c1acce3c9ff29942f8d12de058b6d99cde004b33779095d3a41e5f37"
+    },
+    {
+      "file": "backend/data/process_templates/metal_pgm_carbon.json",
+      "sha256": "6f408becee8c581f034e6c9dad4071cdae3f0ba9753e5de15f31e378bb3f221d"
+    },
+    {
+      "file": "backend/data/process_templates/metal_pgm_on_carbon.json",
+      "sha256": "55519e4f851b7217f0446c33d44c9487c77e9c0b310b412147e52e5e46ae1d96"
+    },
+    {
+      "file": "backend/data/process_templates/metal_pgm_on_metal_oxide.json",
+      "sha256": "b12aa761fc2ab27d10041acae6af3c6917a0eaaf12c1dc8322a164e5ba0f447d"
+    },
+    {
+      "file": "backend/data/process_templates/pem_electrolyzer_ccm.json",
+      "sha256": "2653bf70fcff21c03f6ce01f0c50961da646bf052abcd1baee5eea462e06213c"
+    },
+    {
+      "file": "backend/data/process_templates/pem_fuel_cell_ccm.json",
+      "sha256": "42911d8adacac6b254afb9ebb72403c3c1c5bf25ed588d57321f61050d98b2ca"
+    },
+    {
+      "file": "backend/data/process_templates/reduction_activation_addon.json",
+      "sha256": "fe59fb079233d86e8a65179da0eca3c8e552e8750c79914f05ec5db0d9f9a5b8"
+    },
+    {
+      "file": "backend/data/process_templates/shaping_extrusion_pelletizing.json",
+      "sha256": "ee847854f1546fd8dc26a83179c9131f81583eaec4afb28a445d1608f3d6bad5"
+    },
+    {
+      "file": "backend/data/process_templates/sol_gel_metal_oxide.json",
+      "sha256": "3f76bfe671f8a5c7f40a5cf021b293ff380ba966091709c08722972bfe7a4591"
+    },
+    {
+      "file": "backend/data/process_templates/solid_state_mechanochemical.json",
+      "sha256": "d8e7805a96250967809953369cd6c928bf8f8a9a8e08d3559b1e45a88710f508"
+    },
+    {
+      "file": "backend/data/process_templates/sulfidation_hydrotreating.json",
+      "sha256": "225f40e66824406637cce0f472972d8b3e694f4f7a6a7ad58265825e5214f0f8"
+    },
+    {
+      "file": "backend/data/process_templates/washcoat_monolith.json",
+      "sha256": "9dc6239fde365f6cc74da11ac13a198edd22d50ea03b4503ddb5b9587d31804d"
+    },
+    {
+      "file": "backend/data/process_templates/wet_impregnation_metal_oxide.json",
+      "sha256": "272eb421a0e76d00b742b794e78db5bbf9d5b79b659d5872df9b76fe672f6aaa"
+    },
+    {
+      "file": "backend/data/process_templates/zeolite_beta_bulk.json",
+      "sha256": "d99a7bc5ef8d4e3363b5e5afe8f0567f825ff791a2689806a2092aa18689da0c"
+    },
+    {
+      "file": "backend/data/process_templates/zeolite_beta_with_metal_active_site.json",
+      "sha256": "c98afb89f783c0161af8c59d951345dbc14a92fa133a083e47a0999374e72d40"
+    },
+    {
+      "file": "backend/data/process_templates/zeolite_fcc.json",
+      "sha256": "88c130fa997fa7a091c3dff39718b0957049e24db5dd6c96a1cc716fbe3a8dd6"
+    },
+    {
+      "file": "backend/data/process_templates/zeolite_zsm_5_2025_pct.json",
+      "sha256": "02208744c5d8f7bc12f74571ebc3567b6d71e791e7ea00146f13f8226fbdbd01"
+    },
+    {
+      "file": "backend/data/process_templates/zeolite_zsm_5_bulk.json",
+      "sha256": "c681a33a792bf95bc6f1518e6fa3e673840fc5e929722a434c0b56226aafdb92"
+    },
+    {
+      "file": "backend/data/propane_dehydrogenation_benchmark.json",
+      "sha256": "53d47a441ec322114e263dbc1cd66c5e1947d66be7264442b37777621071cfcd"
+    },
+    {
+      "file": "backend/data/rwgs_benchmark.json",
+      "sha256": "c372004830615396031c2fde9c0c366fc2b5ef1ba60d4ee942845f978a52a72e"
+    },
+    {
+      "file": "backend/data/selective_acetylene_hydrogenation_benchmark.json",
+      "sha256": "c4aaadfa06997a3a9fbe026e970b9ebcc6b3f06c9a711d8739f25466002cb1ae"
+    },
+    {
+      "file": "backend/data/spent_catalyst.json",
+      "sha256": "d9050806ceed09330b43016459196d7df70aa47e739b538c80ef431b511f7faa"
+    },
+    {
+      "file": "backend/data/steam_methane_reforming_benchmark.json",
+      "sha256": "cee6008be10e780855a8e5f028ea272975348aa7b36db6b4d9231284a8ffc3f9"
+    },
+    {
+      "file": "backend/data/step_library.json",
+      "sha256": "c550828dade8b0e5de130c9612d746a3542c12734ebb4abddb04a9182a6a4e63"
+    },
+    {
+      "file": "backend/data/support_price_history.json",
+      "sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29"
+    },
+    {
+      "file": "backend/data/support_series.json",
+      "sha256": "2267c34b16d94fe59034348f6643dcfa80404b466e52fa381f10bc7b472ae7d8"
+    },
+    {
+      "file": "backend/data/syngas_methanol_benchmark.json",
+      "sha256": "48c89457861cee0ffab005d8a1dc31182f018a7b5423f4622d37c0d0f1935a42"
+    },
+    {
+      "file": "backend/data/unit_conversions.json",
+      "sha256": "6b8825defa627740051a2515cad6566b8670e74f740aa927dc2bdde70859ec12"
+    },
+    {
+      "file": "backend/data/water_gas_shift_benchmark.json",
+      "sha256": "eb0b19af7fc1d3afa171000301e05f747dd04787f6f61123b3713e2826b8f630"
+    }
+  ],
+  "code_inputs": [
+    {
+      "file": "backend\\core\\__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "backend\\core\\breakeven.py",
+      "sha256": "fda464e9e41feac82d9c3dd814cc4be0aba91b7ca293a07ff6450ba22021f26e"
+    },
+    {
+      "file": "backend\\core\\capex_opex.py",
+      "sha256": "ec39add1b9e057d591004312bb0e14a058f6dcaa21813d14d736ca90be3887d7"
+    },
+    {
+      "file": "backend\\core\\comtrade_snapshot.py",
+      "sha256": "e2053833984e61d003034d392933e8d045ddad44056cace8bea1616fdf02fd0f"
+    },
+    {
+      "file": "backend\\core\\constants.py",
+      "sha256": "df0767315a34ec41957e5de3de00606bcfd2b99c4990812fdc2a2e186a331a9f"
+    },
+    {
+      "file": "backend\\core\\cost_engine.py",
+      "sha256": "032ffe6b277e7d695fc74eb77705258780000c9e44e2d3a056d9975e941f212c"
+    },
+    {
+      "file": "backend\\core\\decision_engine.py",
+      "sha256": "69b893a146e2b7c70a333c62cde117995dc52e8534e3492ffc944d9483734948"
+    },
+    {
+      "file": "backend\\core\\electrocatalyst.py",
+      "sha256": "7a066acd01dc7b7fddd5146780567073a88c4d184871d3805c6e18102007e6fa"
+    },
+    {
+      "file": "backend\\core\\lca.py",
+      "sha256": "b68daa224b262f271e188ada93e6c97bfa85922f48e0426df312d0381ffa9fa4"
+    },
+    {
+      "file": "backend\\core\\material_pricing.py",
+      "sha256": "3e1aa62d3a16b5c06b401a5a2f3b48e00032c071b94759a31096a611cdd43b60"
+    },
+    {
+      "file": "backend\\core\\materials_calc.py",
+      "sha256": "516fa4edcfdab2a77f05085a8a173accde5d58ac2c9284ac3cadc5fa810cddcc"
+    },
+    {
+      "file": "backend\\core\\price_escalation.py",
+      "sha256": "461d7e6f4e695223d101c0235f2f0f099cc19e2674b15f2c8a3765a4e336c0c0"
+    },
+    {
+      "file": "backend\\core\\price_evidence.py",
+      "sha256": "20eef990b508a0310348316a23ae5d3ad4c498682263d512e19126db9ddee908"
+    },
+    {
+      "file": "backend\\core\\price_fetcher.py",
+      "sha256": "b848ec372334d531667668d0f03aa4d2e0d7595fa50596505f6ba9ec9dc04cb9"
+    },
+    {
+      "file": "backend\\core\\process_energy.py",
+      "sha256": "4873b75b4cda1ccc94b3604d01faf7a92847a83e4bad36b83c4a3ae0367dc7da"
+    },
+    {
+      "file": "backend\\core\\reference_basis.py",
+      "sha256": "bf9d6c3975caa6d7f5c32f2bfe306520a8394368364af33188816b612c6f2088"
+    },
+    {
+      "file": "backend\\core\\spent_catalyst.py",
+      "sha256": "a74208f46055d084a044c96c69bf29aa0bdcf58a81d01602d0d9b937f9aaa9a8"
+    },
+    {
+      "file": "backend\\core\\step_method.py",
+      "sha256": "4fac130bb6225bf30757cc7e0671c5dc198d9656b1a1932fccad63612a470995"
+    },
+    {
+      "file": "backend\\core\\uncertainty.py",
+      "sha256": "6714ca0b62da87d485a67fa9d3a3ed73fc54b464b27a612ca362858f3641a98f"
+    },
+    {
+      "file": "scripts\\active_metal_breakeven.py",
+      "sha256": "2ed0308d8cd9affcd6ee6c26eff7937af014893197b16d0f046af123459aa52f"
+    },
+    {
+      "file": "scripts\\audit_free_support_impact.py",
+      "sha256": "e28b58f178e210ab0717bbe840ecec3149285c5f867abf06a47d2dd96a7ce4fe"
+    },
+    {
+      "file": "scripts\\audit_provenance.py",
+      "sha256": "5a0f58431dd0ae6b05efbcfbe6a59805165bcfcfee44067396d4036dbd26546c"
+    },
+    {
+      "file": "scripts\\build_reference_basis.py",
+      "sha256": "80dcc7b93530cda6629735275f417ee7c13e744787f8c3fe27658a962d3962c2"
+    },
+    {
+      "file": "scripts\\build_submission_manuscript.py",
+      "sha256": "2222a25151c20f4482e5c6cd39da1d4f0d932e5051502fe44f8fe9aef72c6ebb"
+    },
+    {
+      "file": "scripts\\catcost_excel.py",
+      "sha256": "9fe6f61db9b158174a1b9fe54be82e153e61da9a0dc77c8461491c4fc2714bc5"
+    },
+    {
+      "file": "scripts\\derive_loh_step_rates.py",
+      "sha256": "e79ccaf0d19e90e30b5337951871e82b66afa90b3e009a06378776ebbfa4f47f"
+    },
+    {
+      "file": "scripts\\fetch_price_history.py",
+      "sha256": "5db8e192cc780abb4a0f467585cfba7c437d9e436ad0737fef2a66b56dcb0845"
+    },
+    {
+      "file": "scripts\\fetch_support_history.py",
+      "sha256": "68273522aa10c8deb5f27e0d51d3ec8db3976cd659bc8565697b2ac1b5556182"
+    },
+    {
+      "file": "scripts\\generate_app_icons.py",
+      "sha256": "92f707ba76f167ed4e2addbf75c4e223eb96cfd588eb3420b0c285d08c1e9004"
+    },
+    {
+      "file": "scripts\\generate_paper_figures.py",
+      "sha256": "5ccb219418d0d28d3e0e9dba8d10f0a970395870ed808a395dc3c5aa8a2b8fc7"
+    },
+    {
+      "file": "scripts\\generate_paper_si.py",
+      "sha256": "62ecee90f1c900fe67b490a6b1e9cc10c94332aded3f522bf65236cba6f38709"
+    },
+    {
+      "file": "scripts\\measure_autonomous_baseline.py",
+      "sha256": "80e604e05391a13487b1cbdf070991d98b3896717fb625fb97e58d5c6b5017f7"
+    },
+    {
+      "file": "scripts\\price_volatility_screen.py",
+      "sha256": "ffe4bf4121182f538378b3d1c5bff1d0a607bf59ff2f74a034af1f11ebb6d00f"
+    },
+    {
+      "file": "scripts\\reproduce_catcost_table62.py",
+      "sha256": "52676a0022cb9dc2701d6882363ed5f19e493825573e4a619285450d88605395"
+    },
+    {
+      "file": "scripts\\reproduce_external_cost_cases.py",
+      "sha256": "027b8e94f976582b9e38c27c96d6775bdada0832e0aebe0800715a48dfdd750c"
+    },
+    {
+      "file": "scripts\\reproduce_paper.py",
+      "sha256": "a208828fe67f18d02b6e2c814d9afeda1f4bea9717b764dfd4dcffe9ad77d465"
+    },
+    {
+      "file": "scripts\\round_readme_screens.py",
+      "sha256": "9173e01a7d991f021a8b4be5ea744b96ccc685f2bfa17f22b43444b5bfb79537"
+    },
+    {
+      "file": "scripts\\run_all_families.py",
+      "sha256": "222fc992c28b4935d598415fdcf5cd24bbec11ae228827287272c5330f71ac03"
+    },
+    {
+      "file": "scripts\\validate_catcost_data.py",
+      "sha256": "fab52317dc45603d6c8f1d760f6b49c07a9be66fc2a30cb865d4bbff8076a45f"
+    }
+  ],
+  "project_version": "1.4.0",
+  "analysis_database": "new temporary SQLite database seeded from committed library data",
+  "code_changed_during_run": [],
+  "outputs": [
+    {
+      "file": "active_metal_breakeven_2026-09-07.json",
+      "sha256": "d08a0ca8d91d84d7545f3c9b64d954eb8dbdeaf2128a31d6c1a3e4ec4a960ee5"
+    },
+    {
+      "file": "all_families_2026-09-07.json",
+      "sha256": "d25a24e6a1cbb5ad384e1bf47d98bf04ce9586b86edfda5e81beea1167a4236e"
+    },
+    {
+      "file": "all_families_live_2026-09-07.json",
+      "sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400"
+    },
+    {
+      "file": "breakeven_sweep_points_2026-09-07.json",
+      "sha256": "acd0a840524726fc36c717696c0ffb85dd1c2ab561643f8bec23ece3acbf350f"
+    },
+    {
+      "file": "figure_manifest_2026-09-07.json",
+      "sha256": "18053d3f48cb992a520c3084aaf2e153bd4ef1c6a816743edbe88c21f9a67426"
+    },
+    {
+      "file": "figures\\figure1_architecture_2026-09-07.png",
+      "sha256": "ae9e7e4af95f008381e94343379982a31eed62cd9df7e34a182d485ebf211cfd"
+    },
+    {
+      "file": "figures\\figure1_architecture_2026-09-07.svg",
+      "sha256": "3356220f6946059fe5bf397c51e8644011915895d5d9a9f7c2ef7ce2f2e1ac07"
+    },
+    {
+      "file": "figures\\figure2_table62_2026-09-07.png",
+      "sha256": "e39fa25ec37c56e5a36bf9d133d0b23c102e7b67e1d5082bd53a6f316055686c"
+    },
+    {
+      "file": "figures\\figure2_table62_2026-09-07.svg",
+      "sha256": "d562ceef0e3206bc166af4a04ce66d6fe09966d8e1e4c4bb6d9f464114cb5aec"
+    },
+    {
+      "file": "figures\\figure3_gwp_cost_2026-09-07.png",
+      "sha256": "4c4111c0075622bf6554f84ee2f39c182f5b02d3fc661bf63c734511eb1ebfa2"
+    },
+    {
+      "file": "figures\\figure3_gwp_cost_2026-09-07.svg",
+      "sha256": "28a0b41316555fafde1f234c25866bf5b237efe286b5662a8cc4186af6667bef"
+    },
+    {
+      "file": "figures\\figure4_weight_sensitivity_2026-09-07.png",
+      "sha256": "ba05032bac976187bd2692e32ec314435305dd1e9ab87b165524f07d564e5f13"
+    },
+    {
+      "file": "figures\\figure4_weight_sensitivity_2026-09-07.svg",
+      "sha256": "b18c3771fe78ae116c5df4dba4d2d34f427f81abb202b7c9b7722a63c06da719"
+    },
+    {
+      "file": "figures\\figure5_live_reference_2026-09-07.png",
+      "sha256": "5dcb1bd7c3fdf1af3d32b55dfc29832d592ca323594b266d5d08da9cbb27d8d9"
+    },
+    {
+      "file": "figures\\figure5_live_reference_2026-09-07.svg",
+      "sha256": "5cc61737f7d910884fb4228d73b3ab6baee1b5f49abb1007d88b855e66c4ce5d"
+    },
+    {
+      "file": "figures\\figure6_breakeven_sweeps_2026-09-07.png",
+      "sha256": "af148736f4d7d1f278425fe8ad418042de0fd60de9d6759de0ee575a20626bfb"
+    },
+    {
+      "file": "figures\\figure6_breakeven_sweeps_2026-09-07.svg",
+      "sha256": "496dfe3701ad2b44af0a55507f689c58c3411b45d776e24f8190973e62c8fbe0"
+    },
+    {
+      "file": "live_basis_2026-09-07.json",
+      "sha256": "891ab156cb7bfc85af91afddd0736a32cd40a53785a4711dd0c43dee18395e05"
+    },
+    {
+      "file": "manufacturing_costs_2026-09-07.json",
+      "sha256": "6dbfef38ae81dbde0f026960178606dc46f9bb3ce0494dcd84dfd8e77e0dba5b"
+    },
+    {
+      "file": "monthly_history_2026-09-07.json",
+      "sha256": "0c1cfe4b239f6c5b3c72e4d15df748d0934f44010f2c99aa091f7e53d745d7e3"
+    },
+    {
+      "file": "paper_summary_2026-09-07.json",
+      "sha256": "c649c2c595b802448e429d6eb058df819bbee036f5ededa27712ef5e918381a6"
+    },
+    {
+      "file": "price_history_2026-09-07.json",
+      "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69"
+    },
+    {
+      "file": "price_volatility_2026-09-07.json",
+      "sha256": "65ea7d2f2bab3892d60c9441d21b3fc7f000e37682074280ae7e3ae4074552bb"
+    },
+    {
+      "file": "reference_basis_2026-09-07.json",
+      "sha256": "6ec710eebc2bbee8a390b3fc413e8c70c9947beec1a8fe89f2bdc5167944f506"
+    },
+    {
+      "file": "results_2026-09-07.md",
+      "sha256": "ad5c6ab5d187901a8f15c033e6ad5554e2e7fe530934099417c52fe9419370e3"
+    },
+    {
+      "file": "support_history_2026-09-07.json",
+      "sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29"
+    },
+    {
+      "file": "table62_reproduction_2026-09-07.json",
+      "sha256": "1f5907208f1278b17ba4ed75171c09362de225a9e66711d198e67ff9ae48b136"
+    }
+  ],
+  "finished_at": "2026-09-06T16:35:12.788818+00:00"
+}

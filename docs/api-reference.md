@@ -66,7 +66,16 @@ Simplified calculation with minimal inputs.
 Compare up to 4 compositions side-by-side.
 
 ### POST /api/uncertainty
-Monte Carlo simulation (100-10000 iterations).
+Monte Carlo simulation (100-10000 iterations). Pass `calculation_input` with the
+same body accepted by `/api/calculate`, plus `n_simulations` and optionally `seed`.
+`seed` is a nonnegative integer; the same input and seed reproduce the same
+summary. Omit it (or pass `null`) for fresh random draws. Both the full calculator
+input and legacy flat uncertainty request accept this field.
+
+The offline `scripts/run_all_families.py` analysis accepts `--price-basis <json>`
+for a frozen price map and `--basis-type reference` for the academic tier. Frozen
+runs omit the wall-clock timestamp (`generated_at: null`) so identical inputs
+produce identical JSON; `SOURCE_DATE_EPOCH` can supply a fixed UTC timestamp.
 
 ## Prices
 

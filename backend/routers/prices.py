@@ -12,7 +12,7 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlmodel import Session, select
 
 from backend.core.decision_engine import list_benchmark_catalogs
-from backend.core.price_evidence import describe_price_evidence
+from backend.core.price_evidence import describe_price_evidence, price_needs_review
 from backend.core.price_fetcher import (
     JM_HISTORY_SYMBOLS,
     WESTMETALL_FIELDS,
@@ -96,9 +96,13 @@ def _serialize_price_row(
     source: str,
     fetched_at: str | None,
     basis: str = "live",
+    latest_reference_month: str | None = None,
 ) -> dict:
     source_type = _source_type_from_source(source)
-    evidence = describe_price_evidence(source=source, fetched_at=fetched_at)
+    evidence = describe_price_evidence(
+        source=source, fetched_at=fetched_at, basis=basis,
+        latest_reference_month=latest_reference_month,
+    )
     return {
         "symbol": symbol,
         "name": name,
@@ -111,7 +115,17 @@ def _serialize_price_row(
         "basis": basis,
         "basis_month": fetched_at[:7] if basis == "reference" and fetched_at else None,
         "evidence": evidence,
+        "needs_review": price_needs_review(basis=basis, evidence=evidence, fetched_at=fetched_at),
     }
+
+
+def _latest_reference_month(session: Session) -> str | None:
+    latest = session.exec(
+        select(MetalPrice.fetched_at)
+        .where(MetalPrice.basis == "reference", MetalPrice.symbol.in_(TRACKED_SYMBOLS))
+        .order_by(MetalPrice.fetched_at.desc()).limit(1)
+    ).first()
+    return latest.strftime("%Y-%m") if latest else None
 
 
 def _reference_rows(session: Session, symbol: str, cutoff: date | None = None) -> list[MetalPrice]:
@@ -140,6 +154,7 @@ def get_all_prices(
         .order_by(MetalPrice.fetched_at.desc())
     )
     db_prices = session.exec(stmt).all()
+    latest_reference_month = _latest_reference_month(session) if basis == "reference" else None
 
     seen: set[str] = set()
     result = []
@@ -154,6 +169,7 @@ def get_all_prices(
                 source=p.source,
                 fetched_at=p.fetched_at.isoformat(),
                 basis=basis,
+                latest_reference_month=latest_reference_month,
             ))
 
     # Fill missing symbols from the USGS / CatCost anchors
@@ -167,6 +183,7 @@ def get_all_prices(
                 source=info["source"],
                 fetched_at=info["fetched_at"],
                 basis=basis,
+                latest_reference_month=latest_reference_month,
             ))
 
     # Sort: live prices first, then alphabetical
@@ -406,6 +423,7 @@ def get_price(
         .limit(1)
     )
     p = session.exec(stmt).first()
+    latest_reference_month = _latest_reference_month(session) if basis == "reference" else None
     if p:
         return _serialize_price_row(
             symbol=p.symbol,
@@ -415,6 +433,7 @@ def get_price(
             source=p.source,
             fetched_at=p.fetched_at.isoformat(),
             basis=basis,
+            latest_reference_month=latest_reference_month,
         )
     refs = get_reference_prices()
     if symbol not in refs:
@@ -428,6 +447,7 @@ def get_price(
         source=info["source"],
         fetched_at=info["fetched_at"],
         basis=basis,
+        latest_reference_month=latest_reference_month,
     )
 
 

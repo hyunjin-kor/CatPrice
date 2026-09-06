@@ -1,4 +1,5 @@
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { useLang } from '../../lib/i18n';
 
 type HistogramBar = {
   range: string;
@@ -7,6 +8,7 @@ type HistogramBar = {
 };
 
 export default function EstimateRangeBarChart({ data }: { data: HistogramBar[] }) {
+  const { t } = useLang();
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={data} barSize={54}>
@@ -15,7 +17,7 @@ export default function EstimateRangeBarChart({ data }: { data: HistogramBar[] }
         <YAxis tick={{ fill: '#8b95a1', fontSize: 11 }} axisLine={false} tickLine={false} />
         <Tooltip
           cursor={{ fill: 'rgba(13,148,136,0.06)' }}
-          formatter={(value) => [`${value}%`, 'Share of simulations']}
+          formatter={(value) => [`${value}%`, t('Share of simulations')]}
           contentStyle={{
             borderRadius: 14,
             border: '1px solid rgba(25,31,40,0.10)',

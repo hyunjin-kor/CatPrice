@@ -1,6 +1,6 @@
 # Project Links
 
-Last verified: 2026-09-02
+Last verified: 2026-09-06
 
 This page tracks COMET's external connection points. Only verified links are listed as active.
 
@@ -28,10 +28,12 @@ This page tracks COMET's external connection points. Only verified links are lis
 
 Single source of truth: `package.json`, `pyproject.toml`, `frontend/package.json` must agree.
 
-- Current package version: `1.3.24`
-- Python package version: `1.3.24`
-- Frontend package version: `1.3.24`
-- Latest verified GitHub release: `v1.3.24` (published 2026-08-31, verified via `gh release view v1.3.24` on 2026-09-01; every release is archived on Zenodo under concept DOI `10.5281/zenodo.21451931`)
+- Current prepared package version: `1.4.0`
+- Python package version: `1.4.0`
+- Frontend and backend APP_VERSION: `1.4.0`
+- Latest verified GitHub release: `v1.3.24` (published 2026-08-31T18:24:09Z; verified with `gh release list -L 1` on 2026-09-07). Version 1.4.0 has no release or tag from this run.
+- Concept DOI `10.5281/zenodo.21451931`: DOI resolver, Zenodo and DataCite verified on 2026-09-06; resolves to the existing v1.3.24 record. Crossref 404 reflects DataCite registration, not a broken identifier. [Evidence](sources/t06-external-checks-2026-09-06.json).
+- Citation metadata: root `CITATION.cff` and `codemeta.json` describe prepared source version 1.4.0; no release date is asserted.
 - Asset name pattern: `COMET.Setup.<version>.exe` (installer), `COMET-win-unpacked.zip` (portable), plus `latest.yml` and `COMET.Setup.<version>.exe.blockmap` (auto-update metadata, from v1.3.13 on)
 
 The published GitHub release tag may lag behind the package version when a bump has not yet been tagged. To re-verify, run `gh release list -L 1` against the repo.
@@ -39,3 +41,7 @@ The published GitHub release tag may lag behind the package version when a bump 
 ## Claude Handoff
 
 Use `CLAUDE.md` at the repository root as the first file for Claude or Claude Code. It points to the project rules, verified links, commands, and migration notes needed to continue development without relying on chat history.
+
+## Submission evidence
+
+The current [manuscript](paper/manuscript_2026-09-07.md), [SI](paper/si_2026-09-07.md), and [results](paper/submission-2026-09-07/results_2026-09-07.md) share the frozen May 2026 reference basis. [Source and format checks](paper/submission-format-2026-09-07.md) verify the ACS guidance and existing concept DOI; they do not create a new deposit or establish the planned v1.4.0 release. The [latest task audit](audit/validation-submission-2026-09-07.md) distinguishes completed software/data work from the unresolved empirical manufacturing-cost validation.

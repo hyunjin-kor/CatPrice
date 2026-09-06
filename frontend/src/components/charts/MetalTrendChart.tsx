@@ -9,6 +9,7 @@ import {
   YAxis,
 } from 'recharts';
 import { formatPrice } from '../../lib/format-price';
+import { useLang } from '../../lib/i18n';
 
 type HistoryPoint = {
   date: string;
@@ -31,6 +32,7 @@ export default function MetalTrendChart({
   selectedDisplayUnit: string;
   selectedColor: string;
 }) {
+  const { lang } = useLang();
   return (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart data={data} margin={{ top: 8, right: 16, bottom: 0, left: 0 }}>
@@ -48,7 +50,7 @@ export default function MetalTrendChart({
           tickLine={false}
           tickFormatter={(value) =>
             new Date(value).toLocaleDateString(
-              'en-US',
+              lang === 'ko' ? 'ko-KR' : 'en-US',
               period === '1mo' ? { month: 'short', day: 'numeric' } : { year: '2-digit', month: 'short' },
             )
           }
@@ -64,7 +66,7 @@ export default function MetalTrendChart({
           cursor={{ stroke: 'rgba(13,148,136,0.35)', strokeWidth: 1, strokeDasharray: '3 3' }}
           formatter={(value) => [formatPrice(Number(value)), selectedDisplayUnit]}
           labelFormatter={(value) =>
-            new Date(value).toLocaleDateString('en-US', {
+            new Date(value).toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', {
               year: 'numeric',
               month: 'long',
               day: 'numeric',

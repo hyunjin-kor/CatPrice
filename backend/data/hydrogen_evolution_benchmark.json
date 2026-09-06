@@ -64,7 +64,7 @@
       "label": "Nature Materials 2007",
       "url": "https://doi.org/10.1038/nmat1840",
       "kind": "literature",
-      "note": "Stamenkovic, Mun et al.: trends in electrocatalysis on extended and nanoscale Pt-bimetallic alloy surfaces, foundational for HER cathodes at low Pt loading."
+      "note": "ORR study on Pt3M alloy surfaces; mechanistic context only, not direct HER or Pt/C electrode-assembly evidence."
     },
     {
       "id": "li-mos2-graphene-jacs-2011",
@@ -104,7 +104,7 @@
     {
       "id": "li-mos2-basal-natmater-2016",
       "label": "Nature Materials 2016",
-      "url": "https://doi.org/10.1038/nmat4564",
+      "url": "https://doi.org/10.1038/nmat4465",
       "kind": "literature",
       "note": "Li, Tsai et al.: activating and optimizing MoS2 basal planes for HER through the formation of strained sulphur vacancies, expanding usable active surface beyond edges."
     },
@@ -127,7 +127,7 @@
       "label": "Nature Nanotechnology 2017",
       "url": "https://doi.org/10.1038/nnano.2016.304",
       "kind": "literature",
-      "note": "Ru nanoparticles in a nitrogenated holey C2N framework: 13.5 mV (acid) and 17.0 mV (alkaline) overpotentials at 10 mA/cm2, Pt-class in both media."
+      "note": "Ru nanoparticles in a nitrogenated holey C2N framework: abstract-reported overpotentials of 13.5 mV (acid) and 17.0 mV (alkaline) at 10 mA/cm2. SI Table S1 gives 22 mV in acid at 10 mA/cm2; the discrepancy is unresolved in this audit."
     },
     {
       "id": "fcc-ru-jacs-2016",
@@ -135,6 +135,13 @@
       "url": "https://doi.org/10.1021/jacs.6b11291",
       "kind": "literature",
       "note": "fcc-structured ruthenium outperforms platinum for alkaline hydrogen evolution."
+    },
+    {
+      "id": "mckone-nimo-acscatal-2013",
+      "label": "ACS Catal. 2013",
+      "url": "https://doi.org/10.1021/cs300691m",
+      "kind": "literature",
+      "note": "Unsupported Ni-Mo nanopowders prepared by precipitation/reduction; 6:4 Ni:Mo precursor molar ratio. Table 1 reports 70 mV at 20 mA/cm2 with 1 mg/cm2 in 2 M KOH at 25 C. The COMET 70/30 wt% recipe and electrode defaults remain screening assumptions."
     }
   ],
   "catalog_quotes": [],
@@ -278,8 +285,7 @@
         85
       ],
       "literature_basis_ids": [
-        "norskov-her-volcano-jes-2005",
-        "stamenkovic-pt-bimetallic-natmater-2007"
+        "norskov-her-volcano-jes-2005"
       ],
       "catalog_quote_ids": [],
       "electrode_defaults": {
@@ -339,7 +345,7 @@
         90
       ],
       "literature_basis_ids": [
-        "gong-nio-her-ncomms-2014",
+        "mckone-nimo-acscatal-2013",
         "zou-her-csr-2015"
       ],
       "catalog_quote_ids": [],
@@ -437,7 +443,7 @@
       "title": "Ru@C2N pH-universal cathode",
       "archetype": "Cheaper-PGM option",
       "screening_basis": "literature_architecture_proxy",
-      "summary": "Ruthenium particles locked in a nitrogenated carbon framework deliver platinum-class hydrogen evolution in both acid and base at roughly a third of platinum's metal price.",
+      "summary": "Ruthenium particles in a nitrogenated carbon framework are a literature architecture for hydrogen evolution in acid and base. Relative Ru/Pt cost depends on the selected price basis.",
       "route_template_id": "pem-pt-carbon-cathode-route",
       "order_size_tons": 20,
       "performance_index": 90,
@@ -454,7 +460,7 @@
       "catalog_quote_ids": [],
       "decision_notes": [
         "Prices the Ru-for-Pt substitution between the Pt/C baseline and the two non-PGM entries.",
-        "The C2N framework synthesis (not the metal) is the readiness discount; its precursor chemistry floors at commodity melamine."
+        "C2N is an engineering price proxy. The public supplementary methods identify hexaaminobenzene preparation; no source-matched melamine-to-C2N cost conversion or bulk C2N quotation was verified."
       ],
       "components": [
         {
@@ -479,7 +485,7 @@
             "evidence_tier": "engineering_proxy",
             "confidence_score": 50,
             "transparency": "derived_proxy",
-            "note": "Nitrogenated holey carbon framework proxy; precursor chemistry floors at UN Comtrade melamine ($1.68/kg, 2024) but the condensation synthesis carries a large premium. No public quote exists."
+            "note": "C2N is an engineering price proxy. The public supplementary methods identify hexaaminobenzene preparation; no source-matched melamine-to-C2N cost conversion or bulk C2N quotation was verified."
           }
         }
       ]

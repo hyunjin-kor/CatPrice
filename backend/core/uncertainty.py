@@ -6,8 +6,6 @@ Provides probabilistic cost ranges instead of single-point estimates.
 
 from __future__ import annotations
 
-from copy import deepcopy
-
 import numpy as np
 
 from backend.core.cost_engine import estimate_catalyst_cost
@@ -118,17 +116,17 @@ def run_cost_request_monte_carlo(
         resolved_materials=context["resolved_materials"],
     )
 
+    bounds = np.array([uncertainties.get(key, (1.0, 1.0)) for key in (
+        "active_component_price", "promoter_price", "support_price",
+        "electrode_adjunct_price", "order_size_tons",
+    )])
+    factors = rng.uniform(bounds[:, 0], bounds[:, 1], size=(n_simulations, 5))
     results = []
-    for _ in range(n_simulations):
-        varied_components = deepcopy(context["resolved_components"])
-        varied_electrode = deepcopy(context["electrode_payload"])
+    for factor_row in factors:
+        active_factor, promoter_factor, support_factor, adjunct_factor, order_factor = map(float, factor_row)
+        varied_components = [dict(component) for component in context["resolved_components"]]
+        varied_electrode = dict(context["electrode_payload"]) if context["electrode_payload"] is not None else None
         order_size = req.order_size_tons
-
-        active_factor = rng.uniform(*uncertainties.get("active_component_price", (1.0, 1.0)))
-        promoter_factor = rng.uniform(*uncertainties.get("promoter_price", (1.0, 1.0)))
-        support_factor = rng.uniform(*uncertainties.get("support_price", (1.0, 1.0)))
-        adjunct_factor = rng.uniform(*uncertainties.get("electrode_adjunct_price", (1.0, 1.0)))
-        order_factor = rng.uniform(*uncertainties.get("order_size_tons", (1.0, 1.0)))
 
         for component in varied_components:
             base_price = float(component.get("price_per_lb", 0.0))

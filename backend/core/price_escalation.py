@@ -6,6 +6,8 @@ Adjusts costs between reference years using producer price indices.
 from __future__ import annotations
 
 import json
+from functools import lru_cache
+from pathlib import Path
 
 from backend.paths import data_dir
 
@@ -29,6 +31,13 @@ def _coerce_index_value(index_type: str, value) -> float:
 def _load_index(index_type: str) -> dict[str, float]:
     """Load index data from JSON file."""
     filepath = _DATA_DIR / f"{index_type}.json"
+    stat = filepath.stat()
+    return dict(_read_index(filepath, index_type, stat.st_mtime_ns, stat.st_size))
+
+
+@lru_cache(maxsize=8)
+def _read_index(filepath: Path, index_type: str, _mtime_ns: int, _size: int) -> dict[str, float]:
+    """Reuse parsed indices until a file changes, including after a BLS update."""
     with open(filepath, encoding="utf-8") as f:
         data = json.load(f)
     return {str(k): _coerce_index_value(index_type, v) for k, v in data["annual"].items()}

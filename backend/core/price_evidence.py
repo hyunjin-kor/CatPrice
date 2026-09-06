@@ -160,6 +160,8 @@ def describe_price_evidence(
     source: str | None,
     fetched_at: str | None = None,
     manual: bool = False,
+    basis: str = "live",
+    latest_reference_month: str | None = None,
 ) -> dict[str, Any]:
     """Return consistent price-evidence metadata for a source string."""
 
@@ -194,6 +196,12 @@ def describe_price_evidence(
 
     freshness_target_hours = rule["freshness_target_hours"]
     freshness_status = _freshness_status(age_hours, freshness_target_hours)
+    if basis == "reference" and "monthly average" in (source or ""):
+        freshness_status = (
+            "unknown" if parsed is None or latest_reference_month is None
+            else "current" if parsed.strftime("%Y-%m") >= latest_reference_month
+            else "stale"
+        )
 
     return {
         "tier": rule["tier"],
@@ -206,6 +214,20 @@ def describe_price_evidence(
         "label": rule["label"],
         "note": rule["note"],
     }
+
+
+def price_needs_review(*, basis: str, evidence: dict, fetched_at: str | None) -> bool:
+    """Monthly publications and fixed anchors do not age like daily quotes."""
+    if basis == "reference":
+        if evidence["label"] == "Monthly average reference":
+            return evidence["freshness_status"] != "current"
+        return evidence["tier"] != "indexed_reference"
+    if evidence["confidence_score"] < 75:
+        return True
+    if evidence["freshness_target_hours"] is None:
+        return False
+    parsed = _parse_iso_datetime(fetched_at)
+    return parsed is None or (datetime.now(UTC) - parsed).total_seconds() > 7 * 86400
 
 
 def build_fixed_evidence(

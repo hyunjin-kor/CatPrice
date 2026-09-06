@@ -1,0 +1,225 @@
+[
+  {
+    "name": "2 wt% Pt/C",
+    "order_size_tons": 2.0,
+    "materials_rows_sum": 10.7013,
+    "materials_published_total": 10.7,
+    "rows": [
+      {
+        "key": "step_cost_per_hr",
+        "comet": 390.0,
+        "published": 390.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "campaign_days",
+        "comet": 2.5,
+        "published": 2.5,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "campaign_cost",
+        "comet": 23400.0,
+        "published": 23400.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "processing_cost_per_lb",
+        "comet": 5.85,
+        "published": 5.85,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "subtotal_per_lb",
+        "comet": 16.55,
+        "published": 16.55,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "ga_per_lb",
+        "comet": 0.8275,
+        "published": 0.83,
+        "dev_pct": -0.301204819277102
+      },
+      {
+        "key": "sard_per_lb",
+        "comet": 0.8689,
+        "published": 0.87,
+        "dev_pct": -0.12643678160919425
+      },
+      {
+        "key": "margin_per_lb",
+        "comet": 9.1231,
+        "published": 9.12,
+        "dev_pct": 0.033991228070193606
+      },
+      {
+        "key": "estimated_price_per_lb",
+        "comet": 27.3695,
+        "published": 27.37,
+        "dev_pct": -0.0018268176836038997
+      }
+    ],
+    "margin": {
+      "comet_pct_of_selling_price": 33.33,
+      "comet_pct_of_premargin": 50.0,
+      "table_footnote_pct_of_premargin": 50.0
+    },
+    "market": {
+      "market_price_per_lb": 34.09,
+      "comet_vs_market_pct": -19.713992373129962,
+      "published_vs_market_pct": -19.712525667351137
+    }
+  },
+  {
+    "name": "21 wt% Ni/Al2O3",
+    "order_size_tons": 20.0,
+    "materials_rows_sum": 11.8918,
+    "materials_published_total": 11.88,
+    "rows": [
+      {
+        "key": "step_cost_per_hr",
+        "comet": 1200.0,
+        "published": 1200.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "campaign_days",
+        "comet": 3.0,
+        "published": 3.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "campaign_cost",
+        "comet": 86400.0,
+        "published": 86400.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "processing_cost_per_lb",
+        "comet": 2.16,
+        "published": 2.16,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "subtotal_per_lb",
+        "comet": 14.04,
+        "published": 14.04,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "ga_per_lb",
+        "comet": 0.702,
+        "published": 0.7,
+        "dev_pct": 0.285714285714286
+      },
+      {
+        "key": "sard_per_lb",
+        "comet": 0.7371,
+        "published": 0.74,
+        "dev_pct": -0.3918918918918938
+      },
+      {
+        "key": "margin_per_lb",
+        "comet": 3.7415,
+        "published": 5.11,
+        "dev_pct": -26.78082191780823
+      },
+      {
+        "key": "estimated_price_per_lb",
+        "comet": 19.2206,
+        "published": 20.59,
+        "dev_pct": -6.650801359883434
+      }
+    ],
+    "margin": {
+      "comet_pct_of_selling_price": 19.47,
+      "comet_pct_of_premargin": 24.17,
+      "table_footnote_pct_of_premargin": 33.0
+    },
+    "market": {
+      "market_price_per_lb": 21.33,
+      "comet_vs_market_pct": -9.88935771214251,
+      "published_vs_market_pct": -3.469292076887007
+    }
+  },
+  {
+    "name": "USY-based FCC (with RE)",
+    "order_size_tons": 200.0,
+    "materials_rows_sum": 0.3524,
+    "materials_published_total": 0.352,
+    "rows": [
+      {
+        "key": "step_cost_per_hr",
+        "comet": 6725.0,
+        "published": 6725.0,
+        "dev_pct": 0.0
+      },
+      {
+        "key": "campaign_days",
+        "comet": 2.33,
+        "published": 4.0,
+        "dev_pct": -41.75
+      },
+      {
+        "key": "campaign_cost",
+        "comet": 376600.0,
+        "published": 645600.0,
+        "dev_pct": -41.66666666666667
+      },
+      {
+        "key": "processing_cost_per_lb",
+        "comet": 0.9415,
+        "published": 1.61,
+        "dev_pct": -41.52173913043479
+      },
+      {
+        "key": "subtotal_per_lb",
+        "comet": 1.2935,
+        "published": 1.97,
+        "dev_pct": -34.34010152284264
+      },
+      {
+        "key": "ga_per_lb",
+        "comet": 0.0647,
+        "published": 0.1,
+        "dev_pct": -35.30000000000001
+      },
+      {
+        "key": "sard_per_lb",
+        "comet": 0.0679,
+        "published": 0.1,
+        "dev_pct": -32.1
+      },
+      {
+        "key": "margin_per_lb",
+        "comet": 0.1829,
+        "published": 0.24,
+        "dev_pct": -23.79166666666666
+      },
+      {
+        "key": "estimated_price_per_lb",
+        "comet": 1.609,
+        "published": 2.41,
+        "dev_pct": -33.23651452282158
+      }
+    ],
+    "margin": {
+      "comet_pct_of_selling_price": 11.37,
+      "comet_pct_of_premargin": 12.83,
+      "table_footnote_pct_of_premargin": 11.0
+    },
+    "market": {
+      "market_price_per_lb": 2.73,
+      "comet_vs_market_pct": -41.06227106227106,
+      "published_vs_market_pct": -11.721611721611715
+    },
+    "with_published_rate": {
+      "effective_rate_ton_per_day": 67.0,
+      "campaign_days": 3.985,
+      "processing_cost_per_lb": 1.608,
+      "estimated_price_per_lb": 2.438,
+      "dev_pct_vs_published": 1.16
+    }
+  }
+]

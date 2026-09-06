@@ -1,0 +1,1834 @@
+{
+  "basis_month": "2026-06",
+  "seed": 20260906,
+  "comparison": "Incremental support snapshot expansion: same June metal prices, all 37 code inputs, other 80 data files, compositions, route steps, processing cost, LCA factors and profile weights. Only verified support observations are added. Economics and cost-weighted price-source confidence can both affect composite rankings.",
+  "before_directory": "docs/paper/free-data-2026-09-06",
+  "after_directory": "docs/paper/free-data-2026-09-07",
+  "source_contract": {
+    "cost": "all_families_<date>.json: families[].candidates[].landed_cost_per_lb and materials_cost_per_lb",
+    "scores": "all_families_<date>.json: families[].candidates[].scores",
+    "rankings": "all_families_<date>.json: families[].profiles.<profile>.ranking and families[].performance_zero.ranking",
+    "lca": "all_families_<date>.json: families[].candidates[].lca; paper_summary_<date>.json: lca",
+    "summary": "paper_summary_<date>.json: weight_sensitivity, volatility, breakeven, live_reference_comparison, table62"
+  },
+  "inputs": [
+    {
+      "file": "docs/paper/free-data-2026-09-07/price_history_2026-09-07.json",
+      "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69"
+    },
+    {
+      "file": "docs/paper/free-data-2026-09-06/support_history_2026-09-06.json",
+      "sha256": "4d0dccdf351ea3ecbebca9233da5cd6a97d5a790ecab313749fcd9b6c8af5896"
+    },
+    {
+      "file": "docs/paper/free-data-2026-09-07/support_history_2026-09-07.json",
+      "sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3"
+    },
+    {
+      "file": "docs/paper/free-data-2026-09-07/live_basis_2026-09-07.json",
+      "sha256": "891ab156cb7bfc85af91afddd0736a32cd40a53785a4711dd0c43dee18395e05"
+    }
+  ],
+  "input_changes": {
+    "code_inputs": [],
+    "inputs": [
+      {
+        "file": "backend/data/support_price_history.json",
+        "before_sha256": "4d0dccdf351ea3ecbebca9233da5cd6a97d5a790ecab313749fcd9b6c8af5896",
+        "after_sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3"
+      }
+    ]
+  },
+  "support_coverage": {
+    "before_series": 1,
+    "after_series": 9,
+    "before_observations": 3,
+    "after_observations": 11,
+    "prior_observations_preserved": true,
+    "additions": [
+      {
+        "symbol": "HS251990",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 0.6434
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS281122",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 2.1895
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS281990",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 4.5274
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS282010",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 2.7147
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS282300",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 3.3905
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS284210",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 4.5579
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS284610",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 17.633
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      },
+      {
+        "symbol": "HS380210",
+        "unit": "$/kg",
+        "points": [
+          {
+            "date": "2026-06-30",
+            "price": 3.7154
+          }
+        ],
+        "source": "UN Comtrade (monthly unit value)"
+      }
+    ]
+  },
+  "effect_summary": {
+    "families": 30,
+    "candidates": 116,
+    "changed_cost_candidates": 15,
+    "changed_cost_families": 11,
+    "cost_decreases": 9,
+    "cost_increases": 6,
+    "min_change_pct": -3.80912949,
+    "max_change_pct": 4.6065873,
+    "changed_score_candidates": 11,
+    "tested_named_profile_rankings": 90,
+    "tested_performance_zero_rankings": 30,
+    "changed_rankings": 2,
+    "changed_winners": 1,
+    "changed_winners_by_profile": {
+      "balanced": 1
+    },
+    "changed_cost_order_families": 0
+  },
+  "cost_changes": [
+    {
+      "family": "ammonia-cracking",
+      "candidate": "co-mgo-la2o3",
+      "before_landed_cost_usd_per_lb": 4.8305,
+      "after_landed_cost_usd_per_lb": 4.6465,
+      "change_pct": -3.80912949,
+      "before_materials_cost_usd_per_lb": 1.8213,
+      "after_materials_cost_usd_per_lb": 1.6869,
+      "before_price_evidence_score": 81.7,
+      "after_price_evidence_score": 85.2
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ni-mgo-ceo2-interface",
+      "before_landed_cost_usd_per_lb": 5.7065,
+      "after_landed_cost_usd_per_lb": 5.6028,
+      "change_pct": -1.81722597,
+      "before_materials_cost_usd_per_lb": 1.8084,
+      "after_materials_cost_usd_per_lb": 1.7327,
+      "before_price_evidence_score": 83.2,
+      "after_price_evidence_score": 85.2
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ru-mgo-premium",
+      "before_landed_cost_usd_per_lb": 1214.0658,
+      "after_landed_cost_usd_per_lb": 1213.9222,
+      "change_pct": -0.01182802,
+      "before_materials_cost_usd_per_lb": 885.011,
+      "after_materials_cost_usd_per_lb": 884.9061,
+      "before_price_evidence_score": 88.0,
+      "after_price_evidence_score": 88.0
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cu-zrox-interface",
+      "before_landed_cost_usd_per_lb": 5.9142,
+      "after_landed_cost_usd_per_lb": 5.7735,
+      "change_pct": -2.37901999,
+      "before_materials_cost_usd_per_lb": 1.5017,
+      "after_materials_cost_usd_per_lb": 1.3989,
+      "before_price_evidence_score": 77.1,
+      "after_price_evidence_score": 80.0
+    },
+    {
+      "family": "co-prox",
+      "candidate": "au-tio2-nanogold",
+      "before_landed_cost_usd_per_lb": 2468.8081,
+      "after_landed_cost_usd_per_lb": 2468.9481,
+      "change_pct": 0.00567075,
+      "before_materials_cost_usd_per_lb": 1484.3942,
+      "after_materials_cost_usd_per_lb": 1484.4789,
+      "before_price_evidence_score": 88.0,
+      "after_price_evidence_score": 88.0
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "fe-cu-k-precipitated",
+      "before_landed_cost_usd_per_lb": 6.6259,
+      "after_landed_cost_usd_per_lb": 6.6185,
+      "change_pct": -0.11168294,
+      "before_materials_cost_usd_per_lb": 2.4159,
+      "after_materials_cost_usd_per_lb": 2.4106,
+      "before_price_evidence_score": 57.9,
+      "after_price_evidence_score": 58.2
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "nimo-carbon-hdo",
+      "before_landed_cost_usd_per_lb": 12.8186,
+      "after_landed_cost_usd_per_lb": 13.4091,
+      "change_pct": 4.6065873,
+      "before_materials_cost_usd_per_lb": 4.8073,
+      "after_materials_cost_usd_per_lb": 5.1988,
+      "before_price_evidence_score": 84.1,
+      "after_price_evidence_score": 83.6
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "pt-silica-hdo",
+      "before_landed_cost_usd_per_lb": 412.5713,
+      "after_landed_cost_usd_per_lb": 412.4117,
+      "change_pct": -0.03868422,
+      "before_materials_cost_usd_per_lb": 268.7579,
+      "after_materials_cost_usd_per_lb": 268.6521,
+      "before_price_evidence_score": 87.9,
+      "after_price_evidence_score": 87.9
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "ru-carbon-hdo",
+      "before_landed_cost_usd_per_lb": 1839.3629,
+      "after_landed_cost_usd_per_lb": 1839.9619,
+      "change_pct": 0.03256562,
+      "before_materials_cost_usd_per_lb": 1341.5013,
+      "after_materials_cost_usd_per_lb": 1341.9389,
+      "before_price_evidence_score": 88.0,
+      "after_price_evidence_score": 88.0
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "ni-sio2-highload",
+      "before_landed_cost_usd_per_lb": 11.804,
+      "after_landed_cost_usd_per_lb": 11.7675,
+      "change_pct": -0.30921721,
+      "before_materials_cost_usd_per_lb": 6.8568,
+      "after_materials_cost_usd_per_lb": 6.8301,
+      "before_price_evidence_score": 86.8,
+      "after_price_evidence_score": 87.4
+    },
+    {
+      "family": "nh3-scr",
+      "candidate": "v2o5-wo3-tio2",
+      "before_landed_cost_usd_per_lb": 6.0476,
+      "after_landed_cost_usd_per_lb": 6.1546,
+      "change_pct": 1.76929691,
+      "before_materials_cost_usd_per_lb": 2.2437,
+      "after_materials_cost_usd_per_lb": 2.3219,
+      "before_price_evidence_score": 72.1,
+      "after_price_evidence_score": 72.1
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "wo3-silica-oct",
+      "before_landed_cost_usd_per_lb": 6.4049,
+      "after_landed_cost_usd_per_lb": 6.2749,
+      "change_pct": -2.02969601,
+      "before_materials_cost_usd_per_lb": 2.697,
+      "after_materials_cost_usd_per_lb": 2.5976,
+      "before_price_evidence_score": 59.9,
+      "after_price_evidence_score": 61.0
+    },
+    {
+      "family": "pem-electrolyzer-oer",
+      "candidate": "iro2-tio2-supported",
+      "before_landed_cost_usd_per_lb": 73452.8558,
+      "after_landed_cost_usd_per_lb": 73452.9268,
+      "change_pct": 9.666e-05,
+      "before_materials_cost_usd_per_lb": 53652.4998,
+      "after_materials_cost_usd_per_lb": 53652.5517,
+      "before_price_evidence_score": 88.0,
+      "after_price_evidence_score": 88.0
+    },
+    {
+      "family": "rwgs",
+      "candidate": "pt-tio2-premium",
+      "before_landed_cost_usd_per_lb": 758.6141,
+      "after_landed_cost_usd_per_lb": 758.73,
+      "change_pct": 0.01527786,
+      "before_materials_cost_usd_per_lb": 552.0555,
+      "after_materials_cost_usd_per_lb": 552.1402,
+      "before_price_evidence_score": 88.0,
+      "after_price_evidence_score": 88.0
+    },
+    {
+      "family": "water-gas-shift",
+      "candidate": "fe-cr-hts",
+      "before_landed_cost_usd_per_lb": 6.8681,
+      "after_landed_cost_usd_per_lb": 6.7814,
+      "change_pct": -1.26235786,
+      "before_materials_cost_usd_per_lb": 2.5803,
+      "after_materials_cost_usd_per_lb": 2.517,
+      "before_price_evidence_score": 59.3,
+      "after_price_evidence_score": 59.3
+    }
+  ],
+  "winner_changes": [
+    {
+      "family": "olefin-metathesis",
+      "profile": "balanced",
+      "before": "mo-silica-alumina",
+      "after": "wo3-silica-oct"
+    }
+  ],
+  "ranking_changes": [
+    {
+      "family": "ammonia-cracking",
+      "profile": "balanced",
+      "before": [
+        "co-mgo-la2o3",
+        "ni-alumina-baseline",
+        "ni-mgo-ceo2-interface",
+        "ru-mgo-premium"
+      ],
+      "after": [
+        "co-mgo-la2o3",
+        "ni-mgo-ceo2-interface",
+        "ni-alumina-baseline",
+        "ru-mgo-premium"
+      ]
+    },
+    {
+      "family": "olefin-metathesis",
+      "profile": "balanced",
+      "before": [
+        "mo-silica-alumina",
+        "wo3-silica-oct",
+        "w-h-alumina",
+        "re2o7-alumina-mild"
+      ],
+      "after": [
+        "wo3-silica-oct",
+        "mo-silica-alumina",
+        "w-h-alumina",
+        "re2o7-alumina-mild"
+      ]
+    }
+  ],
+  "cost_order_changes": [],
+  "score_changes": [
+    {
+      "family": "ammonia-cracking",
+      "candidate": "co-mgo-la2o3",
+      "before": {
+        "economics": 99.9,
+        "evidence": 81.7,
+        "route": 79.7,
+        "performance": 76.0,
+        "total": 88.6
+      },
+      "after": {
+        "economics": 100.0,
+        "evidence": 85.2,
+        "route": 79.7,
+        "performance": 76.0,
+        "total": 89.4
+      }
+    },
+    {
+      "family": "ammonia-cracking",
+      "candidate": "ni-mgo-ceo2-interface",
+      "before": {
+        "economics": 99.9,
+        "evidence": 83.2,
+        "route": 65.7,
+        "performance": 84.0,
+        "total": 87.3
+      },
+      "after": {
+        "economics": 99.9,
+        "evidence": 85.2,
+        "route": 65.7,
+        "performance": 84.0,
+        "total": 87.7
+      }
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cza-baseline",
+      "before": {
+        "economics": 99.5,
+        "evidence": 85.9,
+        "route": 86.0,
+        "performance": 75.0,
+        "total": 90.4
+      },
+      "after": {
+        "economics": 99.4,
+        "evidence": 85.9,
+        "route": 86.0,
+        "performance": 75.0,
+        "total": 90.4
+      }
+    },
+    {
+      "family": "co2-methanol",
+      "candidate": "cu-zrox-interface",
+      "before": {
+        "economics": 100.0,
+        "evidence": 77.1,
+        "route": 75.7,
+        "performance": 89.0,
+        "total": 88.9
+      },
+      "after": {
+        "economics": 100.0,
+        "evidence": 80.0,
+        "route": 75.7,
+        "performance": 89.0,
+        "total": 89.5
+      }
+    },
+    {
+      "family": "fischer-tropsch-synthesis",
+      "candidate": "fe-cu-k-precipitated",
+      "before": {
+        "economics": 95.9,
+        "evidence": 57.9,
+        "route": 88.7,
+        "performance": 76.0,
+        "total": 82.7
+      },
+      "after": {
+        "economics": 95.9,
+        "evidence": 58.2,
+        "route": 88.7,
+        "performance": 76.0,
+        "total": 82.7
+      }
+    },
+    {
+      "family": "hydrodeoxygenation",
+      "candidate": "nimo-carbon-hdo",
+      "before": {
+        "economics": 99.9,
+        "evidence": 84.1,
+        "route": 78.7,
+        "performance": 80.0,
+        "total": 89.0
+      },
+      "after": {
+        "economics": 99.9,
+        "evidence": 83.6,
+        "route": 78.7,
+        "performance": 80.0,
+        "total": 88.9
+      }
+    },
+    {
+      "family": "methane-pyrolysis",
+      "candidate": "ni-sio2-highload",
+      "before": {
+        "economics": 55.7,
+        "evidence": 86.8,
+        "route": 70.0,
+        "performance": 72.0,
+        "total": 67.2
+      },
+      "after": {
+        "economics": 55.9,
+        "evidence": 87.4,
+        "route": 70.0,
+        "performance": 72.0,
+        "total": 67.4
+      }
+    },
+    {
+      "family": "nh3-scr",
+      "candidate": "v2o5-wo3-tio2",
+      "before": {
+        "economics": 93.9,
+        "evidence": 72.1,
+        "route": 87.3,
+        "performance": 76.0,
+        "total": 85.5
+      },
+      "after": {
+        "economics": 93.2,
+        "evidence": 72.1,
+        "route": 87.3,
+        "performance": 76.0,
+        "total": 85.2
+      }
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "mo-silica-alumina",
+      "before": {
+        "economics": 95.7,
+        "evidence": 82.3,
+        "route": 79.3,
+        "performance": 82.0,
+        "total": 87.3
+      },
+      "after": {
+        "economics": 95.5,
+        "evidence": 82.3,
+        "route": 79.3,
+        "performance": 82.0,
+        "total": 87.2
+      }
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "wo3-silica-oct",
+      "before": {
+        "economics": 100.0,
+        "evidence": 59.9,
+        "route": 89.7,
+        "performance": 88.0,
+        "total": 87.2
+      },
+      "after": {
+        "economics": 100.0,
+        "evidence": 61.0,
+        "route": 89.7,
+        "performance": 88.0,
+        "total": 87.4
+      }
+    },
+    {
+      "family": "olefin-metathesis",
+      "candidate": "w-h-alumina",
+      "before": {
+        "economics": 97.2,
+        "evidence": 57.8,
+        "route": 50.0,
+        "performance": 78.0,
+        "total": 76.6
+      },
+      "after": {
+        "economics": 97.1,
+        "evidence": 57.8,
+        "route": 50.0,
+        "performance": 78.0,
+        "total": 76.5
+      }
+    }
+  ],
+  "invariants": {
+    "all_candidate_lca_identical": true,
+    "lca_summary_identical": true,
+    "all_candidate_screening_basis_route_steps_and_processing_cost_identical": true,
+    "all_live_analysis_content_identical_except_source_filename": true,
+    "live_source_filename_before": "live_basis_2026-09-06.json",
+    "live_source_filename_after": "live_basis_2026-09-07.json",
+    "live_basis_content_identical": true,
+    "table62_identical": true,
+    "manufacturing_costs_identical": true,
+    "old_artifact_files_unchanged": 28
+  },
+  "summary_before": {
+    "weight_sensitivity": {
+      "grid_points": 286,
+      "median_balanced_winner_share_pct": 55.59440559440559,
+      "min_balanced_winner_share_pct": 20.97902097902098,
+      "max_balanced_winner_share_pct": 92.65734265734265,
+      "families_below_50_pct": 12,
+      "performance_zero_changes": 3
+    },
+    "lca": {
+      "coverage_mean_pct": 62.79456896551724,
+      "coverage_median_pct": 99.825,
+      "candidates_coverage_at_least_90_pct": 64,
+      "candidates_coverage_below_50_pct": 47,
+      "route_share_eligible_candidates": 54,
+      "route_share_median_pct": 2.449573268695874,
+      "route_share_p90_pct": 5.5506062846215745,
+      "route_share_max_pct": 15.193526127595508
+    },
+    "volatility": {
+      "families": 30,
+      "families_flipping_balanced": 7,
+      "families_flipping_performance_zero": 5,
+      "flipping_families_performance_zero": [
+        "ammonia-synthesis",
+        "co2-to-formate",
+        "co-prox",
+        "nitrogen-reduction-reaction",
+        "photocatalytic-water-splitting"
+      ],
+      "window": {
+        "first": "2019-01-31",
+        "last": "2026-06-30",
+        "states": 90
+      },
+      "varying_symbols": [
+        "Ag",
+        "Al",
+        "Au",
+        "Co",
+        "Cu",
+        "Ir",
+        "Mo",
+        "Ni",
+        "Pd",
+        "Pt",
+        "Rh",
+        "Ru",
+        "Sn",
+        "Zn"
+      ],
+      "held_at_baseline": [
+        "HS281820"
+      ]
+    },
+    "breakeven": {
+      "families": 30,
+      "contests": 120,
+      "errors": [],
+      "exposure_counts": {
+        "base_vs_base": 3,
+        "metal_vs_none": 11,
+        "precious_vs_base": 15,
+        "precious_vs_precious": 1
+      },
+      "precious_vs_base_sweeps": 28,
+      "precious_cost_crossings": 12,
+      "precious_cost_crossing_median_factor": 0.0043,
+      "precious_cost_crossings_between_0_1_and_10": 3,
+      "precious_without_cost_crossing_in_scan": 16
+    }
+  },
+  "summary_after": {
+    "weight_sensitivity": {
+      "grid_points": 286,
+      "median_balanced_winner_share_pct": 55.59440559440559,
+      "min_balanced_winner_share_pct": 20.97902097902098,
+      "max_balanced_winner_share_pct": 92.65734265734265,
+      "families_below_50_pct": 11,
+      "performance_zero_changes": 4
+    },
+    "lca": {
+      "coverage_mean_pct": 62.79456896551724,
+      "coverage_median_pct": 99.825,
+      "candidates_coverage_at_least_90_pct": 64,
+      "candidates_coverage_below_50_pct": 47,
+      "route_share_eligible_candidates": 54,
+      "route_share_median_pct": 2.449573268695874,
+      "route_share_p90_pct": 5.5506062846215745,
+      "route_share_max_pct": 15.193526127595508
+    },
+    "volatility": {
+      "families": 30,
+      "families_flipping_balanced": 6,
+      "families_flipping_performance_zero": 6,
+      "flipping_families_performance_zero": [
+        "ammonia-cracking",
+        "ammonia-synthesis",
+        "co2-to-formate",
+        "co-prox",
+        "nitrogen-reduction-reaction",
+        "photocatalytic-water-splitting"
+      ],
+      "window": {
+        "first": "2019-01-31",
+        "last": "2026-06-30",
+        "states": 90
+      },
+      "varying_symbols": [
+        "Ag",
+        "Al",
+        "Au",
+        "Co",
+        "Cu",
+        "Ir",
+        "Mo",
+        "Ni",
+        "Pd",
+        "Pt",
+        "Rh",
+        "Ru",
+        "Sn",
+        "Zn"
+      ],
+      "held_at_baseline": [
+        "HS251990",
+        "HS281122",
+        "HS281820",
+        "HS281990",
+        "HS282010",
+        "HS282300",
+        "HS284210",
+        "HS284610",
+        "HS380210"
+      ]
+    },
+    "breakeven": {
+      "families": 30,
+      "contests": 120,
+      "errors": [],
+      "exposure_counts": {
+        "base_vs_base": 3,
+        "metal_vs_none": 11,
+        "precious_vs_base": 15,
+        "precious_vs_precious": 1
+      },
+      "precious_vs_base_sweeps": 28,
+      "precious_cost_crossings": 12,
+      "precious_cost_crossing_median_factor": 0.00435,
+      "precious_cost_crossings_between_0_1_and_10": 3,
+      "precious_without_cost_crossing_in_scan": 16
+    }
+  },
+  "live_reference_changed_by_profile_before": {
+    "balanced": 6,
+    "cost-first": 4,
+    "evidence-first": 11,
+    "performance_zero": 4
+  },
+  "live_reference_changed_by_profile_after": {
+    "balanced": 5,
+    "cost-first": 4,
+    "evidence-first": 11,
+    "performance_zero": 4
+  },
+  "table62": [
+    {
+      "name": "2 wt% Pt/C",
+      "published_usd_per_lb": 27.37,
+      "comet_usd_per_lb": 27.3695,
+      "residual_pct": -0.0018268176836038997,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "21 wt% Ni/Al2O3",
+      "published_usd_per_lb": 20.59,
+      "comet_usd_per_lb": 19.2206,
+      "residual_pct": -6.650801359883434,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "USY-based FCC (with RE)",
+      "published_usd_per_lb": 2.41,
+      "comet_usd_per_lb": 2.438,
+      "residual_pct": 1.16,
+      "effective_rate_ton_per_day": 67.0
+    }
+  ],
+  "replay": {
+    "printed_command": "python scripts/reproduce_paper.py --price-basis reference --month 2026-06 --seed 20260906 --date 2026-09-07 --history \"docs/paper/free-data-2026-09-07/price_history_2026-09-07.json\" --live-basis \"docs/paper/free-data-2026-09-07/live_basis_2026-09-07.json\" --support-history \"docs/paper/free-data-2026-09-07/support_history_2026-09-07.json\" --out-dir \"docs/paper/free-data-2026-09-07\"",
+    "returncode": 0,
+    "elapsed_seconds": 28.078,
+    "all_seven_stable_json_byte_identical": true,
+    "files": [
+      {
+        "file": "docs/paper/free-data-2026-09-07/all_families_2026-09-07.json",
+        "first_sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c",
+        "replay_sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/all_families_live_2026-09-07.json",
+        "first_sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400",
+        "replay_sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/paper_summary_2026-09-07.json",
+        "first_sha256": "b056308fb8c4e85d4288b4a20747f94629d5223f3655b113e5ae6a54cf1fb9d2",
+        "replay_sha256": "b056308fb8c4e85d4288b4a20747f94629d5223f3655b113e5ae6a54cf1fb9d2"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/table62_reproduction_2026-09-07.json",
+        "first_sha256": "1f5907208f1278b17ba4ed75171c09362de225a9e66711d198e67ff9ae48b136",
+        "replay_sha256": "1f5907208f1278b17ba4ed75171c09362de225a9e66711d198e67ff9ae48b136"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/manufacturing_costs_2026-09-07.json",
+        "first_sha256": "6dbfef38ae81dbde0f026960178606dc46f9bb3ce0494dcd84dfd8e77e0dba5b",
+        "replay_sha256": "6dbfef38ae81dbde0f026960178606dc46f9bb3ce0494dcd84dfd8e77e0dba5b"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/breakeven_sweep_points_2026-09-07.json",
+        "first_sha256": "b564612f585b1eb28f426a627f5ed180e471fd123c6ec5cf5d871b7e2cbaae81",
+        "replay_sha256": "b564612f585b1eb28f426a627f5ed180e471fd123c6ec5cf5d871b7e2cbaae81"
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/monthly_history_2026-09-07.json",
+        "first_sha256": "cbc9ec0ec5bd74a7377e046ad74022a9709c3673df30a7713fc58c25aae17746",
+        "replay_sha256": "cbc9ec0ec5bd74a7377e046ad74022a9709c3673df30a7713fc58c25aae17746"
+      }
+    ],
+    "timestamp_bearing_json_checks": [
+      {
+        "file": "docs/paper/free-data-2026-09-07/reference_basis_2026-09-07.json",
+        "excluded_key": "generated_at",
+        "generated_at_before": "2026-09-06T15:32:10.241853+00:00",
+        "generated_at_after": "2026-09-06T15:33:44.575366+00:00",
+        "all_other_content_identical": true
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/price_volatility_2026-09-07.json",
+        "excluded_key": "generated_at",
+        "generated_at_before": "2026-09-06T15:32:19.316608+00:00",
+        "generated_at_after": "2026-09-06T15:33:54.138948+00:00",
+        "all_other_content_identical": true
+      },
+      {
+        "file": "docs/paper/free-data-2026-09-07/active_metal_breakeven_2026-09-07.json",
+        "excluded_key": "generated_at",
+        "generated_at_before": "2026-09-06T15:32:28.933145+00:00",
+        "generated_at_after": "2026-09-06T15:34:04.630651+00:00",
+        "all_other_content_identical": true
+      }
+    ],
+    "validation_note": "An initial overly broad whole-file comparison included the three outputs with generated_at and failed. The actual replay contract uses exact bytes for seven stable JSON outputs and ignores only generated_at in the other three; no scientific field is excluded."
+  },
+  "timings": {
+    "first_elapsed_seconds": 25.91,
+    "first_commands": [
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/build_reference_basis.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--month",
+          "2026-06",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.644
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/reproduce_catcost_table62.py",
+          "--json",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\table62_reproduction_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.092
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/run_all_families.py",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\all_families_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 1.519
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/price_volatility_screen.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--since",
+          "2019-01",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\price_volatility_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 7.538
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/active_metal_breakeven.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\active_metal_breakeven_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 9.624
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/run_all_families.py",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\live_basis_2026-09-07.json",
+          "--basis-type",
+          "live",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\all_families_live_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 1.286
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/generate_paper_figures.py",
+          "--directory",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07",
+          "--date",
+          "2026-09-07"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 3.744
+      }
+    ],
+    "replay_commands": [
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/build_reference_basis.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--month",
+          "2026-06",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.664
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/reproduce_catcost_table62.py",
+          "--json",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\table62_reproduction_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 0.086
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/run_all_families.py",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\all_families_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 1.564
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/price_volatility_screen.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--since",
+          "2019-01",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\price_volatility_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 8.036
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/active_metal_breakeven.py",
+          "--history",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\monthly_history_2026-09-07.json",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\reference_basis_2026-09-07.json",
+          "--basis-type",
+          "reference",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\active_metal_breakeven_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 10.452
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/run_all_families.py",
+          "--price-basis",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\live_basis_2026-09-07.json",
+          "--basis-type",
+          "live",
+          "--out",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07\\all_families_live_2026-09-07.json"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 1.438
+      },
+      {
+        "command": [
+          "C:\\Python314\\python.exe",
+          "scripts/generate_paper_figures.py",
+          "--directory",
+          "C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\docs\\paper\\free-data-2026-09-07",
+          "--date",
+          "2026-09-07"
+        ],
+        "returncode": 0,
+        "elapsed_seconds": 4.152
+      }
+    ]
+  },
+  "manifest_hash_verification": {
+    "code_inputs": {
+      "count": 37,
+      "all_matched": true,
+      "files": [
+        {
+          "file": "backend\\core\\__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "backend\\core\\breakeven.py",
+          "sha256": "fda464e9e41feac82d9c3dd814cc4be0aba91b7ca293a07ff6450ba22021f26e",
+          "actual_sha256": "fda464e9e41feac82d9c3dd814cc4be0aba91b7ca293a07ff6450ba22021f26e"
+        },
+        {
+          "file": "backend\\core\\capex_opex.py",
+          "sha256": "ec39add1b9e057d591004312bb0e14a058f6dcaa21813d14d736ca90be3887d7",
+          "actual_sha256": "ec39add1b9e057d591004312bb0e14a058f6dcaa21813d14d736ca90be3887d7"
+        },
+        {
+          "file": "backend\\core\\comtrade_snapshot.py",
+          "sha256": "e2053833984e61d003034d392933e8d045ddad44056cace8bea1616fdf02fd0f",
+          "actual_sha256": "e2053833984e61d003034d392933e8d045ddad44056cace8bea1616fdf02fd0f"
+        },
+        {
+          "file": "backend\\core\\constants.py",
+          "sha256": "df0767315a34ec41957e5de3de00606bcfd2b99c4990812fdc2a2e186a331a9f",
+          "actual_sha256": "df0767315a34ec41957e5de3de00606bcfd2b99c4990812fdc2a2e186a331a9f"
+        },
+        {
+          "file": "backend\\core\\cost_engine.py",
+          "sha256": "032ffe6b277e7d695fc74eb77705258780000c9e44e2d3a056d9975e941f212c",
+          "actual_sha256": "032ffe6b277e7d695fc74eb77705258780000c9e44e2d3a056d9975e941f212c"
+        },
+        {
+          "file": "backend\\core\\decision_engine.py",
+          "sha256": "69b893a146e2b7c70a333c62cde117995dc52e8534e3492ffc944d9483734948",
+          "actual_sha256": "69b893a146e2b7c70a333c62cde117995dc52e8534e3492ffc944d9483734948"
+        },
+        {
+          "file": "backend\\core\\electrocatalyst.py",
+          "sha256": "7a066acd01dc7b7fddd5146780567073a88c4d184871d3805c6e18102007e6fa",
+          "actual_sha256": "7a066acd01dc7b7fddd5146780567073a88c4d184871d3805c6e18102007e6fa"
+        },
+        {
+          "file": "backend\\core\\lca.py",
+          "sha256": "b68daa224b262f271e188ada93e6c97bfa85922f48e0426df312d0381ffa9fa4",
+          "actual_sha256": "b68daa224b262f271e188ada93e6c97bfa85922f48e0426df312d0381ffa9fa4"
+        },
+        {
+          "file": "backend\\core\\material_pricing.py",
+          "sha256": "3e1aa62d3a16b5c06b401a5a2f3b48e00032c071b94759a31096a611cdd43b60",
+          "actual_sha256": "3e1aa62d3a16b5c06b401a5a2f3b48e00032c071b94759a31096a611cdd43b60"
+        },
+        {
+          "file": "backend\\core\\materials_calc.py",
+          "sha256": "516fa4edcfdab2a77f05085a8a173accde5d58ac2c9284ac3cadc5fa810cddcc",
+          "actual_sha256": "516fa4edcfdab2a77f05085a8a173accde5d58ac2c9284ac3cadc5fa810cddcc"
+        },
+        {
+          "file": "backend\\core\\price_escalation.py",
+          "sha256": "461d7e6f4e695223d101c0235f2f0f099cc19e2674b15f2c8a3765a4e336c0c0",
+          "actual_sha256": "461d7e6f4e695223d101c0235f2f0f099cc19e2674b15f2c8a3765a4e336c0c0"
+        },
+        {
+          "file": "backend\\core\\price_evidence.py",
+          "sha256": "20eef990b508a0310348316a23ae5d3ad4c498682263d512e19126db9ddee908",
+          "actual_sha256": "20eef990b508a0310348316a23ae5d3ad4c498682263d512e19126db9ddee908"
+        },
+        {
+          "file": "backend\\core\\price_fetcher.py",
+          "sha256": "b848ec372334d531667668d0f03aa4d2e0d7595fa50596505f6ba9ec9dc04cb9",
+          "actual_sha256": "b848ec372334d531667668d0f03aa4d2e0d7595fa50596505f6ba9ec9dc04cb9"
+        },
+        {
+          "file": "backend\\core\\process_energy.py",
+          "sha256": "4873b75b4cda1ccc94b3604d01faf7a92847a83e4bad36b83c4a3ae0367dc7da",
+          "actual_sha256": "4873b75b4cda1ccc94b3604d01faf7a92847a83e4bad36b83c4a3ae0367dc7da"
+        },
+        {
+          "file": "backend\\core\\reference_basis.py",
+          "sha256": "bf9d6c3975caa6d7f5c32f2bfe306520a8394368364af33188816b612c6f2088",
+          "actual_sha256": "bf9d6c3975caa6d7f5c32f2bfe306520a8394368364af33188816b612c6f2088"
+        },
+        {
+          "file": "backend\\core\\spent_catalyst.py",
+          "sha256": "a74208f46055d084a044c96c69bf29aa0bdcf58a81d01602d0d9b937f9aaa9a8",
+          "actual_sha256": "a74208f46055d084a044c96c69bf29aa0bdcf58a81d01602d0d9b937f9aaa9a8"
+        },
+        {
+          "file": "backend\\core\\step_method.py",
+          "sha256": "4fac130bb6225bf30757cc7e0671c5dc198d9656b1a1932fccad63612a470995",
+          "actual_sha256": "4fac130bb6225bf30757cc7e0671c5dc198d9656b1a1932fccad63612a470995"
+        },
+        {
+          "file": "backend\\core\\uncertainty.py",
+          "sha256": "6714ca0b62da87d485a67fa9d3a3ed73fc54b464b27a612ca362858f3641a98f",
+          "actual_sha256": "6714ca0b62da87d485a67fa9d3a3ed73fc54b464b27a612ca362858f3641a98f"
+        },
+        {
+          "file": "scripts\\active_metal_breakeven.py",
+          "sha256": "2ed0308d8cd9affcd6ee6c26eff7937af014893197b16d0f046af123459aa52f",
+          "actual_sha256": "2ed0308d8cd9affcd6ee6c26eff7937af014893197b16d0f046af123459aa52f"
+        },
+        {
+          "file": "scripts\\audit_free_support_impact.py",
+          "sha256": "e28b58f178e210ab0717bbe840ecec3149285c5f867abf06a47d2dd96a7ce4fe",
+          "actual_sha256": "e28b58f178e210ab0717bbe840ecec3149285c5f867abf06a47d2dd96a7ce4fe"
+        },
+        {
+          "file": "scripts\\audit_provenance.py",
+          "sha256": "5a0f58431dd0ae6b05efbcfbe6a59805165bcfcfee44067396d4036dbd26546c",
+          "actual_sha256": "5a0f58431dd0ae6b05efbcfbe6a59805165bcfcfee44067396d4036dbd26546c"
+        },
+        {
+          "file": "scripts\\build_reference_basis.py",
+          "sha256": "80dcc7b93530cda6629735275f417ee7c13e744787f8c3fe27658a962d3962c2",
+          "actual_sha256": "80dcc7b93530cda6629735275f417ee7c13e744787f8c3fe27658a962d3962c2"
+        },
+        {
+          "file": "scripts\\catcost_excel.py",
+          "sha256": "9fe6f61db9b158174a1b9fe54be82e153e61da9a0dc77c8461491c4fc2714bc5",
+          "actual_sha256": "9fe6f61db9b158174a1b9fe54be82e153e61da9a0dc77c8461491c4fc2714bc5"
+        },
+        {
+          "file": "scripts\\derive_loh_step_rates.py",
+          "sha256": "e79ccaf0d19e90e30b5337951871e82b66afa90b3e009a06378776ebbfa4f47f",
+          "actual_sha256": "e79ccaf0d19e90e30b5337951871e82b66afa90b3e009a06378776ebbfa4f47f"
+        },
+        {
+          "file": "scripts\\fetch_price_history.py",
+          "sha256": "5db8e192cc780abb4a0f467585cfba7c437d9e436ad0737fef2a66b56dcb0845",
+          "actual_sha256": "5db8e192cc780abb4a0f467585cfba7c437d9e436ad0737fef2a66b56dcb0845"
+        },
+        {
+          "file": "scripts\\fetch_support_history.py",
+          "sha256": "68273522aa10c8deb5f27e0d51d3ec8db3976cd659bc8565697b2ac1b5556182",
+          "actual_sha256": "68273522aa10c8deb5f27e0d51d3ec8db3976cd659bc8565697b2ac1b5556182"
+        },
+        {
+          "file": "scripts\\generate_app_icons.py",
+          "sha256": "92f707ba76f167ed4e2addbf75c4e223eb96cfd588eb3420b0c285d08c1e9004",
+          "actual_sha256": "92f707ba76f167ed4e2addbf75c4e223eb96cfd588eb3420b0c285d08c1e9004"
+        },
+        {
+          "file": "scripts\\generate_paper_figures.py",
+          "sha256": "63e75da4979c5706eb27874dfc52ef0fc6478794be9f20e1f77fb5dd66da407b",
+          "actual_sha256": "63e75da4979c5706eb27874dfc52ef0fc6478794be9f20e1f77fb5dd66da407b"
+        },
+        {
+          "file": "scripts\\generate_paper_si.py",
+          "sha256": "62ecee90f1c900fe67b490a6b1e9cc10c94332aded3f522bf65236cba6f38709",
+          "actual_sha256": "62ecee90f1c900fe67b490a6b1e9cc10c94332aded3f522bf65236cba6f38709"
+        },
+        {
+          "file": "scripts\\measure_autonomous_baseline.py",
+          "sha256": "80e604e05391a13487b1cbdf070991d98b3896717fb625fb97e58d5c6b5017f7",
+          "actual_sha256": "80e604e05391a13487b1cbdf070991d98b3896717fb625fb97e58d5c6b5017f7"
+        },
+        {
+          "file": "scripts\\price_volatility_screen.py",
+          "sha256": "ffe4bf4121182f538378b3d1c5bff1d0a607bf59ff2f74a034af1f11ebb6d00f",
+          "actual_sha256": "ffe4bf4121182f538378b3d1c5bff1d0a607bf59ff2f74a034af1f11ebb6d00f"
+        },
+        {
+          "file": "scripts\\reproduce_catcost_table62.py",
+          "sha256": "52676a0022cb9dc2701d6882363ed5f19e493825573e4a619285450d88605395",
+          "actual_sha256": "52676a0022cb9dc2701d6882363ed5f19e493825573e4a619285450d88605395"
+        },
+        {
+          "file": "scripts\\reproduce_paper.py",
+          "sha256": "a208828fe67f18d02b6e2c814d9afeda1f4bea9717b764dfd4dcffe9ad77d465",
+          "actual_sha256": "a208828fe67f18d02b6e2c814d9afeda1f4bea9717b764dfd4dcffe9ad77d465"
+        },
+        {
+          "file": "scripts\\round_readme_screens.py",
+          "sha256": "9173e01a7d991f021a8b4be5ea744b96ccc685f2bfa17f22b43444b5bfb79537",
+          "actual_sha256": "9173e01a7d991f021a8b4be5ea744b96ccc685f2bfa17f22b43444b5bfb79537"
+        },
+        {
+          "file": "scripts\\run_all_families.py",
+          "sha256": "222fc992c28b4935d598415fdcf5cd24bbec11ae228827287272c5330f71ac03",
+          "actual_sha256": "222fc992c28b4935d598415fdcf5cd24bbec11ae228827287272c5330f71ac03"
+        },
+        {
+          "file": "scripts\\validate_catcost_data.py",
+          "sha256": "fab52317dc45603d6c8f1d760f6b49c07a9be66fc2a30cb865d4bbff8076a45f",
+          "actual_sha256": "fab52317dc45603d6c8f1d760f6b49c07a9be66fc2a30cb865d4bbff8076a45f"
+        }
+      ]
+    },
+    "inputs": {
+      "count": 81,
+      "all_matched": true,
+      "files": [
+        {
+          "file": "backend/data/aem_electrolyzer_oer_benchmark.json",
+          "sha256": "e5b93781fe0c4da8cba1b14e4fe384ae0d35b6206932d128498cc1c66791b668",
+          "actual_sha256": "e5b93781fe0c4da8cba1b14e4fe384ae0d35b6206932d128498cc1c66791b668"
+        },
+        {
+          "file": "backend/data/ammonia_cracking_benchmark.json",
+          "sha256": "61a0d9909038ba697d846db03c4db6ded8217ccfd0d89cb0595c81f0e172c035",
+          "actual_sha256": "61a0d9909038ba697d846db03c4db6ded8217ccfd0d89cb0595c81f0e172c035"
+        },
+        {
+          "file": "backend/data/ammonia_synthesis_benchmark.json",
+          "sha256": "366326d8f5f01ab06610b25afe9c5851494b3f5c7a36ebde951ed50433efd98b",
+          "actual_sha256": "366326d8f5f01ab06610b25afe9c5851494b3f5c7a36ebde951ed50433efd98b"
+        },
+        {
+          "file": "backend/data/capex_factors.json",
+          "sha256": "a8976a7a6924e35653a5d3426c1d4fd101ff83e705f55f5c857f6253f81f2cd8",
+          "actual_sha256": "a8976a7a6924e35653a5d3426c1d4fd101ff83e705f55f5c857f6253f81f2cd8"
+        },
+        {
+          "file": "backend/data/cepci.json",
+          "sha256": "25cd7e13c1b849825bcbcce53bac14359f75f9f0e10294aa6b238c6cd30c27a9",
+          "actual_sha256": "25cd7e13c1b849825bcbcce53bac14359f75f9f0e10294aa6b238c6cd30c27a9"
+        },
+        {
+          "file": "backend/data/chemppi.json",
+          "sha256": "b00aa54d03a1b0b855751585d73355976d09ceaccf6caf2de681c14c7719d775",
+          "actual_sha256": "b00aa54d03a1b0b855751585d73355976d09ceaccf6caf2de681c14c7719d775"
+        },
+        {
+          "file": "backend/data/co2_electroreduction_benchmark.json",
+          "sha256": "13628f565cd342274a0656ca1a2f6b85ab12e747b352e3ad5870866ea58a96d7",
+          "actual_sha256": "13628f565cd342274a0656ca1a2f6b85ab12e747b352e3ad5870866ea58a96d7"
+        },
+        {
+          "file": "backend/data/co2_methanation_benchmark.json",
+          "sha256": "07fac53e6e2a57b514608d9eeb64c3f5f4d50519e8a2afdeed9904f36e02c1b3",
+          "actual_sha256": "07fac53e6e2a57b514608d9eeb64c3f5f4d50519e8a2afdeed9904f36e02c1b3"
+        },
+        {
+          "file": "backend/data/co2_methanol_benchmark.json",
+          "sha256": "a303e72180093412c6b08d20ebe4902b4d384de9b811794d0e5316103fb9cbff",
+          "actual_sha256": "a303e72180093412c6b08d20ebe4902b4d384de9b811794d0e5316103fb9cbff"
+        },
+        {
+          "file": "backend/data/co2_to_formate_benchmark.json",
+          "sha256": "b65f09c933a1037b7214bcf47b17950462c9f2566c24bd951b851fe049c91d08",
+          "actual_sha256": "b65f09c933a1037b7214bcf47b17950462c9f2566c24bd951b851fe049c91d08"
+        },
+        {
+          "file": "backend/data/co_prox_benchmark.json",
+          "sha256": "b364560ce902c1564f1e0e1f881bc020fa1a1556598297b9ec97265e0dabd187",
+          "actual_sha256": "b364560ce902c1564f1e0e1f881bc020fa1a1556598297b9ec97265e0dabd187"
+        },
+        {
+          "file": "backend/data/dry_reforming_benchmark.json",
+          "sha256": "476eb0a3096638a1132abdd5ce1ffa866210d9b0864f77ae938aed721a20cbf0",
+          "actual_sha256": "476eb0a3096638a1132abdd5ce1ffa866210d9b0864f77ae938aed721a20cbf0"
+        },
+        {
+          "file": "backend/data/electrocatalyst_library.json",
+          "sha256": "9c2d3cff354f8e0b61f3395ef763f94429599d7269edb468d2c945d9e9d6f16d",
+          "actual_sha256": "9c2d3cff354f8e0b61f3395ef763f94429599d7269edb468d2c945d9e9d6f16d"
+        },
+        {
+          "file": "backend/data/equipment_library.json",
+          "sha256": "1e5adead1a20343ea0e4e8b56fdb1ff82326f031c8c5d824260acc2f668c20d3",
+          "actual_sha256": "1e5adead1a20343ea0e4e8b56fdb1ff82326f031c8c5d824260acc2f668c20d3"
+        },
+        {
+          "file": "backend/data/ethylene_epoxidation_benchmark.json",
+          "sha256": "1b641f08308cafd1f0892ca8937b12aa5ed49f215b00b093195828d81169f8e2",
+          "actual_sha256": "1b641f08308cafd1f0892ca8937b12aa5ed49f215b00b093195828d81169f8e2"
+        },
+        {
+          "file": "backend/data/fischer_tropsch_benchmark.json",
+          "sha256": "30eb3d2789dad08e18abac3d7b9759665441dfaf0abe23d44668ba6bec13d17d",
+          "actual_sha256": "30eb3d2789dad08e18abac3d7b9759665441dfaf0abe23d44668ba6bec13d17d"
+        },
+        {
+          "file": "backend/data/formic_acid_dehydrogenation_benchmark.json",
+          "sha256": "d84d5c0da4d8457727196eea54c8e532ba52eb59082c57e6bb43509cc886530e",
+          "actual_sha256": "d84d5c0da4d8457727196eea54c8e532ba52eb59082c57e6bb43509cc886530e"
+        },
+        {
+          "file": "backend/data/fuel_cell_orr_benchmark.json",
+          "sha256": "02949aabd9707bc9d4f6f6a724db488d4faf72890b0dc97ac4834a3d739740ec",
+          "actual_sha256": "02949aabd9707bc9d4f6f6a724db488d4faf72890b0dc97ac4834a3d739740ec"
+        },
+        {
+          "file": "backend/data/glycerol_oxidation_benchmark.json",
+          "sha256": "24d86d1fc03f95ec313ab30a183d275324afff2e352feb89051a50e14f84ed72",
+          "actual_sha256": "24d86d1fc03f95ec313ab30a183d275324afff2e352feb89051a50e14f84ed72"
+        },
+        {
+          "file": "backend/data/hydrodeoxygenation_benchmark.json",
+          "sha256": "1d8830c1fb02835c960e70b31ae2f5ff27181082771dd366fc27e7bbb2dd3816",
+          "actual_sha256": "1d8830c1fb02835c960e70b31ae2f5ff27181082771dd366fc27e7bbb2dd3816"
+        },
+        {
+          "file": "backend/data/hydrogen_evolution_benchmark.json",
+          "sha256": "be5f79cc245fe2282605e8355a477f7b39b4d9ddd2c768a66dbf717b5811a8a0",
+          "actual_sha256": "be5f79cc245fe2282605e8355a477f7b39b4d9ddd2c768a66dbf717b5811a8a0"
+        },
+        {
+          "file": "backend/data/lca_factors.json",
+          "sha256": "d9a360919a20b7dc2f1c0bcf57511711bdfd6d1fd817008440961329911afde6",
+          "actual_sha256": "d9a360919a20b7dc2f1c0bcf57511711bdfd6d1fd817008440961329911afde6"
+        },
+        {
+          "file": "backend/data/loh2002_step_anchors.json",
+          "sha256": "f55c5e42cb84eb2eafac18d4a335869bbc848d4379163c338a5fd1679e3de2f3",
+          "actual_sha256": "f55c5e42cb84eb2eafac18d4a335869bbc848d4379163c338a5fd1679e3de2f3"
+        },
+        {
+          "file": "backend/data/materials_curated.json",
+          "sha256": "b99e8e6ac0d7f8938ff59d8896df103d8949337e9a6a15187d135a4d64d03fee",
+          "actual_sha256": "b99e8e6ac0d7f8938ff59d8896df103d8949337e9a6a15187d135a4d64d03fee"
+        },
+        {
+          "file": "backend/data/materials_library.json",
+          "sha256": "391502d24d75c16509c33bd2c7f4240225efb9f1a46e4dd8708a2d6769fe2e0d",
+          "actual_sha256": "391502d24d75c16509c33bd2c7f4240225efb9f1a46e4dd8708a2d6769fe2e0d"
+        },
+        {
+          "file": "backend/data/mea_manufacturing.json",
+          "sha256": "a6e9bbaba16d9e6a29ae0b4cbf489d7fc979b2dd408b6c7695a7fb103103ab42",
+          "actual_sha256": "a6e9bbaba16d9e6a29ae0b4cbf489d7fc979b2dd408b6c7695a7fb103103ab42"
+        },
+        {
+          "file": "backend/data/methane_pyrolysis_benchmark.json",
+          "sha256": "1c8e9713377a99e223816a9fbf7c75199f62437ddfd26f5f9f1b1f00fe0415a2",
+          "actual_sha256": "1c8e9713377a99e223816a9fbf7c75199f62437ddfd26f5f9f1b1f00fe0415a2"
+        },
+        {
+          "file": "backend/data/methanol_to_olefins_benchmark.json",
+          "sha256": "b1fb6cb1a04f6a8c90fa3402e2588f5a7802929529e21033a49e3ba2c3ba2ea6",
+          "actual_sha256": "b1fb6cb1a04f6a8c90fa3402e2588f5a7802929529e21033a49e3ba2c3ba2ea6"
+        },
+        {
+          "file": "backend/data/nh3_scr_benchmark.json",
+          "sha256": "9f9e709014c9398117ff8860505bc1df732ad9af0ff29e4e76c85d7042318953",
+          "actual_sha256": "9f9e709014c9398117ff8860505bc1df732ad9af0ff29e4e76c85d7042318953"
+        },
+        {
+          "file": "backend/data/nitrogen_reduction_benchmark.json",
+          "sha256": "bafc158d5d5b77676bb75a40dd5969342086a9368718fbf687159486c9930aa4",
+          "actual_sha256": "bafc158d5d5b77676bb75a40dd5969342086a9368718fbf687159486c9930aa4"
+        },
+        {
+          "file": "backend/data/olefin_metathesis_benchmark.json",
+          "sha256": "2504596e2ca3c0e28bd1a1670f87e00a985926d11d5de06ab76f879ef6af01bf",
+          "actual_sha256": "2504596e2ca3c0e28bd1a1670f87e00a985926d11d5de06ab76f879ef6af01bf"
+        },
+        {
+          "file": "backend/data/opex_factors.json",
+          "sha256": "7034d4a7cfa94c19d65994ac9e32dae416b8b14d4c67ae7b49623e0d30b2262d",
+          "actual_sha256": "7034d4a7cfa94c19d65994ac9e32dae416b8b14d4c67ae7b49623e0d30b2262d"
+        },
+        {
+          "file": "backend/data/pem_electrolyzer_oer_benchmark.json",
+          "sha256": "e5d03c8be44049edd8812401d867a2bc8505ce365500ea7ad871e0825d634154",
+          "actual_sha256": "e5d03c8be44049edd8812401d867a2bc8505ce365500ea7ad871e0825d634154"
+        },
+        {
+          "file": "backend/data/photocatalytic_co2_reduction_benchmark.json",
+          "sha256": "1f04a4c9c0daf82f2a24d8f6ef79038967902e2bc311707c3a414d6b3fa653cf",
+          "actual_sha256": "1f04a4c9c0daf82f2a24d8f6ef79038967902e2bc311707c3a414d6b3fa653cf"
+        },
+        {
+          "file": "backend/data/photocatalytic_water_splitting_benchmark.json",
+          "sha256": "0c5e8bbe3b00243bb11d558d1fd50b65cd0f3591e6d12b6500a73710a28bfbbe",
+          "actual_sha256": "0c5e8bbe3b00243bb11d558d1fd50b65cd0f3591e6d12b6500a73710a28bfbbe"
+        },
+        {
+          "file": "backend/data/process_energy_factors.json",
+          "sha256": "34936c1baa605c710f8df5043d0707ffd52a36e2457c0b3fdde02a86f0fc2067",
+          "actual_sha256": "34936c1baa605c710f8df5043d0707ffd52a36e2457c0b3fdde02a86f0fc2067"
+        },
+        {
+          "file": "backend/data/process_templates/aem_fuel_cell_ccm.json",
+          "sha256": "934b73b6dfb70e8bb49091a2d4ae9afb31e6b6d9fa6a1732226acd28d730ee49",
+          "actual_sha256": "934b73b6dfb70e8bb49091a2d4ae9afb31e6b6d9fa6a1732226acd28d730ee49"
+        },
+        {
+          "file": "backend/data/process_templates/alkaline_electrolyzer_gde.json",
+          "sha256": "3905b0246f38f4dec9c68acaccf9c02a973681090e3529bb4b463267b0ceb321",
+          "actual_sha256": "3905b0246f38f4dec9c68acaccf9c02a973681090e3529bb4b463267b0ceb321"
+        },
+        {
+          "file": "backend/data/process_templates/colloidal_nanoparticle_deposition.json",
+          "sha256": "60de52ac9160973821cf3d92991180a94945b6ec879c9cf1cbc6c28e5491dc81",
+          "actual_sha256": "60de52ac9160973821cf3d92991180a94945b6ec879c9cf1cbc6c28e5491dc81"
+        },
+        {
+          "file": "backend/data/process_templates/combustion_synthesis_mixed_oxide.json",
+          "sha256": "f23fdaa0246f124880d22bb98847ad8f092fbe9af671ebf2e4681e62916de183",
+          "actual_sha256": "f23fdaa0246f124880d22bb98847ad8f092fbe9af671ebf2e4681e62916de183"
+        },
+        {
+          "file": "backend/data/process_templates/coprecipitation_metal_oxide.json",
+          "sha256": "42908089894c9f1968b9de1b17386834543cc1051ca503889e1d5c6747056278",
+          "actual_sha256": "42908089894c9f1968b9de1b17386834543cc1051ca503889e1d5c6747056278"
+        },
+        {
+          "file": "backend/data/process_templates/custom_step_process.json",
+          "sha256": "40426e34eb3ff86aab5dd02944572f9c557a6cbfbf676816f51a64658fe489b7",
+          "actual_sha256": "40426e34eb3ff86aab5dd02944572f9c557a6cbfbf676816f51a64658fe489b7"
+        },
+        {
+          "file": "backend/data/process_templates/deposition_precipitation_metal_oxide.json",
+          "sha256": "39f62ccd2ae98032b93a073085d187502366fc02fb392eb186a738451e6e6e2f",
+          "actual_sha256": "39f62ccd2ae98032b93a073085d187502366fc02fb392eb186a738451e6e6e2f"
+        },
+        {
+          "file": "backend/data/process_templates/dmfc_gde_route.json",
+          "sha256": "1119d3d1203cb05b5fbebeb3375cf3622786b2793045802cbb8e38fef46f1558",
+          "actual_sha256": "1119d3d1203cb05b5fbebeb3375cf3622786b2793045802cbb8e38fef46f1558"
+        },
+        {
+          "file": "backend/data/process_templates/excess_solution_impregnation_metal_oxide.json",
+          "sha256": "587d81435bb043f22bb32242316c5b4475750b6484d26b76870cd723d8b285e6",
+          "actual_sha256": "587d81435bb043f22bb32242316c5b4475750b6484d26b76870cd723d8b285e6"
+        },
+        {
+          "file": "backend/data/process_templates/fcc_catalyst_usy_w_re.json",
+          "sha256": "ef21ca2a31180bb69fe3135e87908e987fb57af57a313d66a738558ac70f09a1",
+          "actual_sha256": "ef21ca2a31180bb69fe3135e87908e987fb57af57a313d66a738558ac70f09a1"
+        },
+        {
+          "file": "backend/data/process_templates/fusion_promoted_magnetite.json",
+          "sha256": "3cbdf560cdfc98c4337db049fd9c5dbc0f0c5e59a26dfaed41f1a4493896b415",
+          "actual_sha256": "3cbdf560cdfc98c4337db049fd9c5dbc0f0c5e59a26dfaed41f1a4493896b415"
+        },
+        {
+          "file": "backend/data/process_templates/hydrothermal_oxide_nanostructure.json",
+          "sha256": "831f9b6f46373ccc69af6cac94d3d5774a4a226bccbe49ab5d6233af36742eb4",
+          "actual_sha256": "831f9b6f46373ccc69af6cac94d3d5774a4a226bccbe49ab5d6233af36742eb4"
+        },
+        {
+          "file": "backend/data/process_templates/ion_exchange_zeolite_metal.json",
+          "sha256": "c25d50825569f8ce98bf91bc0f9cbb3053a62ae58738e9552d85bcd0a54c0a1e",
+          "actual_sha256": "c25d50825569f8ce98bf91bc0f9cbb3053a62ae58738e9552d85bcd0a54c0a1e"
+        },
+        {
+          "file": "backend/data/process_templates/magnesia_alumina.json",
+          "sha256": "c4c89486a424a1ef07beda882757a8400c5113531029be6415f5c57d76bf9aab",
+          "actual_sha256": "c4c89486a424a1ef07beda882757a8400c5113531029be6415f5c57d76bf9aab"
+        },
+        {
+          "file": "backend/data/process_templates/metal_carbide_bulk.json",
+          "sha256": "7c24e605e26fe30bd903901f94bcdeecedf784b7df78608c1dede5a35cdb7ec0",
+          "actual_sha256": "7c24e605e26fe30bd903901f94bcdeecedf784b7df78608c1dede5a35cdb7ec0"
+        },
+        {
+          "file": "backend/data/process_templates/metal_carbide_on_metal_oxide.json",
+          "sha256": "1bdb63d1ef69c281d5f427341cd929d9ab316dd0c98ba04c6524482bfcda2d77",
+          "actual_sha256": "1bdb63d1ef69c281d5f427341cd929d9ab316dd0c98ba04c6524482bfcda2d77"
+        },
+        {
+          "file": "backend/data/process_templates/metal_earth_abundant_on_metal_oxide.json",
+          "sha256": "e5f79ae9c1acce3c9ff29942f8d12de058b6d99cde004b33779095d3a41e5f37",
+          "actual_sha256": "e5f79ae9c1acce3c9ff29942f8d12de058b6d99cde004b33779095d3a41e5f37"
+        },
+        {
+          "file": "backend/data/process_templates/metal_pgm_carbon.json",
+          "sha256": "6f408becee8c581f034e6c9dad4071cdae3f0ba9753e5de15f31e378bb3f221d",
+          "actual_sha256": "6f408becee8c581f034e6c9dad4071cdae3f0ba9753e5de15f31e378bb3f221d"
+        },
+        {
+          "file": "backend/data/process_templates/metal_pgm_on_carbon.json",
+          "sha256": "55519e4f851b7217f0446c33d44c9487c77e9c0b310b412147e52e5e46ae1d96",
+          "actual_sha256": "55519e4f851b7217f0446c33d44c9487c77e9c0b310b412147e52e5e46ae1d96"
+        },
+        {
+          "file": "backend/data/process_templates/metal_pgm_on_metal_oxide.json",
+          "sha256": "b12aa761fc2ab27d10041acae6af3c6917a0eaaf12c1dc8322a164e5ba0f447d",
+          "actual_sha256": "b12aa761fc2ab27d10041acae6af3c6917a0eaaf12c1dc8322a164e5ba0f447d"
+        },
+        {
+          "file": "backend/data/process_templates/pem_electrolyzer_ccm.json",
+          "sha256": "2653bf70fcff21c03f6ce01f0c50961da646bf052abcd1baee5eea462e06213c",
+          "actual_sha256": "2653bf70fcff21c03f6ce01f0c50961da646bf052abcd1baee5eea462e06213c"
+        },
+        {
+          "file": "backend/data/process_templates/pem_fuel_cell_ccm.json",
+          "sha256": "42911d8adacac6b254afb9ebb72403c3c1c5bf25ed588d57321f61050d98b2ca",
+          "actual_sha256": "42911d8adacac6b254afb9ebb72403c3c1c5bf25ed588d57321f61050d98b2ca"
+        },
+        {
+          "file": "backend/data/process_templates/reduction_activation_addon.json",
+          "sha256": "fe59fb079233d86e8a65179da0eca3c8e552e8750c79914f05ec5db0d9f9a5b8",
+          "actual_sha256": "fe59fb079233d86e8a65179da0eca3c8e552e8750c79914f05ec5db0d9f9a5b8"
+        },
+        {
+          "file": "backend/data/process_templates/shaping_extrusion_pelletizing.json",
+          "sha256": "ee847854f1546fd8dc26a83179c9131f81583eaec4afb28a445d1608f3d6bad5",
+          "actual_sha256": "ee847854f1546fd8dc26a83179c9131f81583eaec4afb28a445d1608f3d6bad5"
+        },
+        {
+          "file": "backend/data/process_templates/sol_gel_metal_oxide.json",
+          "sha256": "3f76bfe671f8a5c7f40a5cf021b293ff380ba966091709c08722972bfe7a4591",
+          "actual_sha256": "3f76bfe671f8a5c7f40a5cf021b293ff380ba966091709c08722972bfe7a4591"
+        },
+        {
+          "file": "backend/data/process_templates/solid_state_mechanochemical.json",
+          "sha256": "d8e7805a96250967809953369cd6c928bf8f8a9a8e08d3559b1e45a88710f508",
+          "actual_sha256": "d8e7805a96250967809953369cd6c928bf8f8a9a8e08d3559b1e45a88710f508"
+        },
+        {
+          "file": "backend/data/process_templates/sulfidation_hydrotreating.json",
+          "sha256": "225f40e66824406637cce0f472972d8b3e694f4f7a6a7ad58265825e5214f0f8",
+          "actual_sha256": "225f40e66824406637cce0f472972d8b3e694f4f7a6a7ad58265825e5214f0f8"
+        },
+        {
+          "file": "backend/data/process_templates/washcoat_monolith.json",
+          "sha256": "9dc6239fde365f6cc74da11ac13a198edd22d50ea03b4503ddb5b9587d31804d",
+          "actual_sha256": "9dc6239fde365f6cc74da11ac13a198edd22d50ea03b4503ddb5b9587d31804d"
+        },
+        {
+          "file": "backend/data/process_templates/wet_impregnation_metal_oxide.json",
+          "sha256": "272eb421a0e76d00b742b794e78db5bbf9d5b79b659d5872df9b76fe672f6aaa",
+          "actual_sha256": "272eb421a0e76d00b742b794e78db5bbf9d5b79b659d5872df9b76fe672f6aaa"
+        },
+        {
+          "file": "backend/data/process_templates/zeolite_beta_bulk.json",
+          "sha256": "d99a7bc5ef8d4e3363b5e5afe8f0567f825ff791a2689806a2092aa18689da0c",
+          "actual_sha256": "d99a7bc5ef8d4e3363b5e5afe8f0567f825ff791a2689806a2092aa18689da0c"
+        },
+        {
+          "file": "backend/data/process_templates/zeolite_beta_with_metal_active_site.json",
+          "sha256": "c98afb89f783c0161af8c59d951345dbc14a92fa133a083e47a0999374e72d40",
+          "actual_sha256": "c98afb89f783c0161af8c59d951345dbc14a92fa133a083e47a0999374e72d40"
+        },
+        {
+          "file": "backend/data/process_templates/zeolite_fcc.json",
+          "sha256": "88c130fa997fa7a091c3dff39718b0957049e24db5dd6c96a1cc716fbe3a8dd6",
+          "actual_sha256": "88c130fa997fa7a091c3dff39718b0957049e24db5dd6c96a1cc716fbe3a8dd6"
+        },
+        {
+          "file": "backend/data/process_templates/zeolite_zsm_5_2025_pct.json",
+          "sha256": "02208744c5d8f7bc12f74571ebc3567b6d71e791e7ea00146f13f8226fbdbd01",
+          "actual_sha256": "02208744c5d8f7bc12f74571ebc3567b6d71e791e7ea00146f13f8226fbdbd01"
+        },
+        {
+          "file": "backend/data/process_templates/zeolite_zsm_5_bulk.json",
+          "sha256": "c681a33a792bf95bc6f1518e6fa3e673840fc5e929722a434c0b56226aafdb92",
+          "actual_sha256": "c681a33a792bf95bc6f1518e6fa3e673840fc5e929722a434c0b56226aafdb92"
+        },
+        {
+          "file": "backend/data/propane_dehydrogenation_benchmark.json",
+          "sha256": "53d47a441ec322114e263dbc1cd66c5e1947d66be7264442b37777621071cfcd",
+          "actual_sha256": "53d47a441ec322114e263dbc1cd66c5e1947d66be7264442b37777621071cfcd"
+        },
+        {
+          "file": "backend/data/rwgs_benchmark.json",
+          "sha256": "c372004830615396031c2fde9c0c366fc2b5ef1ba60d4ee942845f978a52a72e",
+          "actual_sha256": "c372004830615396031c2fde9c0c366fc2b5ef1ba60d4ee942845f978a52a72e"
+        },
+        {
+          "file": "backend/data/selective_acetylene_hydrogenation_benchmark.json",
+          "sha256": "c4aaadfa06997a3a9fbe026e970b9ebcc6b3f06c9a711d8739f25466002cb1ae",
+          "actual_sha256": "c4aaadfa06997a3a9fbe026e970b9ebcc6b3f06c9a711d8739f25466002cb1ae"
+        },
+        {
+          "file": "backend/data/spent_catalyst.json",
+          "sha256": "d9050806ceed09330b43016459196d7df70aa47e739b538c80ef431b511f7faa",
+          "actual_sha256": "d9050806ceed09330b43016459196d7df70aa47e739b538c80ef431b511f7faa"
+        },
+        {
+          "file": "backend/data/steam_methane_reforming_benchmark.json",
+          "sha256": "cee6008be10e780855a8e5f028ea272975348aa7b36db6b4d9231284a8ffc3f9",
+          "actual_sha256": "cee6008be10e780855a8e5f028ea272975348aa7b36db6b4d9231284a8ffc3f9"
+        },
+        {
+          "file": "backend/data/step_library.json",
+          "sha256": "c550828dade8b0e5de130c9612d746a3542c12734ebb4abddb04a9182a6a4e63",
+          "actual_sha256": "c550828dade8b0e5de130c9612d746a3542c12734ebb4abddb04a9182a6a4e63"
+        },
+        {
+          "file": "backend/data/support_price_history.json",
+          "sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3",
+          "actual_sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3"
+        },
+        {
+          "file": "backend/data/support_series.json",
+          "sha256": "2267c34b16d94fe59034348f6643dcfa80404b466e52fa381f10bc7b472ae7d8",
+          "actual_sha256": "2267c34b16d94fe59034348f6643dcfa80404b466e52fa381f10bc7b472ae7d8"
+        },
+        {
+          "file": "backend/data/syngas_methanol_benchmark.json",
+          "sha256": "48c89457861cee0ffab005d8a1dc31182f018a7b5423f4622d37c0d0f1935a42",
+          "actual_sha256": "48c89457861cee0ffab005d8a1dc31182f018a7b5423f4622d37c0d0f1935a42"
+        },
+        {
+          "file": "backend/data/unit_conversions.json",
+          "sha256": "6b8825defa627740051a2515cad6566b8670e74f740aa927dc2bdde70859ec12",
+          "actual_sha256": "6b8825defa627740051a2515cad6566b8670e74f740aa927dc2bdde70859ec12"
+        },
+        {
+          "file": "backend/data/water_gas_shift_benchmark.json",
+          "sha256": "eb0b19af7fc1d3afa171000301e05f747dd04787f6f61123b3713e2826b8f630",
+          "actual_sha256": "eb0b19af7fc1d3afa171000301e05f747dd04787f6f61123b3713e2826b8f630"
+        }
+      ]
+    },
+    "outputs": {
+      "count": 27,
+      "all_matched": true,
+      "files": [
+        {
+          "file": "active_metal_breakeven_2026-09-07.json",
+          "sha256": "1bb8970b987791ea279287e1bb8711c9580fd97b227bf15c02f7f78afedc2d72",
+          "actual_sha256": "1bb8970b987791ea279287e1bb8711c9580fd97b227bf15c02f7f78afedc2d72"
+        },
+        {
+          "file": "all_families_2026-09-07.json",
+          "sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c",
+          "actual_sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c"
+        },
+        {
+          "file": "all_families_live_2026-09-07.json",
+          "sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400",
+          "actual_sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400"
+        },
+        {
+          "file": "breakeven_sweep_points_2026-09-07.json",
+          "sha256": "b564612f585b1eb28f426a627f5ed180e471fd123c6ec5cf5d871b7e2cbaae81",
+          "actual_sha256": "b564612f585b1eb28f426a627f5ed180e471fd123c6ec5cf5d871b7e2cbaae81"
+        },
+        {
+          "file": "figure_manifest_2026-09-07.json",
+          "sha256": "cc0a740b4121705bdebca189d12b9ea665e3f64bc076373dd5872a60f9d7541b",
+          "actual_sha256": "cc0a740b4121705bdebca189d12b9ea665e3f64bc076373dd5872a60f9d7541b"
+        },
+        {
+          "file": "figures\\figure1_architecture_2026-09-07.png",
+          "sha256": "ae9e7e4af95f008381e94343379982a31eed62cd9df7e34a182d485ebf211cfd",
+          "actual_sha256": "ae9e7e4af95f008381e94343379982a31eed62cd9df7e34a182d485ebf211cfd"
+        },
+        {
+          "file": "figures\\figure1_architecture_2026-09-07.svg",
+          "sha256": "3356220f6946059fe5bf397c51e8644011915895d5d9a9f7c2ef7ce2f2e1ac07",
+          "actual_sha256": "3356220f6946059fe5bf397c51e8644011915895d5d9a9f7c2ef7ce2f2e1ac07"
+        },
+        {
+          "file": "figures\\figure2_table62_2026-09-07.png",
+          "sha256": "e39fa25ec37c56e5a36bf9d133d0b23c102e7b67e1d5082bd53a6f316055686c",
+          "actual_sha256": "e39fa25ec37c56e5a36bf9d133d0b23c102e7b67e1d5082bd53a6f316055686c"
+        },
+        {
+          "file": "figures\\figure2_table62_2026-09-07.svg",
+          "sha256": "d562ceef0e3206bc166af4a04ce66d6fe09966d8e1e4c4bb6d9f464114cb5aec",
+          "actual_sha256": "d562ceef0e3206bc166af4a04ce66d6fe09966d8e1e4c4bb6d9f464114cb5aec"
+        },
+        {
+          "file": "figures\\figure3_gwp_cost_2026-09-07.png",
+          "sha256": "b0c45230fd1ea7a25c0e1a7e1cb2e367d039067ff0787147ad4a87bd7733c0e1",
+          "actual_sha256": "b0c45230fd1ea7a25c0e1a7e1cb2e367d039067ff0787147ad4a87bd7733c0e1"
+        },
+        {
+          "file": "figures\\figure3_gwp_cost_2026-09-07.svg",
+          "sha256": "abb5d3f7d1240ca4bd0da047d7542fed15d48e9b68d147b61ca4b62d47e6b374",
+          "actual_sha256": "abb5d3f7d1240ca4bd0da047d7542fed15d48e9b68d147b61ca4b62d47e6b374"
+        },
+        {
+          "file": "figures\\figure4_weight_sensitivity_2026-09-07.png",
+          "sha256": "1dd57a986f0cbfd2978b3d9959854d3dd2937f070171df09cbe4db43cd441cf4",
+          "actual_sha256": "1dd57a986f0cbfd2978b3d9959854d3dd2937f070171df09cbe4db43cd441cf4"
+        },
+        {
+          "file": "figures\\figure4_weight_sensitivity_2026-09-07.svg",
+          "sha256": "4df4926972039ad8a1c156252ccc220abf0430ef82c6b606a31d64af8027ce62",
+          "actual_sha256": "4df4926972039ad8a1c156252ccc220abf0430ef82c6b606a31d64af8027ce62"
+        },
+        {
+          "file": "figures\\figure5_live_reference_2026-09-07.png",
+          "sha256": "cb4ed9ee1378abb0281cc4ef190029fbf8b8a8a1c75b5ce2198ebbbc6e84ed75",
+          "actual_sha256": "cb4ed9ee1378abb0281cc4ef190029fbf8b8a8a1c75b5ce2198ebbbc6e84ed75"
+        },
+        {
+          "file": "figures\\figure5_live_reference_2026-09-07.svg",
+          "sha256": "132ffe3db19adf9af7b03e0ad52c5989191b3da18dd5fd4ba24659d927f0c527",
+          "actual_sha256": "132ffe3db19adf9af7b03e0ad52c5989191b3da18dd5fd4ba24659d927f0c527"
+        },
+        {
+          "file": "figures\\figure6_breakeven_sweeps_2026-09-07.png",
+          "sha256": "9c0fdea7b1c208929074b13e3f05b0ad2ac71b20ae0734138ba871d700e815e8",
+          "actual_sha256": "9c0fdea7b1c208929074b13e3f05b0ad2ac71b20ae0734138ba871d700e815e8"
+        },
+        {
+          "file": "figures\\figure6_breakeven_sweeps_2026-09-07.svg",
+          "sha256": "44d38075f3b5ff2a6142e188462e4c3c9a9b2655462d7b722cee6f5a7284b7e8",
+          "actual_sha256": "44d38075f3b5ff2a6142e188462e4c3c9a9b2655462d7b722cee6f5a7284b7e8"
+        },
+        {
+          "file": "live_basis_2026-09-07.json",
+          "sha256": "891ab156cb7bfc85af91afddd0736a32cd40a53785a4711dd0c43dee18395e05",
+          "actual_sha256": "891ab156cb7bfc85af91afddd0736a32cd40a53785a4711dd0c43dee18395e05"
+        },
+        {
+          "file": "manufacturing_costs_2026-09-07.json",
+          "sha256": "6dbfef38ae81dbde0f026960178606dc46f9bb3ce0494dcd84dfd8e77e0dba5b",
+          "actual_sha256": "6dbfef38ae81dbde0f026960178606dc46f9bb3ce0494dcd84dfd8e77e0dba5b"
+        },
+        {
+          "file": "monthly_history_2026-09-07.json",
+          "sha256": "cbc9ec0ec5bd74a7377e046ad74022a9709c3673df30a7713fc58c25aae17746",
+          "actual_sha256": "cbc9ec0ec5bd74a7377e046ad74022a9709c3673df30a7713fc58c25aae17746"
+        },
+        {
+          "file": "paper_summary_2026-09-07.json",
+          "sha256": "b056308fb8c4e85d4288b4a20747f94629d5223f3655b113e5ae6a54cf1fb9d2",
+          "actual_sha256": "b056308fb8c4e85d4288b4a20747f94629d5223f3655b113e5ae6a54cf1fb9d2"
+        },
+        {
+          "file": "price_history_2026-09-07.json",
+          "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+          "actual_sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69"
+        },
+        {
+          "file": "price_volatility_2026-09-07.json",
+          "sha256": "c126bbe1ba1ead64a12f4759f56c868e550c9e3406d12efb4587c8a99fcf9116",
+          "actual_sha256": "c126bbe1ba1ead64a12f4759f56c868e550c9e3406d12efb4587c8a99fcf9116"
+        },
+        {
+          "file": "reference_basis_2026-09-07.json",
+          "sha256": "3e9c52ad2518b1534384f0a39e51fc8a786b5ebcba951eaf55672f4c538efd76",
+          "actual_sha256": "3e9c52ad2518b1534384f0a39e51fc8a786b5ebcba951eaf55672f4c538efd76"
+        },
+        {
+          "file": "results_2026-09-07.md",
+          "sha256": "eb7779ded7493627c6bc4cadcca5e64e3d049e5a8c0bd55f234636be413a162a",
+          "actual_sha256": "eb7779ded7493627c6bc4cadcca5e64e3d049e5a8c0bd55f234636be413a162a"
+        },
+        {
+          "file": "support_history_2026-09-07.json",
+          "sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3",
+          "actual_sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3"
+        },
+        {
+          "file": "table62_reproduction_2026-09-07.json",
+          "sha256": "1f5907208f1278b17ba4ed75171c09362de225a9e66711d198e67ff9ae48b136",
+          "actual_sha256": "1f5907208f1278b17ba4ed75171c09362de225a9e66711d198e67ff9ae48b136"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "All support observations are US imports, world partner, six-digit HS all-grade unit values, not catalyst-grade supplier quotes.",
+    "The eight added support series contain June 2026 only; they are held at baseline in long historical replay and do not establish support-price volatility.",
+    "No missing observations, generic carbon/silica/zeolite LCA factors, manufacturing rates or catalyst performance measurements were invented.",
+    "Composite ranking changes reflect price changes and cost-weighted price-source confidence; they are not direct evidence of improved catalytic performance.",
+    "Original July paper artifacts and the previous one-series June supplement remain separate; this run is an additional support-price scenario."
+  ],
+  "readme_replay": {
+    "readme_line": 122,
+    "command": "python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --date 2026-09-07 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history docs/paper/free-data-2026-09-07/support_history_2026-09-07.json --out-dir _local/free-data-replay-2026-09-07",
+    "returncode": 0,
+    "elapsed_seconds": 29.56,
+    "basis_month": "2026-06",
+    "seed": 20260906,
+    "support_history_sha256": "e6ce5251b911026a80d94c516ac919150f711417fdc660ba0d5fb2f58020dfe3",
+    "all_three_major_json_byte_identical": true,
+    "files": [
+      {
+        "frozen_file": "docs/paper/free-data-2026-09-07/all_families_2026-09-07.json",
+        "replay_file": "_local/free-data-replay-2026-09-07/all_families_2026-09-07.json",
+        "sha256": "165b051e1ea293ec85304c548f625d64633da2314fc1e9bb6025853da147817c",
+        "byte_identical": true
+      },
+      {
+        "frozen_file": "docs/paper/free-data-2026-09-07/all_families_live_2026-09-07.json",
+        "replay_file": "_local/free-data-replay-2026-09-07/all_families_live_2026-09-07.json",
+        "sha256": "5bc79f9454cd319229a6245c3a15b5454c7a15a9c3f8d155de03119a85ed0400",
+        "byte_identical": true
+      },
+      {
+        "frozen_file": "docs/paper/free-data-2026-09-07/paper_summary_2026-09-07.json",
+        "replay_file": "_local/free-data-replay-2026-09-07/paper_summary_2026-09-07.json",
+        "sha256": "b056308fb8c4e85d4288b4a20747f94629d5223f3655b113e5ae6a54cf1fb9d2",
+        "byte_identical": true
+      }
+    ],
+    "manifest_hash_verification": {
+      "code_inputs": {
+        "count": 37,
+        "all_matched": true
+      },
+      "inputs": {
+        "count": 81,
+        "all_matched": true
+      },
+      "outputs": {
+        "count": 27,
+        "all_matched": true
+      }
+    }
+  }
+}

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="720pt" height="417.6pt" viewBox="0 0 720 417.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 417.6 
+L 720 417.6 
+L 720 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 24.768 166.88304 
+L 220.32 166.88304 
+Q 225.9072 166.88304 225.9072 162.6072 
+L 225.9072 82.4352 
+Q 225.9072 78.15936 220.32 78.15936 
+L 24.768 78.15936 
+Q 19.1808 78.15936 19.1808 82.4352 
+L 19.1808 162.6072 
+Q 19.1808 166.88304 24.768 166.88304 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 255.24 166.88304 
+L 450.792 166.88304 
+Q 456.3792 166.88304 456.3792 162.6072 
+L 456.3792 82.4352 
+Q 456.3792 78.15936 450.792 78.15936 
+L 255.24 78.15936 
+Q 249.6528 78.15936 249.6528 82.4352 
+L 249.6528 162.6072 
+Q 249.6528 166.88304 255.24 166.88304 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 485.712 166.88304 
+L 681.264 166.88304 
+Q 686.8512 166.88304 686.8512 162.6072 
+L 686.8512 82.4352 
+Q 686.8512 78.15936 681.264 78.15936 
+L 485.712 78.15936 
+Q 480.1248 78.15936 480.1248 82.4352 
+L 480.1248 162.6072 
+Q 480.1248 166.88304 485.712 166.88304 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 485.712 332.57184 
+L 681.264 332.57184 
+Q 686.8512 332.57184 686.8512 328.296 
+L 686.8512 248.124 
+Q 686.8512 243.84816 681.264 243.84816 
+L 485.712 243.84816 
+Q 480.1248 243.84816 480.1248 248.124 
+L 480.1248 328.296 
+Q 480.1248 332.57184 485.712 332.57184 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 255.24 332.57184 
+L 450.792 332.57184 
+Q 456.3792 332.57184 456.3792 328.296 
+L 456.3792 248.124 
+Q 456.3792 243.84816 450.792 243.84816 
+L 255.24 243.84816 
+Q 249.6528 243.84816 249.6528 248.124 
+L 249.6528 328.296 
+Q 249.6528 332.57184 255.24 332.57184 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 24.768 332.57184 
+L 220.32 332.57184 
+Q 225.9072 332.57184 225.9072 328.296 
+L 225.9072 248.124 
+Q 225.9072 243.84816 220.32 243.84816 
+L 24.768 243.84816 
+Q 19.1808 243.84816 19.1808 248.124 
+L 19.1808 328.296 
+Q 19.1808 332.57184 24.768 332.57184 
+z
+" clip-path="url(#p5705efa85c)" style="fill: #ffffff; stroke: #376d9c; stroke-width: 1.3; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="122.544" y="100.60752" transform="rotate(-0 122.544 100.60752)">Source observations</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(72.752203 123.030148)">IMF / Johnson Matthey</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(81.575016 135.159758)">Live-tier providers</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(63.756422 147.289367)">Public material references</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="353.016" y="100.60752" transform="rotate(-0 353.016 100.60752)">Frozen inputs</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(300.583266 123.030148)">Raw history + SHA-256</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(291.986859 135.159758)">Completed monthly means</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(301.318031 147.289367)">Separate live snapshot</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="583.488" y="100.60752" transform="rotate(-0 583.488 100.60752)">Price basis</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(535.376672 123.030148)">One reference month</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(533.467688 135.159758)">Explicit metal anchors</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(546.200578 147.289367)">Source evidence</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="583.488" y="266.29632" transform="rotate(-0 583.488 266.29632)">Cost and LCA engine</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(513.960188 288.718948)">Step Method / electrode model</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(514.250578 300.848558)">Scale and margin assumptions</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(509.4855 312.978167)">Coverage and missing processes</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="353.016" y="266.29632" transform="rotate(-0 353.016 266.29632)">Deterministic analyses</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(300.538969 288.718948)">Benchmark weight grid</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(316.461938 300.848558)">Historical replay</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(306.354516 312.978167)">Active-metal sweeps</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #26313b" x="122.544" y="266.29632" transform="rotate(-0 122.544 266.29632)">Research outputs</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(55.028531 288.718948)">JSON + environment manifest</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(57.524625 300.848558)">Figures and numerical tables</text>
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; fill: #26313b" transform="translate(62.008453 312.978167)">Desktop / web result views</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 223.714811 122.5212 
+Q 234.288282 122.5212 243.296506 122.5212 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 239.296506 120.5212 
+L 243.296506 122.5212 
+L 239.296506 124.5212 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 454.186811 122.5212 
+Q 464.760282 122.5212 473.768506 122.5212 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 469.768506 120.5212 
+L 473.768506 122.5212 
+L 469.768506 124.5212 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 583.488 169.949743 
+Q 583.488 204.560701 583.488 237.606411 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 585.488 233.606411 
+L 583.488 237.606411 
+L 581.488 233.606411 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 475.333189 288.21 
+Q 464.759718 288.21 455.751494 288.21 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 459.751494 290.21 
+L 455.751494 288.21 
+L 459.751494 286.21 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 244.861189 288.21 
+Q 234.287718 288.21 225.279494 288.21 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 229.279494 290.21 
+L 225.279494 288.21 
+L 229.279494 286.21 
+" style="fill: none; stroke: #26313b; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+  </g>
+  <g id="text_13">
+   <text style="font-size: 15px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26313b" x="14.4" y="19.749656" transform="rotate(-0 14.4 19.749656)">COMET architecture and research data flow</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #26313b" x="14.4" y="411.7536" transform="rotate(-0 14.4 411.7536)">Reference histories and local live quotes remain separate; legacy fallback sources retain their original labels.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5705efa85c">
+   <rect x="10.8" y="61.056" width="698.4" height="320.688"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -319,6 +319,7 @@
           "name": "Al2O3",
           "wt_pct": 79.5,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.9,
             "evidence_label": "Gamma-alumina support screening proxy",
@@ -521,6 +522,7 @@
           "name": "SiO2",
           "wt_pct": 5.0,
           "pricing": {
+            "reference_series": "HS281122",
             "type": "fixed",
             "price_per_lb": 1.1,
             "evidence_label": "SiO2 binder proxy",

@@ -92,6 +92,8 @@ automatically before a rebuild, or manually with `npm run desktop:stop`.
 
 ## Tests
 
+The prepared source version is **1.4.0**; the latest verified public release is **v1.3.24** (verified 2026-09-07). Tagging and publishing 1.4.0 remain human release steps. See the [release preparation checklist](docs/release-checklist.md) and [Korean getting-started guide](docs/getting-started.ko.md).
+
 ```bash
 python -m pytest backend/tests -q    # engine + API, includes CatCost validation cases
 cd frontend && npm run build         # type-check + build
@@ -104,6 +106,20 @@ published inputs. Pt/C matches to the cent. The other two land within 7%, and
 both residuals trace to footnotes in the table itself.
 `scripts/reproduce_catcost_table62.py` prints the full comparison.
 
+## Reproduce the paper
+
+The [unified manuscript](docs/paper/manuscript_2026-09-07.md), [supporting information](docs/paper/si_2026-09-07.md) and six figures use **May 2026**, the latest common month in the frozen metal history and ten validated support series. Reproduce their numerical results without network access:
+
+```bash
+python scripts/reproduce_paper.py --price-basis reference --month 2026-05 --seed 20260906 --date 2026-09-07 --history docs/paper/submission-2026-09-07/price_history_2026-09-07.json --live-basis docs/paper/submission-2026-09-07/live_basis_2026-09-07.json --support-history docs/paper/submission-2026-09-07/support_history_2026-09-07.json --out-dir _local/submission-replay-2026-09-07
+```
+
+Matplotlib is needed for figures. Input hashes, exact commands and Python/package versions are recorded in the reproduction manifest. `python scripts/build_submission_manuscript.py --directory docs/paper/submission-2026-09-07 --check` checks the committed manuscript/SI and their numerical source keys. The original July metal-only results and earlier June support runs remain available as historical snapshots.
+
+The shipped support history contains ten series and 28 observations over April–June. Alpha alumina lacks a valid June observation, so the combined paper basis is May; the app can still show each series' latest accepted quote. These all-grade import values are bulk proxies, not catalyst-grade supplier quotations. To collect a small new snapshot without credentials, run `python scripts/fetch_support_history.py --start 2026-04 --end 2026-07 --out support_history.json`; it records missing data and stops at provider rate limits. Omitting `--month` in the paper pipeline selects the common month of its supplied inputs.
+
+See the [validation and submission audit](docs/audit/validation-submission-2026-09-07.md) and [methodology](docs/methodology.md#reproducing-the-paper). The external cost evidence screen found no fully matched manufacturing-cost observation; method reproduction is not an empirical procurement-accuracy claim. Project data acquisition must remain free: no purchases, paid subscriptions or billable API calls.
+
 ## Optional API keys
 
 COMET runs without any keys. Add them only if you want live price feeds:
@@ -112,7 +128,7 @@ COMET runs without any keys. Add them only if you want live price feeds:
 METALS_DEV_API_KEY=your_key      # metals.dev, free tier available
 METALPRICE_API_KEY=your_key      # metalpriceapi.com, free tier available
 BLS_API_KEY=your_key             # bls.gov, free with registration
-COMTRADE_API_KEY=your_key        # comtradeplus.un.org, free tier; monthly support-material unit values on the academic basis
+COMTRADE_API_KEY=your_key        # optional scheduled collection; verified shipped support observations work offline without a key
 ```
 
 ## Method basis
@@ -121,7 +137,7 @@ COMET is an independent implementation. It cites the CatCost methodology
 academically but does not redistribute CatCost source data, and it is not
 affiliated with or endorsed by NREL.
 
-- Baddour, F. G., et al. (2018). *Journal of the American Chemical Society*.
+- Baddour, F. G., et al. (2018). Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method. *Organic Process Research & Development*. [Verified DOI](https://doi.org/10.1021/acs.oprd.8b00245).
 - Van Allsburg, K. M., et al. (2022). Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost. *Nature Catalysis*.
 
 Benchmark- and route-specific references are attached to the datasets inside the app.

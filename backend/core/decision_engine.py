@@ -105,8 +105,13 @@ def _latest_price_map(session: Session, basis: str = "live") -> dict[str, dict[s
 def _resolve_component_pricing(
     component: dict[str, Any],
     latest_prices: dict[str, dict[str, Any]],
+    basis: str = "live",
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     pricing = component["pricing"]
+    reference = latest_prices.get(pricing.get("reference_series")) if basis == "reference" else None
+    use_reference = reference is not None and reference.get("unit") in {"$/kg", "$/lb"}
+    if use_reference:
+        pricing = {**pricing, "type": "market_feed", "symbol": pricing["reference_series"]}
 
     if pricing["type"] == "market_feed":
         symbol = pricing["symbol"]
@@ -127,8 +132,12 @@ def _resolve_component_pricing(
             "source_type": "live" if evidence["tier"] != "indexed_reference" else "indexed",
             "source": latest["source"],
             "unit": latest["unit"],
-            "price_basis": "market_feed",
-            "pricing_note": pricing["note"],
+            "price_basis": "reference_series" if use_reference else "market_feed",
+            "pricing_note": (
+                f"Reference override: {pricing['reference_series']}, all-grade UN Comtrade import unit value; "
+                "not a catalyst-grade quotation. Fixed-price fallback note: "
+                if use_reference else ""
+            ) + pricing["note"],
             "fetched_at": latest["fetched_at"],
             "evidence": evidence,
         }
@@ -302,7 +311,7 @@ def evaluate_benchmark_family(
         component_inputs: list[dict[str, Any]] = []
         component_meta: list[dict[str, Any]] = []
         for component in candidate["components"]:
-            component_input, meta = _resolve_component_pricing(component, latest_prices)
+            component_input, meta = _resolve_component_pricing(component, latest_prices, basis)
             component_inputs.append(component_input)
             component_meta.append(meta)
 
@@ -427,10 +436,10 @@ def evaluate_benchmark_family(
     _apply_total_scores(candidates, score_weights)
     candidates.sort(
         key=lambda item: (
-            float(item["scores"]["total"]),
-            -float(item["summary"]["landed_cost_per_lb"]),
+            -float(item["scores"]["total"]),
+            float(item["summary"]["landed_cost_per_lb"]),
+            item["slug"],
         ),
-        reverse=True,
     )
 
     return {

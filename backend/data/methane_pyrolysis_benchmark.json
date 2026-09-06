@@ -287,6 +287,7 @@
           "name": "SiO2",
           "wt_pct": 25.0,
           "pricing": {
+            "reference_series": "HS281122",
             "type": "fixed",
             "price_per_lb": 1.1,
             "evidence_label": "SiO2 screening proxy",
@@ -343,6 +344,7 @@
           "name": "Al2O3",
           "wt_pct": 38.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",

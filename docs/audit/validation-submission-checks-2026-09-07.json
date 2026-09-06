@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-07",
+  "baseline_commit": "dbd763b",
+  "data_commit": "b69123b",
+  "python": "3.14.0",
+  "pytest": {
+    "command": "python -m pytest backend/tests -q",
+    "passed": 710,
+    "elapsed_seconds": 459.11,
+    "output_tail": "710 passed in 459.11s (0:07:39)"
+  },
+  "ruff": {
+    "command": "python -m ruff check backend scripts",
+    "status": "passed"
+  },
+  "frontend": {
+    "commands": [
+      "npm run check:i18n",
+      "npm run lint",
+      "npm run build"
+    ],
+    "status": "passed",
+    "missing_key_occurrences": 0,
+    "untranslated_ui_label_occurrences": 0,
+    "combined_wall_seconds": 7.7483737,
+    "vite_seconds": 0.452,
+    "known_warning": "Existing Tailwind sourcemap warning; build succeeded"
+  },
+  "node_rules": {
+    "command": "node --test scripts/test_calculator_rules.mjs",
+    "passed": 10
+  },
+  "desktop": {
+    "build_seconds": 180.742553,
+    "smoke_exit": 0,
+    "total_seconds": 197.8055162,
+    "version": "1.4.0",
+    "main_window_count": 1,
+    "prices_status": 200,
+    "calculate_status": 200,
+    "estimated_price_per_kg": 9.0374,
+    "support_source_sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29",
+    "support_packaged_sha256": "b6ac7e3f3309d73c8cfe6c0a61547c576e68d522d5f25e94312a6d992a01fa29",
+    "packaged_snapshot_matches": true
+  },
+  "browser": {
+    "functional_cases_passed": 6,
+    "functional_cases_total": 6,
+    "screenshots": 10,
+    "page_errors": 0,
+    "console_errors": 0,
+    "failed_api_responses": 0,
+    "external_browser_requests": 0,
+    "visual_limitations": 1
+  },
+  "attempt_notes": [
+    "Initial Node glob matched no tests; corrected explicit rule file passed10.",
+    "Invoking optional cold_start browser helper without external Playwright NODE_PATH failed module resolution; no package added. Independent configured real Chrome helper subsequently passed6functionalflows.",
+    "Frozen raw JSON intentionally retains Windows CRLF for exact hashes. git diff --check with cr-at-eol validates actual trailing spaces without treating CR as data corruption.",
+    "Figure4 source-score caption clarified and wrapped after actual image inspection.",
+    "New SI source guard tested against actual LF Git blob, CRLF working source and rejected content mutation."
+  ],
+  "final_ci": {
+    "status": "pending_final_push",
+    "note": "Data commit CI passed. This final documentation/figure/build-script commit is checked after push; its exact head outcome is recorded in PR112, avoiding an endless report-only commit loop."
+  },
+  "data_commit_ci": {
+    "head": "b69123b33e14702fde3e9587ca62a7a7b0c089fa",
+    "run_id": 34045687191,
+    "backend": "success",
+    "frontend": "success"
+  }
+}

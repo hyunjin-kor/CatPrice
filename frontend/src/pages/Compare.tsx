@@ -224,7 +224,7 @@ export default function Compare() {
   if (loading && !benchmark) {
     return (
       <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7">
-        <div className="cp-subtle-label">Literature Benchmarks</div>
+        <div className="cp-subtle-label">{t("Literature Benchmarks")}</div>
         <Skeleton className="mt-3 h-9 w-3/5 max-w-md" />
         <Skeleton className="mt-3 h-3 w-3/4 max-w-xl" />
         <Skeleton className="mt-2 h-3 w-2/3 max-w-lg" />
@@ -243,7 +243,7 @@ export default function Compare() {
   }
 
   if (error || !benchmark || !activeCandidate) {
-    return <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7"><span className="section-kicker">Literature Benchmarks</span><h1 className="cp-heading-xl mt-4">Literature benchmarks are unavailable.</h1><p className="cp-body-copy mt-3 max-w-xl">{error || 'The selected benchmark family did not return any candidate data.'}</p></section>;
+    return <section className="surface-card cp-enter overflow-hidden p-6 sm:p-7"><span className="section-kicker">{t("Literature Benchmarks")}</span><h1 className="cp-heading-xl mt-4">{t("Literature benchmarks are unavailable.")}</h1><p className="cp-body-copy mt-3 max-w-xl">{t(error || 'The selected benchmark family did not return any candidate data.')}</p></section>;
   }
 
   const winner = benchmark.winner;
@@ -275,7 +275,7 @@ export default function Compare() {
                 <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Top route')}</div><div className="mt-2 text-xl font-display text-white">{winner.title}</div></div>
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t(winner.summary.economics_basis_label)}</div><div className="mt-2 text-xl font-display text-white">{benchmarkCostValue(winner)}</div><div className="mt-1 text-xs text-slate-400">{benchmarkCostDetail(winner)}</div></div>
-                  <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Evidence')}</div><div className="mt-2 text-xl font-display text-white">{winner.scores.evidence.toFixed(1)}</div></div>
+                  <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Price evidence')}</div><div className="mt-2 text-xl font-display text-white">{winner.scores.evidence.toFixed(1)}</div></div>
                   <div className="cp-metric-tile-dark"><div className="cp-subtle-label !text-slate-400">{t('Literature bank')}</div><div className="mt-2 text-xl font-display text-white">{benchmark.citations.length}</div><div className="mt-1 text-xs text-slate-400">{t('Public benchmark links in the active reaction family')}</div></div>
                 </div>
               ) : null}

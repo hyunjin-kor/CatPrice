@@ -603,6 +603,7 @@
           "name": "TiO2",
           "wt_pct": 60.0,
           "pricing": {
+            "reference_series": "HS282300",
             "type": "fixed",
             "price_per_lb": 1.4515,
             "evidence_label": "USGS TiO2 pigment import index",

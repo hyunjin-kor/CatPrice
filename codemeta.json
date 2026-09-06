@@ -1,0 +1,14 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "COMET: Catalyst Overall Manufacturing Estimation Tool",
+  "description": "Catalyst manufacturing cost estimation with live and monthly reference price bases. Version 1.4.0 is prepared source, not a published release.",
+  "version": "1.4.0",
+  "codeRepository": "https://github.com/hyunjin-kor/COMET",
+  "identifier": "https://doi.org/10.5281/zenodo.21451931",
+  "license": "https://github.com/hyunjin-kor/COMET/blob/master/LICENSE",
+  "programmingLanguage": ["Python", "TypeScript", "JavaScript"],
+  "operatingSystem": "Windows",
+  "author": [{"@type": "Person", "givenName": "Hyunjin", "familyName": "Kang"}],
+  "keywords": ["catalysis", "cost estimation", "techno-economic analysis"]
+}

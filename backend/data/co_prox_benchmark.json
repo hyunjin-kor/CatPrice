@@ -287,6 +287,7 @@
           "name": "Al2O3",
           "wt_pct": 99.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",
@@ -342,6 +343,7 @@
           "name": "TiO2",
           "wt_pct": 98.0,
           "pricing": {
+            "reference_series": "HS282300",
             "type": "fixed",
             "price_per_lb": 1.4515,
             "evidence_label": "USGS TiO2 pigment import index",
