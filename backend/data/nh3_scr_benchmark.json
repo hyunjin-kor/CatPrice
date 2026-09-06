@@ -149,6 +149,7 @@
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "Annual average WO3 concentrate price 2024, $25/kg = $11.34/lb (USGS MCS 2025)."}},
         {"role": "support", "name": "TiO2", "wt_pct": 90.5, "pricing": {
+          "reference_series": "HS282300",
           "type": "fixed", "price_per_lb": 1.4515, "evidence_label": "USGS TiO2 pigment import index",
           "evidence_tier": "public_index", "confidence_score": 72, "transparency": "public_index",
           "note": "2025e landed duty-paid unit value of U.S. TiO2 pigment imports, $3,200/t (USGS MCS Feb 2026); anatase SCR grade carried at pigment parity."}}

@@ -339,6 +339,7 @@
           "name": "Al2O3",
           "wt_pct": 88.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.5,
             "evidence_label": "Engineering support proxy",
@@ -412,6 +413,7 @@
           "name": "MgO",
           "wt_pct": 70.0,
           "pricing": {
+            "reference_series": "HS251990",
             "type": "fixed",
             "price_per_lb": 0.4,
             "evidence_label": "MgO engineering proxy",
@@ -469,6 +471,7 @@
           "name": "MgO",
           "wt_pct": 97.0,
           "pricing": {
+            "reference_series": "HS251990",
             "type": "fixed",
             "price_per_lb": 0.4,
             "evidence_label": "MgO engineering proxy",
@@ -522,6 +525,7 @@
           "name": "MgO",
           "wt_pct": 85.0,
           "pricing": {
+            "reference_series": "HS251990",
             "type": "fixed",
             "price_per_lb": 0.45,
             "evidence_label": "MgO engineering proxy",

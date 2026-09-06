@@ -264,6 +264,7 @@
           "name": "Al2O3",
           "wt_pct": 80.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.2676,
             "evidence_label": "USGS industrial alumina proxy",

@@ -270,6 +270,7 @@
           "name": "SiO2",
           "wt_pct": 99.0,
           "pricing": {
+            "reference_series": "HS281122",
             "type": "fixed",
             "price_per_lb": 1.1,
             "evidence_label": "Silica support screening proxy",
@@ -332,6 +333,7 @@
           "name": "Al2O3",
           "wt_pct": 84.0,
           "pricing": {
+            "reference_series": "HS281820",
             "type": "fixed",
             "price_per_lb": 0.9,
             "evidence_label": "Alumina support screening proxy",
@@ -394,6 +396,7 @@
           "name": "Activated carbon",
           "wt_pct": 85.0,
           "pricing": {
+            "reference_series": "HS380210",
             "type": "fixed",
             "price_per_lb": 1.2247,
             "evidence_label": "UN Comtrade activated-carbon import unit value",
@@ -447,6 +450,7 @@
           "name": "Activated carbon",
           "wt_pct": 95.0,
           "pricing": {
+            "reference_series": "HS380210",
             "type": "fixed",
             "price_per_lb": 1.2247,
             "evidence_label": "UN Comtrade activated-carbon import unit value",
