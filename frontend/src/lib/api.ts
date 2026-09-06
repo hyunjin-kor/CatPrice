@@ -416,6 +416,7 @@ export interface MetalPrice {
   fetched_at: string | null;
   basis: PriceBasis;
   basis_month: string | null;
+  needs_review: boolean;
   evidence: {
     tier: string;
     confidence_score: number;
