@@ -1,49 +1,92 @@
-# Free-data update goal — 2026-09-06
+# 무료 자료 업데이트 최종 보고 — 2026-09-06
 
-User authorization: use the goal feature to update COMET, with zero data expenditure. No purchases, paid subscriptions or billable API calls. Started from `f4f9bdd` on the isolated `autonomous/2026-09-06` worktree; continuing the existing open PR112. Previous application baseline: 636 tests passed, frontend/desktop1.4.0/Table6.2 verified. The initial frozen paper run remains unchanged.
+무료 자료만으로 담체 관측값과 출처를 보완하고 두 화면 오류를 수정했습니다. **추가 goal 작업 완료 6 / 부분 완료 1 / 보류 0**. 부분 완료는 Comtrade 호출 제한으로 담체 11종 중 1종의 관측값만 확보한 항목입니다. 기존 T01–T19는 19개 완료 상태를 유지합니다. 전체 합계는 **완료 25 / 부분 완료 1 / 보류 0**입니다.
 
-| ID | Status | Evidence / acceptance | Commit |
+유료 구매·구독·과금 API·키 발급은 없었습니다. 코드 커밋은 `a300071`, 브랜치는 `autonomous/2026-09-06`, PR은 [#112](https://github.com/hyunjin-kor/COMET/pull/112) 한 개입니다. 1.4.0은 릴리스 준비 상태이며 머지·태그·릴리스·Zenodo 등록·배포는 하지 않았습니다.
+
+## 추가 작업 결과
+
+| ID | 상태 | 커밋 | 근거 명령 출력 요약 |
 |---|---|---|---|
-| D01 | Complete | Active goal and free-only policy confirmed; persisted local state initialized | `601ce9b` |
-| D02 | Complete | Free Comtrade responses/terms; 8 LCA sources, 4 exact pairs; 8 benchmark candidates; reproducible small-scale422 | Current validated batch |
-| D03 | Partial | Implementation and 3 alumina observations verified; other10 definitions blocked by provider429, no retry | Current validated batch |
-| D04 | Complete | B01–B11 applied; 18 focused tests; same-price full analysis JSON byte-identical. Four LCA pairs documented with no generic aliases | Tested update batch |
-| D05 | Complete | Before422; after5 browser scenarios pass, cold20t outputs unchanged; Node10 and focused backend6 pass | Current validated batch |
-| D06 | Complete | June combined basis; 6 figures; 37 code/81 data/27 output hashes agree; generated replay command produces identical scientific JSON | Tested update batch |
-| D07 | In progress | 679 pytest passed in386.99s; new module coverage93%; frontend/Node/ruff/desktop passed; PR CI pending | Local verification complete |
+| D01 | 완료 | `601ce9b` | goal 생성, 무료 자료 정책과 로컬 재개 상태 저장 |
+| D02 | 완료 | `a300071` | 무료 Comtrade 응답/이용 조건, LCA 8개 출처, 두 반응군 8개 후보 대조; 실제 422 재현 |
+| D03 | 부분 완료 | `a300071` | 엄격한 수집·검증·오프라인 적용·논문 연결 완료. 알루미나 3개월 확보, 다음 요청 HTTP429에서 중단. 다른 10종 미확보 |
+| D04 | 완료 | `a300071` | 문헌 수정 B01–B11, 관련 18 tests 통과; 동일 가격의 전체 분석 JSON 바이트 일치. GWP/CED 4쌍은 조건을 붙여 근거 목록에 수록 |
+| D05 | 완료 | `a300071` | 규모별 단계 로딩 전 계산 차단; 월평균 출처·관측 월·원자료 링크 구분. 브라우저 5개 시나리오, 한/영 화면 및 계산값 불변 검증 |
+| D06 | 완료 | `a300071` | 6월 기준 별도 논문 분석·그림 6종. 실제 재현 명령 재실행 후 주요 JSON 3종 바이트 일치. 37개 코드·81개 데이터·27개 산출물 해시 확인 |
+| D07 | 완료 | `a300071` + 최종 보고 커밋 | 전체 679 passed; ruff·프론트·Node·Windows 빌드/스모크 통과. [코드 CI34018926982](https://github.com/hyunjin-kor/COMET/actions/runs/34018926982) backend/frontend 모두 성공 |
 
-## Scope and decisions
+## 계산 결과와 이유
 
-- Search the highest-value free evidence first: support prices, carbon/silica/zeolite LCA, and source fidelity for CO2-to-methanol and hydrogen-evolution candidates.
-- A generic material label does not authorize substitution of a grade-specific or synthesis-specific factor. GWP and CED must each have evidence; missing metrics stay missing.
-- Free API responses must be checked for requested reporter, flow, period, HS code, aggregation level, weight/value validity and completeness. No paid endpoint or authentication change is authorized.
-- New results will use a separate run directory so the initial manuscript snapshots and hashes remain reviewable. No tag, release, merge, deployment or license change.
-- Runtime goal state is local under `.autonomy`; this audit is the committed human-readable record.
+무료 API에서 받은 HS281820 알루미나 수입 단가는 4월 **0.5782**, 5월 **0.6728**, 6월 **0.5558 USD/kg**입니다. 7월은 HTTP200/count0으로 관측값이 없었습니다. 모든 등급과 교역 상대를 합친 수입 단가이며, 촉매용 감마 알루미나 견적으로 간주하지 않습니다. 앱의 reference 기준에서만 해당 관측값을 사용하고 live는 기존 라이브러리 경로를 유지합니다.
 
-## Research and implementation evidence
+동일한 6월 금속 가격·조성·점수 가중치·계산식으로 담체 관측값 유무만 비교했습니다. **116개 중 23개 후보(15개 반응군)**의 단가가 **0.0011–8.6778%** 낮아졌습니다. 출처와 재료비 비중이 바뀌면 가격 근거 점수도 바뀌므로, 종합 추천 변화 전체를 순수 가격 효과라고 부르지 않습니다.
 
-- Free support acquisition and exact retained responses: `docs/sources/free-comtrade-evidence-2026-09-06.md`; `backend/data/support_price_history.json`. April/May/June alumina0.5782/0.6728/0.5558USD/kg; July missing. HTTP429 stopped the collection. No key or paid endpoint used.
-- LCA: `docs/sources/free-lca-evidence-2026-09-06.md` and JSON. Four source-specific GWP/CED pairs retained in the evidence register; no generic carbon/silica/zeolite mapping. Original LCA factors and coverage remain unchanged.
-- Two-family source audit: `docs/sources/free-benchmark-validation-2026-09-06.md`. Source identity, actual reaction, nominal versus measured loading, precursor molar versus mass ratio, and laboratory versus assembly assumptions are distinguished.
-- Startup regression: `docs/audit/free-data-stability-2026-09-06.md`, before/after JSON and8 screenshots. Original uncaptured first-run422 remains unidentified; the newly reproduced delayed scale-fitting422 has concrete request/response evidence.
-- Independent snapshot review found boolean quantities, forged request status/source and dropped declared-series integrity gaps. All three were corrected with regression coverage before integration.
-- Focused checks:37 snapshot/pipeline tests pass; frontend784translation calls/825Korean keys/0missing, lint/build pass, Node10pass. Full-suite and paper/desktop verification follow.
+| 반응군 / 가중치 | 이전 추천 | 담체 반영 후 |
+|---|---|---|
+| 암모니아 분해 / 성능 가중치 0 | Co-MgO-La2O3 | Ni/알루미나 |
+| CO2 메탄화 / 균형 | Ni/세리아 | Ni/알루미나 |
 
-## Controlled support-price effect
+나머지 해당 프로파일의 최상위 추천은 같습니다. 전체 후보별 전후 단가와 입력 가격은 `docs/audit/free-data-impact-2026-09-06.json`에 있습니다. 재현 명령:
 
-`python scripts/audit_free_support_impact.py --history docs/paper/price_history_2026-09-06.json --support-history backend/data/support_price_history.json --out docs/audit/free-data-impact-2026-09-06.json` runs both sides with identical June metal prices, compositions, score weights, engine and LCA factors.23of116candidate costs across15families change, from−0.0011%to−8.6778%. Two profile winners change: ammonia-cracking/performance-zero changes Co-MgO-La2O3→Ni/alumina; CO2-methanation/balanced changes Ni/ceria→Ni/alumina. Price-evidence scores also respond to changed source/cost shares, so these are not claimed to be price-only composite-score effects. All LCA values and coverage are identical. Full per-candidate before/after prices and both price maps are in the JSON.
+```bash
+python scripts/audit_free_support_impact.py --history docs/paper/price_history_2026-09-06.json --support-history backend/data/support_price_history.json --out docs/audit/free-data-impact-2026-09-06.json
+```
 
-Actual UI testing additionally found that a reference support override inherited a live-price banner and the original2024library quote metadata. The override metadata/display is being corrected and rechecked; the price itself was already correct at0.5558USD/kg.
+문헌 B01–B11 수정은 DOI·반응 귀속·직접 인용 연결·조건·가정 설명만 바꿨습니다. 같은 가격으로 실행한 30개 반응군·116개 후보의 원가·점수·순위 JSON은 바이트까지 같습니다. 잘못 연결한 정정 DOI와 ORR/CO 생성 논문을 바로잡고, 무료 원문과 SI가 있는 NiMo 논문을 직접 근거로 연결했습니다. 조성·성능 점수·공정 단가는 임의로 바꾸지 않았습니다.
 
-## Final local verification
+| Table 6.2 | COMET, USD/lb | 출판값, USD/lb | 결과 |
+|---|---:|---:|---|
+| Pt/C | 27.3695 → 27.37 | 27.37 | 센트 일치 |
+| Ni/Al2O3 | 19.2206 | 20.59 | −6.65%, 7% 이내 |
+| FCC, 각주 b의 67 short tons/day | 2.4380 | 2.41 | +1.16%, 2% 이내 |
 
-- Full backend: **679 passed in 386.99 seconds**,43 more than the previous636-test baseline.
-- New strict snapshot module: **93% coverage**,33 focused tests in0.93s, using the already-existing temporary coverage venv. No dependency was added.
-- Ruff across backend/scripts passed. Frontend check:i18n/lint/build and Node10 passed;787 translation calls,829 Korean keys, no missing/untranslated UI labels within the scanner scope.
-- Windows package1.4.0 built and desktop smoke passed in204.08s combined: one window, prices200, calculate200. No optional API keys were configured.
-- Five real-browser loading scenarios passed after support integration. The reference evidence panel shows observation month2026-06 and the verified monthly request URL, with the original2024library price/link separately identified. Display fixes do not change computed results.
-- Table6.2 remains Pt27.3695→27.37 USD/lb, Ni19.2206(−6.65%), FCC2.4380(+1.16%) with footnote-b67short tons/day. No method formula or uncosted-process rate changed.
-- Separate paper run: `docs/paper/free-data-2026-09-06/`. Seed20260906, June2026,30families/116candidates,90historical states. The generated replay command was actually executed; reference/live all-family JSON and paper summary were byte-identical. Raw metal/support hashes and all37code/81data/27output hashes verified.
-- Detailed evidence: `docs/audit/free-data-checks-2026-09-06.json`, `free-data-replay-check-2026-09-06.json`, source audits and browser records.
+계산식과 미산정 공정 단가는 유지했습니다. FCC 명목 생산율 150 short tons/day의 1.6090 USD/lb는 합격값이 아닌 별도 진단값입니다.
 
-The original July manuscript, SI, numerical artifacts and their snapshot bytes remain unchanged. The June run is an explicit supplementary analysis; a change in publication month is separated from the controlled support-only comparison.
+## LCA와 논문 재현
+
+무료 1차 출처 8개, Crossref DOI 7개, 원문 6개를 확인해 활성탄·13X의 GWP/CED 4쌍을 확보했습니다. 기존 일반 Carbon/Activated carbon/Zeolite 항목의 원료·등급·제조 경로와 일치한다는 증거가 없어 자동 연결하지 않았습니다. LCA 값과 반영률은 불변이며, 임의 CED·탄소 중립·범용 담체 계수를 넣지 않았습니다.
+
+별도 결과는 `docs/paper/free-data-2026-09-06/`에 있습니다. 금속과 확보된 담체의 최신 공통 월은 **2026-06**, seed는 **20260906**입니다. 90개 역사 월, 30개 반응군, 116개 후보, 그림 6종을 재생성했습니다. 짧은 담체 이력은 장기 변동성 분석에서 기준값으로 유지하고 그 사실을 출력에 표시합니다. 기존 7월 원고·SI·수치·스냅샷은 그대로 보존했습니다.
+
+```bash
+python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history backend/data/support_price_history.json --out-dir docs/paper/free-data-2026-09-06
+```
+
+- 금속 원본 SHA-256: `84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69`.
+- 담체 원본 SHA-256: `4d0dccdf351ea3ecbebca9233da5cd6a97d5a790ecab313749fcd9b6c8af5896`.
+
+원본과 생성 산출물의 바이트를 보존합니다. 코드·기존 데이터 해시는 실행 OS의 실제 바이트이므로 다른 OS의 줄바꿈 차이는 별도로 해석해야 합니다. 생성된 SVG의 경로 공백은 Matplotlib 출력 그대로이며, 원본 해시를 맞추려고 임의 재포맷하지 않았습니다.
+
+## 검증과 성능 기록
+
+| 확인 | 최초 실행 완료 시점 | 무료 자료 업데이트 |
+|---|---|---|
+| 전체 백엔드 | 636 passed, 383.97s | 679 passed, 386.99s |
+| 새 자료 검증 모듈 | 없음 | 93% coverage, 33 focused tests |
+| 프론트 | lint/build·번역 검사 통과 | lint/build·Node10 통과; 787 번역 호출, 829 한국어 키, 누락 0 |
+| Windows | 1.4.0 빌드/스모크 통과 | 커밋 a300071 재빌드/스모크 192.77s, 한 창·API200 |
+| 실제 브라우저 | 열촉매/전극 흐름 확인 | 로딩 5개 시나리오, reference/live, 출처 한/영 확인 |
+
+추가 속도 개선을 주장하지 않습니다. 기존 T11의 calculate 3.078ms, MC10,000회 0.419s, 전체 반응군 1.172s는 해당 고정 입력의 기존 측정값이며 이번 goal의 새 성능값으로 재표기하지 않습니다. 전체 테스트 시간은 테스트 개수와 동시 작업도 달라 직접적인 속도 비교가 아닙니다.
+
+상세 근거는 `docs/audit/free-data-checks-2026-09-06.json`, `free-data-replay-check-2026-09-06.json`, `free-data-stability-2026-09-06.md`, `free-data-support-ui-2026-09-06.md`와 스크린샷에 있습니다. 기본 Python에는 pytest-cov가 없어 기존 임시 coverage venv를 재사용했습니다. 의존성 추가나 git hook 우회는 없었습니다.
+
+## 사람이 해야 할 남은 일
+
+1. PR과 CI를 검토한 뒤 승인된 변경을 master에 머지하고 태그 `v1.4.0`을 만들고 푸시합니다.
+2. 실제 릴리스·설치 파일·이전 버전에서의 자동 업데이트를 확인합니다.
+3. Zenodo 버전 DOI와 concept DOI `10.5281/zenodo.21451931` 연결을 확인합니다.
+4. 저자·소속·연구비·TOC·분량과 ACS Sustainable Chemistry & Engineering의 투고 안내를 최종 확인합니다.
+5. 무료 호출이 다시 허용되면 남은 담체 자료를 추가 수집할 수 있습니다. 유료 자료로 전환하지 않습니다. LCA 자동 연결은 후보 재료의 등급·원료·공정 증거가 확보된 경우에만 판단합니다.
+
+## 보수적으로 유지한 가정과 확인 못 한 것
+
+- 무료 접근과 재배포 허가, DOI 등록과 과학적 타당성을 구분했습니다. 원문/PDF/SI나 제한된 LCA 배경 인벤토리는 커밋하지 않았습니다. 코드 라이선스는 변경하지 않았습니다.
+- 무료 공개 API의 다음 요청이 429가 된 뒤 재시도하거나 유료 endpoint로 우회하지 않았습니다. 다른 10종의 새 관측값은 확인 못 했습니다. 7월 미발표는 조회한 알루미나에 한정합니다.
+- 탄소흑·실리카의 정확한 GWP/CED 쌍과 일부 원문/SI 접근·재사용 조건, 후보의 정확한 담체 등급은 확인 못 했습니다. 4개의 조건부 LCA 근거를 일반 담체로 확대하지 않았습니다.
+- NiMo 몰비를 질량비로 복사하지 않았고, ALD 단가·Ru 30wt%·C2N 제조 원가를 추정해 채우지 않았습니다. Ru 문헌의 초록/SI 산성 과전압 차이는 미해결로 표시했습니다.
+- 최초 T02의 응답 미확보 422가 이번에 재현한 로딩 경쟁과 같은 원인인지는 확인 못 했습니다. 새 회귀는 실패 요청/응답을 보존하고 고쳤습니다.
+- source audit는 두 반응군에 대한 심화 대조이며 나머지 28개 반응군의 모든 원문 수치가 새로 검증됐다는 뜻이 아닙니다.
+
+기존 T01–T19 표와 초기 성능·출처·릴리스 준비 기록은 `docs/audit/autonomous-run-2026-09-06.md`의 앞부분에 유지합니다. 이후 보고 커밋은 문서·검증 기록만 바꾸며, 최종 PR Checks 결과도 확인합니다.
