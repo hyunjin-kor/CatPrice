@@ -26,6 +26,7 @@ Start at the [README](../README.md) for what the app does and how to install it.
 | [Roadmap](roadmap.md) | What is planned and what has been superseded |
 | [Project links](project-links.md) | Verified external URLs and release metadata |
 | [Project history](project-history.md) | Benchmarking notes and the original phase plan (historical) |
+| [GPT / Codex hand-off](gpt-handoff.md) | Master prompt, phased work plan, pending decisions, and paper skeleton for handing the project to another coding agent (Korean) |
 
 ## Local development
 
