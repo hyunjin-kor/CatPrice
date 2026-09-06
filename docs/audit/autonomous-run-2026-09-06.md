@@ -2,16 +2,20 @@
 
 ## Baseline
 
-- Requested base: master dd04fa9. Verification pending.
+- Verified base: master dd04fa9aae9f82dc0ceec45a305db3945d22c65b. Branch autonomous/2026-09-06; Draft PR https://github.com/hyunjin-kor/COMET/pull/112; initial log commit 06b33e3.
 - Policy: no questions; no tags, releases, deployments, license changes, secrets, or proprietary workbook redistribution.
 - This log is the resumption source. Begin with the first task not marked 완료.
-- Initial truth signals: pending.
+- Baseline: 573 passed in 543.22 s (wall 548.71 s); frontend lint/build passed in 12.58 s; desktop build 189.24 s and smoke passed (total 206.39 s), Version 1.3.24, one window, prices/calculate HTTP 200.
+- Table 6.2: Pt/C 27.3695 USD/lb (rounds 27.37); Ni 19.2206 (-6.65%); FCC footnote-b 2.4380 (+1.16%). Nominal FCC 1.6090 (-33.24%) is diagnostic, not the acceptance case.
+- Raw command evidence: baseline-pytest.txt, baseline-frontend.txt, baseline-desktop.txt, baseline-table62.txt.
+- Latest release rechecked with gh release list -L 1: v1.3.24, published 2026-08-31T18:24:09Z.
+- Tailwind sourcemap warning and electron-builder duplicate dependency notices are pre-existing non-failing diagnostics.
 
 ## Tasks
 
 | ID | 상태 | 커밋 | 근거 명령 출력 요약 | 메모 |
 |---|---|---|---|---|
-| T01 | 진행 | pending | Branch and log initialized; checks pending | 필수 |
+| T01 | 완료 | 06b33e3; this commit | All four baseline signals passed; outputs above | 필수; Draft PR #112 |
 | T02 | 대기 | — | — | 필수 |
 | T03 | 대기 | — | — | 필수 |
 | T04 | 대기 | — | — | 필수 |
@@ -33,4 +37,7 @@
 
 ## Assumptions and unverified items
 
-None recorded yet.
+- docs/gpt-handoff.md is absent on the requested master commit; other requested entry documents read.
+- The user-defined audit log takes precedence over duplicate .autonomy state files; no scheduled automation was created.
+- Initial log-only commit used unchanged, user-verified baseline code; local full checks completed before any implementation commit.
+- At 11:48:39 KST an external process switched the shared checkout to master and pulled 10b5388. No task agent issued that operation. Preserved every working file and resumed in C:/Users/user/Desktop/COMET-autonomous-2026-09-06 on the original run branch. The original checkout was left intact; all subsequent writes use explicit isolated paths.
