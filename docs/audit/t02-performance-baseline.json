@@ -1,0 +1,156 @@
+{
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "history_file": "docs/paper/price_history_2026-09-02.json",
+  "history_sha256": "402d32619f5b126f0eecee113233a377666e8b550d82b56981851a74d35e9177",
+  "basis_month": "2026-08",
+  "seed": 42,
+  "calculation_input": {
+    "catalyst_domain": "thermal",
+    "price_basis": "reference",
+    "order_size_tons": 20.0,
+    "steps": [
+      "mixer_slurry",
+      "incipient_wetness",
+      "dryer_rotary_100_300C"
+    ],
+    "components": [
+      {
+        "role": "active_metal",
+        "material_key": "lit:usgs-platinum-bullion-2025",
+        "wt_pct": 2.0
+      },
+      {
+        "role": "support",
+        "material_key": "lit:usgs-alumina-2025",
+        "wt_pct": 98.0
+      }
+    ]
+  },
+  "basis_limitation": "No committed IMF reference snapshot was present. Archived 2026-09-02 live-feed history is averaged by completed calendar month for timing only; original source names are preserved. This is not the paper reference basis.",
+  "measurement_scope": "In-process FastAPI TestClient; temporary SQLite; startup price collection disabled; no network latency; wall time includes response serialization.",
+  "measurements": {
+    "calculate": {
+      "requests": 20,
+      "warmup_requests": 1,
+      "median_seconds": 0.004151350000029197,
+      "samples_seconds": [
+        0.004465400000071895,
+        0.004298900000094363,
+        0.0042829000001347595,
+        0.0038242999999056337,
+        0.004298900000094363,
+        0.004746800000020812,
+        0.004089499999963664,
+        0.0037154000001464738,
+        0.00393619999999828,
+        0.004165399999919828,
+        0.004189100000075996,
+        0.00437499999998181,
+        0.004020299999865529,
+        0.004137300000138566,
+        0.0039458000001104665,
+        0.0035875999999461783,
+        0.0043362999999772,
+        0.003977000000077169,
+        0.00426000000015847,
+        0.003848500000003696
+      ],
+      "result_price_per_lb": 718.239
+    },
+    "uncertainty_1000": {
+      "seconds": 0.30088499999988016,
+      "result": {
+        "n_simulations": 1000,
+        "n_successful": 1000,
+        "mean": 717.1705,
+        "median": 713.1895,
+        "std": 126.6392,
+        "min": 502.243,
+        "max": 943.5748,
+        "p5": 524.5903,
+        "p25": 605.2972,
+        "p75": 828.6891,
+        "p95": 912.6344,
+        "unit": "$/lb",
+        "baseline_price_per_lb": 718.239,
+        "baseline_price_per_kg": 1583.4441,
+        "composition": "2.0% Pt/Al2O3",
+        "catalyst_domain": "thermal",
+        "application_family": "general",
+        "uncertainties_applied": {
+          "active_component_price": [
+            0.7,
+            1.3
+          ],
+          "promoter_price": [
+            0.8,
+            1.2
+          ],
+          "support_price": [
+            0.8,
+            1.2
+          ],
+          "electrode_adjunct_price": [
+            0.85,
+            1.15
+          ],
+          "order_size_tons": [
+            0.8,
+            1.2
+          ]
+        }
+      }
+    },
+    "uncertainty_10000": {
+      "seconds": 2.8119323999999324,
+      "result": {
+        "n_simulations": 10000,
+        "n_successful": 10000,
+        "mean": 717.8894,
+        "median": 719.5683,
+        "std": 124.355,
+        "min": 499.4274,
+        "max": 944.971,
+        "p5": 523.6505,
+        "p25": 610.0294,
+        "p75": 824.9581,
+        "p95": 912.0006,
+        "unit": "$/lb",
+        "baseline_price_per_lb": 718.239,
+        "baseline_price_per_kg": 1583.4441,
+        "composition": "2.0% Pt/Al2O3",
+        "catalyst_domain": "thermal",
+        "application_family": "general",
+        "uncertainties_applied": {
+          "active_component_price": [
+            0.7,
+            1.3
+          ],
+          "promoter_price": [
+            0.8,
+            1.2
+          ],
+          "support_price": [
+            0.8,
+            1.2
+          ],
+          "electrode_adjunct_price": [
+            0.85,
+            1.15
+          ],
+          "order_size_tons": [
+            0.8,
+            1.2
+          ]
+        }
+      }
+    },
+    "all_families": {
+      "seconds": 1.6968663000000106,
+      "families": 30,
+      "candidates": 116,
+      "stdout": "family                              dom       n  grid#  stab%  proc%  cov%  winner(balanced) -> perf0\naem-electrolyzer-oer                electro   4      3   76.6   0.00   100  cr-doped-amorphous = cr-doped-amorphous\nammonia-cracking                    thermal   4      4   38.5   2.61   100  ni-mgo-ceo2-interface != ni-alumina-baseline\nammonia-synthesis                   thermal   4      4   42.7   2.40    54  fused-iron-baseline = fused-iron-baseline\nco2-electroreduction                electro   4      3   92.7   0.00   100  ag-co-mea = ag-co-mea\nco2-methanation                     thermal   4      4   44.8   1.32    52  ni-ceo2-lowtemp != ni-alumina-baseline\nco2-methanol                        thermal   4      4   55.2   2.92    95  cza-baseline = cza-baseline\nco2-to-formate                      thermal   4      4   58.4   0.43    18  pdag-ndcarbon-co2fa = pdag-ndcarbon-co2fa\nco-prox                             thermal   3      3   77.6   0.77   100  pt-fe-alumina != cuo-ceo2\ndry-reforming                       thermal   4      4   61.5  12.77    55  ni-single-atom-ceria = ni-single-atom-ceria\nethylene-epoxidation                thermal   4      3   63.6   0.70   100  agcs-industrial != ag-alumina-baseline\nfischer-tropsch-synthesis           thermal   4      3   57.0  17.48    59  fe-silica-lower-olefin = fe-silica-lower-olefin\nformic-acid-dehydrogenation         thermal   4      3   40.9  12.32     4  co-nc-nonnoble = co-nc-nonnoble\nfuel-cell-orr                       electro   4      4   24.1  17.19    33  fen-c-pgmfree-cathode != ptc-baseline-cathode\nglycerol-electrooxidation           electro   4      2   61.2   0.00    47  niooh-glycerol-anode = niooh-glycerol-anode\nhydrodeoxygenation                  thermal   4      4   37.4   6.24    30  comos-hdo = comos-hdo\nhydrogen-evolution-reaction         electro   4      2   53.5   0.00    62  nimo-alkaline-her-cathode = nimo-alkaline-her-cathode\nmethane-pyrolysis                   thermal   4      4   50.7  27.58    50  activated-carbon-autocatalytic = activated-carbon-autocatalytic\nmethanol-to-olefins                 thermal   4      3   55.2  93.36     1  hzsm5-mth = hzsm5-mth\nnh3-scr                             thermal   3      3   78.0  56.74    35  v2o5-wo3-tio2 = v2o5-wo3-tio2\nnitrogen-reduction-reaction         electro   4      2   47.9   0.00    50  plasma-nrr = plasma-nrr\nolefin-metathesis                   thermal   4      2   88.8  14.98    54  wo3-silica-oct = wo3-silica-oct\npem-electrolyzer-oer                electro   4      3   75.9   0.00   100  pem-low-ir-interface = pem-low-ir-interface\nphotocatalytic-co2-reduction        thermal   4      4   77.6  55.70    35  tio2-photo-co2 = tio2-photo-co2\nphotocatalytic-water-splitting      thermal   4      4   55.9  26.21    50  pt-tio2-cocatalyst != tio2-anatase-baseline\npropane-dehydrogenation             thermal   4      3   65.4  26.14    45  crox-alumina-catofin = crox-alumina-catofin\nrwgs                                thermal   4      4   70.3   2.24   100  cu-ceria-baseline = cu-ceria-baseline\nselective-acetylene-hydrogenation   thermal   4      4   60.1   2.79   100  nizn-intermetallic = nizn-intermetallic\nsteam-methane-reforming             thermal   3      3   54.9   8.08    72  ni-calcium-aluminate = ni-calcium-aluminate\nsyngas-methanol                     thermal   3      3   85.7   4.06    99  cza-industrial = cza-industrial\nwater-gas-shift                     thermal   4      4   60.5   5.53    97  cu-zno-baseline = cu-zno-baseline\n\nwrote C:\\Users\\Public\\Documents\\ESTsoft\\CreatorTemp\\comet-performance-1xk7vg59\\families.json  (families=30, candidates=116, grid points=286)\n"
+    }
+  }
+}
