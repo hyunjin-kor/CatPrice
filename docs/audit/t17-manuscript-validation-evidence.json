@@ -1,0 +1,551 @@
+{
+  "checked_at_utc": "2026-09-06T03:37:13.139272+00:00",
+  "files": {
+    "manuscript_2026-09-06.md": {
+      "sha256": "0e495ab97d6111dcc0e33577f080959aa69f68f89847d981f9b27aaa2284a763",
+      "json_source_comments": 42,
+      "resolved_key_count": 69,
+      "relative_markdown_links": 6
+    },
+    "si_2026-09-06.md": {
+      "sha256": "7b4cee759c8260a0f4b54cad0f02e4632a8e04ffd5e1cdfa624108a1b2498947",
+      "json_source_comments": 980,
+      "resolved_key_count": 980,
+      "relative_markdown_links": 0
+    }
+  },
+  "numeric_literal_checks": 466,
+  "numeric_literal_errors": [],
+  "source_key_errors": [],
+  "missing_relative_links": [],
+  "word_count": {
+    "method": "Whitespace-separated words; HTML source comments and citation superscripts removed. Main text excludes title, references, figure captions and table rows; includes abstract, keywords, author placeholder, headings and reproduction command as a conservative estimate.",
+    "abstract": 165,
+    "main_text": 2424,
+    "figures": 6,
+    "small_tables": 2,
+    "estimated_word_equivalent_6_large_figures_2_small_tables": 6624,
+    "all_small_visuals_word_equivalent": 4824,
+    "all_large_visuals_word_equivalent": 7224,
+    "keywords": 6
+  },
+  "recomputed_aggregates": {
+    "families": 30,
+    "candidates": 116,
+    "screening_basis_counts": {
+      "engineering_proxy": 29,
+      "literature_architecture_proxy": 83,
+      "literature_low_loading_plus_vendor_stack": 1,
+      "market_plus_vendor_anchor": 1,
+      "ru_based_cost_pressure_relief": 1,
+      "vendor_stack_anchor": 1
+    },
+    "lca": {
+      "coverage_mean_pct": 62.79456896551724,
+      "coverage_median_pct": 99.825,
+      "candidates_coverage_below_50_pct": 47,
+      "route_share_eligible_candidates": 54,
+      "route_share_median_pct": 2.449573268695874,
+      "route_share_p90_pct": 5.5506062846215745,
+      "route_share_max_pct": 15.193526127595508
+    },
+    "weight_sensitivity": {
+      "grid_points": 286,
+      "median_balanced_winner_share_pct": 55.41958041958042,
+      "min_balanced_winner_share_pct": 20.27972027972028,
+      "max_balanced_winner_share_pct": 92.65734265734265,
+      "families_below_50_pct": 12,
+      "performance_zero_changes": 3
+    },
+    "breakeven": {
+      "contests": 120,
+      "errors": [],
+      "precious_vs_base_sweeps": 28,
+      "precious_cost_crossings": 13,
+      "precious_cost_crossing_median_factor": 0.0038,
+      "precious_cost_crossings_between_0_1_and_10": 3,
+      "precious_without_cost_crossing_in_scan": 15
+    },
+    "live_reference_comparison": {
+      "changed_by_profile": {
+        "balanced": 5,
+        "cost-first": 4,
+        "evidence-first": 11,
+        "performance_zero": 5
+      }
+    }
+  },
+  "aggregate_errors": [],
+  "hashes": {
+    "history": {
+      "file": "price_history_2026-09-06.json",
+      "sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+      "matches_manifest": true
+    },
+    "input_files_checked": 80,
+    "code_files_checked": 34,
+    "mismatches": []
+  },
+  "figures": [
+    {
+      "figure": "figure1_architecture",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "scripts/reproduce_paper.py",
+        "backend/core",
+        "frontend/src"
+      ]
+    },
+    {
+      "figure": "figure2_table62",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "paper_summary_2026-09-06.json:table62"
+      ]
+    },
+    {
+      "figure": "figure3_gwp_cost",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "all_families_2026-09-06.json:families[].candidates[].landed_cost_per_lb",
+        "families[].candidates[].lca"
+      ]
+    },
+    {
+      "figure": "figure4_weight_sensitivity",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "all_families_2026-09-06.json:families[].simplex"
+      ]
+    },
+    {
+      "figure": "figure5_live_reference",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "paper_summary_2026-09-06.json:live_reference_comparison",
+        "live_basis_2026-09-06.json:price_basis"
+      ]
+    },
+    {
+      "figure": "figure6_breakeven_sweeps",
+      "formats": {
+        "svg": true,
+        "png": true
+      },
+      "source_keys": [
+        "breakeven_sweep_points_2026-09-06.json:rows",
+        "active_metal_breakeven_2026-09-06.json:families[].contests"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "baddour2018",
+      "doi": "10.1021/acs.oprd.8b00245",
+      "crossref_http": 200,
+      "doi_matches": true,
+      "title_matches": true,
+      "publisher_http": 403,
+      "authors": [
+        {
+          "given": "Frederick G.",
+          "family": "Baddour",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lesley",
+          "family": "Snowden-Swan",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Pacific Northwest National Laboratory, 902 Battelle Boulevard, Richland, Washington 99354, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5655-6281",
+          "authenticated-orcid": true,
+          "given": "John D.",
+          "family": "Super",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Cobroko Solutions, P.O. Box 130609, Houston, Texas 77219, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kurt M.",
+          "family": "Van Allsburg",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "National Bioenergy Center, National Renewable Energy Laboratory, 15013 Denver West Parkway, Golden, Colorado 80401, United States"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "authors_match": true,
+      "journal_matches": true,
+      "volume_issue_matches": true,
+      "page_or_article_number_matches": true
+    },
+    {
+      "name": "van_allsburg2022",
+      "doi": "10.1038/s41929-022-00759-6",
+      "crossref_http": 200,
+      "doi_matches": true,
+      "title_matches": true,
+      "publisher_http": 200,
+      "authors": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-4553-6709",
+          "authenticated-orcid": false,
+          "given": "Kurt M.",
+          "family": "Van Allsburg",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-9110-2410",
+          "authenticated-orcid": false,
+          "given": "Eric C. D.",
+          "family": "Tan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "John D.",
+          "family": "Super",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Joshua A.",
+          "family": "Schaidle",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5837-5804",
+          "authenticated-orcid": false,
+          "given": "Frederick G.",
+          "family": "Baddour",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "authors_match": true,
+      "journal_matches": true,
+      "volume_issue_matches": true,
+      "page_or_article_number_matches": true
+    },
+    {
+      "name": "nuss_eckelman2014",
+      "doi": "10.1371/journal.pone.0101298",
+      "crossref_http": 200,
+      "doi_matches": true,
+      "title_matches": true,
+      "publisher_http": 200,
+      "authors": [
+        {
+          "given": "Philip",
+          "family": "Nuss",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Matthew J.",
+          "family": "Eckelman",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "authors_match": true,
+      "journal_matches": true,
+      "volume_issue_matches": true,
+      "page_or_article_number_matches": true
+    },
+    {
+      "name": "biosteam2020",
+      "doi": "10.1021/acssuschemeng.9b07040",
+      "crossref_http": 200,
+      "doi_matches": true,
+      "title_matches": true,
+      "publisher_http": 403,
+      "authors": [
+        {
+          "given": "Yoel",
+          "family": "Cortes-Peña",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Deepak",
+          "family": "Kumar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "State University of New York College of Environmental Science and Forestry , , 402 Walters Hall, 1 Forestry Drive , , ,",
+              "place": [
+                "Syracuse, New York, United States, 13210"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vijay",
+          "family": "Singh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 360 G Agricultural Sciences Building, 1304 W. Pennsylvania Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0003-2489-2579",
+          "authenticated-orcid": true,
+          "given": "Jeremy S.",
+          "family": "Guest",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 3221 Newmark Civil Engineering Laboratory, 205 N. Mathews Avenue , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            },
+            {
+              "name": "University of Illinois at Urbana-Champaign , , 1206 W. Gregory Drive , , ,",
+              "place": [
+                "Urbana, Illinois, United States, 61801"
+              ]
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "authors_match": true,
+      "journal_matches": true,
+      "volume_issue_matches": true,
+      "page_or_article_number_matches": true
+    }
+  ],
+  "bibliographic_checks": {
+    "frederick_given_name_from_crossref": "Frederick G.",
+    "citation_cff_given_name_matches": true,
+    "readme_journal_matches": true,
+    "numeric_citations_in_first_appearance_order": true,
+    "normalization": "HTML entity decoding, whitespace collapse and Unicode NFC applied before metadata comparisons; ACS Crossref titles contain &amp; and one decomposed author diacritic."
+  },
+  "volatility_checks": {
+    "common_dates": 91,
+    "families_flipping_balanced": 7,
+    "families_flipping_performance_zero": 6,
+    "flipping_families_performance_zero": [
+      "ammonia-cracking",
+      "ammonia-synthesis",
+      "co2-to-formate",
+      "co-prox",
+      "nitrogen-reduction-reaction",
+      "photocatalytic-water-splitting"
+    ]
+  },
+  "manufacturing_checks": {
+    "2": {
+      "template_count": 28,
+      "min_processing_cost_per_lb": 2.4937,
+      "max_processing_cost_per_lb": 32.3183
+    },
+    "20": {
+      "template_count": 28,
+      "min_processing_cost_per_lb": 0.5985,
+      "max_processing_cost_per_lb": 6.739
+    },
+    "200": {
+      "template_count": 28,
+      "min_processing_cost_per_lb": 0.0884,
+      "max_processing_cost_per_lb": 1.3546
+    }
+  },
+  "reference_basis_checks": {
+    "basis_month": "2026-07",
+    "series_count": 14,
+    "anchor_symbols": [
+      "Fe",
+      "Re",
+      "V",
+      "W"
+    ],
+    "support_quote_keys": []
+  },
+  "table62_checks": [
+    {
+      "name": "2 wt% Pt/C",
+      "published_usd_per_lb": 27.37,
+      "comet_usd_per_lb": 27.3695,
+      "residual_pct": -0.0018268176836038997,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "21 wt% Ni/Al2O3",
+      "published_usd_per_lb": 20.59,
+      "comet_usd_per_lb": 19.2206,
+      "residual_pct": -6.650801359883434,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "USY-based FCC (with RE)",
+      "published_usd_per_lb": 2.41,
+      "comet_usd_per_lb": 2.438,
+      "residual_pct": 1.16,
+      "effective_rate_ton_per_day": 67.0
+    }
+  ],
+  "figures_visually_inspected": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}
