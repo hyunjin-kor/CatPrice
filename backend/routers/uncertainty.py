@@ -23,6 +23,7 @@ class UncertaintyRequest(BaseModel):
     steps: list[str] = ["mixer_slurry", "incipient_wetness", "dryer_rotary_100_300C"]
     order_size_tons: float = 10.0
     n_simulations: int = Field(default=1000, ge=100, le=10000)
+    seed: int | None = Field(default=None, ge=0)
     uncertainties: dict[str, list[float]] | None = None
 
     @model_validator(mode="after")
@@ -77,7 +78,7 @@ def uncertainty_analysis(
                 context=context,
                 uncertainties=uncertainties,
                 n_simulations=req.n_simulations,
-                seed=42,
+                seed=req.seed,
             )
 
         base_params = {
@@ -94,7 +95,7 @@ def uncertainty_analysis(
             base_params=base_params,
             uncertainties=uncertainties,
             n_simulations=req.n_simulations,
-            seed=42,
+            seed=req.seed,
         )
         return result
     except ValueError as e:
