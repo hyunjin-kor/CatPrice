@@ -1,0 +1,1318 @@
+{
+  "families": 30,
+  "candidates": 116,
+  "screening_basis_counts": {
+    "engineering_proxy": 29,
+    "literature_architecture_proxy": 83,
+    "literature_low_loading_plus_vendor_stack": 1,
+    "market_plus_vendor_anchor": 1,
+    "ru_based_cost_pressure_relief": 1,
+    "vendor_stack_anchor": 1
+  },
+  "component_source_type_counts": {
+    "fixed": 143,
+    "indexed": 108
+  },
+  "table62": [
+    {
+      "name": "2 wt% Pt/C",
+      "published_usd_per_lb": 27.37,
+      "comet_usd_per_lb": 27.3695,
+      "residual_pct": -0.0018268176836038997,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "21 wt% Ni/Al2O3",
+      "published_usd_per_lb": 20.59,
+      "comet_usd_per_lb": 19.2206,
+      "residual_pct": -6.650801359883434,
+      "effective_rate_ton_per_day": null
+    },
+    {
+      "name": "USY-based FCC (with RE)",
+      "published_usd_per_lb": 2.41,
+      "comet_usd_per_lb": 2.438,
+      "residual_pct": 1.16,
+      "effective_rate_ton_per_day": 67.0
+    }
+  ],
+  "weight_sensitivity": {
+    "grid_points": 286,
+    "median_balanced_winner_share_pct": 55.41958041958042,
+    "min_balanced_winner_share_pct": 20.27972027972028,
+    "max_balanced_winner_share_pct": 92.65734265734265,
+    "families_below_50_pct": 12,
+    "performance_zero_changes": 3
+  },
+  "lca": {
+    "coverage_mean_pct": 62.79456896551724,
+    "coverage_median_pct": 99.825,
+    "candidates_coverage_at_least_90_pct": 64,
+    "candidates_coverage_below_50_pct": 47,
+    "route_share_eligible_candidates": 54,
+    "route_share_median_pct": 2.449573268695874,
+    "route_share_p90_pct": 5.5506062846215745,
+    "route_share_max_pct": 15.193526127595508
+  },
+  "volatility": {
+    "families": 30,
+    "families_flipping_balanced": 7,
+    "families_flipping_performance_zero": 6,
+    "flipping_families_performance_zero": [
+      "ammonia-cracking",
+      "ammonia-synthesis",
+      "co2-to-formate",
+      "co-prox",
+      "nitrogen-reduction-reaction",
+      "photocatalytic-water-splitting"
+    ],
+    "window": {
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "states": 91
+    },
+    "varying_symbols": [
+      "Ag",
+      "Al",
+      "Au",
+      "Co",
+      "Cu",
+      "Ir",
+      "Mo",
+      "Ni",
+      "Pd",
+      "Pt",
+      "Rh",
+      "Ru",
+      "Sn",
+      "Zn"
+    ],
+    "held_at_baseline": []
+  },
+  "breakeven": {
+    "families": 30,
+    "contests": 120,
+    "errors": [],
+    "exposure_counts": {
+      "base_vs_base": 3,
+      "metal_vs_none": 11,
+      "precious_vs_base": 15,
+      "precious_vs_precious": 1
+    },
+    "precious_vs_base_sweeps": 28,
+    "precious_cost_crossings": 13,
+    "precious_cost_crossing_median_factor": 0.0038,
+    "precious_cost_crossings_between_0_1_and_10": 3,
+    "precious_without_cost_crossing_in_scan": 15
+  },
+  "live_reference_comparison": {
+    "status": "available",
+    "rows": [
+      {
+        "family": "aem-electrolyzer-oer",
+        "profile": "balanced",
+        "reference_winner": "cr-doped-amorphous",
+        "live_winner": "cr-doped-amorphous",
+        "changed": false
+      },
+      {
+        "family": "aem-electrolyzer-oer",
+        "profile": "cost-first",
+        "reference_winner": "cr-doped-amorphous",
+        "live_winner": "cr-doped-amorphous",
+        "changed": false
+      },
+      {
+        "family": "aem-electrolyzer-oer",
+        "profile": "evidence-first",
+        "reference_winner": "cr-doped-amorphous",
+        "live_winner": "cr-doped-amorphous",
+        "changed": false
+      },
+      {
+        "family": "aem-electrolyzer-oer",
+        "profile": "performance_zero",
+        "reference_winner": "cr-doped-amorphous",
+        "live_winner": "cr-doped-amorphous",
+        "changed": false
+      },
+      {
+        "family": "ammonia-cracking",
+        "profile": "balanced",
+        "reference_winner": "co-mgo-la2o3",
+        "live_winner": "ni-mgo-ceo2-interface",
+        "changed": true
+      },
+      {
+        "family": "ammonia-cracking",
+        "profile": "cost-first",
+        "reference_winner": "co-mgo-la2o3",
+        "live_winner": "ni-mgo-ceo2-interface",
+        "changed": true
+      },
+      {
+        "family": "ammonia-cracking",
+        "profile": "evidence-first",
+        "reference_winner": "co-mgo-la2o3",
+        "live_winner": "ni-mgo-ceo2-interface",
+        "changed": true
+      },
+      {
+        "family": "ammonia-cracking",
+        "profile": "performance_zero",
+        "reference_winner": "co-mgo-la2o3",
+        "live_winner": "ni-alumina-baseline",
+        "changed": true
+      },
+      {
+        "family": "ammonia-synthesis",
+        "profile": "balanced",
+        "reference_winner": "cs-co3mo3n",
+        "live_winner": "fused-iron-baseline",
+        "changed": true
+      },
+      {
+        "family": "ammonia-synthesis",
+        "profile": "cost-first",
+        "reference_winner": "cs-co3mo3n",
+        "live_winner": "fused-iron-baseline",
+        "changed": true
+      },
+      {
+        "family": "ammonia-synthesis",
+        "profile": "evidence-first",
+        "reference_winner": "cs-co3mo3n",
+        "live_winner": "fused-iron-baseline",
+        "changed": true
+      },
+      {
+        "family": "ammonia-synthesis",
+        "profile": "performance_zero",
+        "reference_winner": "cs-co3mo3n",
+        "live_winner": "fused-iron-baseline",
+        "changed": true
+      },
+      {
+        "family": "co2-electroreduction",
+        "profile": "balanced",
+        "reference_winner": "ag-co-mea",
+        "live_winner": "ag-co-mea",
+        "changed": false
+      },
+      {
+        "family": "co2-electroreduction",
+        "profile": "cost-first",
+        "reference_winner": "ag-co-mea",
+        "live_winner": "ag-co-mea",
+        "changed": false
+      },
+      {
+        "family": "co2-electroreduction",
+        "profile": "evidence-first",
+        "reference_winner": "ag-co-mea",
+        "live_winner": "ag-co-mea",
+        "changed": false
+      },
+      {
+        "family": "co2-electroreduction",
+        "profile": "performance_zero",
+        "reference_winner": "ag-co-mea",
+        "live_winner": "ag-co-mea",
+        "changed": false
+      },
+      {
+        "family": "co2-methanation",
+        "profile": "balanced",
+        "reference_winner": "ni-ceo2-lowtemp",
+        "live_winner": "ni-ceo2-lowtemp",
+        "changed": false
+      },
+      {
+        "family": "co2-methanation",
+        "profile": "cost-first",
+        "reference_winner": "ni-alumina-baseline",
+        "live_winner": "ni-ceo2-lowtemp",
+        "changed": true
+      },
+      {
+        "family": "co2-methanation",
+        "profile": "evidence-first",
+        "reference_winner": "ni-alumina-baseline",
+        "live_winner": "ni-ceo2-lowtemp",
+        "changed": true
+      },
+      {
+        "family": "co2-methanation",
+        "profile": "performance_zero",
+        "reference_winner": "ni-alumina-baseline",
+        "live_winner": "ni-alumina-baseline",
+        "changed": false
+      },
+      {
+        "family": "co2-methanol",
+        "profile": "balanced",
+        "reference_winner": "cza-baseline",
+        "live_winner": "cza-baseline",
+        "changed": false
+      },
+      {
+        "family": "co2-methanol",
+        "profile": "cost-first",
+        "reference_winner": "cza-baseline",
+        "live_winner": "cza-baseline",
+        "changed": false
+      },
+      {
+        "family": "co2-methanol",
+        "profile": "evidence-first",
+        "reference_winner": "cza-baseline",
+        "live_winner": "cza-baseline",
+        "changed": false
+      },
+      {
+        "family": "co2-methanol",
+        "profile": "performance_zero",
+        "reference_winner": "cza-baseline",
+        "live_winner": "cza-baseline",
+        "changed": false
+      },
+      {
+        "family": "co2-to-formate",
+        "profile": "balanced",
+        "reference_winner": "pdag-ndcarbon-co2fa",
+        "live_winner": "pdag-ndcarbon-co2fa",
+        "changed": false
+      },
+      {
+        "family": "co2-to-formate",
+        "profile": "cost-first",
+        "reference_winner": "pdag-ndcarbon-co2fa",
+        "live_winner": "pdag-ndcarbon-co2fa",
+        "changed": false
+      },
+      {
+        "family": "co2-to-formate",
+        "profile": "evidence-first",
+        "reference_winner": "pdag-ndcarbon-co2fa",
+        "live_winner": "pdag-ndcarbon-co2fa",
+        "changed": false
+      },
+      {
+        "family": "co2-to-formate",
+        "profile": "performance_zero",
+        "reference_winner": "pdag-ndcarbon-co2fa",
+        "live_winner": "pdag-ndcarbon-co2fa",
+        "changed": false
+      },
+      {
+        "family": "co-prox",
+        "profile": "balanced",
+        "reference_winner": "cuo-ceo2",
+        "live_winner": "pt-fe-alumina",
+        "changed": true
+      },
+      {
+        "family": "co-prox",
+        "profile": "cost-first",
+        "reference_winner": "cuo-ceo2",
+        "live_winner": "cuo-ceo2",
+        "changed": false
+      },
+      {
+        "family": "co-prox",
+        "profile": "evidence-first",
+        "reference_winner": "pt-fe-alumina",
+        "live_winner": "pt-fe-alumina",
+        "changed": false
+      },
+      {
+        "family": "co-prox",
+        "profile": "performance_zero",
+        "reference_winner": "cuo-ceo2",
+        "live_winner": "cuo-ceo2",
+        "changed": false
+      },
+      {
+        "family": "dry-reforming",
+        "profile": "balanced",
+        "reference_winner": "ni-co-almgo",
+        "live_winner": "ni-single-atom-ceria",
+        "changed": true
+      },
+      {
+        "family": "dry-reforming",
+        "profile": "cost-first",
+        "reference_winner": "ni-co-almgo",
+        "live_winner": "ni-single-atom-ceria",
+        "changed": true
+      },
+      {
+        "family": "dry-reforming",
+        "profile": "evidence-first",
+        "reference_winner": "ni-co-almgo",
+        "live_winner": "ni-single-atom-ceria",
+        "changed": true
+      },
+      {
+        "family": "dry-reforming",
+        "profile": "performance_zero",
+        "reference_winner": "ni-co-almgo",
+        "live_winner": "ni-single-atom-ceria",
+        "changed": true
+      },
+      {
+        "family": "ethylene-epoxidation",
+        "profile": "balanced",
+        "reference_winner": "agcs-industrial",
+        "live_winner": "agcs-industrial",
+        "changed": false
+      },
+      {
+        "family": "ethylene-epoxidation",
+        "profile": "cost-first",
+        "reference_winner": "agcs-industrial",
+        "live_winner": "agcs-industrial",
+        "changed": false
+      },
+      {
+        "family": "ethylene-epoxidation",
+        "profile": "evidence-first",
+        "reference_winner": "agcs-industrial",
+        "live_winner": "agcs-industrial",
+        "changed": false
+      },
+      {
+        "family": "ethylene-epoxidation",
+        "profile": "performance_zero",
+        "reference_winner": "ag-alumina-baseline",
+        "live_winner": "ag-alumina-baseline",
+        "changed": false
+      },
+      {
+        "family": "fischer-tropsch-synthesis",
+        "profile": "balanced",
+        "reference_winner": "fe-silica-lower-olefin",
+        "live_winner": "fe-silica-lower-olefin",
+        "changed": false
+      },
+      {
+        "family": "fischer-tropsch-synthesis",
+        "profile": "cost-first",
+        "reference_winner": "fe-silica-lower-olefin",
+        "live_winner": "fe-silica-lower-olefin",
+        "changed": false
+      },
+      {
+        "family": "fischer-tropsch-synthesis",
+        "profile": "evidence-first",
+        "reference_winner": "co-alumina-fts",
+        "live_winner": "fe-silica-lower-olefin",
+        "changed": true
+      },
+      {
+        "family": "fischer-tropsch-synthesis",
+        "profile": "performance_zero",
+        "reference_winner": "fe-silica-lower-olefin",
+        "live_winner": "fe-silica-lower-olefin",
+        "changed": false
+      },
+      {
+        "family": "formic-acid-dehydrogenation",
+        "profile": "balanced",
+        "reference_winner": "co-nc-nonnoble",
+        "live_winner": "co-nc-nonnoble",
+        "changed": false
+      },
+      {
+        "family": "formic-acid-dehydrogenation",
+        "profile": "cost-first",
+        "reference_winner": "co-nc-nonnoble",
+        "live_winner": "co-nc-nonnoble",
+        "changed": false
+      },
+      {
+        "family": "formic-acid-dehydrogenation",
+        "profile": "evidence-first",
+        "reference_winner": "co-nc-nonnoble",
+        "live_winner": "ptmo-gasphase-premium",
+        "changed": true
+      },
+      {
+        "family": "formic-acid-dehydrogenation",
+        "profile": "performance_zero",
+        "reference_winner": "co-nc-nonnoble",
+        "live_winner": "co-nc-nonnoble",
+        "changed": false
+      },
+      {
+        "family": "fuel-cell-orr",
+        "profile": "balanced",
+        "reference_winner": "fen-c-pgmfree-cathode",
+        "live_winner": "fen-c-pgmfree-cathode",
+        "changed": false
+      },
+      {
+        "family": "fuel-cell-orr",
+        "profile": "cost-first",
+        "reference_winner": "fen-c-pgmfree-cathode",
+        "live_winner": "fen-c-pgmfree-cathode",
+        "changed": false
+      },
+      {
+        "family": "fuel-cell-orr",
+        "profile": "evidence-first",
+        "reference_winner": "ptco-intermetallic-cathode",
+        "live_winner": "ptco-intermetallic-cathode",
+        "changed": false
+      },
+      {
+        "family": "fuel-cell-orr",
+        "profile": "performance_zero",
+        "reference_winner": "fen-c-pgmfree-cathode",
+        "live_winner": "ptc-baseline-cathode",
+        "changed": true
+      },
+      {
+        "family": "glycerol-electrooxidation",
+        "profile": "balanced",
+        "reference_winner": "niooh-glycerol-anode",
+        "live_winner": "niooh-glycerol-anode",
+        "changed": false
+      },
+      {
+        "family": "glycerol-electrooxidation",
+        "profile": "cost-first",
+        "reference_winner": "niooh-glycerol-anode",
+        "live_winner": "niooh-glycerol-anode",
+        "changed": false
+      },
+      {
+        "family": "glycerol-electrooxidation",
+        "profile": "evidence-first",
+        "reference_winner": "niooh-glycerol-anode",
+        "live_winner": "niooh-glycerol-anode",
+        "changed": false
+      },
+      {
+        "family": "glycerol-electrooxidation",
+        "profile": "performance_zero",
+        "reference_winner": "niooh-glycerol-anode",
+        "live_winner": "niooh-glycerol-anode",
+        "changed": false
+      },
+      {
+        "family": "hydrodeoxygenation",
+        "profile": "balanced",
+        "reference_winner": "comos-hdo",
+        "live_winner": "comos-hdo",
+        "changed": false
+      },
+      {
+        "family": "hydrodeoxygenation",
+        "profile": "cost-first",
+        "reference_winner": "comos-hdo",
+        "live_winner": "comos-hdo",
+        "changed": false
+      },
+      {
+        "family": "hydrodeoxygenation",
+        "profile": "evidence-first",
+        "reference_winner": "comos-hdo",
+        "live_winner": "pt-silica-hdo",
+        "changed": true
+      },
+      {
+        "family": "hydrodeoxygenation",
+        "profile": "performance_zero",
+        "reference_winner": "comos-hdo",
+        "live_winner": "comos-hdo",
+        "changed": false
+      },
+      {
+        "family": "hydrogen-evolution-reaction",
+        "profile": "balanced",
+        "reference_winner": "nimo-alkaline-her-cathode",
+        "live_winner": "nimo-alkaline-her-cathode",
+        "changed": false
+      },
+      {
+        "family": "hydrogen-evolution-reaction",
+        "profile": "cost-first",
+        "reference_winner": "nimo-alkaline-her-cathode",
+        "live_winner": "nimo-alkaline-her-cathode",
+        "changed": false
+      },
+      {
+        "family": "hydrogen-evolution-reaction",
+        "profile": "evidence-first",
+        "reference_winner": "nimo-alkaline-her-cathode",
+        "live_winner": "nimo-alkaline-her-cathode",
+        "changed": false
+      },
+      {
+        "family": "hydrogen-evolution-reaction",
+        "profile": "performance_zero",
+        "reference_winner": "nimo-alkaline-her-cathode",
+        "live_winner": "nimo-alkaline-her-cathode",
+        "changed": false
+      },
+      {
+        "family": "methane-pyrolysis",
+        "profile": "balanced",
+        "reference_winner": "activated-carbon-autocatalytic",
+        "live_winner": "activated-carbon-autocatalytic",
+        "changed": false
+      },
+      {
+        "family": "methane-pyrolysis",
+        "profile": "cost-first",
+        "reference_winner": "activated-carbon-autocatalytic",
+        "live_winner": "activated-carbon-autocatalytic",
+        "changed": false
+      },
+      {
+        "family": "methane-pyrolysis",
+        "profile": "evidence-first",
+        "reference_winner": "activated-carbon-autocatalytic",
+        "live_winner": "activated-carbon-autocatalytic",
+        "changed": false
+      },
+      {
+        "family": "methane-pyrolysis",
+        "profile": "performance_zero",
+        "reference_winner": "activated-carbon-autocatalytic",
+        "live_winner": "activated-carbon-autocatalytic",
+        "changed": false
+      },
+      {
+        "family": "methanol-to-olefins",
+        "profile": "balanced",
+        "reference_winner": "hzsm5-mth",
+        "live_winner": "hzsm5-mth",
+        "changed": false
+      },
+      {
+        "family": "methanol-to-olefins",
+        "profile": "cost-first",
+        "reference_winner": "hzsm5-mth",
+        "live_winner": "hzsm5-mth",
+        "changed": false
+      },
+      {
+        "family": "methanol-to-olefins",
+        "profile": "evidence-first",
+        "reference_winner": "hzsm5-mth",
+        "live_winner": "hzsm5-mth",
+        "changed": false
+      },
+      {
+        "family": "methanol-to-olefins",
+        "profile": "performance_zero",
+        "reference_winner": "hzsm5-mth",
+        "live_winner": "hzsm5-mth",
+        "changed": false
+      },
+      {
+        "family": "nh3-scr",
+        "profile": "balanced",
+        "reference_winner": "v2o5-wo3-tio2",
+        "live_winner": "v2o5-wo3-tio2",
+        "changed": false
+      },
+      {
+        "family": "nh3-scr",
+        "profile": "cost-first",
+        "reference_winner": "fe-zsm-5",
+        "live_winner": "fe-zsm-5",
+        "changed": false
+      },
+      {
+        "family": "nh3-scr",
+        "profile": "evidence-first",
+        "reference_winner": "v2o5-wo3-tio2",
+        "live_winner": "v2o5-wo3-tio2",
+        "changed": false
+      },
+      {
+        "family": "nh3-scr",
+        "profile": "performance_zero",
+        "reference_winner": "v2o5-wo3-tio2",
+        "live_winner": "v2o5-wo3-tio2",
+        "changed": false
+      },
+      {
+        "family": "nitrogen-reduction-reaction",
+        "profile": "balanced",
+        "reference_winner": "plasma-nrr",
+        "live_winner": "plasma-nrr",
+        "changed": false
+      },
+      {
+        "family": "nitrogen-reduction-reaction",
+        "profile": "cost-first",
+        "reference_winner": "plasma-nrr",
+        "live_winner": "plasma-nrr",
+        "changed": false
+      },
+      {
+        "family": "nitrogen-reduction-reaction",
+        "profile": "evidence-first",
+        "reference_winner": "plasma-nrr",
+        "live_winner": "li-mediated-nrr",
+        "changed": true
+      },
+      {
+        "family": "nitrogen-reduction-reaction",
+        "profile": "performance_zero",
+        "reference_winner": "plasma-nrr",
+        "live_winner": "plasma-nrr",
+        "changed": false
+      },
+      {
+        "family": "olefin-metathesis",
+        "profile": "balanced",
+        "reference_winner": "mo-silica-alumina",
+        "live_winner": "wo3-silica-oct",
+        "changed": true
+      },
+      {
+        "family": "olefin-metathesis",
+        "profile": "cost-first",
+        "reference_winner": "wo3-silica-oct",
+        "live_winner": "wo3-silica-oct",
+        "changed": false
+      },
+      {
+        "family": "olefin-metathesis",
+        "profile": "evidence-first",
+        "reference_winner": "mo-silica-alumina",
+        "live_winner": "wo3-silica-oct",
+        "changed": true
+      },
+      {
+        "family": "olefin-metathesis",
+        "profile": "performance_zero",
+        "reference_winner": "mo-silica-alumina",
+        "live_winner": "wo3-silica-oct",
+        "changed": true
+      },
+      {
+        "family": "pem-electrolyzer-oer",
+        "profile": "balanced",
+        "reference_winner": "pem-low-ir-interface",
+        "live_winner": "pem-low-ir-interface",
+        "changed": false
+      },
+      {
+        "family": "pem-electrolyzer-oer",
+        "profile": "cost-first",
+        "reference_winner": "pem-low-ir-interface",
+        "live_winner": "pem-low-ir-interface",
+        "changed": false
+      },
+      {
+        "family": "pem-electrolyzer-oer",
+        "profile": "evidence-first",
+        "reference_winner": "pem-low-ir-interface",
+        "live_winner": "pem-low-ir-interface",
+        "changed": false
+      },
+      {
+        "family": "pem-electrolyzer-oer",
+        "profile": "performance_zero",
+        "reference_winner": "pem-low-ir-interface",
+        "live_winner": "pem-low-ir-interface",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-co2-reduction",
+        "profile": "balanced",
+        "reference_winner": "tio2-photo-co2",
+        "live_winner": "tio2-photo-co2",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-co2-reduction",
+        "profile": "cost-first",
+        "reference_winner": "tio2-photo-co2",
+        "live_winner": "tio2-photo-co2",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-co2-reduction",
+        "profile": "evidence-first",
+        "reference_winner": "tio2-photo-co2",
+        "live_winner": "tio2-photo-co2",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-co2-reduction",
+        "profile": "performance_zero",
+        "reference_winner": "tio2-photo-co2",
+        "live_winner": "tio2-photo-co2",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-water-splitting",
+        "profile": "balanced",
+        "reference_winner": "pt-tio2-cocatalyst",
+        "live_winner": "pt-tio2-cocatalyst",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-water-splitting",
+        "profile": "cost-first",
+        "reference_winner": "tio2-anatase-baseline",
+        "live_winner": "tio2-anatase-baseline",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-water-splitting",
+        "profile": "evidence-first",
+        "reference_winner": "pt-tio2-cocatalyst",
+        "live_winner": "pt-tio2-cocatalyst",
+        "changed": false
+      },
+      {
+        "family": "photocatalytic-water-splitting",
+        "profile": "performance_zero",
+        "reference_winner": "tio2-anatase-baseline",
+        "live_winner": "tio2-anatase-baseline",
+        "changed": false
+      },
+      {
+        "family": "propane-dehydrogenation",
+        "profile": "balanced",
+        "reference_winner": "crox-alumina-catofin",
+        "live_winner": "crox-alumina-catofin",
+        "changed": false
+      },
+      {
+        "family": "propane-dehydrogenation",
+        "profile": "cost-first",
+        "reference_winner": "crox-alumina-catofin",
+        "live_winner": "crox-alumina-catofin",
+        "changed": false
+      },
+      {
+        "family": "propane-dehydrogenation",
+        "profile": "evidence-first",
+        "reference_winner": "crox-alumina-catofin",
+        "live_winner": "crox-alumina-catofin",
+        "changed": false
+      },
+      {
+        "family": "propane-dehydrogenation",
+        "profile": "performance_zero",
+        "reference_winner": "crox-alumina-catofin",
+        "live_winner": "crox-alumina-catofin",
+        "changed": false
+      },
+      {
+        "family": "rwgs",
+        "profile": "balanced",
+        "reference_winner": "cu-ceria-baseline",
+        "live_winner": "cu-ceria-baseline",
+        "changed": false
+      },
+      {
+        "family": "rwgs",
+        "profile": "cost-first",
+        "reference_winner": "cu-ceria-baseline",
+        "live_winner": "cu-ceria-baseline",
+        "changed": false
+      },
+      {
+        "family": "rwgs",
+        "profile": "evidence-first",
+        "reference_winner": "mo2n-hightemp",
+        "live_winner": "cu-ceria-baseline",
+        "changed": true
+      },
+      {
+        "family": "rwgs",
+        "profile": "performance_zero",
+        "reference_winner": "cu-ceria-baseline",
+        "live_winner": "cu-ceria-baseline",
+        "changed": false
+      },
+      {
+        "family": "selective-acetylene-hydrogenation",
+        "profile": "balanced",
+        "reference_winner": "nizn-intermetallic",
+        "live_winner": "nizn-intermetallic",
+        "changed": false
+      },
+      {
+        "family": "selective-acetylene-hydrogenation",
+        "profile": "cost-first",
+        "reference_winner": "nizn-intermetallic",
+        "live_winner": "nizn-intermetallic",
+        "changed": false
+      },
+      {
+        "family": "selective-acetylene-hydrogenation",
+        "profile": "evidence-first",
+        "reference_winner": "nizn-intermetallic",
+        "live_winner": "nizn-intermetallic",
+        "changed": false
+      },
+      {
+        "family": "selective-acetylene-hydrogenation",
+        "profile": "performance_zero",
+        "reference_winner": "nizn-intermetallic",
+        "live_winner": "nizn-intermetallic",
+        "changed": false
+      },
+      {
+        "family": "steam-methane-reforming",
+        "profile": "balanced",
+        "reference_winner": "ni-calcium-aluminate",
+        "live_winner": "ni-calcium-aluminate",
+        "changed": false
+      },
+      {
+        "family": "steam-methane-reforming",
+        "profile": "cost-first",
+        "reference_winner": "ni-calcium-aluminate",
+        "live_winner": "ni-calcium-aluminate",
+        "changed": false
+      },
+      {
+        "family": "steam-methane-reforming",
+        "profile": "evidence-first",
+        "reference_winner": "ni-calcium-aluminate",
+        "live_winner": "ni-calcium-aluminate",
+        "changed": false
+      },
+      {
+        "family": "steam-methane-reforming",
+        "profile": "performance_zero",
+        "reference_winner": "ni-calcium-aluminate",
+        "live_winner": "ni-calcium-aluminate",
+        "changed": false
+      },
+      {
+        "family": "syngas-methanol",
+        "profile": "balanced",
+        "reference_winner": "cza-industrial",
+        "live_winner": "cza-industrial",
+        "changed": false
+      },
+      {
+        "family": "syngas-methanol",
+        "profile": "cost-first",
+        "reference_winner": "cza-industrial",
+        "live_winner": "cza-industrial",
+        "changed": false
+      },
+      {
+        "family": "syngas-methanol",
+        "profile": "evidence-first",
+        "reference_winner": "cza-industrial",
+        "live_winner": "cza-industrial",
+        "changed": false
+      },
+      {
+        "family": "syngas-methanol",
+        "profile": "performance_zero",
+        "reference_winner": "cza-industrial",
+        "live_winner": "cza-industrial",
+        "changed": false
+      },
+      {
+        "family": "water-gas-shift",
+        "profile": "balanced",
+        "reference_winner": "cu-zno-baseline",
+        "live_winner": "cu-zno-baseline",
+        "changed": false
+      },
+      {
+        "family": "water-gas-shift",
+        "profile": "cost-first",
+        "reference_winner": "cu-zno-baseline",
+        "live_winner": "cu-zno-baseline",
+        "changed": false
+      },
+      {
+        "family": "water-gas-shift",
+        "profile": "evidence-first",
+        "reference_winner": "co-ceria-interface",
+        "live_winner": "cu-zno-baseline",
+        "changed": true
+      },
+      {
+        "family": "water-gas-shift",
+        "profile": "performance_zero",
+        "reference_winner": "cu-zno-baseline",
+        "live_winner": "cu-zno-baseline",
+        "changed": false
+      }
+    ],
+    "changed_by_profile": {
+      "balanced": 5,
+      "cost-first": 4,
+      "evidence-first": 11,
+      "performance_zero": 5
+    }
+  },
+  "basis_month": "2026-07",
+  "seed": 20260906,
+  "price_ranges": {
+    "Ag": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 14.6255,
+      "max": 91.2125,
+      "median": 24.0433,
+      "basis_month_price": 58.597,
+      "min_over_basis": 0.2495946891479086,
+      "max_over_basis": 1.556606993532092
+    },
+    "Al": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 0.6622,
+      "max": 1.6593,
+      "median": 1.0671,
+      "basis_month_price": 1.4326,
+      "min_over_basis": 0.4622364930894876,
+      "max_over_basis": 1.1582437526176181
+    },
+    "Au": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 1283.9476,
+      "max": 5014.645,
+      "median": 1900.275,
+      "basis_month_price": 4075.0968,
+      "min_over_basis": 0.31507168124202595,
+      "max_over_basis": 1.2305584986349283
+    },
+    "Co": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 9.8525,
+      "max": 37.0995,
+      "median": 15.1954,
+      "basis_month_price": 25.3435,
+      "min_over_basis": 0.3887584587764121,
+      "max_over_basis": 1.4638664746384675
+    },
+    "Cu": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 2.2943,
+      "max": 6.1471,
+      "median": 4.0415,
+      "basis_month_price": 6.1429,
+      "min_over_basis": 0.37348809194354454,
+      "max_over_basis": 1.0006837161601199
+    },
+    "Ir": {
+      "source": "Johnson Matthey (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 1480.0,
+      "max": 7816.6667,
+      "median": 4541.3043,
+      "basis_month_price": 7684.7826,
+      "min_over_basis": 0.1925884019152344,
+      "max_over_basis": 1.0171617216601547
+    },
+    "Mo": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 7.7857,
+      "max": 37.4,
+      "median": 19.65,
+      "basis_month_price": 30.337,
+      "min_over_basis": 0.2566404061047566,
+      "max_over_basis": 1.232818011009658
+    },
+    "Ni": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 5.2268,
+      "max": 15.3878,
+      "median": 7.6308,
+      "basis_month_price": 7.5443,
+      "min_over_basis": 0.6928144426918336,
+      "max_over_basis": 2.039659080365309
+    },
+    "Pd": {
+      "source": "Johnson Matthey (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 933.65,
+      "max": 2889.15,
+      "median": 1554.15,
+      "basis_month_price": 1278.8696,
+      "min_over_basis": 0.7300587956739295,
+      "max_over_basis": 2.259143543641979
+    },
+    "Pt": {
+      "source": "Johnson Matthey (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 758.4762,
+      "max": 2440.4286,
+      "median": 970.05,
+      "basis_month_price": 1627.5652,
+      "min_over_basis": 0.4660189342952282,
+      "max_over_basis": 1.4994352299987737
+    },
+    "Rh": {
+      "source": "Johnson Matthey (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 2473.8636,
+      "max": 28742.8571,
+      "median": 8022.7273,
+      "basis_month_price": 8178.2609,
+      "min_over_basis": 0.3024926240736585,
+      "max_over_basis": 3.514543917277083
+    },
+    "Ru": {
+      "source": "Johnson Matthey (monthly average)",
+      "unit": "$/troy_oz",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 250.0,
+      "max": 1704.7619,
+      "median": 465.0,
+      "basis_month_price": 1598.913,
+      "min_over_basis": 0.1563562245100265,
+      "max_over_basis": 1.0662005374901573
+    },
+    "Sn": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 6.7825,
+      "max": 24.1486,
+      "median": 12.4521,
+      "basis_month_price": 23.9869,
+      "min_over_basis": 0.28275850568435273,
+      "max_over_basis": 1.0067411795605101
+    },
+    "Zn": {
+      "source": "IMF PCPS (monthly average)",
+      "unit": "$/lb",
+      "first": "2019-01-31",
+      "last": "2026-07-31",
+      "months": 91,
+      "min": 0.8634,
+      "max": 1.9828,
+      "median": 1.2693,
+      "basis_month_price": 1.6301,
+      "min_over_basis": 0.5296607570087724,
+      "max_over_basis": 1.21636709404331
+    }
+  },
+  "manufacturing": {
+    "2": {
+      "template_count": 28,
+      "target_year": 2026,
+      "min_processing_cost_per_lb": 2.4937,
+      "max_processing_cost_per_lb": 32.3183,
+      "partly_costed_template_ids": [
+        "fusion_promoted_magnetite",
+        "hydrothermal_oxide_nanostructure",
+        "reduction_activation_addon",
+        "sulfidation_hydrotreating",
+        "washcoat_monolith"
+      ],
+      "partly_costed_templates": [
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "dropped_steps": []
+        }
+      ]
+    },
+    "20": {
+      "template_count": 28,
+      "target_year": 2026,
+      "min_processing_cost_per_lb": 0.5985,
+      "max_processing_cost_per_lb": 6.739,
+      "partly_costed_template_ids": [
+        "fusion_promoted_magnetite",
+        "hydrothermal_oxide_nanostructure",
+        "reduction_activation_addon",
+        "sulfidation_hydrotreating",
+        "washcoat_monolith"
+      ],
+      "partly_costed_templates": [
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "dropped_steps": []
+        }
+      ]
+    },
+    "200": {
+      "template_count": 28,
+      "target_year": 2026,
+      "min_processing_cost_per_lb": 0.0884,
+      "max_processing_cost_per_lb": 1.3546,
+      "partly_costed_template_ids": [
+        "fusion_promoted_magnetite",
+        "hydrothermal_oxide_nanostructure",
+        "reduction_activation_addon",
+        "sulfidation_hydrotreating",
+        "washcoat_monolith"
+      ],
+      "partly_costed_templates": [
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "dropped_steps": []
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "dropped_steps": []
+        }
+      ]
+    }
+  }
+}

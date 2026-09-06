@@ -98,29 +98,44 @@ def run_command(command: list[str], env: dict[str, str], records: list[dict], *,
     return record
 
 
+def classify_live_snapshot(payload: dict) -> dict:
+    """Classify only the selected quotes; supplied status cannot override evidence."""
+    from backend.core.price_evidence import describe_price_evidence
+
+    reference_only = (
+        payload.get("basis") == "reference"
+        or payload.get("basis_type") == "reference"
+        or payload.get("cadence") == "monthly_average"
+    )
+    observed = []
+    if not reference_only:
+        for symbol, quote in payload["price_basis"].items():
+            source = quote.get("source") or ""
+            if "monthly" in source.lower() or "averaged by month" in source.lower():
+                continue
+            if describe_price_evidence(source=source)["freshness_target_hours"] is not None:
+                observed.append(symbol)
+    return {**payload, "status": "available" if observed else "unavailable", "observed_symbols": sorted(observed)}
+
+
 def snapshot_live(path: Path) -> dict:
     """Read existing local live quotes without collecting prices or writing to the DB."""
     from sqlalchemy import inspect
-    from sqlmodel import Session, select
+    from sqlmodel import Session
 
     from backend.core.decision_engine import _latest_price_map
     from backend.database import engine
-    from backend.models.metal_price import MetalPrice
 
     if not inspect(engine).has_table("metal_prices"):
         payload = {"status": "unavailable", "reason": "local database has no metal_prices table", "observed_symbols": [], "price_basis": {}}
     else:
         with Session(engine) as session:
-            rows = session.exec(select(MetalPrice).where(MetalPrice.basis == "live")).all()
             basis = _latest_price_map(session, "live")
-        observed = sorted({r.symbol for r in rows if "live" in r.source.lower() or "settlement" in r.source.lower()})
-        payload = {
-            "status": "available" if observed else "unavailable",
+        payload = classify_live_snapshot({
             "source": "existing local live-tier database snapshot; no network refresh performed",
-            "observed_symbols": observed,
             "price_basis": basis,
             "note": "Quote dates and source labels are preserved. Anchors are not live observations.",
-        }
+        })
     write_json(path, payload)
     return payload
 
@@ -220,9 +235,7 @@ def main() -> None:
             normalized["raw_input_sha256"] = manifest["history"]["sha256"]
             write_json(paths["monthly_history"], normalized)
             if args.live_basis:
-                live = read_json(args.live_basis)
-                observed = sorted(s for s, quote in live["price_basis"].items() if "live" in quote["source"].lower() or "settlement" in quote["source"].lower())
-                live = {"status": "available" if observed else "unavailable", "observed_symbols": observed, **live}
+                live = classify_live_snapshot(read_json(args.live_basis))
                 write_json(paths["live_basis"], live)
             else:
                 live = snapshot_live(paths["live_basis"])

@@ -75,7 +75,7 @@ def main() -> None:
     ax.bar_label(bars, fmt="%.2f", padding=3)
     bars = ax.bar(x + 0.18, [r["comet_usd_per_lb"] for r in rows], width=0.36, color=BLUE, edgecolor=INK, linewidth=0.6, label="COMET")
     ax.bar_label(bars, fmt="%.2f", padding=3)
-    ax.set(xticks=x, xticklabels=["2 wt% Pt/C", "21 wt% Ni/Al2O3", "USY-FCC\n67 t/day (footnote b)"], ylabel="Catalyst selling price (2017 USD/lb)", ylim=(0, max(r["published_usd_per_lb"] for r in rows) * 1.2))
+    ax.set(xticks=x, xticklabels=["2 wt% Pt/C", "21 wt% Ni/Al2O3", "USY-FCC\n67 short tons/day (footnote b)"], ylabel="Catalyst selling price (2017 USD/lb)", ylim=(0, max(r["published_usd_per_lb"] for r in rows) * 1.2))
     ax.yaxis.grid(True, color=GREY)
     ax.legend(frameon=False)
     fig.suptitle("CatCost Table 6.2 reproduction", fontsize=15, x=0.02, ha="left")

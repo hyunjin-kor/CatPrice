@@ -1,0 +1,4 @@
+# Preserve the byte hashes of the frozen paper snapshots on Windows and Linux.
+docs/paper/*_2026-09-06.json -text
+docs/paper/figures/*_2026-09-06.svg -text
+docs/paper/results_2026-09-06.md -text

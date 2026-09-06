@@ -1,0 +1,165 @@
+{
+  "status": "available",
+  "source": "existing local live-tier database snapshot; no network refresh performed",
+  "observed_symbols": [
+    "Ag",
+    "Al",
+    "Au",
+    "Cu",
+    "Ir",
+    "Ni",
+    "Pd",
+    "Pt",
+    "Rh",
+    "Ru",
+    "Sn",
+    "Zn"
+  ],
+  "price_basis": {
+    "Pt": {
+      "symbol": "Pt",
+      "name": "Platinum",
+      "price": 1826.0,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Pd": {
+      "symbol": "Pd",
+      "name": "Palladium",
+      "price": 1403.9,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Au": {
+      "symbol": "Au",
+      "name": "Gold",
+      "price": 4476.6,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Ag": {
+      "symbol": "Ag",
+      "name": "Silver",
+      "price": 66.748,
+      "unit": "$/troy_oz",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Cu": {
+      "symbol": "Cu",
+      "name": "Copper",
+      "price": 6.6825,
+      "unit": "$/lb",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Al": {
+      "symbol": "Al",
+      "name": "Aluminum",
+      "price": 1.5754,
+      "unit": "$/lb",
+      "source": "Yahoo Finance (live)",
+      "fetched_at": "2026-09-05T09:15:01.173817"
+    },
+    "Ir": {
+      "symbol": "Ir",
+      "name": "Iridium",
+      "price": 7850.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Rh": {
+      "symbol": "Rh",
+      "name": "Rhodium",
+      "price": 9425.0,
+      "unit": "$/troy_oz",
+      "source": "Kitco (live)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Ru": {
+      "symbol": "Ru",
+      "name": "Ruthenium",
+      "price": 1675.0,
+      "unit": "$/troy_oz",
+      "source": "Johnson Matthey (live)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Co": {
+      "symbol": "Co",
+      "name": "Cobalt",
+      "price": 21.0,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Fe": {
+      "symbol": "Fe",
+      "name": "Iron",
+      "price": 0.0604,
+      "unit": "$/lb",
+      "source": "CatCost 2018 + ChemPPI escalation",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Mo": {
+      "symbol": "Mo",
+      "name": "Molybdenum",
+      "price": 23.13,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Ni": {
+      "symbol": "Ni",
+      "name": "Nickel",
+      "price": 7.5705,
+      "unit": "$/lb",
+      "source": "Markets Insider (live)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "W": {
+      "symbol": "W",
+      "name": "Tungsten",
+      "price": 21.74,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Zn": {
+      "symbol": "Zn",
+      "name": "Zinc",
+      "price": 1.8123,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Sn": {
+      "symbol": "Sn",
+      "name": "Tin",
+      "price": 24.6981,
+      "unit": "$/lb",
+      "source": "Westmetall (LME settlement)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "V": {
+      "symbol": "V",
+      "name": "Vanadium",
+      "price": 8.96,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    },
+    "Re": {
+      "symbol": "Re",
+      "name": "Rhenium",
+      "price": 1179.4,
+      "unit": "$/lb",
+      "source": "USGS MCS 2026 (2025 avg)",
+      "fetched_at": "2026-09-05T06:00:05.313539"
+    }
+  },
+  "note": "Quote dates and source labels are preserved. Anchors are not live observations."
+}

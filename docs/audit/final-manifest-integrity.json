@@ -1,0 +1,270 @@
+{
+  "checked_at_utc": "2026-09-06T03:42:35.252848+00:00",
+  "branch": "autonomous/2026-09-06",
+  "hash_scope_note": "Code and backend/data hashes describe bytes in the actual Windows execution environment. Their Git canonical line endings may differ on another OS. Frozen dated paper inputs and outputs use -text to preserve exact artifact bytes.",
+  "manifest_groups": {
+    "outputs": {
+      "count": 26,
+      "mismatches": []
+    },
+    "inputs": {
+      "count": 80,
+      "mismatches": []
+    },
+    "code_inputs": {
+      "count": 34,
+      "mismatches": []
+    }
+  },
+  "history": {
+    "file": "docs/paper/price_history_2026-09-06.json",
+    "manifest_sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+    "working_sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+    "git_attributes": "docs/paper/price_history_2026-09-06.json: text: unset",
+    "git_raw_object_id": "e16ba2ca1da7a4b21d3030a800822d57e09980b8",
+    "git_canonical_object_id": "e16ba2ca1da7a4b21d3030a800822d57e09980b8",
+    "git_canonical_equals_worktree": true,
+    "bytes": 87068,
+    "staged_sha256": "84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69",
+    "staged_bytes": 87068,
+    "staged_equals_worktree": true
+  },
+  "git_output_filtering": [
+    {
+      "file": "docs/paper/active_metal_breakeven_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/all_families_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/all_families_live_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/breakeven_sweep_points_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figure_manifest_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure1_architecture_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure1_architecture_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure2_table62_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure2_table62_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure3_gwp_cost_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure3_gwp_cost_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure4_weight_sensitivity_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure4_weight_sensitivity_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure5_live_reference_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure5_live_reference_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure6_breakeven_sweeps_2026-09-06.png",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/figures/figure6_breakeven_sweeps_2026-09-06.svg",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/live_basis_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/manufacturing_costs_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/monthly_history_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/paper_summary_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/price_history_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/price_volatility_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/reference_basis_2026-09-06.json",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/results_2026-09-06.md",
+      "canonical_equals_raw": true
+    },
+    {
+      "file": "docs/paper/table62_reproduction_2026-09-06.json",
+      "canonical_equals_raw": true
+    }
+  ],
+  "git_index_outputs": [
+    {
+      "file": "docs/paper/active_metal_breakeven_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/all_families_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/all_families_live_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/breakeven_sweep_points_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figure_manifest_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure1_architecture_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure1_architecture_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure2_table62_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure2_table62_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure3_gwp_cost_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure3_gwp_cost_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure4_weight_sensitivity_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure4_weight_sensitivity_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure5_live_reference_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure5_live_reference_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure6_breakeven_sweeps_2026-09-06.png",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/figures/figure6_breakeven_sweeps_2026-09-06.svg",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/live_basis_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/manufacturing_costs_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/monthly_history_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/paper_summary_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/price_history_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/price_volatility_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/reference_basis_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/results_2026-09-06.md",
+      "in_index": true,
+      "index_matches_manifest": true
+    },
+    {
+      "file": "docs/paper/table62_reproduction_2026-09-06.json",
+      "in_index": true,
+      "index_matches_manifest": true
+    }
+  ]
+}
