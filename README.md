@@ -133,7 +133,7 @@ COMET is an independent implementation. It cites the CatCost methodology
 academically but does not redistribute CatCost source data, and it is not
 affiliated with or endorsed by NREL.
 
-- Baddour, F. G., et al. (2018). *Journal of the American Chemical Society*.
+- Baddour, F. G., et al. (2018). Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method. *Organic Process Research & Development*. [Verified DOI](https://doi.org/10.1021/acs.oprd.8b00245).
 - Van Allsburg, K. M., et al. (2022). Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost. *Nature Catalysis*.
 
 Benchmark- and route-specific references are attached to the datasets inside the app.

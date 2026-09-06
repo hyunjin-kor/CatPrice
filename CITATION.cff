@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use COMET in your research, please cite it as below."
 title: "COMET: Catalyst Overall Manufacturing Estimation Tool"
 type: software
+version: "1.4.0"
+# Prepared source version; no release date until a human publishes the tag.
 authors:
   - family-names: "Kang"
     given-names: "Hyunjin"
@@ -16,9 +18,18 @@ keywords:
   - chemical-engineering
 references:
   - type: article
+    title: "Estimating Precommercial Heterogeneous Catalyst Price: A Simple Step-Based Method"
+    authors:
+      - family-names: "Baddour"
+        given-names: "Frederick G."
+    journal: "Organic Process Research & Development"
+    year: 2018
+    doi: "10.1021/acs.oprd.8b00245"
+  - type: article
     title: "Early-stage evaluation of catalyst manufacturing cost and environmental impact using CatCost"
     authors:
       - family-names: "Van Allsburg"
         given-names: "Kurt M."
     journal: "Nature Catalysis"
     year: 2022
+    doi: "10.1038/s41929-022-00759-6"
