@@ -30,7 +30,7 @@
 나머지 해당 프로파일의 최상위 추천은 같습니다. 전체 후보별 전후 단가와 입력 가격은 `docs/audit/free-data-impact-2026-09-06.json`에 있습니다. 재현 명령:
 
 ```bash
-python scripts/audit_free_support_impact.py --history docs/paper/price_history_2026-09-06.json --support-history backend/data/support_price_history.json --out docs/audit/free-data-impact-2026-09-06.json
+python scripts/audit_free_support_impact.py --history docs/paper/price_history_2026-09-06.json --support-history docs/paper/free-data-2026-09-06/support_history_2026-09-06.json --out docs/audit/free-data-impact-2026-09-06.json
 ```
 
 문헌 B01–B11 수정은 DOI·반응 귀속·직접 인용 연결·조건·가정 설명만 바꿨습니다. 같은 가격으로 실행한 30개 반응군·116개 후보의 원가·점수·순위 JSON은 바이트까지 같습니다. 잘못 연결한 정정 DOI와 ORR/CO 생성 논문을 바로잡고, 무료 원문과 SI가 있는 NiMo 논문을 직접 근거로 연결했습니다. 조성·성능 점수·공정 단가는 임의로 바꾸지 않았습니다.
@@ -50,7 +50,7 @@ python scripts/audit_free_support_impact.py --history docs/paper/price_history_2
 별도 결과는 `docs/paper/free-data-2026-09-06/`에 있습니다. 금속과 확보된 담체의 최신 공통 월은 **2026-06**, seed는 **20260906**입니다. 90개 역사 월, 30개 반응군, 116개 후보, 그림 6종을 재생성했습니다. 짧은 담체 이력은 장기 변동성 분석에서 기준값으로 유지하고 그 사실을 출력에 표시합니다. 기존 7월 원고·SI·수치·스냅샷은 그대로 보존했습니다.
 
 ```bash
-python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history backend/data/support_price_history.json --out-dir docs/paper/free-data-2026-09-06
+python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --history docs/paper/price_history_2026-09-06.json --live-basis docs/paper/live_basis_2026-09-06.json --support-history docs/paper/free-data-2026-09-06/support_history_2026-09-06.json --out-dir docs/paper/free-data-2026-09-06
 ```
 
 - 금속 원본 SHA-256: `84888f60f59d4a21a47945f1f98576c1824bc20babbde678c7419cf3806d4c69`.
@@ -90,3 +90,5 @@ python scripts/reproduce_paper.py --price-basis reference --seed 20260906 --hist
 - source audit는 두 반응군에 대한 심화 대조이며 나머지 28개 반응군의 모든 원문 수치가 새로 검증됐다는 뜻이 아닙니다.
 
 기존 T01–T19 표와 초기 성능·출처·릴리스 준비 기록은 `docs/audit/autonomous-run-2026-09-06.md`의 앞부분에 유지합니다. 이후 보고 커밋은 문서·검증 기록만 바꾸며, 최종 PR Checks 결과도 확인합니다.
+
+이 문서는9월6일 실행의 기록입니다. 이후 담체9종으로 확대한 결과와 남은2종의 품질 문제는 [9월7일 재개 보고](free-data-resume-2026-09-07.md)에 기록했습니다. 위 재현 명령은 당시 동결 입력을 사용합니다.

@@ -1,0 +1,3201 @@
+{
+  "price_basis": "published Step Method rates, escalated with bundled ChemPPI",
+  "scales": {
+    "2": {
+      "order_size_tons": 2.0,
+      "scale": "small",
+      "basis_year": 2017,
+      "target_year": 2026,
+      "chemppi_escalation": 1.33,
+      "templates": [
+        {
+          "id": "colloidal_nanoparticle_deposition",
+          "name": "Colloidal / Polyol Nanoparticle Synthesis with Deposition",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "kiln_batch",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.9773,
+          "processing_cost_per_kg": 19.7915,
+          "step_cost_per_hr": 598.49,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "combustion_synthesis_mixed_oxide",
+          "name": "Solution Combustion Synthesis - Mixed Oxide",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 6.6831,
+          "processing_cost_per_kg": 14.7337,
+          "step_cost_per_hr": 445.54,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "coprecipitation_metal_oxide",
+          "name": "Co-precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.7778,
+          "processing_cost_per_kg": 19.3517,
+          "step_cost_per_hr": 585.19,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "deposition_precipitation_metal_oxide",
+          "name": "Deposition-Precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 10.1743,
+          "processing_cost_per_kg": 22.4305,
+          "step_cost_per_hr": 678.29,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "excess_solution_impregnation_metal_oxide",
+          "name": "Excess-Solution (Wet) Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.7778,
+          "processing_cost_per_kg": 19.3517,
+          "step_cost_per_hr": 585.19,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "fcc_catalyst_usy_w_re",
+          "name": "FCC Catalyst (USY w/ RE)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_spray",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_batch",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "dryer_spray",
+              "to": "dryer_rotary_100_300C"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 32.3183,
+          "processing_cost_per_kg": 71.2496,
+          "step_cost_per_hr": 2154.55,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "kiln_continuous_direct",
+            "mill",
+            "reactor_simple"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "kiln_batch",
+            "mill",
+            "reactor_simple"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_direct",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "processing_cost_per_lb": 4.0897,
+          "processing_cost_per_kg": 9.0162,
+          "step_cost_per_hr": 272.64,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "processing_cost_per_lb": 9.476,
+          "processing_cost_per_kg": 20.891,
+          "step_cost_per_hr": 631.74,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "ion_exchange_zeolite_metal",
+          "name": "Ion Exchange - Metal into Zeolite",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 7.6806,
+          "processing_cost_per_kg": 16.9328,
+          "step_cost_per_hr": 512.04,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "magnesia_alumina",
+          "name": "Magnesia/Alumina",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 16.2589,
+          "processing_cost_per_kg": 35.8447,
+          "step_cost_per_hr": 1083.93,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_carbide_bulk",
+          "name": "Metal Carbide (Bulk)",
+          "category": "Bulk Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mill",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "mill",
+            "kiln_batch",
+            "kiln_batch",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 12.668,
+          "processing_cost_per_kg": 27.9281,
+          "step_cost_per_hr": 844.53,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_carbide_on_metal_oxide",
+          "name": "Metal Carbide on Metal Oxide",
+          "category": "Supported Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_batch",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "kiln_batch",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 13.7652,
+          "processing_cost_per_kg": 30.347,
+          "step_cost_per_hr": 917.68,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_earth_abundant_on_metal_oxide",
+          "name": "Metal (Earth Abundant) on Metal Oxide",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_batch",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "kiln_batch",
+            "kiln_batch"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 13.1667,
+          "processing_cost_per_kg": 29.0276,
+          "step_cost_per_hr": 877.78,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_pgm_carbon",
+          "name": "PGM on Carbon Support",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_plate_frame",
+            "dryer_batch_vacuum_tray"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_plate_frame",
+            "dryer_batch_vacuum_tray"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 5.4861,
+          "processing_cost_per_kg": 12.0948,
+          "step_cost_per_hr": 365.74,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_pgm_on_carbon",
+          "name": "Metal (PGM) on Carbon",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_plate_frame",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 7.7803,
+          "processing_cost_per_kg": 17.1526,
+          "step_cost_per_hr": 518.69,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "metal_pgm_on_metal_oxide",
+          "name": "Metal (PGM) on Metal Oxide",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "kiln_batch",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_plate_frame",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 12.668,
+          "processing_cost_per_kg": 27.9281,
+          "step_cost_per_hr": 844.53,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "kiln_continuous_indirect",
+            "flare"
+          ],
+          "steps_fitted": [
+            "kiln_batch",
+            "flare"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "processing_cost_per_lb": 2.4937,
+          "processing_cost_per_kg": 5.4977,
+          "step_cost_per_hr": 166.25,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "shaping_extrusion_pelletizing",
+          "name": "Shaping - Extrudates, Pellets and Spheres",
+          "category": "Shaping",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_batch"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 6.9823,
+          "processing_cost_per_kg": 15.3933,
+          "step_cost_per_hr": 465.49,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "sol_gel_metal_oxide",
+          "name": "Sol-Gel - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.1793,
+          "processing_cost_per_kg": 18.0322,
+          "step_cost_per_hr": 545.29,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "solid_state_mechanochemical",
+          "name": "Solid-State / Mechanochemical Synthesis - Bulk Oxide or Nitride",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_batch",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 4.4887,
+          "processing_cost_per_kg": 9.8959,
+          "step_cost_per_hr": 299.24,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "processing_cost_per_lb": 10.0745,
+          "processing_cost_per_kg": 22.2104,
+          "step_cost_per_hr": 671.64,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "category": "Structured",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_batch"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "processing_cost_per_lb": 5.9849,
+          "processing_cost_per_kg": 13.1944,
+          "step_cost_per_hr": 398.99,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "wet_impregnation_metal_oxide",
+          "name": "Incipient Wetness Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.1793,
+          "processing_cost_per_kg": 18.0322,
+          "step_cost_per_hr": 545.29,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "zeolite_beta_bulk",
+          "name": "Zeolite Beta (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "kiln_batch",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 20.3486,
+          "processing_cost_per_kg": 44.8609,
+          "step_cost_per_hr": 1356.57,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "zeolite_beta_with_metal_active_site",
+          "name": "Zeolite Beta with Metal Active Site",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "kiln_batch",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_batch"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 25.336,
+          "processing_cost_per_kg": 55.8563,
+          "step_cost_per_hr": 1689.06,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "zeolite_fcc",
+          "name": "FCC Catalyst (Zeolite-based)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_spray",
+            "kiln_continuous_direct",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "dryer_spray",
+              "to": "dryer_rotary_100_300C"
+            },
+            {
+              "from": "kiln_continuous_direct",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 8.7778,
+          "processing_cost_per_kg": 19.3517,
+          "step_cost_per_hr": 585.19,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "zeolite_zsm_5_2025_pct",
+          "name": "Zeolite ZSM-5 (20\u201325%)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_plate_frame",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 25.2362,
+          "processing_cost_per_kg": 55.6362,
+          "step_cost_per_hr": 1682.41,
+          "campaign_days": 2.5
+        },
+        {
+          "id": "zeolite_zsm_5_bulk",
+          "name": "Zeolite ZSM-5 (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_plate_frame",
+            "filter_plate_frame",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_batch",
+            "scrubber_nox",
+            "mill"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "filter_rotary_vacuum",
+              "to": "filter_plate_frame"
+            },
+            {
+              "from": "kiln_continuous_indirect",
+              "to": "kiln_batch"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 23.74,
+          "processing_cost_per_kg": 52.3377,
+          "step_cost_per_hr": 1582.67,
+          "campaign_days": 2.5
+        }
+      ]
+    },
+    "20": {
+      "order_size_tons": 20.0,
+      "scale": "medium",
+      "basis_year": 2017,
+      "target_year": 2026,
+      "chemppi_escalation": 1.33,
+      "templates": [
+        {
+          "id": "colloidal_nanoparticle_deposition",
+          "name": "Colloidal / Polyol Nanoparticle Synthesis with Deposition",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.7955,
+          "processing_cost_per_kg": 3.9584,
+          "step_cost_per_hr": 997.48,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "combustion_synthesis_mixed_oxide",
+          "name": "Solution Combustion Synthesis - Mixed Oxide",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.4364,
+          "processing_cost_per_kg": 3.1667,
+          "step_cost_per_hr": 797.98,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "coprecipitation_metal_oxide",
+          "name": "Co-precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.8194,
+          "processing_cost_per_kg": 4.0111,
+          "step_cost_per_hr": 1010.78,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "deposition_precipitation_metal_oxide",
+          "name": "Deposition-Precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.0947,
+          "processing_cost_per_kg": 4.618,
+          "step_cost_per_hr": 1163.72,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "excess_solution_impregnation_metal_oxide",
+          "name": "Excess-Solution (Wet) Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.8194,
+          "processing_cost_per_kg": 4.0111,
+          "step_cost_per_hr": 1010.78,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "fcc_catalyst_usy_w_re",
+          "name": "FCC Catalyst (USY w/ RE)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_spray",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_spray",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 6.739,
+          "processing_cost_per_kg": 14.8569,
+          "step_cost_per_hr": 3743.87,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "kiln_continuous_direct",
+            "mill",
+            "reactor_simple"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "kiln_continuous_direct",
+            "mill",
+            "reactor_simple"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "processing_cost_per_lb": 1.1611,
+          "processing_cost_per_kg": 2.5598,
+          "step_cost_per_hr": 645.04,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "processing_cost_per_lb": 1.975,
+          "processing_cost_per_kg": 4.3541,
+          "step_cost_per_hr": 1097.23,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "ion_exchange_zeolite_metal",
+          "name": "Ion Exchange - Metal into Zeolite",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.5441,
+          "processing_cost_per_kg": 3.4042,
+          "step_cost_per_hr": 857.83,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "magnesia_alumina",
+          "name": "Magnesia/Alumina",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 3.4952,
+          "processing_cost_per_kg": 7.7056,
+          "step_cost_per_hr": 1941.76,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_carbide_bulk",
+          "name": "Metal Carbide (Bulk)",
+          "category": "Bulk Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mill",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "mill",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.753,
+          "processing_cost_per_kg": 6.0693,
+          "step_cost_per_hr": 1529.47,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_carbide_on_metal_oxide",
+          "name": "Metal Carbide on Metal Oxide",
+          "category": "Supported Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.8967,
+          "processing_cost_per_kg": 6.3861,
+          "step_cost_per_hr": 1609.27,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_earth_abundant_on_metal_oxide",
+          "name": "Metal (Earth Abundant) on Metal Oxide",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.8727,
+          "processing_cost_per_kg": 6.3332,
+          "step_cost_per_hr": 1595.97,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_pgm_carbon",
+          "name": "PGM on Carbon Support",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_plate_frame",
+            "dryer_batch_vacuum_tray"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_plate_frame",
+              "to": "filter_rotary_vacuum"
+            },
+            {
+              "from": "dryer_batch_vacuum_tray",
+              "to": "dryer_rotary_40_100C"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.9576,
+          "processing_cost_per_kg": 2.1111,
+          "step_cost_per_hr": 531.99,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_pgm_on_carbon",
+          "name": "Metal (PGM) on Carbon",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.4603,
+          "processing_cost_per_kg": 3.2194,
+          "step_cost_per_hr": 811.28,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "metal_pgm_on_metal_oxide",
+          "name": "Metal (PGM) on Metal Oxide",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.5136,
+          "processing_cost_per_kg": 5.5415,
+          "step_cost_per_hr": 1396.47,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "kiln_continuous_indirect",
+            "flare"
+          ],
+          "steps_fitted": [
+            "kiln_continuous_indirect",
+            "flare"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "processing_cost_per_lb": 0.5985,
+          "processing_cost_per_kg": 1.3195,
+          "step_cost_per_hr": 332.49,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "shaping_extrusion_pelletizing",
+          "name": "Shaping - Extrudates, Pellets and Spheres",
+          "category": "Shaping",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.4962,
+          "processing_cost_per_kg": 3.2986,
+          "step_cost_per_hr": 831.23,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "sol_gel_metal_oxide",
+          "name": "Sol-Gel - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.7356,
+          "processing_cost_per_kg": 3.8263,
+          "step_cost_per_hr": 964.23,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "solid_state_mechanochemical",
+          "name": "Solid-State / Mechanochemical Synthesis - Bulk Oxide or Nitride",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.1371,
+          "processing_cost_per_kg": 2.5069,
+          "step_cost_per_hr": 631.74,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "processing_cost_per_lb": 2.1186,
+          "processing_cost_per_kg": 4.6707,
+          "step_cost_per_hr": 1177.02,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "category": "Structured",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "processing_cost_per_lb": 1.2568,
+          "processing_cost_per_kg": 2.7708,
+          "step_cost_per_hr": 698.23,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "wet_impregnation_metal_oxide",
+          "name": "Incipient Wetness Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.6758,
+          "processing_cost_per_kg": 3.6945,
+          "step_cost_per_hr": 930.98,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "zeolite_beta_bulk",
+          "name": "Zeolite Beta (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 4.4767,
+          "processing_cost_per_kg": 9.8694,
+          "step_cost_per_hr": 2487.05,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "zeolite_beta_with_metal_active_site",
+          "name": "Zeolite Beta with Metal Active Site",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 5.4941,
+          "processing_cost_per_kg": 12.1124,
+          "step_cost_per_hr": 3052.28,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "zeolite_fcc",
+          "name": "FCC Catalyst (Zeolite-based)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_spray",
+            "kiln_continuous_direct",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_spray",
+            "kiln_continuous_direct",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 2.2982,
+          "processing_cost_per_kg": 5.0667,
+          "step_cost_per_hr": 1276.77,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "zeolite_zsm_5_2025_pct",
+          "name": "Zeolite ZSM-5 (20\u201325%)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 4.9315,
+          "processing_cost_per_kg": 10.8721,
+          "step_cost_per_hr": 2739.74,
+          "campaign_days": 3.0
+        },
+        {
+          "id": "zeolite_zsm_5_bulk",
+          "name": "Zeolite ZSM-5 (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 4.9315,
+          "processing_cost_per_kg": 10.8721,
+          "step_cost_per_hr": 2739.74,
+          "campaign_days": 3.0
+        }
+      ]
+    },
+    "200": {
+      "order_size_tons": 200.0,
+      "scale": "large",
+      "basis_year": 2017,
+      "target_year": 2026,
+      "chemppi_escalation": 1.33,
+      "templates": [
+        {
+          "id": "colloidal_nanoparticle_deposition",
+          "name": "Colloidal / Polyol Nanoparticle Synthesis with Deposition",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3398,
+          "processing_cost_per_kg": 0.7491,
+          "step_cost_per_hr": 2427.2,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "combustion_synthesis_mixed_oxide",
+          "name": "Solution Combustion Synthesis - Mixed Oxide",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.2281,
+          "processing_cost_per_kg": 0.5029,
+          "step_cost_per_hr": 1629.21,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "coprecipitation_metal_oxide",
+          "name": "Co-precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3212,
+          "processing_cost_per_kg": 0.7081,
+          "step_cost_per_hr": 2294.2,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "deposition_precipitation_metal_oxide",
+          "name": "Deposition-Precipitation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3957,
+          "processing_cost_per_kg": 0.8724,
+          "step_cost_per_hr": 2826.19,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "excess_solution_impregnation_metal_oxide",
+          "name": "Excess-Solution (Wet) Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3212,
+          "processing_cost_per_kg": 0.7081,
+          "step_cost_per_hr": 2294.2,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "fcc_catalyst_usy_w_re",
+          "name": "FCC Catalyst (USY w/ RE)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_spray",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_spray",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 1.3546,
+          "processing_cost_per_kg": 2.9864,
+          "step_cost_per_hr": 9675.54,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "fusion_promoted_magnetite",
+          "name": "Oxide-Melt Fusion - Promoted Magnetite",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "kiln_continuous_direct",
+            "mill",
+            "reactor_simple"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "kiln_continuous_direct",
+            "mill",
+            "reactor_simple"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Electric fusion furnace (~1600 C melt): costed at the direct-fired kiln rate",
+            "Sieving to 1.5-3 mm grains: costed at the mill rate"
+          ],
+          "processing_cost_per_lb": 0.1862,
+          "processing_cost_per_kg": 0.4105,
+          "step_cost_per_hr": 1329.97,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "hydrothermal_oxide_nanostructure",
+          "name": "Hydrothermal / Solvothermal Synthesis - Bulk Oxide",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Pressure autoclave (120-250 C, autogenous pressure): costed at the crystallizer rate; there is no pressure-vessel rate in the Step Library"
+          ],
+          "processing_cost_per_lb": 0.3026,
+          "processing_cost_per_kg": 0.6671,
+          "step_cost_per_hr": 2161.2,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "ion_exchange_zeolite_metal",
+          "name": "Ion Exchange - Metal into Zeolite",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.2839,
+          "processing_cost_per_kg": 0.6259,
+          "step_cost_per_hr": 2028.21,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "magnesia_alumina",
+          "name": "Magnesia/Alumina",
+          "category": "Mixed Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.5446,
+          "processing_cost_per_kg": 1.2006,
+          "step_cost_per_hr": 3890.17,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_carbide_bulk",
+          "name": "Metal Carbide (Bulk)",
+          "category": "Bulk Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mill",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "mill",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.4283,
+          "processing_cost_per_kg": 0.9442,
+          "step_cost_per_hr": 3058.93,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_carbide_on_metal_oxide",
+          "name": "Metal Carbide on Metal Oxide",
+          "category": "Supported Carbide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "flare",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.4655,
+          "processing_cost_per_kg": 1.0263,
+          "step_cost_per_hr": 3324.93,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_earth_abundant_on_metal_oxide",
+          "name": "Metal (Earth Abundant) on Metal Oxide",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.4422,
+          "processing_cost_per_kg": 0.9749,
+          "step_cost_per_hr": 3158.68,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_pgm_carbon",
+          "name": "PGM on Carbon Support",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_plate_frame",
+            "dryer_batch_vacuum_tray"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C"
+          ],
+          "substitutions": [
+            {
+              "from": "filter_plate_frame",
+              "to": "filter_rotary_vacuum"
+            },
+            {
+              "from": "dryer_batch_vacuum_tray",
+              "to": "dryer_rotary_40_100C"
+            }
+          ],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.1676,
+          "processing_cost_per_kg": 0.3695,
+          "step_cost_per_hr": 1196.97,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_pgm_on_carbon",
+          "name": "Metal (PGM) on Carbon",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "reactor_multistep",
+            "scrubber_nox",
+            "filter_rotary_vacuum",
+            "reactor_simple",
+            "dryer_rotary_40_100C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3165,
+          "processing_cost_per_kg": 0.6978,
+          "step_cost_per_hr": 2260.95,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "metal_pgm_on_metal_oxide",
+          "name": "Metal (PGM) on Metal Oxide",
+          "category": "Supported PGM",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "incipient_wetness",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "dryer_rotary_40_100C",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3957,
+          "processing_cost_per_kg": 0.8724,
+          "step_cost_per_hr": 2826.19,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "reduction_activation_addon",
+          "name": "Activation - Gas-Phase Reduction (H2)",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "kiln_continuous_indirect",
+            "flare"
+          ],
+          "steps_fitted": [
+            "kiln_continuous_indirect",
+            "flare"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Hydrogen reduction furnace: costed at the indirect kiln rate"
+          ],
+          "processing_cost_per_lb": 0.0884,
+          "processing_cost_per_kg": 0.1949,
+          "step_cost_per_hr": 631.74,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "shaping_extrusion_pelletizing",
+          "name": "Shaping - Extrudates, Pellets and Spheres",
+          "category": "Shaping",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.2327,
+          "processing_cost_per_kg": 0.513,
+          "step_cost_per_hr": 1662.46,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "sol_gel_metal_oxide",
+          "name": "Sol-Gel - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_multistep",
+            "dryer_rotary_40_100C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3212,
+          "processing_cost_per_kg": 0.7081,
+          "step_cost_per_hr": 2294.2,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "solid_state_mechanochemical",
+          "name": "Solid-State / Mechanochemical Synthesis - Bulk Oxide or Nitride",
+          "category": "Bulk Oxide",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_dry_blender",
+            "mill",
+            "kiln_continuous_indirect",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.1722,
+          "processing_cost_per_kg": 0.3796,
+          "step_cost_per_hr": 1230.22,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "sulfidation_hydrotreating",
+          "name": "Impregnation with Sulfidation - Hydrotreating Catalysts",
+          "category": "Activation",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "extruder_with_feeder",
+            "reactor_simple",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Gas-phase sulfiding (H2S/H2 or DMDS): costed at the simple-reactor rate"
+          ],
+          "processing_cost_per_lb": 0.3445,
+          "processing_cost_per_kg": 0.7595,
+          "step_cost_per_hr": 2460.45,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "washcoat_monolith",
+          "name": "Washcoating - Catalyst on Monolith / Honeycomb",
+          "category": "Structured",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "mill",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [
+            "Dip-coating or vacuum-assisted coating line: no Step Library rate, the coating pass is not costed",
+            "Honeycomb substrate (cordierite or metal foil) enters as a material, not a step"
+          ],
+          "processing_cost_per_lb": 0.1909,
+          "processing_cost_per_kg": 0.4209,
+          "step_cost_per_hr": 1363.22,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "wet_impregnation_metal_oxide",
+          "name": "Incipient Wetness Impregnation - Metal on Oxide Support",
+          "category": "Supported Metal",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.2653,
+          "processing_cost_per_kg": 0.5849,
+          "step_cost_per_hr": 1895.21,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "zeolite_beta_bulk",
+          "name": "Zeolite Beta (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.7774,
+          "processing_cost_per_kg": 1.7139,
+          "step_cost_per_hr": 5552.63,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "zeolite_beta_with_metal_active_site",
+          "name": "Zeolite Beta with Metal Active Site",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "extruder_with_feeder",
+            "incipient_wetness",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.931,
+          "processing_cost_per_kg": 2.0525,
+          "step_cost_per_hr": 6649.86,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "zeolite_fcc",
+          "name": "FCC Catalyst (Zeolite-based)",
+          "category": "FCC/Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_spray",
+            "kiln_continuous_direct",
+            "mill",
+            "scrubber_nox"
+          ],
+          "steps_fitted": [
+            "mixer_slurry",
+            "reactor_simple",
+            "filter_rotary_vacuum",
+            "dryer_spray",
+            "kiln_continuous_direct",
+            "mill",
+            "scrubber_nox"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.3817,
+          "processing_cost_per_kg": 0.8415,
+          "step_cost_per_hr": 2726.44,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "zeolite_zsm_5_2025_pct",
+          "name": "Zeolite ZSM-5 (20\u201325%)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill",
+            "mixer_slurry",
+            "mixer_slurry",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.917,
+          "processing_cost_per_kg": 2.0216,
+          "step_cost_per_hr": 6550.11,
+          "campaign_days": 2.33
+        },
+        {
+          "id": "zeolite_zsm_5_bulk",
+          "name": "Zeolite ZSM-5 (Bulk)",
+          "category": "Zeolite",
+          "catalyst_domain": "thermal",
+          "steps": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill"
+          ],
+          "steps_fitted": [
+            "reactor_simple",
+            "crystallizer",
+            "crystallizer",
+            "crystallizer",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "reactor_multistep",
+            "reactor_multistep",
+            "filter_rotary_vacuum",
+            "filter_rotary_vacuum",
+            "dryer_rotary_100_300C",
+            "dryer_rotary_100_300C",
+            "kiln_continuous_indirect",
+            "scrubber_nox",
+            "mill"
+          ],
+          "substitutions": [],
+          "dropped_steps": [],
+          "uncosted_operations": [],
+          "processing_cost_per_lb": 0.8984,
+          "processing_cost_per_kg": 1.9806,
+          "step_cost_per_hr": 6417.11,
+          "campaign_days": 2.33
+        }
+      ]
+    }
+  }
+}

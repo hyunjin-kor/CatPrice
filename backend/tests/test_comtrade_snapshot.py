@@ -94,8 +94,11 @@ def test_shipped_free_snapshot_can_seed_reference_prices_without_network(session
 
     series = load_support_history()
     assert "HS281820" in series
-    assert save_reference_series(session, series)["HS281820"] >= 1
+    saved = save_reference_series(session, series)
+    assert set(saved) == set(series)
+    assert all(count >= 1 for count in saved.values())
     assert save_reference_series(session, series) == {}
     prices = _latest_price_map(session, "reference")
-    assert prices["HS281820"]["price"] == series["HS281820"]["points"][-1]["price"]
-    assert "HS281820" not in _latest_price_map(session, "live")
+    for symbol, entry in series.items():
+        assert prices[symbol]["price"] == entry["points"][-1]["price"]
+    assert not set(series) & set(_latest_price_map(session, "live"))

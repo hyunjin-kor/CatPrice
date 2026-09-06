@@ -1,0 +1,87 @@
+{
+  "checked_at": "2026-09-06T15:39:18.651518+00:00",
+  "baseline_commit": "8f4ae4de9732ec1f06affaa1ea4bf04d9caada18",
+  "scope": "D03 resumed June support snapshot expansion; no application calculation code change",
+  "pytest": {
+    "command": "python -m pytest backend/tests -q",
+    "exit_code": 0,
+    "wall_seconds": 459.715,
+    "output": "........................................................................ [ 10%]\r\n........................................................................ [ 21%]\r\n........................................................................ [ 31%]\r\n........................................................................ [ 42%]\r\n........................................................................ [ 53%]\r\n........................................................................ [ 63%]\r\n........................................................................ [ 74%]\r\n........................................................................ [ 84%]\r\n........................................................................ [ 95%]\r\n...............................                                          [100%]\r\n679 passed in 455.93s (0:07:35)\r\n"
+  },
+  "local_checks": [
+    {
+      "command": "python -m ruff check backend scripts",
+      "cwd": ".",
+      "exit_code": 0,
+      "wall_seconds": 0.142,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": "npm.cmd run check:i18n",
+      "cwd": "frontend",
+      "exit_code": 0,
+      "wall_seconds": 0.737,
+      "output": "\n> frontend@1.4.0 check:i18n\n> node ../scripts/check_i18n.mjs\n\n{\n  \"static_translation_calls\": 787,\n  \"korean_keys\": 829,\n  \"missing_key_occurrences\": 0,\n  \"raw_jsx_label_occurrences\": 27,\n  \"untranslated_ui_label_occurrences\": 0,\n  \"missing\": [],\n  \"untranslatedLabels\": [],\n  \"scope\": \"Literal and conditional t(string) keys, literal JSX text, UI attributes and direct JSX template-literal fragments. Technical symbols/units, the product name and already-Korean text are explicitly excluded from untranslated UI counts. Conditional language branches, source data and variable translation keys require manual/browser review.\"\n}\n"
+    },
+    {
+      "command": "npm.cmd run lint",
+      "cwd": "frontend",
+      "exit_code": 0,
+      "wall_seconds": 9.426,
+      "output": "\n> frontend@1.4.0 lint\n> eslint .\n\n"
+    },
+    {
+      "command": "npm.cmd run build",
+      "cwd": "frontend",
+      "exit_code": 0,
+      "wall_seconds": 6.2,
+      "output": "\n> frontend@1.4.0 build\n> tsc -b && vite build\n\nvite v8.1.5 building client environment for production...\n\u001b[2K\rtransforming...✓ 618 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                                      0.75 kB │ gzip:   0.41 kB\ndist/assets/PretendardVariable-CJuje-Rk.woff2    2,057.68 kB\ndist/assets/index-BXUpkB8K.css                      61.73 kB │ gzip:  11.15 kB\ndist/assets/format-price-xyQn9blZ.js                 0.35 kB │ gzip:   0.18 kB │ map:     1.67 kB\ndist/assets/calculator-session-OVC9PJVi.js           0.59 kB │ gzip:   0.28 kB │ map:     4.62 kB\ndist/assets/rolldown-runtime-QTnfLwEv.js             0.69 kB │ gzip:   0.42 kB\ndist/assets/ResultBreakdownPieChart-C5HDu_fW.js      0.79 kB │ gzip:   0.52 kB │ map:     2.15 kB\ndist/assets/FitPriceText-DcTail5I.js                 0.91 kB │ gzip:   0.43 kB │ map:     3.01 kB\ndist/assets/EstimateRangeBarChart-CWnW0xkB.js        1.01 kB │ gzip:   0.59 kB │ map:     2.66 kB\ndist/assets/Skeleton-a7cBJvy9.js                     1.42 kB │ gzip:   0.59 kB │ map:     4.45 kB\ndist/assets/MetalCompareChart-BBfYm8tx.js            1.71 kB │ gzip:   0.90 kB │ map:     5.27 kB\ndist/assets/MetalTrendChart-DCCc8hTX.js              1.78 kB │ gzip:   0.89 kB │ map:     5.06 kB\ndist/assets/api-CbdZfW3m.js                          3.19 kB │ gzip:   1.41 kB │ map:    41.26 kB\ndist/assets/WorkspaceSections-EoDuokri.js            3.33 kB │ gzip:   1.49 kB │ map:     9.67 kB\ndist/assets/export-csv-BrhDHTdX.js                   4.76 kB │ gzip:   1.99 kB │ map:    13.81 kB\ndist/assets/Compare-BE7SirXV.js                     18.04 kB │ gzip:   4.87 kB │ map:    40.03 kB\ndist/assets/CapEx-CtKc9t9W.js                       18.28 kB │ gzip:   4.33 kB │ map:    43.72 kB\ndist/assets/Uncertainty-Cp99Hzhd.js                 18.35 kB │ gzip:   5.23 kB │ map:    42.64 kB\ndist/assets/Library-D1EmwhWs.js                     24.21 kB │ gzip:   5.94 kB │ map:    62.03 kB\ndist/assets/Prices-COZIVOZ3.js                      32.18 kB │ gzip:   8.55 kB │ map:    77.96 kB\ndist/assets/CalculatorResult-103lK16G.js            44.53 kB │ gzip:  10.64 kB │ map:    94.85 kB\ndist/assets/Calculator-BNzbOPcv.js                  68.80 kB │ gzip:  17.49 kB │ map:   182.85 kB\ndist/assets/index-B9V-nUmZ.js                      123.82 kB │ gzip:  41.82 kB │ map:   564.76 kB\ndist/assets/react-CC1klYW5.js                      189.64 kB │ gzip:  59.65 kB │ map:   841.37 kB\ndist/assets/recharts-KlhfxoSq.js                   390.73 kB │ gzip: 111.46 kB │ map: 1,913.19 kB\n\n[plugin @tailwindcss/vite:generate:build] \u001b[33m[SOURCEMAP_BROKEN] \u001b[0mSourcemap is likely to be incorrect: a plugin (@tailwindcss/vite:generate:build) was used to transform files, but didn't generate a sourcemap for the transformation. Consult the plugin documentation for help: https://rolldown.rs/guide/troubleshooting#warning-sourcemap-is-likely-to-be-incorrect\n\n✓ built in 1.02s\n"
+    },
+    {
+      "command": "node scripts/test_calculator_rules.mjs",
+      "cwd": ".",
+      "exit_code": 0,
+      "wall_seconds": 0.224,
+      "output": "✔ repeated operations remain distinct while order-only changes match (0.8202ms)\n✔ selected card identity survives identical routes and scale fitting (0.1301ms)\n✔ selected method waits for current-scale steps, while manual routes stay usable (0.0784ms)\n✔ fuel_cell × pem_fuel_cell_ccm defaults (5.8805ms)\n✔ direct_methanol_fuel_cell × dmfc_gde_route defaults (0.1027ms)\n✔ electrolyzer × pem_electrolyzer_ccm defaults (0.0717ms)\n✔ electrolyzer × alkaline_electrolyzer_gde defaults (0.0862ms)\n✔ AEM fuel-cell route retains existing application-family preference (0.112ms)\n✔ equal chemistry ranks prefer source scope, then quoted price, then name (0.2074ms)\n✔ electrode displayed ledger uses area costs without thermal cost fields (0.2416ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 13.1221\n"
+    },
+    {
+      "command": "python scripts/reproduce_catcost_table62.py",
+      "cwd": ".",
+      "exit_code": 0,
+      "wall_seconds": 0.102,
+      "output": "\r\n## 2 wt% Pt/C  (order 2 ton)\r\nmaterials: published total 10.7  |  sum of rows 10.7013\r\n                                 COMET   Table 6.2    dev %\r\nstep_cost_per_hr              390.0000    390.0000    +0.00\r\ncampaign_days                   2.5000      2.5000    +0.00\r\ncampaign_cost               23400.0000  23400.0000    +0.00\r\nprocessing_cost_per_lb          5.8500      5.8500    +0.00\r\nsubtotal_per_lb                16.5500     16.5500    +0.00\r\nga_per_lb                       0.8275      0.8300    -0.30\r\nsard_per_lb                     0.8689      0.8700    -0.13\r\nmargin_per_lb                   9.1231      9.1200    +0.03\r\nestimated_price_per_lb         27.3695     27.3700    -0.00\r\nmargin basis: COMET 33.33% of selling price = 50.0% of pre-margin  |  table footnote 50.0% of pre-margin\r\nvs market $34.09: COMET -19.7%  |  CatCost published -19.7%\r\n\r\n## 21 wt% Ni/Al2O3  (order 20 ton)\r\nmaterials: published total 11.88  |  sum of rows 11.8918\r\n                                 COMET   Table 6.2    dev %\r\nstep_cost_per_hr             1200.0000   1200.0000    +0.00\r\ncampaign_days                   3.0000      3.0000    +0.00\r\ncampaign_cost               86400.0000  86400.0000    +0.00\r\nprocessing_cost_per_lb          2.1600      2.1600    +0.00\r\nsubtotal_per_lb                14.0400     14.0400    +0.00\r\nga_per_lb                       0.7020      0.7000    +0.29\r\nsard_per_lb                     0.7371      0.7400    -0.39\r\nmargin_per_lb                   3.7415      5.1100   -26.78\r\nestimated_price_per_lb         19.2206     20.5900    -6.65\r\nmargin basis: COMET 19.47% of selling price = 24.17% of pre-margin  |  table footnote 33.0% of pre-margin\r\nvs market $21.33: COMET -9.9%  |  CatCost published -3.5%\r\n\r\n## USY-based FCC (with RE)  (order 200 ton)\r\nmaterials: published total 0.352  |  sum of rows 0.3524\r\n                                 COMET   Table 6.2    dev %\r\nstep_cost_per_hr             6725.0000   6725.0000    +0.00\r\ncampaign_days                   2.3300      4.0000   -41.75\r\ncampaign_cost              376600.0000 645600.0000   -41.67\r\nprocessing_cost_per_lb          0.9415      1.6100   -41.52\r\nsubtotal_per_lb                 1.2935      1.9700   -34.34\r\nga_per_lb                       0.0647      0.1000   -35.30\r\nsard_per_lb                     0.0679      0.1000   -32.10\r\nmargin_per_lb                   0.1829      0.2400   -23.79\r\nestimated_price_per_lb          1.6090      2.4100   -33.24\r\nmargin basis: COMET 11.37% of selling price = 12.83% of pre-margin  |  table footnote 11.0% of pre-margin\r\nvs market $2.73: COMET -41.1%  |  CatCost published -11.7%\r\nwith footnote-b rate 67 t/d: campaign 3.985 d, processing 1.6080, price 2.4380 (+1.16% vs published)\r\n"
+    }
+  ],
+  "desktop": [
+    {
+      "command": "npm.cmd run build",
+      "exit_code": 0,
+      "wall_seconds": 208.0,
+      "output": "6 INFO: Building COLLECT COLLECT-00.toc\r\n138813 INFO: Building COLLECT COLLECT-00.toc completed successfully.\r\n138919 INFO: Build complete! The results are available in: C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\build\\backend-sidecar\r\n[COMET] Backend sidecar ready at build/backend-sidecar\\COMETBackend\n\n> comet@1.4.0 electron:build\n> npm run desktop:stop && electron-builder build --win\n\n\n> comet@1.4.0 desktop:stop\n> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop_comet_processes.ps1 -Quiet\n\n  • electron-builder  version=26.15.3 os=10.0.26200\n  • loaded configuration  file=package.json (\"build\" field)\n  • executing @electron/rebuild  electronVersion=41.10.7 arch=x64 buildFromSource=false workspaceRoot=C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06 projectDir=./ appDir=./\n  • installing native dependencies  arch=x64\n  • completed installing native dependencies\n  • packaging       platform=win32 arch=x64 electron=41.10.7 appOutDir=dist-electron\\win-unpacked\n  • downloaded      label=electron progress=100%\n  • downloaded electron zip extracted successfully  output=C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\\dist-electron\\win-unpacked\n  • searching for node modules  pm=npm searchDir=C:\\Users\\user\\Desktop\\COMET-autonomous-2026-09-06\n  • updating asar integrity executable resource  executablePath=dist-electron\\win-unpacked\\COMET.exe\n  • signing with signtool.exe  path=dist-electron\\win-unpacked\\resources\\backend-sidecar\\COMETBackend.exe\n  • signing with signtool.exe  path=dist-electron\\win-unpacked\\COMET.exe\n  • building        target=nsis file=dist-electron\\COMET.Setup.1.4.0.exe archs=x64 oneClick=false perMachine=false\n  • signing with signtool.exe  path=dist-electron\\win-unpacked\\resources\\elevate.exe\n  • signing with signtool.exe  path=dist-electron\\COMET.Setup.1.4.0.__uninstaller.exe\n  • signing with signtool.exe  path=dist-electron\\COMET.Setup.1.4.0.exe\n  • building block map  blockMapFile=dist-electron\\COMET.Setup.1.4.0.exe.blockmap\n"
+    },
+    {
+      "command": "npm.cmd run smoke:desktop",
+      "exit_code": 0,
+      "wall_seconds": 17.993,
+      "output": "\n> comet@1.4.0 smoke:desktop\n> powershell -NoProfile -ExecutionPolicy Bypass -File scripts/smoke_test_desktop.ps1\n\n[COMET] Launching packaged desktop app...\n[COMET] Re-launching app to verify single-instance recovery...\n\r\n\r\nStatus              : ok\r\nVersion             : 1.4.0\r\nMainWindowCount     : 1\r\nPricesStatus        : 200\r\nCalculateStatus     : 200\r\nEstimatedPricePerKg : 9.0374\r\nLauncherLog         : C:\\Users\\user\\AppData\\Roaming\\COMET\\comet-launcher.log\r\n\r\n\r\n\r\n"
+    }
+  ],
+  "source_policy_check": {
+    "checked_at": "2026-09-06T15:25:55.018628+00:00",
+    "url": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+    "response_url": "https://uncomtrade.org/docs/policy-on-use-and-re-dissemination/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "body_bytes": 463385
+  },
+  "browser_evidence": "docs/audit/free-data-resume-ui-2026-09-07.json",
+  "scientific_replay_and_impact": "docs/audit/free-data-resume-impact-2026-09-07.json",
+  "ci_note": "Final committed-head CI result and commit SHA are recorded in PR112 after push. This file records completed local checks only.",
+  "preservation": {
+    "baseline": "8f4ae4d",
+    "previous_tracked_paper_files_unchanged": 66,
+    "previous_supplement_raw_blob_hashes_matched": 28,
+    "license_unchanged": true,
+    "note": "Initial raw git-blob comparison of all historical text files encountered normal Windows line-ending differences. The corrected check uses git tracked-content comparison for all historical files and raw blob equality for the explicitly frozen supplement."
+  }
+}

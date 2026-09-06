@@ -6,3 +6,7 @@ backend/data/support_price_history.json -text
 docs/paper/free-data-2026-09-06/*.json -text
 docs/paper/free-data-2026-09-06/*.md -text
 docs/paper/free-data-2026-09-06/figures/*.svg -text
+docs/sources/comtrade-preview-2026-09-07.json -text
+docs/paper/free-data-2026-09-07/*.json -text
+docs/paper/free-data-2026-09-07/*.md -text
+docs/paper/free-data-2026-09-07/figures/*.svg -text
